@@ -1,0 +1,5 @@
+firmware/
+results/raw/
+tools/
+*.bin
+*.img
