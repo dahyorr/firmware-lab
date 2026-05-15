@@ -3,7 +3,7 @@
 ## Setup
 - Date:
 - **Host:** Proxmox VE on AMD Ryzen 5 PRO 5650GE, 40GB RAM
-- **VM:** Ubuntu 26.04 LTS Server
+- **VM:** Ubuntu 22.04 LTS Server
   - 6 vCPU, CPU type `host` (AMD-V passthrough)
   - 12GB RAM (ballooning disabled)
   - 64GB disk (VirtIO SCSI, discard enabled)
@@ -60,3 +60,23 @@
 **Issues encountered:**
 
 - None worth noting today. Everything installed cleanly.
+
+
+
+
+## 2026-05-15 — First successful emulation
+
+**Goal:** Reproduce FirmAE's baseline by booting a known-good firmware image.
+
+**Result: SUCCESS.**
+
+**Firmware tested:**
+- D-Link DIR-868L revB firmware version 2.05b02 (EU multi)
+- Filename: DIR-868L_fw_revB_2-05b02_eu_multi_20161117.bin
+- SHA256: <run `sha256sum` and paste>
+- Source: FirmAE GitHub releases v1.0
+
+**Command:**
+`sudo ./run.sh -c dlink_dir868l ./DIR-868L_fw_revB_2-05b02_eu_multi_20161117.zip`
+
+**FirmAE output (final lines):**

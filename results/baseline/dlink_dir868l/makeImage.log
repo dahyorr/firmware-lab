@@ -1,0 +1,47 @@
+----Running----
+----Copying Filesystem Tarball----
+----Creating QEMU Image----
+Formatting '/home/dahyor/project/tools/FirmAE/scratch/1/image.raw', fmt=raw size=1073741824
+----Creating Partition Table----
+
+Welcome to fdisk (util-linux 2.37.2).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0xbccf16eb.
+
+Command (m for help): Created a new DOS disklabel with disk identifier 0xe9b29578.
+
+Command (m for help): Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): Partition number (1-4, default 1): First sector (2048-2097151, default 2048): Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-2097151, default 2097151): 
+Created a new partition 1 of type 'Linux' and of size 1023 MiB.
+
+Command (m for help): The partition table has been altered.
+Syncing disks.
+
+----Mounting QEMU Image----
+----Creating Filesystem----
+Discarding device blocks:      0/261888             done                            
+Creating filesystem with 261888 4k blocks and 65536 inodes
+Filesystem UUID: 214e41a3-da22-4edf-9999-2730ffe4d628
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Writing superblocks and filesystem accounting information: 0/8   done
+
+----Making QEMU Image Mountpoint----
+----Mounting QEMU Image Partition----
+----Extracting Filesystem Tarball----
+----Creating FIRMADYNE Directories----
+----Finding Init (chroot)----
+----Patching Filesystem (chroot)----
+Removing /sbin/reboot!
+Removing /etc/scripts/sys_resetbutton!
+----Setting up FIRMADYNE----
+----Unmounting QEMU Image----
+/dev/loop3p1: clean, 2614/65536 files, 25537/261888 blocks
