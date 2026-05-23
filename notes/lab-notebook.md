@@ -80,3 +80,34 @@
 `sudo ./run.sh -c dlink_dir868l ./DIR-868L_fw_revB_2-05b02_eu_multi_20161117.zip`
 
 **FirmAE output (final lines):**
+
+
+## 2026-05-15 (later) — Network conflict between FirmAE and home network resolved
+
+**Issue:** Running FirmAE in run mode (`-r`) caused SSH to drop. Diagnosis traced through three hypotheses (subnet collision, single-NIC limitation, host-route conflict) before identifying the actual cause.
+
+**Root cause:** Home network topology — Windows client on 192.168.0.0/24, opnsense bridge at 192.168.0.3 routing to lab network 10.10.0.0/24, lab VM in 10.10.1.0/24. When FirmAE brings up its tap1_0.1 interface claiming 192.168.0.1/24 inside the VM, the kernel routing table gets a new, more-specific route for 192.168.0.0/24 via the tap interface. Reply packets to the SSH client at 192.168.0.11 then route into the emulated firmware instead of back to the client.
+
+**Fix:** Pin a /32 route to the SSH client before the conflict appears:
+
+`sudo ip route add 192.168.0.11/32 via 10.10.1.1 dev enp6s18`
+
+Made persistent via a systemd oneshot service.
+
+**Lesson:** FirmAE assumes the host has no traffic flowing through 192.168.0.0/24 because it hardcodes that subnet for emulated firmware. In any lab where the operator's access path also passes through 192.168.0.0/24, an override route is required. This is the kind of practical finding that would belong in a "deployment considerations" section of the dissertation.
+
+**Significance for project:** This is the first real friction point between FirmAE as published and FirmAE as deployable in a typical research environment. Worth mentioning in the dissertation's implementation chapter as evidence that the integration work the project undertakes is more than packaging — it includes solving real interoperability issues.
+
+**Time spent on this issue total:** roughly <X> hours across multiple sessions
+
+## Findings from interactive probing — DIR-868L
+
+Manual nmap -sV scan against the emulated firmware revealed six open ports across three distinct services:
+
+- **Port 53/63481 (UDP/TCP DNS):** dnsmasq version 2.45. This is an outdated version (from 2008) with multiple documented CVEs in the National Vulnerability Database. This is the kind of finding the framework's CVE-matching module will surface automatically.
+- **Port 80:** D-Link administrative web interface (custom "WebServer"). Page title "D-LINK", consistent with the genuine device interface.
+- **Port 8181/8182:** D-Link SharePort web interface for shared storage and printing.
+- **Port 49152:** likely UPnP daemon (common default port for IGD/UPnP).
+
+The dnsmasq finding is a good first concrete demonstration of the value of the framework: a single service banner ("dnsmasq 2.45") immediately suggests multiple known vulnerabilities to investigate. This kind of automated identification is the core value proposition of the dynamic analysis module described in section 4.2.3 of the proposal.
+
