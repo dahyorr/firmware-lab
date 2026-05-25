@@ -111,3 +111,23 @@ Manual nmap -sV scan against the emulated firmware revealed six open ports acros
 
 The dnsmasq finding is a good first concrete demonstration of the value of the framework: a single service banner ("dnsmasq 2.45") immediately suggests multiple known vulnerabilities to investigate. This kind of automated identification is the core value proposition of the dynamic analysis module described in section 4.2.3 of the proposal.
 
+
+
+## Design decision: cache detection rather than cache clearance
+
+The framework detects when FirmAE has already processed a firmware image
+and reuses the cached result instead of re-running. Detection happens by
+querying FirmAE's PostgreSQL `image` table for the firmware filename,
+then verifying that `scratch/<iid>/result` exists.
+
+Rationale:
+- Re-extraction is the most expensive step (~5-10 minutes); skipping it
+  on repeat runs makes the framework usable iteratively
+- Processing time measurements remain accurate (they describe the first
+  run, not arbitrary re-runs)
+- The `from_cache` flag in the report tells reviewers when a result is
+  reused vs freshly produced
+
+Alternative considered: always clear cache before runs (Strategy A).
+Rejected because it discards useful data and adds 5-10 minutes per
+re-run with no real benefit.
