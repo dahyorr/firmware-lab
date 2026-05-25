@@ -3,3 +3,8 @@ results/raw/
 tools/
 *.bin
 *.img
+framework/reports/
+framework/logs/
+__pycache__/
+*.pyc
+.venv/
