@@ -10,6 +10,8 @@ non-private IP, regardless of FirmAE's tap routing behaviour.
 """
 
 import ipaddress
+import os
+import signal
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
@@ -99,9 +101,13 @@ def start_run(
     brand: str,
     firmae_dir: Path | None = None,
 ) -> subprocess.Popen:
-    """Start FirmAE in run mode (background). Caller must call stop_run()."""
+    """
+    Start FirmAE in run mode (background). Caller must call stop_run().
+    Spawned in its own process group so stop_run can kill the full tree.
+    """
     from config import FIRMAE_DIR
     firmae_dir = firmae_dir or FIRMAE_DIR
+    _cleanup_tap_interfaces()
     cmd = ["sudo", "./run.sh", "-r", brand, str(firmware_path)]
     return subprocess.Popen(
         cmd,
@@ -109,17 +115,42 @@ def start_run(
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
+        start_new_session=True,
     )
 
 
 def stop_run(proc: subprocess.Popen) -> None:
-    """Terminate a running FirmAE emulation cleanly."""
-    proc.terminate()
+    """
+    Terminate a running FirmAE emulation and its entire process tree, then
+    clean up lingering tap interfaces. FirmAE does not clean these up on exit,
+    and they cause an infinite VLAN-init loop on the next start_run call.
+    """
     try:
-        proc.wait(timeout=10)
-    except subprocess.TimeoutExpired:
-        proc.kill()
+        pgid = os.getpgid(proc.pid)
+        subprocess.run(["sudo", "kill", "-TERM", f"-{pgid}"], check=False)
+        proc.wait(timeout=15)
+    except (ProcessLookupError, subprocess.TimeoutExpired):
+        try:
+            pgid = os.getpgid(proc.pid)
+            subprocess.run(["sudo", "kill", "-KILL", f"-{pgid}"], check=False)
+        except ProcessLookupError:
+            pass
+    subprocess.run(["sudo", "pkill", "-f", "run.sh -r"], check=False)
     subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
+    _cleanup_tap_interfaces()
+
+
+def _cleanup_tap_interfaces() -> None:
+    """Remove FirmAE tap interfaces so the next start_run can create them cleanly."""
+    result = subprocess.run(["ip", "link", "show"], capture_output=True, text=True)
+    import re
+    # Delete VLAN sub-interfaces first (tap<n>_0.<x>), then the base tap<n>_0
+    vlans = re.findall(r'(tap\d+_0\.\d+)', result.stdout)
+    bases = re.findall(r'(tap\d+_0)\b', result.stdout)
+    for name in vlans:
+        subprocess.run(["sudo", "ip", "link", "delete", name], capture_output=True, check=False)
+    for name in bases:
+        subprocess.run(["sudo", "ip", "link", "delete", name], capture_output=True, check=False)
 
 
 # ── private helpers ──────────────────────────────────────────────────────────

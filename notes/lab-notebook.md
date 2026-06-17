@@ -131,3 +131,30 @@ Rationale:
 Alternative considered: always clear cache before runs (Strategy A).
 Rejected because it discards useful data and adds 5-10 minutes per
 re-run with no real benefit.
+
+
+
+## 2026-06-07 — V2 framework design decisions agreed
+
+Decisions made while drafting SPEC.md, locked in for v2 development:
+
+1. Valkey pub/sub in v1, not just v2. Modules publish status events to
+   topics from day one; v1 has an optional subscriber that prints or
+   ignores. v2's web wrapper attaches its own subscriber for live UI
+   updates.
+
+2. Configurable output paths everywhere. No hardcoded report directory.
+   Orchestrator passes target paths into modules.
+
+3. JSON as canonical report format. PDF generation is a separate module
+   in reporting/ that consumes the JSON. Both run in v1.
+
+4. Thin orchestrator. run.py parses arguments and calls analyse_firmware().
+   Modules do the real work. v2 worker is just another caller of the
+   same function.
+
+Implication: v1 is not a throwaway prototype. It is the production logic
+with the CLI as one entry point. v2 adds a web entry point but does not
+replace the framework's internals.
+
+

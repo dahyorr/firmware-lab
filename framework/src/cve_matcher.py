@@ -44,7 +44,8 @@ def match_cves(
     pub = publisher or NullPublisher()
     pub.start("cve_matcher", f"{len(services)} services to check")
 
-    queryable = [s for s in services if s.version.strip()]
+    queryable = [(s, _build_query(s)) for s in services]
+    queryable = [(s, q) for s, q in queryable if q]
     if not queryable:
         pub.success("cve_matcher", {"matches": 0})
         return []
@@ -53,8 +54,7 @@ def match_cves(
         _SESSION.headers["apiKey"] = api_key
 
     matches: list[CVEMatch] = []
-    for i, svc in enumerate(queryable):
-        query = f"{svc.service} {svc.version}".strip()
+    for i, (svc, query) in enumerate(queryable):
         pub.progress("cve_matcher", f"querying NVD for: {query}")
         try:
             found = _query_nvd(svc, query)
@@ -70,7 +70,7 @@ def match_cves(
 
 
 def _query_nvd(svc: ServiceFinding, query: str) -> list[CVEMatch]:
-    params = {"keywordSearch": query, "resultsPerPage": 5}
+    params = {"keywordSearch": query, "resultsPerPage": 10}
     resp = _SESSION.get(NVD_API_URL, params=params, timeout=30)
     resp.raise_for_status()
     data = resp.json()
@@ -98,6 +98,33 @@ def _query_nvd(svc: ServiceFinding, query: str) -> list[CVEMatch]:
             url=f"https://nvd.nist.gov/vuln/detail/{cve_id}",
         ))
     return results
+
+
+def _build_query(svc: ServiceFinding) -> str | None:
+    """
+    Build the NVD keyword query for a service finding.
+
+    NVD full-text search matches product names in CVE descriptions, not exact
+    version numbers (descriptions say "before 2.52", not "2.45"). So we extract
+    the product name from nmap's version string, not the full string.
+
+    e.g. version="dnsmasq 2.45"  → query "dnsmasq"
+         version="OpenSSH 7.4p1" → query "OpenSSH"
+         version="WebServer"     → skip (single generic word, no version number)
+         version=""              → skip
+    """
+    import re
+    v = svc.version.strip()
+    if not v:
+        return None
+    if " " in v:
+        # "product version" format — use just the product name
+        return v.split()[0]
+    if re.search(r"\d", v):
+        # Single token but has a digit — use service name as the search term
+        return svc.service
+    # Single generic label with no version (e.g. "WebServer") — too noisy
+    return None
 
 
 def _extract_cvss(cve: dict) -> tuple[float | None, str | None]:

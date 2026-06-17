@@ -6,6 +6,7 @@ Both run.py and the future web worker call this function; neither
 contains analysis logic of its own.
 """
 
+import socket
 import time
 import uuid
 from dataclasses import dataclass
@@ -94,9 +95,12 @@ def analyse_firmware(
     web_findings: list[WebFinding] = []
 
     try:
-        wait = getattr(cfg, "EMULATION_WAIT_SECONDS", 90)
-        pub.progress("orchestrator", f"waiting {wait}s for services to come up")
-        time.sleep(wait)
+        max_wait = getattr(cfg, "EMULATION_WAIT_SECONDS", 240)
+        pub.progress("orchestrator", f"waiting up to {max_wait}s for firmware to come up")
+        if not _wait_for_host(emulation.ip, timeout=max_wait):
+            pub.progress("orchestrator", "firmware unreachable after timeout — scanning anyway")
+        else:
+            pub.progress("orchestrator", "firmware is up, proceeding to probe")
 
         # ── 4. Service enumeration ───────────────────────────────────────────
         probe_result = probe.probe_services(emulation.ip, profile=profile, publisher=pub)
@@ -141,3 +145,24 @@ def analyse_firmware(
         credentials=credentials,
         web_findings=web_findings,
     )
+
+
+def _wait_for_host(ip: str, timeout: int = 240, poll_interval: int = 10) -> bool:
+    """
+    Poll until any common TCP port on the emulated firmware accepts a connection,
+    or until timeout. Replaces a fixed sleep: embedded firmware boot time varies.
+    """
+    probe_ports = [80, 53, 8080, 8181, 22]
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        for port in probe_ports:
+            try:
+                with socket.create_connection((ip, port), timeout=2):
+                    print(f"[*] Firmware up (port {port} responded)")
+                    return True
+            except (socket.timeout, ConnectionRefusedError, OSError):
+                pass
+        elapsed = int(time.monotonic() - (deadline - timeout))
+        print(f"[*] Waiting for firmware... ({elapsed}s elapsed)")
+        time.sleep(poll_interval)
+    return False

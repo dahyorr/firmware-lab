@@ -6,9 +6,15 @@ exposed by emulated firmware. Only records success/failure — no
 post-authentication actions are taken (R-3).
 
 R-1: the orchestrator validates the IP before calling this module.
+
+Success detection uses positive indicators only (not absence of failure
+keywords), because embedded firmware login pages frequently return HTTP 200
+for every request regardless of credential validity:
+  - New session cookie set in the POST response
+  - 302/301 redirect to a URL that does not contain a login-path pattern
+  - Response body contains admin-specific content ("logout", "sign out")
 """
 
-import base64
 from dataclasses import dataclass, asdict
 
 import requests
@@ -37,11 +43,25 @@ HTTP_LOGIN_PATHS: list[str] = [
 
 HTTP_SERVICE_NAMES = {"http", "http-alt", "http-proxy", "webserver"}
 
-_FAILURE_KEYWORDS = frozenset(
-    ["incorrect", "invalid", "failed", "error", "unauthorized", "denied"]
-)
+# Keywords that unambiguously indicate an authenticated session.
+# Only "logout" is included because it requires you to be logged in.
+# Generic device-info words (reboot, wireless, configuration) appear in
+# unauthenticated HNAP/SOAP responses and produce false positives.
+_SUCCESS_KEYWORDS = frozenset([
+    "logout", "log out", "sign out", "signout",
+])
+
+# URL fragments that indicate the redirect target is a login page, not admin.
+_LOGIN_PATH_PATTERNS = frozenset([
+    "login", "signin", "auth", "logon",
+])
+
+# Used as a "known-wrong" sentinel to establish a baseline response for
+# comparison. Real passwords won't match this.
+_SENTINEL_PASSWORD = "INVALID_SENTINEL_xQZ9_2026"
 
 _REQUEST_TIMEOUT = 10
+_VERIFY_SSL = False
 
 
 @dataclass
@@ -83,15 +103,23 @@ def test_credentials(
 def _test_http(ip: str, svc: ServiceFinding) -> list[CredentialResult]:
     base_url = f"http://{ip}:{svc.port}"
     results = []
-    session = requests.Session()
-    session.verify = False
+
+    # Capture pre-auth baseline: cookies and body before any login attempt.
+    baseline_cookies: set[str] = set()
+    try:
+        s = requests.Session()
+        s.verify = False
+        baseline_resp = s.get(base_url, timeout=_REQUEST_TIMEOUT)
+        baseline_cookies = set(s.cookies.keys())
+    except requests.RequestException:
+        pass
 
     for username, password in DEFAULT_CREDENTIALS:
-        hit = _try_http_basic(session, base_url, svc, username, password)
+        hit = _try_http_basic(base_url, svc, username, password, baseline_cookies)
         if hit:
             results.append(hit)
             continue
-        hit = _try_http_post(session, base_url, svc, username, password)
+        hit = _try_http_post(base_url, svc, username, password, baseline_cookies)
         if hit:
             results.append(hit)
 
@@ -99,16 +127,20 @@ def _test_http(ip: str, svc: ServiceFinding) -> list[CredentialResult]:
 
 
 def _try_http_basic(
-    session: requests.Session,
     base_url: str,
     svc: ServiceFinding,
     username: str,
     password: str,
+    baseline_cookies: set[str],
 ) -> CredentialResult | None:
     try:
-        resp = session.get(base_url, auth=(username, password), timeout=_REQUEST_TIMEOUT)
-        success = resp.status_code == 200 and not _body_suggests_failure(resp.text)
-        if success:
+        s = requests.Session()
+        s.verify = False
+        resp = s.get(base_url, auth=(username, password), timeout=_REQUEST_TIMEOUT)
+        if resp.status_code == 401:
+            return None
+        new_cookies = set(s.cookies.keys()) - baseline_cookies
+        if new_cookies or _body_suggests_success(resp.text):
             return CredentialResult(
                 port=svc.port, service=svc.service,
                 username=username, password=password,
@@ -120,30 +152,63 @@ def _try_http_basic(
 
 
 def _try_http_post(
-    session: requests.Session,
     base_url: str,
     svc: ServiceFinding,
     username: str,
     password: str,
+    baseline_cookies: set[str],
 ) -> CredentialResult | None:
     for path in HTTP_LOGIN_PATHS:
         try:
-            resp = session.post(
+            # Baseline: post a sentinel wrong password to this path first.
+            # If the server returns the same response for any credential, it's
+            # not actually authenticating (e.g. HNAP1 returning device info for all POSTs).
+            s_wrong = requests.Session()
+            s_wrong.verify = False
+            wrong = s_wrong.post(
+                f"{base_url}{path}",
+                data={"username": username, "password": _SENTINEL_PASSWORD},
+                timeout=_REQUEST_TIMEOUT,
+                allow_redirects=False,
+            )
+
+            s = requests.Session()
+            s.verify = False
+            resp = s.post(
                 f"{base_url}{path}",
                 data={"username": username, "password": password},
                 timeout=_REQUEST_TIMEOUT,
-                allow_redirects=True,
+                allow_redirects=False,
             )
-            success = (
-                resp.status_code in (200, 302)
-                and not _body_suggests_failure(resp.text)
-            )
-            if success:
+
+            # Skip if status code identical to wrong-password attempt — same response
+            if resp.status_code == wrong.status_code and resp.status_code not in (200, 302):
+                continue
+
+            new_cookies = set(s.cookies.keys()) - baseline_cookies
+            if new_cookies:
                 return CredentialResult(
                     port=svc.port, service=svc.service,
                     username=username, password=password,
                     success=True, method="http_post",
                 )
+            if resp.status_code in (301, 302):
+                location = resp.headers.get("Location", "").lower()
+                wrong_loc = wrong.headers.get("Location", "").lower()
+                if location != wrong_loc and not any(p in location for p in _LOGIN_PATH_PATTERNS):
+                    return CredentialResult(
+                        port=svc.port, service=svc.service,
+                        username=username, password=password,
+                        success=True, method="http_post",
+                    )
+            if resp.status_code == 200:
+                # Body must differ from wrong-password AND contain a success indicator
+                if resp.text != wrong.text and _body_suggests_success(resp.text):
+                    return CredentialResult(
+                        port=svc.port, service=svc.service,
+                        username=username, password=password,
+                        success=True, method="http_post",
+                    )
         except requests.RequestException:
             continue
     return None
@@ -178,6 +243,6 @@ def _test_ssh(ip: str, svc: ServiceFinding) -> list[CredentialResult]:
     return results
 
 
-def _body_suggests_failure(body: str) -> bool:
+def _body_suggests_success(body: str) -> bool:
     lower = body.lower()
-    return any(kw in lower for kw in _FAILURE_KEYWORDS)
+    return any(kw in lower for kw in _SUCCESS_KEYWORDS)

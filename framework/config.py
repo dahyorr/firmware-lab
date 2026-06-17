@@ -19,4 +19,4 @@ NVD_RATE_LIMIT_SLEEP = 6.0  # seconds between requests; 5 req/30s without key
 
 FIRMWARE_EXTENSIONS = {".zip", ".bin", ".img", ".trx", ".chk"}
 
-EMULATION_WAIT_SECONDS = 90
+EMULATION_WAIT_SECONDS = 600

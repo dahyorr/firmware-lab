@@ -16,17 +16,17 @@ ScanProfileName = Literal["fast", "comprehensive", "stealth"]
 SCAN_PROFILES: dict[ScanProfileName, dict] = {
     "fast": {
         "description": "Top 1000 TCP ports, aggressive timing",
-        "args": ["-sT", "-sV", "--top-ports", "1000", "-T4", "--max-retries", "1"],
+        "args": ["-Pn", "-sT", "-sV", "--top-ports", "1000", "-T4", "--max-retries", "1"],
         "timeout": 180,
     },
     "comprehensive": {
         "description": "All 65535 TCP ports, aggressive timing",
-        "args": ["-sT", "-sV", "-p-", "-T4", "--min-rate", "1000", "--max-retries", "1"],
+        "args": ["-Pn", "-sT", "-sV", "-p-", "-T4", "--min-rate", "1000", "--max-retries", "1"],
         "timeout": 600,
     },
     "stealth": {
         "description": "Top 1000 TCP ports, conservative timing for fragile firmware",
-        "args": ["-sT", "-sV", "--top-ports", "1000", "-T2", "--max-retries", "2"],
+        "args": ["-Pn", "-sT", "-sV", "--top-ports", "1000", "-T2", "--max-retries", "2"],
         "timeout": 600,
     },
 }
