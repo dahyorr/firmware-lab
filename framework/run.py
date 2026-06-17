@@ -1,55 +1,63 @@
 """
-Framework entry point.
+Single-firmware analysis entry point.
 
-Usage: python3 run.py <firmware_path> <brand>
+Usage: python3 run.py <firmware_path> <brand> [profile]
+Profiles: fast, comprehensive (default), stealth
 """
 
 import sys
-import time
+import subprocess
 from pathlib import Path
 
-from src import firmae_runner, probe, report
+import config
+from src.events import make_publisher
+from src.orchestrator import analyse_firmware
 
-REPORTS_DIR = Path(__file__).parent / "reports"
 
-def main(firmware_path: Path, brand: str, profile: str = "comprehensive") -> int:
-    print(f"[*] Analysing {firmware_path.name} (brand: {brand})")
+def main(firmware_path: Path, brand: str, profile: str) -> int:
+    print(f"[*] run_id will be assigned by orchestrator")
+    print(f"[*] Firmware : {firmware_path.name}")
+    print(f"[*] Brand    : {brand}")
+    print(f"[*] Profile  : {profile}")
 
-    print("[*] Step 1: Check emulation...")
-    emulation = firmae_runner.check(firmware_path, brand)
+    pub = make_publisher("pending", config.VALKEY_HOST, config.VALKEY_PORT)
 
-    if emulation.from_cache:
-        print(f"[i] Using cached emulation result (IID {emulation.image_id})")
-        
-    if not emulation.success:
-        print(f"[-] Emulation failed for {firmware_path.name}")
-        report.write_report(firmware_path, emulation, None, REPORTS_DIR)
+    try:
+        result = analyse_firmware(firmware_path, brand, profile=profile, publisher=pub)
+    except subprocess.TimeoutExpired as e:
+        print(f"[-] Timed out: {e}")
+        subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
+        return 1
+    except Exception as e:
+        print(f"[-] Error: {type(e).__name__}: {e}")
+        subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
         return 1
 
-    print(f"[+] Emulated successfully: {emulation.architecture} at {emulation.ip}")
+    print(f"\n[*] run_id : {result.run_id}")
+    print(f"[*] Status : {result.status}")
+    if result.report_path:
+        print(f"[*] Report : {result.report_path}")
+    if result.probe:
+        print(f"[+] Services found: {len(result.probe.services)}")
+        for s in result.probe.services:
+            print(f"      :{s.port}/{s.protocol}  {s.service}  {s.version}".rstrip())
+    if result.cve_matches:
+        print(f"[!] CVE matches: {len(result.cve_matches)}")
+        for c in result.cve_matches:
+            score = f" (CVSS {c.cvss_score})" if c.cvss_score else ""
+            print(f"      {c.cve_id}{score} — port {c.port} {c.service} {c.version}")
+    if any(r.success for r in result.credentials):
+        print(f"[!] Valid credentials found:")
+        for r in result.credentials:
+            if r.success:
+                pw = r.password if r.password else "(empty)"
+                print(f"      port {r.port} — {r.username}:{pw} via {r.method}")
+    if result.web_findings:
+        print(f"[i] Web findings: {len(result.web_findings)}")
+        for w in result.web_findings:
+            print(f"      [{w.severity}] {w.finding_type} {w.path} — {w.detail}")
 
-    print("[*] Step 2: Starting run mode for probing...")
-    run_proc = firmae_runner.start_run(firmware_path, brand)
-    try:
-        # Wait for the firmware to be probeable
-        print("[*] Waiting 90s for services to come up...")
-        time.sleep(90)
-
-        print("[*] Step 3: Probing services...")
-        probe_result = probe.probe_services(emulation.ip, profile=profile)
-        print(f"[+] Found {len(probe_result.services)} open services in {probe_result.scan_duration_seconds}s")
-        for s in probe_result.services:
-            print(f"      :{s.port}/{s.protocol} {s.service} {s.version}".rstrip())
-
-    finally:
-        print("[*] Step 4: Stopping emulation...")
-        firmae_runner.stop_run(run_proc)
-
-    print("[*] Step 5: Writing report...")
-    report_path = report.write_report(firmware_path, emulation, probe_result, REPORTS_DIR)
-    print(f"[+] Report: {report_path}")
-
-    return 0
+    return 0 if result.status == "success" else 1
 
 
 if __name__ == "__main__":
@@ -58,5 +66,5 @@ if __name__ == "__main__":
         print("Profiles: fast, comprehensive (default), stealth")
         sys.exit(2)
     firmware = Path(sys.argv[1]).resolve()
-    profile = sys.argv[3] if len(sys.argv) == 4 else "comprehensive"
+    profile  = sys.argv[3] if len(sys.argv) == 4 else "comprehensive"
     sys.exit(main(firmware, sys.argv[2], profile))

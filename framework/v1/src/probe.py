@@ -1,18 +1,20 @@
 """
 Dynamic analysis probes against a running emulated firmware.
-Service enumeration and banner grabbing via nmap.
+v1: service enumeration and banner grabbing only.
 """
 
+
 import subprocess
-import time
+import json
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Literal
 
-from src.events import NullPublisher
-
 ScanProfileName = Literal["fast", "comprehensive", "stealth"]
 
+# Scan profiles. Each is a list of nmap arguments (excluding the target IP).
+# Keep the arguments here so adding a new profile is one dict entry,
+# not a new function.
 SCAN_PROFILES: dict[ScanProfileName, dict] = {
     "fast": {
         "description": "Top 1000 TCP ports, aggressive timing",
@@ -31,7 +33,6 @@ SCAN_PROFILES: dict[ScanProfileName, dict] = {
     },
 }
 
-
 @dataclass
 class ServiceFinding:
     port: int
@@ -39,7 +40,6 @@ class ServiceFinding:
     service: str
     version: str
     raw_banner: str
-
 
 @dataclass
 class ProbeResult:
@@ -58,13 +58,11 @@ class ProbeResult:
             "raw_output": self.raw_output,
         }
 
-
-def probe_services(
-    ip: str,
-    profile: ScanProfileName = "comprehensive",
-    publisher: NullPublisher | None = None,
-) -> ProbeResult:
-    pub = publisher or NullPublisher()
+def probe_services(ip: str, profile: ScanProfileName = "comprehensive") -> ProbeResult:
+    """"
+    Run nmap against the target using the named profile.
+    """
+    import time
 
     if profile not in SCAN_PROFILES:
         raise ValueError(f"Unknown profile: {profile}. Available: {list(SCAN_PROFILES)}")
@@ -72,7 +70,6 @@ def probe_services(
     config = SCAN_PROFILES[profile]
     cmd = ["sudo", "nmap", *config["args"], ip]
 
-    pub.start("probe", f"profile={profile} target={ip}")
     start = time.monotonic()
     proc = subprocess.run(
         cmd,
@@ -81,19 +78,20 @@ def probe_services(
         timeout=config["timeout"],
     )
     duration = time.monotonic() - start
-    services = _parse_nmap(proc.stdout)
 
-    pub.success("probe", {"services_found": len(services), "duration_seconds": round(duration, 1)})
     return ProbeResult(
         ip=ip,
         scan_profile=profile,
-        services=services,
+        services=_parse_nmap(proc.stdout),
         raw_output=proc.stdout,
         scan_duration_seconds=round(duration, 1),
     )
 
-
 def _parse_nmap(output: str) -> list[ServiceFinding]:
+    """
+    Parse nmap -sV human-readable output into service findings.
+    Simple line-based parser; sufficient for v1.
+    """
     findings = []
     in_port_table = False
     for line in output.splitlines():
@@ -108,7 +106,8 @@ def _parse_nmap(output: str) -> list[ServiceFinding]:
             if len(parts) < 3 or "/" not in parts[0]:
                 continue
             port_proto = parts[0].split("/")
-            if parts[1] != "open":
+            state = parts[1]
+            if state != "open":
                 continue
             service = parts[2] if len(parts) >= 3 else ""
             version = parts[3] if len(parts) >= 4 else ""

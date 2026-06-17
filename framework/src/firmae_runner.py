@@ -3,29 +3,24 @@ FirmAE wrapper.
 
 Responsible for invoking FirmAE in check or run mode and reading its
 scratch directory to determine outcomes.
+
+R-1: any firmware whose inferred IP is not RFC1918 private or loopback
+is reclassified as emulation_failed. The framework never probes a
+non-private IP, regardless of FirmAE's tap routing behaviour.
 """
 
+import ipaddress
 import subprocess
-import shutil
-import time
-from pathlib import Path
 from dataclasses import dataclass
+from pathlib import Path
+
 import psycopg2
 
-DB_CONFIG = {
-    "dbname": "firmware",
-    "user": "firmadyne",
-    "password": "firmadyne",
-    "host": "127.0.0.1",
-}
-
-FIRMAE_DIR = Path.home() / "project" / "tools" / "FirmAE"
-SCRATCH_DIR = FIRMAE_DIR / "scratch"
+from src.events import NullPublisher
 
 
 @dataclass
 class EmulationResult:
-    """Outcome of a FirmAE emulation attempt."""
     image_id: int | None
     success: bool
     architecture: str | None
@@ -34,39 +29,55 @@ class EmulationResult:
     raw_log: str
     from_cache: bool = False
 
-def check(firmware_path: Path, brand: str,  use_cache: bool = True) -> EmulationResult:
-    """
-    Run FirmAE in check mode against a firmware image.
-    Returns whether the firmware booted and exposed network services.
 
-    If use_cache is True and the firmware has been processed before,
-    reuse the cached result instead of re-running FirmAE.
+def check(
+    firmware_path: Path,
+    brand: str,
+    use_cache: bool = True,
+    firmae_dir: Path | None = None,
+    scratch_dir: Path | None = None,
+    db_config: dict | None = None,
+    publisher: NullPublisher | None = None,
+) -> EmulationResult:
     """
+    Run FirmAE in check mode. Returns outcome including inferred IP.
+    If the inferred IP is non-private, success is forced to False (R-1).
+    """
+    from config import FIRMAE_DIR, SCRATCH_DIR, DB_CONFIG
+    firmae_dir  = firmae_dir  or FIRMAE_DIR
+    scratch_dir = scratch_dir or SCRATCH_DIR
+    db_config   = db_config   or DB_CONFIG
+    pub = publisher or NullPublisher()
+
+    pub.start("emulation", firmware_path.name)
 
     if use_cache:
-        cached_id = find_cached_image(firmware_path)
+        cached_id = _find_cached_image(firmware_path, db_config)
         if cached_id is not None:
-            cached = load_cached_result(cached_id)
+            cached = _load_cached_result(cached_id, scratch_dir)
             if cached is not None:
+                cached = _apply_ip_check(cached)
+                pub.success("emulation", {"from_cache": True, "image_id": cached_id})
                 return cached
-            
-    cmd = ["sudo", "./run.sh", "-c", brand, str(firmware_path), ]
-    print(" ".join(cmd), FIRMAE_DIR)
+
+    pub.progress("emulation", "running FirmAE check mode")
+    cmd = ["sudo", "./run.sh", "-c", brand, str(firmware_path)]
     proc = subprocess.run(
         cmd,
-        cwd=FIRMAE_DIR,
+        cwd=firmae_dir,
         capture_output=True,
         text=True,
         timeout=900,
     )
     log = proc.stdout + proc.stderr
     image_id = _extract_image_id(log)
-    print('wrgw', image_id)
+
     if image_id is None:
+        pub.failure("emulation", "could not extract image ID from FirmAE output")
         return EmulationResult(None, False, None, None, False, log)
 
-    scratch = SCRATCH_DIR / str(image_id)
-    return EmulationResult(
+    scratch = scratch_dir / str(image_id)
+    result = EmulationResult(
         image_id=image_id,
         success=_read_text(scratch / "result").strip().lower() == "true",
         architecture=_read_text(scratch / "architecture").strip() or None,
@@ -74,16 +85,27 @@ def check(firmware_path: Path, brand: str,  use_cache: bool = True) -> Emulation
         web_service=bool(_read_text(scratch / "web").strip()),
         raw_log=log,
     )
+    result = _apply_ip_check(result)
 
-def start_run(firmware_path: Path, brand: str) -> subprocess.Popen:
-    """
-    Start FirmAE in run mode (background, returns the process handle).
-    Caller is responsible for terminating the returned process.
-    """
+    if result.success:
+        pub.success("emulation", {"image_id": image_id, "ip": result.ip, "arch": result.architecture})
+    else:
+        pub.failure("emulation", f"emulation failed for image_id={image_id}")
+    return result
+
+
+def start_run(
+    firmware_path: Path,
+    brand: str,
+    firmae_dir: Path | None = None,
+) -> subprocess.Popen:
+    """Start FirmAE in run mode (background). Caller must call stop_run()."""
+    from config import FIRMAE_DIR
+    firmae_dir = firmae_dir or FIRMAE_DIR
     cmd = ["sudo", "./run.sh", "-r", brand, str(firmware_path)]
     return subprocess.Popen(
         cmd,
-        cwd=FIRMAE_DIR,
+        cwd=firmae_dir,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
@@ -97,12 +119,33 @@ def stop_run(proc: subprocess.Popen) -> None:
         proc.wait(timeout=10)
     except subprocess.TimeoutExpired:
         proc.kill()
-    # Belt and braces: kill any orphan qemu processes
     subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
 
 
+# ── private helpers ──────────────────────────────────────────────────────────
+
+def _apply_ip_check(result: EmulationResult) -> EmulationResult:
+    """Enforce R-1: non-private inferred IPs reclassify the run as failed."""
+    if result.ip and not _is_private_ip(result.ip):
+        print(
+            f"[!] Non-private IP inferred ({result.ip}) — reclassifying as "
+            f"emulation_failed (R-1). FirmAE tap routing would keep traffic "
+            f"local, but the framework does not rely on that invariant."
+        )
+        result.success = False
+        result.ip = None
+    return result
+
+
+def _is_private_ip(ip_str: str) -> bool:
+    try:
+        ip = ipaddress.ip_address(ip_str)
+    except ValueError:
+        return False
+    return ip.is_private or ip.is_loopback
+
+
 def _extract_image_id(log: str) -> int | None:
-    """Pull the [IID] N line out of FirmAE's stdout."""
     for line in log.splitlines():
         if "[IID]" in line:
             try:
@@ -111,19 +154,16 @@ def _extract_image_id(log: str) -> int | None:
                 return None
     return None
 
+
 def _read_text(path: Path) -> str:
-    """Read a file if it exists, return empty string otherwise."""
     try:
         return path.read_text()
     except (FileNotFoundError, PermissionError):
         return ""
 
-def find_cached_image(firmware_path: Path) -> int | None:
-    """
-    Check if this firmware has already been processed.
-    Returns the image ID if found, else None.
-    """
-    with psycopg2.connect(**DB_CONFIG) as conn:
+
+def _find_cached_image(firmware_path: Path, db_config: dict) -> int | None:
+    with psycopg2.connect(**db_config) as conn:
         with conn.cursor() as cur:
             cur.execute(
                 "SELECT id FROM image WHERE filename = %s",
@@ -132,16 +172,11 @@ def find_cached_image(firmware_path: Path) -> int | None:
             row = cur.fetchone()
             return row[0] if row else None
 
-def load_cached_result(image_id: int) -> EmulationResult | None:
-    """
-    If scratch/<image_id>/result exists, build an EmulationResult from
-    the cached files without re-running FirmAE.
-    """
-    scratch = SCRATCH_DIR / str(image_id)
-    result_file = scratch / "result"
-    if not result_file.exists():
-        return None
 
+def _load_cached_result(image_id: int, scratch_dir: Path) -> EmulationResult | None:
+    scratch = scratch_dir / str(image_id)
+    if not (scratch / "result").exists():
+        return None
     return EmulationResult(
         image_id=image_id,
         success=_read_text(scratch / "result").strip().lower() == "true",

@@ -1,0 +1,143 @@
+"""
+Orchestrator.
+
+analyse_firmware() is the canonical entry point for the framework.
+Both run.py and the future web worker call this function; neither
+contains analysis logic of its own.
+"""
+
+import time
+import uuid
+from dataclasses import dataclass
+from pathlib import Path
+
+from src import acquisition, firmae_runner, probe, cve_matcher, credential_tester, web_prober, report
+from src.events import NullPublisher, make_publisher
+from src.acquisition import AcquisitionResult
+from src.firmae_runner import EmulationResult
+from src.probe import ProbeResult
+from src.cve_matcher import CVEMatch
+from src.credential_tester import CredentialResult
+from src.web_prober import WebFinding
+
+
+@dataclass
+class AnalysisResult:
+    run_id: str
+    firmware_name: str
+    status: str          # "success" | "emulation_failed" | "timeout" | "error"
+    report_path: Path | None
+    emulation: EmulationResult | None
+    probe: ProbeResult | None
+    cve_matches: list[CVEMatch]
+    credentials: list[CredentialResult]
+    web_findings: list[WebFinding]
+    error: str | None = None
+
+
+def analyse_firmware(
+    firmware_path: Path,
+    brand: str,
+    profile: str = "comprehensive",
+    config=None,
+    publisher=None,
+) -> AnalysisResult:
+    """
+    Run the full pipeline against one firmware image.
+
+    config:    module-level config (defaults from config.py if None)
+    publisher: EventPublisher instance (NullPublisher if None)
+    """
+    import config as _cfg
+    cfg = config or _cfg
+
+    run_id = uuid.uuid4().hex[:8]
+    pub = publisher or NullPublisher(run_id)
+
+    # ── 1. Acquisition ───────────────────────────────────────────────────────
+    acq = acquisition.acquire(firmware_path, publisher=pub)
+
+    # ── 2. FirmAE check ──────────────────────────────────────────────────────
+    emulation = firmae_runner.check(
+        firmware_path, brand,
+        firmae_dir=cfg.FIRMAE_DIR,
+        scratch_dir=cfg.SCRATCH_DIR,
+        db_config=cfg.DB_CONFIG,
+        publisher=pub,
+    )
+
+    if not emulation.success:
+        report_path = report.write_report(
+            acq, emulation, None, [], [], [],
+            output_dir=cfg.REPORTS_DIR, run_id=run_id,
+        )
+        return AnalysisResult(
+            run_id=run_id,
+            firmware_name=acq.name,
+            status="emulation_failed",
+            report_path=report_path,
+            emulation=emulation,
+            probe=None,
+            cve_matches=[],
+            credentials=[],
+            web_findings=[],
+        )
+
+    # ── 3. Start run mode ────────────────────────────────────────────────────
+    run_proc = firmae_runner.start_run(
+        firmware_path, brand, firmae_dir=cfg.FIRMAE_DIR,
+    )
+
+    probe_result = None
+    cve_matches: list[CVEMatch] = []
+    credentials: list[CredentialResult] = []
+    web_findings: list[WebFinding] = []
+
+    try:
+        wait = getattr(cfg, "EMULATION_WAIT_SECONDS", 90)
+        pub.progress("orchestrator", f"waiting {wait}s for services to come up")
+        time.sleep(wait)
+
+        # ── 4. Service enumeration ───────────────────────────────────────────
+        probe_result = probe.probe_services(emulation.ip, profile=profile, publisher=pub)
+
+        # ── 5. CVE matching ──────────────────────────────────────────────────
+        cve_matches = cve_matcher.match_cves(
+            probe_result.services, publisher=pub,
+            api_key=getattr(cfg, "NVD_API_KEY", ""),
+            rate_limit_sleep=getattr(cfg, "NVD_RATE_LIMIT_SLEEP", 6.0),
+        )
+
+        # ── 6. Credential testing ────────────────────────────────────────────
+        credentials = credential_tester.test_credentials(
+            emulation.ip, probe_result.services, publisher=pub,
+        )
+
+        # ── 7. Web probing ───────────────────────────────────────────────────
+        web_findings = web_prober.probe_web(
+            emulation.ip, probe_result.services, publisher=pub,
+        )
+
+    finally:
+        pub.progress("orchestrator", "stopping emulation")
+        firmae_runner.stop_run(run_proc)
+
+    # ── 8. Report ─────────────────────────────────────────────────────────
+    report_path = report.write_report(
+        acq, emulation, probe_result,
+        cve_matches, credentials, web_findings,
+        output_dir=cfg.REPORTS_DIR, run_id=run_id,
+    )
+
+    pub.success("orchestrator", {"report": str(report_path)})
+    return AnalysisResult(
+        run_id=run_id,
+        firmware_name=acq.name,
+        status="success",
+        report_path=report_path,
+        emulation=emulation,
+        probe=probe_result,
+        cve_matches=cve_matches,
+        credentials=credentials,
+        web_findings=web_findings,
+    )
