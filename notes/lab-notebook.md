@@ -134,6 +134,34 @@ re-run with no real benefit.
 
 
 
+## 2026-06-17 — Batch run: 5 firmware across 3 vendors (v2 framework)
+
+**Goal:** Demonstrate the complete v2 pipeline on 5+ firmware images from different vendors.
+
+**Bug fixed during this session:** `stop_run()` in `firmae_runner.py` was sending `sudo kill -TERM -{pgid}` to FirmAE's process group. Despite Python having a different PGID, sudo's signal-forwarding behaviour propagated the SIGTERM back to the Python orchestrator, killing the batch process immediately after QEMU started. Fix: replaced process-group kill with a targeted `sudo kill -TERM {pid}` (killing only the specific sudo PID); `pkill` already handles QEMU and surviving sub-shells in the follow-up steps.
+
+**Batch run results (fast profile, 3 vendors, from cache):**
+
+| Firmware | Vendor | Arch | IP | Services | CVEs | Web |
+|---|---|---|---|---|---|---|
+| DCS-930L 1.08_B4 | dlink | mipsel | blocked | — | — | — |
+| DCS-930L 1.09_B2 | dlink | mipsel | 192.168.0.1 | 4 | 0 | 0 |
+| AC1450 V1.0.0.34 | netgear | armel | 192.168.1.1 | 5 | 10 | 13 |
+| JNR1010 V1.0.0.24 | netgear | mipseb | 192.168.0.1 | 4 | 0 | 4 |
+| ArcherC2 KR V1 | tplink | mipsel | 192.168.0.1 | 4 | 0 | 0 |
+| Archer C7 US V4 | tplink | mipseb | 192.168.1.1 | 3 | 30 | 5 |
+
+DCS-930L 1.08_B4 was rejected by R-1 (inferred public IP 2.65.87.200 — not probed).
+
+**Notable findings:**
+
+- **Netgear AC1450**: dnsmasq 2.15-OpenDNS-1 flagged with 10 CVEs (CVSS up to 7.8). Admin paths exposed: /admin, /cgi-bin/, /HNAP1/, /setup.cgi, /goform/, /webproc.
+- **TP-Link Archer C7**: Dropbear SSH 2011.54 (2011 vintage) with 30 CVE matches (CVSS up to 7.5). dnsmasq 2.62 also present. SSH key exchange negotiation failed with modern paramiko (deprecated KEX algorithms: diffie-hellman-group1-sha1). 4 missing security headers.
+- Paramiko produces noisy tracebacks for old SSH firmware (IncompatiblePeer); these are handled gracefully and don't affect results — worth suppressing with `logging.getLogger("paramiko").setLevel(logging.ERROR)`.
+
+**Emulation success rate:** 5/5 (100%) for images with private IP, 6/6 total including the R-1 rejection.
+
+
 ## 2026-06-07 — V2 framework design decisions agreed
 
 Decisions made while drafting SPEC.md, locked in for v2 development:

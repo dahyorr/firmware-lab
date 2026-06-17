@@ -124,15 +124,18 @@ def stop_run(proc: subprocess.Popen) -> None:
     Terminate a running FirmAE emulation and its entire process tree, then
     clean up lingering tap interfaces. FirmAE does not clean these up on exit,
     and they cause an infinite VLAN-init loop on the next start_run call.
+
+    NOTE: we send SIGTERM to the specific sudo PID rather than the process group
+    because sudo's signal-forwarding behaviour re-delivers the signal to its caller
+    when a group-kill is used, which would terminate the Python orchestrator.
+    pkill handles QEMU and any surviving shells after the initial graceful kill.
     """
     try:
-        pgid = os.getpgid(proc.pid)
-        subprocess.run(["sudo", "kill", "-TERM", f"-{pgid}"], check=False)
+        subprocess.run(["sudo", "kill", "-TERM", str(proc.pid)], check=False)
         proc.wait(timeout=15)
     except (ProcessLookupError, subprocess.TimeoutExpired):
         try:
-            pgid = os.getpgid(proc.pid)
-            subprocess.run(["sudo", "kill", "-KILL", f"-{pgid}"], check=False)
+            subprocess.run(["sudo", "kill", "-KILL", str(proc.pid)], check=False)
         except ProcessLookupError:
             pass
     subprocess.run(["sudo", "pkill", "-f", "run.sh -r"], check=False)
