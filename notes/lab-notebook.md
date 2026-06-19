@@ -162,6 +162,33 @@ DCS-930L 1.08_B4 was rejected by R-1 (inferred public IP 2.65.87.200 — not pro
 **Emulation success rate:** 5/5 (100%) for images with private IP, 6/6 total including the R-1 rejection.
 
 
+## 2026-06-17 — Batch run 2: 5 firmware, dlink_latest + netgear_latest (fresh runs)
+
+**Goal:** Extend batch coverage to 5 more firmware images not previously in the FirmAE database, requiring full check-mode extraction.
+
+**Batch run results (fast profile, all fresh — from_cache=False):**
+
+| Firmware | Vendor | Arch | IP | Services | CVEs | Web |
+|---|---|---|---|---|---|---|
+| DIR-645 REVA v1.06B01 | dlink_latest | — | emulation_failed | — | — | — |
+| DIR-655 REVC v3.02.B05 | dlink_latest | — | emulation_failed | — | — | — |
+| DIR-803 REVA v1.04.B02 | dlink_latest | mipseb | 192.168.0.1 | 4 | 0 | 0 |
+| AC1450 V1.0.0.36 | netgear_latest | armel | 192.168.1.1 | 6 | 0 | 13 |
+| EX6100 V1.0.2.24 | netgear_latest | mipsel | 192.168.0.1 | 4 | 0 | 0 |
+
+**Total runtime:** 18.7 minutes (fresh extraction: ~8-15 min per successful image).
+
+**Notable findings:**
+
+- **Netgear AC1450 V1.0.0.36**: 6 services including FTP (Bftpd 1.6.6) and dnsmasq 2.15-OpenDNS-1. 13 web findings (same admin paths as V1.0.0.34: /admin, /cgi-bin/, /HNAP1/, /setup.cgi, /goform/, plus missing security headers). CVE count was 0 despite dnsmasq 2.15 being present — the "OpenDNS-1" suffix in the version string prevented NVD keyword matching. This is a false-negative case worth noting in the dissertation.
+- **DIR-645 and DIR-655**: FirmAE extracted the kernel but failed to extract the root filesystem (`rootfs_extracted=false`, `kernel_extracted=true` in the `firmware` DB; `scratch/420/result` and `scratch/421/result` both read `extraction fail`). Without a rootfs FirmAE cannot build the disk image, so emulation cannot proceed. These are REVA/REVC variants; the older REVA v1.04.B13 and v1.06.B01 in the database (IDs 73/74) also failed extraction, suggesting the DIR-645 line uses a proprietary SquashFS variant or packing method that FirmAE's `extract.sh` does not handle. This is a documented FirmAE limitation — it supports standard SquashFS, JFFS2, and CramFS but not all vendor-customised packing schemes.
+- **DIR-803 and EX6100**: Emulated successfully but nmap returned no versioned service banners, so CVE matching produced zero results. Consistent with firmware that doesn't serve identifiable version strings.
+
+**Emulation success rate:** 3/5 (60%) for this batch; 2 D-Link images failed extraction.
+
+**CVE false-negative note:** AC1450 v1.0.0.36 carries dnsmasq 2.15-OpenDNS-1 — the same base version that produced 10 CVE hits for v1.0.0.34 (where the version string was plain "2.15-OpenDNS-1"). The NVD keyword query used is the full version string; a production-quality matcher would strip vendor suffixes before querying.
+
+
 ## 2026-06-07 — V2 framework design decisions agreed
 
 Decisions made while drafting SPEC.md, locked in for v2 development:
