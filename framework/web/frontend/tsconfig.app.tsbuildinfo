@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/api.ts","./src/main.tsx","./src/components/FirmwareBrowser.tsx","./src/components/RunPanel.tsx","./src/components/UploadZone.tsx","./src/pages/Home.tsx","./src/pages/ReportDetail.tsx","./src/pages/ReportsPage.tsx","./src/pages/RunPage.tsx"],"version":"5.9.3"}

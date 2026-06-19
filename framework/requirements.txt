@@ -2,3 +2,6 @@ psycopg2-binary
 valkey
 requests
 paramiko
+fastapi[standard]
+uvicorn[standard]
+python-multipart
