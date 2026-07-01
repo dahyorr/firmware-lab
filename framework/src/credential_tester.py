@@ -23,14 +23,51 @@ from src.probe import ServiceFinding
 from src.events import NullPublisher
 
 DEFAULT_CREDENTIALS: list[tuple[str, str]] = [
-    ("admin",  "admin"),
-    ("admin",  "password"),
-    ("admin",  ""),
-    ("admin",  "1234"),
-    ("root",   "root"),
-    ("root",   ""),
-    ("user",   "user"),
-    ("guest",  "guest"),
+    # Most common IoT/router defaults
+    ("admin",         "admin"),
+    ("admin",         "password"),
+    ("admin",         ""),
+    ("admin",         "1234"),
+    ("admin",         "12345"),
+    ("admin",         "123456"),
+    ("admin",         "admin123"),
+    ("admin",         "1111"),
+    ("admin",         "0000"),
+    ("admin",         "pass"),
+    ("admin",         "changeme"),
+    ("admin",         "default"),
+    ("admin",         "888888"),
+    # Root variants — common in embedded Linux
+    ("root",          "root"),
+    ("root",          ""),
+    ("root",          "admin"),
+    ("root",          "toor"),
+    ("root",          "12345"),
+    ("root",          "password"),
+    ("root",          "pass"),
+    # Known Mirai / botnet targets
+    ("root",          "vizxv"),
+    ("root",          "xc3511"),
+    ("root",          "klv1234"),
+    ("root",          "7ujMko0admin"),
+    ("admin",         "7ujMko0admin"),
+    # Vendor-specific defaults
+    ("admin",         "1234567890"),  # TP-Link
+    ("admin",         "smcadmin"),    # SMC
+    ("admin",         "motorola"),    # Motorola
+    ("admin",         "airlive"),     # AirLive
+    ("admin",         "epicrouter"),  # EpicRouter
+    # Generic accounts
+    ("user",          "user"),
+    ("user",          "password"),
+    ("user",          "1234"),
+    ("guest",         "guest"),
+    ("guest",         ""),
+    ("support",       "support"),
+    ("supervisor",    "supervisor"),
+    ("administrator", "administrator"),
+    ("administrator", "password"),
+    ("default",       "default"),
 ]
 
 HTTP_LOGIN_PATHS: list[str] = [
