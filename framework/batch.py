@@ -34,7 +34,7 @@ def derive_brand(firmware_path: Path, vendor: str) -> str:
 
 
 def already_analysed(firmware_path: Path) -> bool:
-    return len(list(REPORTS_DIR.glob(f"{firmware_path.stem}-*.json"))) > 0
+    return len(list(REPORTS_DIR.glob(f"{firmware_path.name}-*.json"))) > 0
 
 
 def discover_firmware(

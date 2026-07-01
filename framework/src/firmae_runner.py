@@ -159,8 +159,34 @@ def _cleanup_tap_interfaces() -> None:
 # ── private helpers ──────────────────────────────────────────────────────────
 
 def _apply_ip_check(result: EmulationResult) -> EmulationResult:
-    """Enforce R-1: non-private inferred IPs reclassify the run as failed."""
-    if result.ip and not _is_private_ip(result.ip):
+    """
+    Enforce R-1 and loopback guard.
+
+    Loopback (127.x.x.x): FirmAE bound to the host rather than a tap
+    interface — scanning would target the host VM, not the firmware.
+    Non-private: traffic would leave the lab network (R-1).
+    Both cases are reclassified as emulation_failed so no probe runs.
+    """
+    if not result.ip:
+        return result
+    try:
+        ip = ipaddress.ip_address(result.ip)
+    except ValueError:
+        result.success = False
+        result.ip = None
+        return result
+
+    if ip.is_loopback:
+        print(
+            f"[!] Emulated IP is loopback ({result.ip}) — FirmAE bound to host "
+            f"rather than a tap interface. Scanning would target the host VM, "
+            f"not the firmware. Reclassifying as emulation_failed."
+        )
+        result.success = False
+        result.ip = None
+        return result
+
+    if not ip.is_private:
         print(
             f"[!] Non-private IP inferred ({result.ip}) — reclassifying as "
             f"emulation_failed (R-1). FirmAE tap routing would keep traffic "
@@ -176,7 +202,7 @@ def _is_private_ip(ip_str: str) -> bool:
         ip = ipaddress.ip_address(ip_str)
     except ValueError:
         return False
-    return ip.is_private or ip.is_loopback
+    return ip.is_private
 
 
 def _extract_image_id(log: str) -> int | None:

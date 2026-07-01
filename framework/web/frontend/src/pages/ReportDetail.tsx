@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getReport } from '../api'
+import { exportReportPdf } from '../utils/exportPdf'
 
 type AnyObj = Record<string, unknown>
 
@@ -33,9 +34,10 @@ const SEVERITY_COLOR: Record<string, string> = {
   MEDIUM:   'text-yellow-400',
   LOW:      'text-blue-400',
   INFO:     'text-gray-400',
-  info:     'text-gray-400',
-  low:      'text-blue-400',
+  high:     'text-orange-400',
   medium:   'text-yellow-400',
+  low:      'text-blue-400',
+  info:     'text-gray-400',
 }
 
 export default function ReportDetail() {
@@ -63,12 +65,23 @@ export default function ReportDetail() {
   const creds = (report.credentials   as AnyObj[]) ?? []
   const webs  = (report.web_findings  as AnyObj[]) ?? []
   const svcs  = (pr.services as AnyObj[]) ?? []
+  const status = (report.status as string)
+    ?? (em.success ? 'success' : em.image_id != null ? 'emulation_failed' : null)
 
   return (
     <div className="h-full overflow-y-auto scrollbar-thin">
       <div className="max-w-4xl mx-auto p-6">
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center justify-between gap-3 mb-6">
           <Link to="/reports" className="text-gray-500 hover:text-gray-300 text-xs">← Reports</Link>
+          <button
+            onClick={() => exportReportPdf(report)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium transition-colors"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Export PDF
+          </button>
         </div>
 
         <Section title="Firmware">
@@ -77,7 +90,7 @@ export default function ReportDetail() {
           <KV label="Size"       value={fw.size_bytes ? `${((fw.size_bytes as number) / 1e6).toFixed(2)} MB` : null} />
           <KV label="Run ID"     value={report.run_id as string} />
           <KV label="Timestamp"  value={report.timestamp as string} />
-          <KV label="Status"     value={report.status as string} />
+          <KV label="Status"     value={status} />
         </Section>
 
         <Section title="Emulation">

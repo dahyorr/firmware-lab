@@ -19,11 +19,17 @@ def list_reports():
         try:
             data = json.loads(f.read_text())
             em = data.get("emulation", {})
+            if em.get("success"):
+                status = "success"
+            elif em:
+                status = "emulation_failed"
+            else:
+                status = data.get("status")
             reports.append({
                 "filename":     f.name,
                 "firmware":     data.get("firmware", {}).get("name", f.stem),
                 "timestamp":    data.get("timestamp"),
-                "status":       data.get("status"),
+                "status":       status,
                 "run_id":       data.get("run_id"),
                 "architecture": em.get("architecture"),
                 "ip":           em.get("ip"),

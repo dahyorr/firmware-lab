@@ -12,7 +12,7 @@ import uuid
 from dataclasses import dataclass
 from pathlib import Path
 
-from src import acquisition, firmae_runner, probe, cve_matcher, credential_tester, web_prober, report
+from src import acquisition, firmae_runner, probe, cve_matcher, credential_tester, web_prober, service_auditor, report
 from src.events import NullPublisher, make_publisher
 from src.acquisition import AcquisitionResult
 from src.firmae_runner import EmulationResult
@@ -112,13 +112,32 @@ def analyse_firmware(
             rate_limit_sleep=getattr(cfg, "NVD_RATE_LIMIT_SLEEP", 6.0),
         )
 
+        # Fallback: if every service is tcpwrapped / has no version banner, OR
+        # if nmap found no services at all, look up CVEs by device model from
+        # the firmware filename and brand string.
+        no_version_info = not probe_result.services or all(
+            s.service.lower() == "tcpwrapped" or not s.version
+            for s in probe_result.services
+        )
+        if no_version_info and not cve_matches:
+            cve_matches = cve_matcher.match_cves_by_firmware(
+                acq.name, brand, publisher=pub,
+                api_key=getattr(cfg, "NVD_API_KEY", ""),
+                rate_limit_sleep=getattr(cfg, "NVD_RATE_LIMIT_SLEEP", 6.0),
+            )
+
         # ── 6. Credential testing ────────────────────────────────────────────
         credentials = credential_tester.test_credentials(
             emulation.ip, probe_result.services, publisher=pub,
         )
 
-        # ── 7. Web probing ───────────────────────────────────────────────────
-        web_findings = web_prober.probe_web(
+        # ── 7. Service security audit (Telnet, FTP, SNMP, etc.) ─────────────
+        service_findings = service_auditor.audit_services(
+            emulation.ip, probe_result.services, publisher=pub,
+        )
+
+        # ── 8. Web probing ───────────────────────────────────────────────────
+        web_findings = service_findings + web_prober.probe_web(
             emulation.ip, probe_result.services, publisher=pub,
         )
 
