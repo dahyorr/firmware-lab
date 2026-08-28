@@ -86,7 +86,7 @@ def analyse_firmware(
 
     # ── 3. Start run mode ────────────────────────────────────────────────────
     run_proc = firmae_runner.start_run(
-        firmware_path, brand, firmae_dir=cfg.FIRMAE_DIR,
+        firmware_path, brand, firmae_dir=cfg.FIRMAE_DIR, image_id=emulation.image_id,
     )
 
     probe_result = None
@@ -143,7 +143,7 @@ def analyse_firmware(
 
     finally:
         pub.progress("orchestrator", "stopping emulation")
-        firmae_runner.stop_run(run_proc)
+        firmae_runner.stop_run(run_proc, image_id=emulation.image_id)
 
     # ── 8. Report ─────────────────────────────────────────────────────────
     report_path = report.write_report(
@@ -171,7 +171,7 @@ def _wait_for_host(ip: str, timeout: int = 240, poll_interval: int = 10) -> bool
     Poll until any common TCP port on the emulated firmware accepts a connection,
     or until timeout. Replaces a fixed sleep: embedded firmware boot time varies.
     """
-    probe_ports = [80, 53, 8080, 8181, 22]
+    probe_ports = [80, 443, 53, 8080, 8181, 22]
     deadline = time.monotonic() + timeout
     while time.monotonic() < deadline:
         for port in probe_ports:

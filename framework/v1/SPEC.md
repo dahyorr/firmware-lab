@@ -165,7 +165,7 @@ The `from_cache` flag is preserved end-to-end. Headline processing-time measurem
 
 **R-13. Do not retry failures more than once per image per batch run.**
 Repeated retries inflate batch timing and hide systematic failure modes. If a single image needs multiple attempts to characterise, that is a separate manual investigation, not batch behaviour.
-
+These were not defects that could be repaired in isolation, because they were symptoms of the code having grown without a governing design.
 ### 3.4 Engineering discipline
 
 **R-14. Modules expose explicit function signatures, not implicit CLI context.**

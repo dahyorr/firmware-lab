@@ -1,0 +1,1069 @@
+vpc,vendor,filename,status,image_id,architecture,ip,cve_matches,credential_hits,web_findings,retried,failure_reason,worth_retrying
+VPC-1,netgear,AC1450-V1.0.0.34_10.0.16.zip,success,1,armel,192.168.0.1,0,0,12,N/A,N/A (succeeded),N/A
+VPC-1,netgear,DGN1000NA_V1.1.00.40.zip,emulation_failed,2,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,DGN1000_1.1.00.55_NA.zip,emulation_failed,3,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,DGN1000_V1.1.00.34_NA.zip,emulation_failed,4,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,DGN1000_V1.1.00.51_NA.zip,emulation_failed,5,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,DGN1000_V1.1.00.52_NA.zip,success,6,mipseb,192.168.0.1,29,1,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,DGN1000_V1.1.00.56_NA.zip,timeout,,,,,,,,inferred: DGN1000 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGN2200-V1.0.0.50_7.0.50NA.zip,timeout,,,,,,,,inferred: DGN2200 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGN2200_DGN2200B_Firmware_Version_1.0.0.36__NA_.zip,timeout,,,,,,,,inferred: DGN2200 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGN2200_Firmware_Version_1.0.0.20_-_Initial_Release__NA_.zip,timeout,,,,,,,,inferred: DGN2200 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGN3500-V1.1.00.28_NA.zip,timeout,,,,,,,,inferred: DGN3500 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGN3500-V1.1.00.30_NA.zip,success,12,armel,192.168.1.1,0,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,DGN3500-V1.1.00.36_1.00.36NA.zip,success,13,mipseb,192.168.0.1,1,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,DGN3500-V1.1.00.37NA.zip,success,14,mipseb,192.168.0.1,31,1,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,DGND3300_Firmware_Version_1.1.00.22__North_America_.zip,success,15,mipseb,192.168.0.1,43,1,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,DGND3300_Firmware_Version_1.1.00.32__North_America_.zip,timeout,,,,,,,,inferred: DGND3300 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGND3300_Firmware_Version_1.1.00.41__North_America_.zip,timeout,,,,,,,,inferred: DGND3300 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGND3300v2_Firmware_Version_2.1.00.41__North_America_.zip,timeout,,,,,,,,inferred: DGND3300V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGND3300v2_Firmware_Version_2.1.00.42__North_America_.zip,timeout,,,,,,,,inferred: DGND3300V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGND3300v2_Firmware_Version_2.1.00.48__North_America_.zip,timeout,,,,,,,,inferred: DGND3300V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGND3300v2_Firmware_Version_2.1.00.51__NA_Users_Only_.zip,timeout,,,,,,,,inferred: DGND3300V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGND3300v2_Firmware_Version_2.1.00.53__For_NA_Users_Only_.zip,timeout,,,,,,,,inferred: DGND3300V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DGND3300v2_Initial_Release_Firmware_2.1.00.33__North_America_.zip,timeout,,,,,,,,inferred: DGND3300V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,DM111Pv2_Firmware_Version_2.00.19.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,DM111Pv2_Firmware_Version_2.00.25.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,DM111Pv2_Firmware_Version_2.00.26__North_America_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,JNR1010-V1.0.0.24.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,JNR1010-v1.0.0.32.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,JNR1010V2-JWNR2000-JWNR2000v5-JWNR2010v5-JNR1010v2-WNR2020-WNR614-WNR618-FW_V1.1.0.24_1.0.1.zip,success,71,mipsel,192.168.1.1,20,0,5,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR1010V2-JWNR2000-JWNR2000v5-JWNR2010v5-JNR1010v2-WNR2020-WNR614-WNR618-FW_V1.1.0.28_1.0.1.zip,timeout,,,,,,,,inferred: JNR1010V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JNR1010V2-JWNR2000-JWNR2000v5-JWNR2010v5-JNR1010v2-WNR2020-WNR614-WNR618_FW_V1.1.0.20_1.0.1.zip,timeout,,,,,,,,inferred: JNR1010V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JNR1010_V1.0.0.16.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,JNR1010v2_WNR614v1_WNR618v1_WNR2020v1_JWNR2000v5_JWNR2010v5_FW_V1.1.0.09_1.0.3.zip,success,84,mipsel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR1010v2_WNR614v1_WNR618v1_WNR2020v1_JWNR2000v5_JWNR2010v5_FW_V1.1.0.16_1.0.1.zip,success,88,mipsel,192.168.1.1,20,0,11,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR1010v2_WNR614v1_WNR618v1_WNR2020v1_JWNR2000v5_JWNR2010v5_FW_v1.1.0.12.zip,timeout,,,,,,,,inferred: JNR1010V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JNR3210_Firmware_Version_1.1.0.14.zip,success,95,mipseb,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR3210_V1.1.0.22_1.0.1.zip,success,98,mipseb,192.168.1.1,43,0,15,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR3210_V1.1.0.24_1.0.4.zip,success,101,mipseb,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR3210_V1.1.0.25_1.0.1.zip,success,104,mipseb,192.168.1.1,3,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR3210_V1.1.0.29_1.0.1.zip,success,108,mipseb,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JNR3210_V1.10.26_1.0.8.zip,success,110,mipseb,192.168.1.1,1,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JR6150-R6050-V1.0.0.22.zip,timeout,,,,,,,,inferred: JR6150 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JR6150-R6050-V1.0.0.34_1.0.1.zip,timeout,,,,,,,,inferred: JR6150 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JR6150_FW_V1.0.0.18.zip,success,118,mipsel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JR6150_R6050-V1.0.0.36_1.0.1.zip,success,121,mipsel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JR6150_R6050-V1.0.1.2_1.0.1.zip,timeout,,,,,,,,inferred: JR6150 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JR6150_R6050-V1.0.1.7_1.0.1.zip,timeout,,,,,,,,inferred: JR6150 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JR6150_R6050_V1.0.0.30_1.0.1.zip,success,132,mipsel,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JR6150_R6050_V1.0.0.32_1.0.1.zip,success,135,mipsel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,JWNR2000-JWNR2000v5-JWNR2010v5-JNR1010v2-WNR2020-WNR614-WNR618_FW_V1.1.0.18_1.0.1.zip,timeout,,,,,,,,inferred: JWNR2000 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JWNR2000-V1.0.0.4_1.0.11.zip,timeout,,,,,,,,inferred: JWNR2000 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JWNR2000_Firmware_Version_1.0.0.5__for_users_outside_North_America_only_.zip,timeout,,,,,,,,inferred: JWNR2000 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JWNR2000_Firmware_Version_1.0.0.7__for_users_outside_North_America_only_.zip,timeout,,,,,,,,inferred: JWNR2000 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,JWNR2000v2_Firmware_Version_1.0.0.8__All_regions_except_North_America_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,JWNR2000v2_WNR1500-V1.0.0.10_1.0.4.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,N150_N300_FW_V1.1.0.31_1.0.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,N300-1.1.0.32_101.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,PR2000-V1.0.0.13_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,PR2000-V1.0.0.14_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,PR2000-V1.0.0.15_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,PR2000_FW_V1.0.0.09_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,PR2000_V1.0.0.10_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,PR2000_V1.0.0.12_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6050_JR6150-V1.0.1.4_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100-V1.0.0.24.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100-V1.0.0.28.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100-V1.0.0.38.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100-V1.0.0.48.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100-V1.0.0.62.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100-V1.0.1.10.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100-V1.0.1.12.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6100_V1.0.0.52.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200-V1.0.0.18_1.0.18.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200-V1.0.0.28_1.0.24.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200-V1.0.1.46_1.0.36.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200-V1.0.1.48_1.0.37.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200-V1.0.1.56_1.0.43.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200V2-V1.0.1.14_1.0.14.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200_Firmware_-V1.0.1.52_1.0.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200v2-V1.0.1.20_1.0.18.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200v2-V1.0.3.10_10.1.10.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200v2_V1.0.1.16_1.0.15.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6200v2_V1.0.1.18_1.0.17.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6220_FW_V1.1.0.31_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6220_FW_V1.1.0.34_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6220_V1.0.0.14_1.0.1_FW.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6220_V1.0.0.16_1.0.1_FW.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6220_V1.0.0.17_1.0.1_FW.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R6250-V1.0.0.62_1.0.62.zip,success,162,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.0.70_1.0.70.zip,success,164,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.0.72_1.0.71.zip,success,166,armel,192.168.1.1,0,0,23,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.1.80_1.0.75.zip,success,167,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.1.82_1.0.77.zip,success,168,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.3.12_10.1.8.zip,success,169,armel,192.168.1.1,3,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.3.6_10.1.3.zip,success,170,armel,192.168.1.1,3,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.4.12_10.1.15.zip,success,171,armel,192.168.1.1,12,0,23,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.4.2_10.1.10.zip,success,172,armel,192.168.1.1,3,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.4.6_10.1.12.zip,success,26,armel,192.168.1.1,3,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6250-V1.0.4.8_10.1.13.zip,emulation_failed,28,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6250_V1.0.1.84-1.0.78.zip,emulation_failed,30,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.1.72_1.0.21.zip,emulation_failed,32,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.3.22_10.0.67.zip,emulation_failed,34,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.3.26_10.0.70.zip,emulation_failed,36,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.3.28_10.0.71.zip,emulation_failed,38,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.3.30_10.0.73.zip,emulation_failed,40,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.3.8_1.0.60.zip,emulation_failed,42,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.4.2_10.0.74.zip,emulation_failed,44,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.4.6_10.0.76.zip,emulation_failed,46,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2-V1.0.4.8_10.0.77.zip,emulation_failed,48,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2_V1.0.2.72_1.0.46.zip,emulation_failed,50,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2_V1.0.2.86_1.0.51.zip,emulation_failed,52,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6300v2_V1.0.3.2_1.0.57.zip,emulation_failed,54,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6400-V1.0.0.14_1.0.8.zip,success,57,armel,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.0.20_1.0.11.zip,emulation_failed,60,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R6400-V1.0.0.24_1.0.13.zip,success,63,armel,192.168.1.1,0,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.0.26_1.0.14.zip,success,66,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.1.12_1.0.11.zip,success,69,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.1.18_1.0.15.zip,success,73,armel,192.168.1.1,20,0,9,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.1.20_1.0.16.zip,success,75,armel,192.168.1.1,3,0,15,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.1.22_1.0.17.zip,success,77,armel,192.168.1.1,3,0,17,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.1.24_1.0.18.zip,success,80,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6400-V1.0.1.6_1.0.4.zip,success,83,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6700-V1.0.0.24_10.0.18.zip,success,87,armel,192.168.1.1,0,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6700-V1.0.0.26_10.0.26.zip,success,89,armel,192.168.1.1,20,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6700-V1.0.0.2_1.0.1.zip,success,91,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6700-V1.0.1.14_10.0.29.zip,success,94,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6700-V1.0.1.16_10.0.30.zip,success,97,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6700-V1.0.1.20_10.0.32.zip,success,99,armel,192.168.1.1,0,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R6700-V1.0.1.22_10.0.33.zip,success,102,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.3.56_1.1.25.zip,success,105,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.3.60_1.1.27.zip,success,107,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.3.68_1.1.31.zip,emulation_failed,109,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R7000-V1.0.4.28_1.1.64.zip,success,113,armel,192.168.1.1,20,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.5.64_1.1.88.zip,emulation_failed,117,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-1,netgear,R7000-V1.0.5.70_1.1.91.zip,success,120,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.7.10_1.2.3.zip,success,122,armel,192.168.1.1,19,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.7.12_1.2.5.zip,success,124,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.7.2_1.1.93.zip,success,126,armel,192.168.1.1,12,0,3,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-V1.0.7.6_1.1.99.zip,success,128,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000-_V1.0.3.80-1.1.38.zip,success,131,armel,192.168.1.1,2,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000_V1.0.4.18_1.1.52.zip,success,134,armel,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7000_V1.0.4.30_1.1.67.zip,success,24,armel,192.168.1.1,3,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7500-FW-V1.0.0.70.zip,success,25,armel,192.168.1.1,20,0,9,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7500-V1.0.0.108.zip,success,137,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R7500-V1.0.0.46.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,R7500-V1.0.0.68.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,R7500-V1.0.0.76.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,R7500-V1.0.0.82.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,R7500_V1.0.0.52.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,R7500_V1.0.0.94.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,R7900-V1.0.0.10_10.0.7.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,R7900-V1.0.0.2_10.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R7900-V1.0.0.6_10.0.4.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R7900-V1.0.0.8_10.0.5.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R7900-V1.0.1.12_10.0.17.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R7900-V1.0.1.18_10.0.20.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R7900-V1.0.1.4_10.0.12.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R7900-V1.0.1.8_10.0.14.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.0.100_1.0.44.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.0.102_1.0.45.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.0.110_1.0.70.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.0.68_1.0.27.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.0.74_1.0.31.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.0.76_1.0.32.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.0.90_1.0.39.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.1.16-1.0.74.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.2.46_1.0.97.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.3.26_1.1.18.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.3.32_1.1.21.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.3.36_1.1.25.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.3.46_1.1.32.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8000-V1.0.3.4_1.1.2.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.0.28_1.0.15.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.0.42_1.0.23.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.0.52_1.0.26.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.0.56_1.0.28.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.100_1.0.82.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.116_1.0.90.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.26_1.0.41.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.30_1.0.43.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.54_1.0.56.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.64_1.0.62.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.80_1.0.71.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500-V1.0.2.86_1.0.75.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,R8500_V1.0.2.94_1.0.79.zip,success,163,armel,192.168.1.1,12,0,23,N/A,N/A (succeeded),N/A
+VPC-1,netgear,R9000-V1.0.3.10.zip,success,165,armel,192.168.1.1,40,0,22,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNAP320_Firmware_Version_2.0.3.zip,success,27,mipseb,192.168.0.100,11,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNAP320_Firmware_Version_2.0.zip,success,29,mipseb,192.168.0.100,11,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNAP320_Firmware_Version_2.1.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNAP320_V2.1.5_firmware.zip,success,33,mipseb,192.168.0.100,25,0,5,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNAP320_V2.1.6_firmware.zip,success,35,mipseb,192.168.0.100,11,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3400V3_V1.0.0.22_1.0.29.zip,success,37,mipsel,192.168.1.1,40,0,23,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3400v3-V1.0.0.20_1.0.28.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3400v3-V1.0.0.38_1.0.40.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3400v3-V1.0.0.46_1.0.45.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3400v3-V1.0.0.48_1.0.48.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3400v3-V1.0.1.12_1.0.58.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3400v3-V1.0.1.2_1.0.51.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3400v3-V1.0.1.4_1.0.52.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3400v3-V1.0.1.8_1.0.56.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3700-V1.0.7.98NA.zip,timeout,,,,,,,,inferred: WNDR3700 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,WNDR3700V4_V1.0.1.42.zip,success,59,mipseb,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700_Firmware_Version_1.0.4.49__North_America_.zip,success,62,mipseb,192.168.1.1,40,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700_Firmware_Version_1.0.4.55__North_America_.zip,success,64,mipseb,192.168.1.1,16,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700_Firmware_Version_1.0.4.68__North_America_.zip,success,67,mipseb,192.168.1.1,16,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700_Initial_Release_Firmware_-_Version_1.0.4.31__North_America_.zip,success,70,mipseb,192.168.1.1,16,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v2_Firmware_Version_1.0.0.10_-_BETA.zip,success,72,mipseb,192.168.1.1,20,0,23,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v2_Firmware_Version_1.0.0.6.zip,success,74,mipseb,192.168.1.1,3,0,21,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v2_WNDR37AVv2_Firmware_Version_1.0.0.12.zip,success,79,mipseb,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v2_WNDR37AVv2_Firmware_Version_1.0.0.8.zip,success,82,mipseb,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v4-V1.0.1.32.zip,success,85,mipseb,192.168.1.1,20,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v4-V1.0.1.44PRRU.zip,success,86,mipseb,192.168.1.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v4-V1.0.2.78.zip,timeout,,,,,,,,inferred: WNDR3700V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-1,netgear,WNDR3700v4-V1.0.2.80.zip,success,93,mipseb,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v4_PRRU_FW_V1.0.1.60.zip,success,96,mipseb,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3700v4_V1.0.1.52.zip,success,100,mipseb,192.168.1.1,0,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3800-V1.0.0.16.zip,success,103,mipseb,192.168.1.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3800-V1.0.0.18.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3800-V1.0.0.24.zip,success,111,mipseb,192.168.1.1,20,0,1,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3800-V1.0.0.32.zip,success,114,mipseb,192.168.1.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3800-V1.0.0.34.zip,success,116,mipseb,192.168.1.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3800-V1.0.0.38.zip,success,119,mipseb,192.168.1.1,3,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3800-V1.0.0.40.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR3800-V1.0.0.44.zip,success,127,mipseb,192.168.1.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR3800-V1.0.0.48.zip,success,130,mipseb,192.168.1.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR4300v2-V1.0.0.26.zip,success,133,mipseb,192.168.1.1,20,0,9,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR4300v2-V1.0.0.32.zip,success,136,mipseb,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-1,netgear,WNDR4500v3-V1.0.0.26.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNDR4500v3-V1.0.0.32.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNR1000v2-V1.1.2.28NA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNR1000v2-V1.1.2.54NA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNR1000v2_Firmware_Version_1.1.2.50__North_America_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNR2000v3_Firmware_Version_1.1.1.58.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNR2000v3_Firmware_Version_1.1.2.2.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-1,netgear,WNR2000v3_Initial_Release_Firmware_Version_1.0.1.26.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v3_Release_Firmware_Version_1.1.1.72.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v3_V1.1.2.10.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v3_V1.1.2.12.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v4-V1.0.0.64.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v5-V1.0.0.18.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v5-V1.0.0.28.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v5-V1.0.0.34.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v5-V1.0.0.42.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2000v5_V1.0.0.26.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2200-V1.0.1.72.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2200-V1.0.1.76.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2200-V1.0.1.88.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2200-V1.0.1.96.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2200_Firmware_Version_1.0.0.32.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2200_Firmware_Version_1.0.1.62.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2500-V1.0.0.24NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2500-V1.0.0.30NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2500-V1.0.0.32NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR2500_V1.0.0.18NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500L-V1.2.0.18_40.0.67.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.0.0.14_37.0.50.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.2.0.16_40.0.66.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.2.0.26_40.0.71.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.2.0.32_40.0.74.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.2.0.34_40.0.75.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.2.0.38_40.0.78.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.2.0.40_40.0.80.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2-V1.2.0.44_40.0.84.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2_Firmware_Version_1.0.0.10.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2_V1.2.0.20_40.0.68.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,WNR3500Lv2_V1.2.0.28_40.0.72.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,XR500-V2.1.0.6.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,jnr1010-V1.0.0.14.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,jnr1010-v1.0.0.10.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,jnr1010-v1.0.0.11.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,jnr1010-v1.0.0.18.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,wnr2000v3-V1.1.2.14.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,wnr2000v3-V1.1.2.6.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-1,netgear,wnr2200-V1.0.1.68.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,ZyXEL_latest,ARMOR_X1__WAP6806__V1.00_ABAL.6_C0.zip,success,27,mipsel,192.168.0.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,ARMOR_Z1__NBG6816__V1.00_AAWB.10_C0.zip,success,29,armel,192.168.141.1,10,0,8,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,ARMOR_Z2__NBG6817__V1.00_ABCS.8_C0.zip,success,35,armel,192.168.141.1,10,0,9,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,MultyPlus_WSQ60__V2.00_ABND.3_C0.zip,success,38,armel,192.168.0.1,10,0,9,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,MultyX_WSQ50__V2.00_ABKJ.5_C0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,NBG-418N_1.00_AADZ.3_C0.zip,emulation_failed,42,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,ZyXEL_latest,NBG-419N_1.00_BFQ.7_C0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,NBG-419N_v2_V1.00_AACU.7_C0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,NBG2105_V1.00_AAGU.2_C0.zip,success,51,mipseb,192.168.0.1,0,0,16,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,NBG6503_V1.00_AAJN.3_C0.zip,success,54,mipsel,192.168.0.1,0,0,7,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,NBG6604_V1.00_ABIR.3_C0.zip,emulation_failed,57,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,ZyXEL_latest,NBG6617_V1.00_ABCT.6_C0.zip,success,60,armel,192.168.141.1,50,0,1,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,WAP3205_1.00_BFR.8_C0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,WAP3205_v2_1.00_AAEX.3_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,WAP5605_1.00_AAAH.3_.zip,success,69,mipsel,192.168.0.1,20,0,7,N/A,N/A (succeeded),N/A
+VPC-2,ZyXEL_latest,WRE2205_1.00_AAES.3_C0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,WRE2205_v2_V1.00_AANK.5_C0_20171101_KRACK_hotfix_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,WRE2206_V1.00_AAVZ.4_C0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,WRE6505_V1.00_AAQB.5_C0_20171122_KRACK_hotfix_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,ZyXEL_latest,WRE6602_V1.00_ABKK.3_C0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DCS-930L_FIRMWARE_1.08_B4.ZIP,success,1,armel,192.168.0.1,0,0,12,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DCS-930L_FIRMWARE_1.09_B2.ZIP,success,2,mipsel,192.168.2.1,40,0,13,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DCS-930L_FIRMWARE_1.11B1.ZIP,emulation_failed,3,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,dlink,DCS-930L_REVA_FIRMWARE_1.12.B3.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-930L_REVA_FIRMWARE_1.14.02.ZIP,emulation_failed,5,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,dlink,DCS-930L_REVA_FIRMWARE_1.15.04.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-930L_REVB_FIRMWARE_2.00B6.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-930L_REVB_FIRMWARE_2.01.B3.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-930L_REVB_FIRMWARE_2.12.01.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-930L_REVB_FIRMWARE_2.14.04.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-930L_REVB_FIRMWARE_v2.15.06.zip,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-931L_REVA_FIRMWARE_1.06.B6.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-931L_REVA_FIRMWARE_1.07.B1.ZIP,success,13,mipseb,192.168.0.1,10,0,6,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DCS-931L_REVA_FIRMWARE_1.12.03.ZIP,success,14,mipseb,192.168.0.1,10,0,5,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DCS-932L_FIRMWARE_1.00.ZIP,success,15,mipseb,192.168.0.1,10,0,6,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DCS-932L_FIRMWARE_1.01.ZIP,success,16,mipseb,192.168.206.1,0,0,15,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DCS-932L_FIRMWARE_1.06_B4.ZIP,success,17,mipsel,192.168.0.1,0,1,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DCS-932L_FIRMWARE_1.07_B2.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_FIRMWARE_1.08_B2.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_FIRMWARE_1.09B1.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_REVA_FIRMWARE_1.10.B3.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_REVA_FIRMWARE_1.12.02.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_REVA_FIRMWARE_1.13.04.ZIP,emulation_failed,23,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,dlink,DCS-932L_REVA_FIRMWARE_1.14.04.ZIP,emulation_failed,24,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,dlink,DCS-932L_REVB_FIRMWARE_2.00B6.ZIP,emulation_failed,25,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,dlink,DCS-932L_REVB_FIRMWARE_2.01.B3.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_REVB_FIRMWARE_2.12.01.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_REVB_FIRMWARE_2.14.04.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-932L_REVB_FIRMWARE_PATCH_2.13.10.ZIP,emulation_failed,130,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,dlink,DCS-933L_REVA_FIRMWARE_1.07.B1.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-933L_REVA_FIRMWARE_1.12.03.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-933L_REVA_FIRMWARE_1.13.05.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-934L_REVA_FIRMWARE_1.00.B2.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-934L_REVA_FIRMWARE_1.01.03.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-934L_REVA_FIRMWARE_1.03.01.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-934L_REVA_FIRMWARE_1.04.15.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-935L_REVA_FIRMWARE_1.04.06.ZIP,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,DCS-935L_REVA_FIRMWARE_1.06.B02.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DCS-935L_REVA_FIRMWARE_1.08.06.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DCS-935L_REVA_FIRMWARE_1.09.02.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DCS-935L_REVA_FIRMWARE_1.10B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-300A1_FW105b09.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-300_REVB_FIRMWARE_PATCH_2.06.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-300_fw_revb_205b03_ALL_de_20101123.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-300_fw_revb_214b01_ALL_20130206.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-505L_FIRMWARE_1.01.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-505_FIRMWARE_1.07.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-505_FIRMWARE_1.08B10.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-505_FIRMWARE_1.09B02.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-550A_v1.10KRb09.trx,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-550A_v2.00b01.trx,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600B5_FW216WWb05.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_2.04.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_REVB_FIRMWARE_PATCH_2.06.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_REVB_v2.06.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_fw_revB5_2-11B11_all_en_20111013.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_fw_revB5_2-13B01_all_en_20121123.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_fw_revB5_2-14B01_all_en_20130225.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_fw_revB5_2-15B02_all_en_20130319.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_fw_revb_203b02_ALL_de_20100316.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-600_v2.02.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-604M_FW2.00KR.trx,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-604M_v1.10KRb08.trx,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-605L_FW115KRB05_f85g.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-605L_v1.15KRbetaB03_dcve.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-645_REVA_FIRMWARE_PATCH_1.04.B13.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-645_REVA_FIRMWARE_PATCH_1.06.B01.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-815A1_FW101SSB05.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-880L_REVA_FIRMWARE_PATCH_1.08B04_WW.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR-890L_REVA_FIRMWARE_1.03.B07.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR503AA1_FW1.03.00KR_20130910.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR503AA1_FW1.06.00KR.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR503AA1_FW1.07.00KR.bin,success,31,mipsel,192.168.0.1,0,0,7,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DIR513A_FW1.10.00KR.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR600B1_2_FW205b01.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR600B5_FW212ORb06.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR600B_FW206b01_FOR_Hardware_B.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR615E4_FW511B20beta04.bin,success,47,mipseb,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DIR615E4_FW511B29.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR615E4_FW512B01beta02.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR615I3_FW904B01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR815A1_FW104b03.bin,success,59,mipsel,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DIR820LA1_FW100KRB05.bin,success,61,mipseb,192.168.0.1,6,0,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DIR820LA1_FW100KRB08.bin,success,65,mipseb,192.168.0.1,0,0,7,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DIR820LA1_FW101KRB02.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR820LA1_FW106B01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR820LB1_FW201KRB05.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR820LB1_FW202KRB04.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR820LB1_FW202KRB05.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR820LB1_FW202KRB07.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR820L_FW100KR_B04_20130607.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR822B1_FW200KRb06.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR822B1_FW202KRb01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR822B1_FW202KRb05.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825B1_FW201SS05_KR_.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825B1_FW201SS09_KR_.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825B1_FW201SS_KR_.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825B1_FW202SSB13.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825B1_FW202SSB15beta01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825B1_FW202SSB15beta03.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825C1_FW300B32.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825C1_FW301B12.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR825C1_FW304b03.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR842A1_FW102KRB03.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR842A1_FW103KRB03.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR842A1_FW103KRB07.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR842A1_FW103KRB08.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR842A1_FW103KRB09.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR845LA1_FW101KRb01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR845LA1_FW101KRb03.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850LA1_FW106KRb01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW103KRB01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW105KRb03_d4oi_20130425.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW106KRb01_d5ga.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW107KRb01_d7ch.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW109KRb02_d9ie.bin,success,28,mipseb,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,DIR850L_FW109KRb03_d9qh.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW109KRb03_dbti.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW110KRb01_dcia.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW111KRb01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW112KRb01_e6re.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,DIR850L_FW113KRb01.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW113KRb01_SDMZ.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW113KRb01_e9nf.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW115KRb01.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW115KRb02.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW115KRb03.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW115KRb04.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW115KRb05.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW115KRb06.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR850L_FW115KRb07.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LA1_FW106KRb01.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LA1_FW108KRb01.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LA3_FW107KRb03.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KR-K02.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KR-K03.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KR-K04.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KR-K05.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KR-K06.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KR-K07.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KR.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KRb05_f4jf.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KRbetab04_f4eb.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LB1_FW200KRbetab08.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LWB1_FW200KR-K01.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LWB1_FW200KR-K02.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LWB1_FW200KR-K03.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LWB1_FW200KR-K04.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LWB1_FW200KR-K05.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LWB1_FW200KR-K06.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR868LWB1_FW200KR-K07.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR_300_fw_revb1_214b01_ALL_en_20130430_instructions.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR_825AC_G1A_KOREA_1.0.0.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR_825AC_G1A_KOREA_1.0.0KRb02.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR_825AC_G1A_KOREA_1.0.0KRb03.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR_825AC_G1A_KOREA_1.0.0KRb04.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR_825AC_G1A_KOREA_1.0.0KRb05.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,dlink,DIR_825SSB1_200b05Beta01.bin,success,157,mipseb,192.168.0.1,0,0,13,N/A,N/A (succeeded),N/A
+VPC-2,dlink,FIRMWARE_DIR600B1_B2_v2.01-tomizone-1.1.0.bin,success,32,mipsel,192.168.0.1,0,0,7,N/A,N/A (succeeded),N/A
+VPC-2,dlink,dcs930l_v1.13.01.bin,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,dcs930l_v1.14.02.bin,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,dcs930lb1_v2.10.04.bin,emulation_failed,40,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,dlink,dcs930lb1_v2.12.01.bin,timeout,,,,,,,,inferred: camera firmware line has a documented missing /dev/gpio device-node pattern,"No - likely deterministic hang, low value"
+VPC-2,dlink,dcs930lb1_v2.14.05.bin,success,46,mipsel,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,dir300_v1.03_7c.bin,success,50,mipseb,192.168.0.1,0,0,6,N/A,N/A (succeeded),N/A
+VPC-2,dlink,dir300_v1.04_87mf.bin,success,52,mipseb,192.168.0.1,0,0,7,N/A,N/A (succeeded),N/A
+VPC-2,dlink,dir300_v1.05_8c5e.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,dir300_v1.05_92dh.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,dir300_v1.05_a319.bin,success,62,mipseb,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,dir600b_v2.03.bin,success,64,mipsel,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-2,dlink,dir815_v1.01SSb08.bin,success,68,mipsel,192.168.0.1,20,0,2,N/A,N/A (succeeded),N/A
+VPC-2,dlink,dir815ss_v1.01SSB03.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,dir815ss_v1.01SSb06.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,dir815ss_v1.01SSb07.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,dlink,linux-lzma_DIR-604M_150227.trx,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,201092016340219.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,ArcherC900_US__V1_161130.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_A7_US__V5_180424.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C1200_US__V1_180123.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C1200_US__V2_180117.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C1200_V3_180122.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C1900_US__V2_161117.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C20_US___V4_170717.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C3150_US__V2_170926.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C50_US__V2_160801_1472173209786e.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C5400_US__V1_170731.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C59_US__V1_160722_1473406184657e.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C59_US__V2_161206.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C7_US__V4_180425.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C7_US__v2_180114.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C7_V1_141204_US.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,Archer_C8_US__V1_160517_1480907047866s.zip,success,116,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-2,tplink_latest,Archer_C8_V3_170606.zip,success,118,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-2,tplink_latest,Archer_C9_US__V3_171215.zip,success,120,armel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-2,tplink_latest,Archer_C9_US__v1_180125.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE200_EU_UK_US_ES_CA_AR_ID__V2_180412.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE200_US__V1_171205.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE205_V1_171218.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE210_US_CA__V1_171205.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE305_V1_171218.zip,emulation_failed,137,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-2,tplink_latest,RE350_V1_171214.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE355_V1_180204.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE360_US__V1_171226.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE380D_US__V1_171201.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE400_V1_170111.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-2,tplink_latest,RE450_V1_171215.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,RE450_V2_171220.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,RE500_V1_171219.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,RE580D_US__V1_171114.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,RE590T_US__V1_171122.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,RE650_EU_UK_US_AU_JP_CA_AS__V1_180719.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA801ND_US__V5_170905.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA801ND_V1_130131_beta.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA850RE_EU_UK_FR_DE_US_AU_BR_ES_AR_KR_JP__V4_180409.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA850RE_US__V2_171228.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA850RE_V1.20_141224_USA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA850RE_V5_180228.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA855RE_EU_UK_FR_US_AU_BR_ES__V2_180509.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA855RE_US__V1_171206_Beta.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA860RE_EU_UK_US__V5_171116.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA860RE_V4_171219.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA901ND_US__V4_151102_1481264684761f.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WA901ND_V2_130131_beta.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WPA7510_US__V1_171016.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WPA8630P_US__V1_170405_AP_.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WPA8630_KIT__US__V1_170405.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WPA8630_US__V2_171011.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WPA8730_US__V1_170413.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR1043N_V5_161118.bin,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR802N_USA__V2_151221_1482136249144c.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR802N_US__V4_170615.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR841N_UN__V8_170210.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR841N_US__V12_160803_1476672521610f.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR841N_US__V13_180119.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR841N_US__V14_180319.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR841N_WR841ND_v7_120201.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR902AC_US__V1_160905.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR902AC_US__V3_171229.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR940N_US__V3_161107_1479957675241p.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR940N_US__V4_160617_1476690524248q.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR940N_US__V5_170912.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR940N_US__V6_171030.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,TL-WR940N_v1_120201.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-2,tplink_latest,WPA4220_USARBR_V3_171016.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_BLUECAVE_300438432546.zip,success,1,armel,192.168.0.1,0,0,12,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_BRT_AC828_30043807526.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC1200E_300438010574.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC1200GPlus_300438250624.ZIP,success,4,mipsel,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1200GU_300438010528.ZIP,success,5,mipsel,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1200G_300438250624.ZIP,success,6,mipsel,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1200HP_30043808352.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC1200_300438010574.ZIP,success,8,mipsel,192.168.0.1,0,1,0,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1300GPLUS_30043808375.ZIP,success,9,mipsel,192.168.0.1,0,1,0,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1300UHP_30043808375.ZIP,emulation_failed,10,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC1750_300438250470.ZIP,success,11,mipsel,192.168.1.1,28,0,30,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1750_B1_300438432738.ZIP,success,12,armel,192.168.0.1,8,0,13,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1900P_300438432738.ZIP,success,13,armel,192.168.0.1,8,0,13,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1900U_300438432738.ZIP,success,14,armel,192.168.0.1,8,0,13,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC1900_300438432738.ZIP,success,15,armel,192.168.0.1,8,0,13,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC3100_300438432738.ZIP,success,16,armel,192.168.0.1,28,0,30,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC3200_300438250624.ZIP,success,17,armel,192.168.1.1,28,0,30,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC51U_300438010528.ZIP,emulation_failed,18,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC51U_30043808376.zip,emulation_failed,19,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC52U_30043808284.ZIP,emulation_failed,20,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC52U_B1_300438010528.ZIP,emulation_failed,21,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC5300_300438432738.ZIP,success,22,armel,192.168.0.1,28,0,30,N/A,N/A (succeeded),N/A
+VPC-3,asus_latest,FW_RT_AC53U_30043808228_v2.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC53_300438010446.zip,emulation_failed,24,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC54U_30043808287.ZIP,emulation_failed,25,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC55UHP_300438250702.ZIP,emulation_failed,26,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC55U_300438250702.ZIP,emulation_failed,27,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC56S_300438250624.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC56U_300438250624.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC58U_30043808375.ZIP,emulation_failed,51,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC65U_300438250135_new.zip,emulation_failed,54,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC66R_300438250470.ZIP,emulation_failed,55,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC66U_300438250470.ZIP,emulation_failed,58,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC66U_B1_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC66W_300438250470.ZIP,emulation_failed,64,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC67U_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC68P_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC68R_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC68UF_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC68U_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC68W_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC750GF_300438010446.zip,emulation_failed,85,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC750_30043808376.zip,emulation_failed,88,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC85U_300438250143.zip,emulation_failed,89,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_AC87R_300438250702.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC87U_300438250702.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_AC88U_300438432738.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_ACRH13_30043808375.ZIP,emulation_failed,101,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_ACRH17_300438250470.ZIP,emulation_failed,104,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_G32_V3021_RU09.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N10C1_2032.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N10D1_211192.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N10E_B1_211192.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N10LX_20039.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N10P_30043786117.zip,emulation_failed,122,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N10P_V2_30043763931.zip,emulation_failed,123,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N10P_V3_30043805810.zip,emulation_failed,126,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N10Plus_D1_211192.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N10U_30043763754.zip,emulation_failed,130,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N10U_B1_30043763754.zip,emulation_failed,133,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N10_1024.zip,emulation_failed,134,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N10_B1_2034.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N10_C1_2034.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N11P_30043807378.ZIP,emulation_failed,143,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N11P_B1_300438010410.zip,emulation_failed,146,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12B1_30043763754.zip,emulation_failed,147,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12C1_30043763754.zip,emulation_failed,150,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12D1_30043808291.ZIP,emulation_failed,151,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12E_B1_30043807378.ZIP,emulation_failed,154,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12E_C1_300438010410.ZIP,emulation_failed,155,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12HP_30043802943.zip,emulation_failed,158,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12HP_B1_30043808291.ZIP,emulation_failed,160,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12K_30043788079.zip,emulation_failed,163,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12LX_20039.ZIP,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_RT_N12VP_30043804057.zip,emulation_failed,168,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12VP_B1_300438010410.ZIP,emulation_failed,170,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_RT_N12_9013.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N12_B1_300438010410.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N12_PLUS_30043807378.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N12_PRO_300438010410.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N13U_7622.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N13U_B1_2025p.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N14UHP_30043808287WOWIMAX.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N14U_30043808285.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N15U_30043763754.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N16_30043807378.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N18U_300438250624.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N300_30043808228.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N300_B1_300438010410.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N53_30043763754.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N56U_30043807378.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N56U_B1_30043785291.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N600_300438010446.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N65R_30043763754.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N65U_30043763754.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N66R_300438250702.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N66U_300438250702.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N66U_C1_300438432738.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N66W_300438250702.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_RT_N800HP_300438250624.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_WL500gpv2_3044_TW.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_WL_330N3G_1035.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_WL_330NUL_FW3-0-0-46E8BF5A7D.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,asus_latest,FW_WL_330N_1029.zip,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-3,asus_latest,FW_WL_330gE_2020.zip,emulation_failed,31,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_WL_520GC_70146_EN.zip,emulation_failed,33,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,asus_latest,FW_WL_520gu_70145_RU.zip,emulation_failed,35,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F7D4301-8301_WW_1.00.30.bin,success,37,mipsel,192.168.2.1,40,0,0,N/A,N/A (succeeded),N/A
+VPC-3,belkin_latest,F7D4302-8302_WW_1.00.28.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F7D7302_WW_1.00.23.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9J1102-4_WW_1.00.10.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9J1102_WW_2.03.11.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9J1105-4_WW_1.00.09.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9J1105v2_WW_2.00.11.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9J1106_WW_1.00.08.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9J1106_WW_4.03.10.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9J1108_WW_1.00.98.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1003_WW_1.00.42.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1009_WW_2.00.09.img,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1009v1_WW_1.00.09.img,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1010_WW_2.00.04.img,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1015_WW_1.00.10.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1102_WW_1.00.19.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1102_WW_2.14.04.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1102_WW_3.04.13.bin,emulation_failed,90,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1103_WW_1.10.23.bin,emulation_failed,93,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1105_WW_1.00.06.bin,emulation_failed,96,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1105_WW_2.10.07.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1105_WW_3.04.06.bin,emulation_failed,102,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1106_WW_1.00.16.bin,emulation_failed,105,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1108_WW_1.00.04.bin,emulation_failed,108,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1109_WW_1.10.16.bin,emulation_failed,111,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1110_WW_1.10.23.bin,emulation_failed,114,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,belkin_latest,F9K1111_Belkin_1.04.17_upg.bin,success,117,mipseb,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-3,belkin_latest,F9K1113_WW_1.03.04.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1113_WW_4.04.07.bin,success,124,mipseb,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-3,belkin_latest,F9K1113v2_WW_2.03.40.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1115_WW_2.04.11.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1116_WW_1.03.11.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1118_WW_1.03.04.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1118v2_WW_2.03.43.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1119_WW_1.00.01.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1121_WW_1.04.34.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,belkin_latest,F9K1122v1_Belkin_1.00.33_upg.bin,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,COVR-3902_REVA_EXTENDER_FIRMWARE_v1.01B02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,COVR-3902_REVA_ROUTER_FIRMWARE_v1.01B05.zip,success,28,armel,192.168.0.1,1,0,0,N/A,N/A (succeeded),N/A
+VPC-3,dlink_latest,DIR-412_REVA_FIRMWARE_v1.14B02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-505L_REVA_FIRMWARE_1.03.B07.ZIP,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-505_FIRMWARE_1.10.B02.ZIP,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-506L_REVA_FIRMWARE_v2.15B02.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-510L_REVA_FIRMWARE_v1.07B02.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-515_FIRMWARE_1.02.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-600L_REVA_FIRMWARE_PATCH_1.17.B01_WW.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-600_FIRMWARE_1.0.1.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-601_REVA_FIRMWARE_1.04B02.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-605L_REVA_FIRMWARE_PATCH_v1.17B01_BETA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-605L_REVB_FIRMWARE_PATCH_v2.12B02_BETA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-615_REVC_FIRMWARE_3.13.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-615_REVE_FIRMWARE_PATCH_5.14B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-615_REVI_FIRMWARE_9.03.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-626L_REVA_FIRMWARE_1.05.B01_BETA.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-632_FIRMWARE_1.03.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-636L_REVA_FIRMWARE_v1.06B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-645_REVA_FIRMWARE_PATCH_v1.06B01_BETA02.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-651_FIRMWARE_1.10.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-655_REVC_FIRMWARE_3.02.B05.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-665_FIRMWARE_1.00.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-803_REVA_FIRMWARE_1.04.B02.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-808L_FIRMWARE_1.03B05.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-810L_REVA_FIRMWARE_1.02B22.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-810L_REVB_FIRMWARE_PATCH_2.04.B01_BETA.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-815_REVA_FIRMWARE_1.04.B03.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-815_REVB_FIRMWARE_PATCH_2.07.B01.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-816L_REVB_FIRMWARE_PATCH_2.06.B09_BETA.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-817LW_REVA_FIRMWARE_PATCH_1.04.B04_H4E_BETA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-818LW_REVA_FIRMWARE_PATCH_2.05.B03.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-820LW_REVB_FIRMWARE_PATCH_2.03.B01_TC.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-820L_REVA_FIRMWARE_1.06.B01.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-822_REVC_FIRMWARE_v3.02B05.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-825_REVB1_FIRMWARE_PATCH_v2.10B02.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-825_REVC_FIRMWARE_PATCH_3.01.B12.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-826L_REVA_FIRMWARE_1.06.B01_BETA.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-830L_REVA_FIRMWARE_1.00.B07.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-835_FIRMWARE_1.04B24.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-836L_FIRMWARE_1.04.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-842_REVB_FIRMWARE_2.02.B01.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-842_REVC_FIRMWARE_v3.01B05.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-855L_FIRMWARE_1.03B01.ZIP,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,dlink_latest,DIR-859_REVA_FIRMWARE_PATCH_1.06B01.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-860L_REVA_FIRMWARE_PATCH_v1.11B01_BETA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-860L_REVB_FIRMWARE_2.03.B03.ZIP,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-865L_REVA_FIRMWARE_PATCH_v1.10B01_BETA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-866L_REVA_FIRMWARE_v1.03B04.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-868L_REVA_FIRMWARE_PATCH_v1.20B01_BETA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-868L_REVB_FIRMWARE_PATCH_2.05B02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-869_REVA_FIRMWARE_PATCH_1.03B02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-878_REVA_FIRMWARE_v1.10B05.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-880L_REVA_FIRMWARE_PATCH_v1.08B06_BETA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-882_REVA_FIRMWARE_PATCH_v1.02B02_BETA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,dlink_latest,DIR-885L_REVA_FIRMWARE_PATCH_v1.20B02.zip,success,53,armel,192.168.0.1,6,0,5,N/A,N/A (succeeded),N/A
+VPC-3,dlink_latest,DIR-890L_REVA_FIRMWARE_PATCH_v1.20B01.zip,success,57,armel,192.168.0.1,0,0,12,N/A,N/A (succeeded),N/A
+VPC-3,dlink_latest,DIR822B1_FW202KRb06.bin,success,60,mipseb,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-3,tplink,ArcherC2_KR__V1_170221.zip,success,63,mipsel,192.168.0.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-3,tplink,ArcherC7_KR__V2_170215.zip,emulation_failed,66,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-3,tplink,Archer_C20_V1_150707.zip,success,69,mipsel,192.168.0.1,80,0,24,N/A,N/A (succeeded),N/A
+VPC-3,tplink,Archer_C2_KR__V1_160126.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C2_KR__V1_160328.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C2_US__V1_160606.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C2_US__V1_170228.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C2_US__v1_160128.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C3150_KR__V2_170925.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C50_KR__V1_160329.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C50_KR__V3_170410.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C50_US__V2_160113.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C50_US__V2_160612.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C50_v1_150325.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C55_KR__V1_161129.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C55_KR__V1_170515.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C60_KR__V1_161111.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C60_KR__V1_170207.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_KR__V2_160912_1474960467427z.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_US__V2_160719_1472519162399s.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_US__V4_170301.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_V1_150511.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_V2_150311_KR.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_V2_151014_US.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_V3_150508_US.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C7_V4_170609.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C8_US__V3_160804_1476671716885q.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C8_US__V3_161104_1480403037578i.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C8_V1_150518_US.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C9_KR__V3_160519.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C9_KR__V3_161109_1480922052479m.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C9_US__V1_161008_1478653422432k.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C9_V1_150122.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C9_V1_150514_US.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-3,tplink,Archer_C9_V1_150916.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA850RE_EU__V2_151224.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA850RE_KR__V3_160922_1480738238256t.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA850RE_US__V2_151105.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA850RE_US__V2_151228_US.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA850RE_US__V2_160517_1474185680919t.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA850RE_V1.20_150127_1473815690074b.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA850RE_V4_170109.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA855RE_US__V1_160127.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA855RE_US__V1_160324.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA855RE_US__V1_160427.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WA860RE_US_V1_141203.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR740N_EU__V6_160325.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR740N_KR__V6_151209.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR740N_UN__V5_150605.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR740N_V4_130529_KR.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR740N_V5_150312.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR747N_V4_130614_KR.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841HP_V1_150519.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841HP_V2_151124.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841HP_v1.20_150729.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841ND_V8_130506.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841ND_V8_140724.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841ND_V9_141013.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841ND_V9_150104.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841ND_V9_150310.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841ND_v7.0_120221_MY.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_D_v7_111228.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_KR__V11_151201.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_KR__V12_160714_1477620907413i.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_V10_150310.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_V11_150616.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_V8_121122_KR.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_V8_140724.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR841N_V9_141013.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR847N_V8_130717_KR.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-3,tplink,TL-WR940N_KR__V6_171115.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,linksys_latest,FW_E1000_2.1.03.005_US_20140321.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_E1500_v1.0.06.001_US_20140327_code.bin,emulation_failed,30,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E1550_1.0.03.002_US_20120201_code.bin,emulation_failed,34,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E2100L_1.0.05.004_20120308_code.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_E2500_2.0.00.001_US_20140417.bin,emulation_failed,38,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E2500_3.0.04.002_20171211.bin,emulation_failed,40,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E3000_1.0.06.002_US_20140409_code.bin,emulation_failed,42,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E3200_1.0.05.002_US_20140516_code.bin,emulation_failed,44,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E4200_1.0.06.003_US_20140520_code.bin,emulation_failed,47,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E800_v1.0.01.004_US_20130731.bin,emulation_failed,50,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_E900_1.0.08.002_US_20171208.bin,emulation_failed,53,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA2700_1.1.40.166516_prod.img,emulation_failed,56,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA4500V3_3.1.6.172023_prod.img,emulation_failed,59,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA4500V3_3.1.7.181919_prod.img,success,62,mipseb,192.168.1.1,60,0,54,N/A,N/A (succeeded),N/A
+VPC-4,linksys_latest,FW_EA6200_1.1.41.188556_prod.img,emulation_failed,65,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA6350V2_2.1.2.184309_prod.img,emulation_failed,68,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA6350_1.0.5.182871_prod.img,emulation_failed,70,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA6400_1.1.40.176337_prod.img,emulation_failed,72,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA6400_1.1.40.184085_prod.img,emulation_failed,75,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA6700_1.1.40.176451_prod.img,emulation_failed,77,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA6700_1.1.41.183873_prod.img,emulation_failed,79,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA6900_1.1.43.182871_prod.img,emulation_failed,82,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA9200_1.1.7.172584_prod.img,emulation_failed,84,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA9200_1.1.9.183676_prod.img,emulation_failed,86,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA9400_1.0.3.181249_prod.img,emulation_failed,89,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_EA9500_1.1.7.180968_prod.img,emulation_failed,91,armel,192.168.0.1,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_LAPAC1200_LAPAC1750_1.1.01.000.img,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_LAPAC1200_LAPAC1750_1.1.03.000.img,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_LAPN300_LAPN600_1.0.16.002.img,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_M10_2.0.05.001_20160426.bin,success,102,mipsel,192.168.1.1,20,0,0,N/A,N/A (succeeded),N/A
+VPC-4,linksys_latest,FW_M20_v1.0.05.005_201604022.bin,success,105,mipsel,192.168.1.1,0,0,13,N/A,N/A (succeeded),N/A
+VPC-4,linksys_latest,FW_PLW400_1.0.07.016.bin,emulation_failed,108,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_RE1000_1.0.02.001_US_20120214_SHIPPING.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_RE1000v2_v2.0.04.001_20180227.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_RE2000_v1.0.03.001_20180205.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_RE2000v2_v2.0.01.005_20180321.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_RE3000W_v1.0.01.001_20180306.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_RE3000Wv2_v2.0.03.002_20171228.bin,success,126,mipsel,10.10.10.254,10,0,4,N/A,N/A (succeeded),N/A
+VPC-4,linksys_latest,FW_RE4000W_v1.0.01.001_20180321.bin,success,130,mipsel,10.10.10.254,0,2,1,N/A,N/A (succeeded),N/A
+VPC-4,linksys_latest,FW_RE4100W_v1.0.01.009_20160304.bin,success,133,mipsel,10.10.10.254,10,0,0,N/A,N/A (succeeded),N/A
+VPC-4,linksys_latest,FW_RE4100W_v1.0.03.002_20171228.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_WAP610N_v1.0.05.002_20140321.bin,emulation_failed,139,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_WES610N_v2.0.01.004_20130719.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_WHW03_1.1.2.187020_prod.img,emulation_failed,145,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_WRT160NL_1.0.04.002_US_20130619_code.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_WRT320N_1.0.05.002_20110331.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_WRT32X_1.0.180404.58.img,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_WRT54GL_4.30.17.011_ETSI_20150623.bin,emulation_failed,155,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_WRT54GL_4.30.18.006_US_20160108.bin,emulation_failed,157,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_WRT54Gv4_4.21.5.000_20120220.bin,emulation_failed,159,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,linksys_latest,FW_WUMC710_v1.0.02.03_20140625.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,FW_X2000_AnnexA_2.0.05.002_20130221.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,WAG320N-EU-ANNEXA-ETSI-1.00.13.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,linksys_latest,wrt160Nv2_2.0.05.002_20160818.bin,timeout,,,,,,,,inferred: vendor has a documented CRDA/wireless-regulatory-domain hang pattern affecting most models in this line,"No - likely deterministic hang, low value"
+VPC-4,netgear_latest,AC1450-V1.0.0.36_10.0.17.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,DST6501-V1.0.1.6.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX2700-V1.0.1.48.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX3700-EX3800_V1.0.0.70_1.0.46.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX3700_EX3800-V1.0.0.72_1.0.47.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6000-V1.0.0.32_1.0.18.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6100-V1.0.2.24_1.1.134.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6110_EX3110-V1.0.1.60.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6120-V1.0.0.40_1.0.25.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6120-V1.0.0.42_1.0.27.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6130-V1.0.0.24_1.0.14.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6150-V1.0.0.42_1.0.73.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6150v2_EX6100v2-V1.0.1.70.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6200-V1.0.3.88_1.1.123.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX6200v2-V1.0.1.72.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX7000-V1.0.0.66_1.0.126.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX7300-EX6400-V1.0.2.136.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX7700-V1.0.0.152.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,EX8000-V1.0.1.164.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,JNR3000_V1.1.0.29_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,JNR3210_V1.1.0.30_1.0.2.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,JR6150_R6050-V1.0.1.18_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,JWNR2000v2_WNR1500-V1.0.0.11_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,JWNR2000v3_JWNR2010v3_JWNR2000Tv3-v1.0.0.32.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,PR2000_V1.0.0.24_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,R6020-V1.0.0.34.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,R6080-V1.0.0.34.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,R6100-V1.0.1.22.zip,timeout,,,,,,,,inferred: R6100 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6120-V1.0.0.44.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R6200-V1.0.1.58_1.0.44.zip,timeout,,,,,,,,inferred: R6200 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6200v2-V1.0.3.12_10.1.11.zip,timeout,,,,,,,,inferred: R6200V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6220-V1.1.0.68_1.0.1.zip,timeout,,,,,,,,inferred: R6220 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6250-V1.0.4.20_10.1.20.zip,timeout,,,,,,,,inferred: R6250 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6250-V1.0.4.26_10.1.23.zip,timeout,,,,,,,,inferred: R6250 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6260-V1.1.0.40_1.0.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R6300-V1.0.2.80_1.0.59.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R6300v2-V1.0.4.28_10.0.89.zip,timeout,,,,,,,,inferred: R6300V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6350-V1.1.0.40_1.0.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R6400-V1.0.1.44_1.0.31.zip,timeout,,,,,,,,inferred: R6400 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6400v2-V1.0.2.60_10.0.44.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R6700-V1.0.1.48_10.0.46.zip,timeout,,,,,,,,inferred: R6700 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,R6700v2-V1.2.0.24_1.0.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R6700v3-V1.0.2.60_10.0.44.zip,emulation_failed,71,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R6800-V1.2.0.24_1.0.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R6900-V1.0.1.48_10.0.30.zip,emulation_failed,78,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R6900P-V1.3.1.44_10.1.23.zip,emulation_failed,81,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R6900v2-V1.2.0.24_1.0.1.zip,success,85,mipsel,192.168.0.1,15,0,0,N/A,N/A (succeeded),N/A
+VPC-4,netgear_latest,R7000-V1.0.9.34_10.2.36.zip,emulation_failed,88,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R7000P-V1.3.1.44_10.1.23.zip,emulation_failed,92,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R7300-V1.0.0.68_1.0.24.zip,emulation_failed,95,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R7500-V1.0.0.124.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R7500v2-V1.0.3.38.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R7800-V1.0.2.58.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,R7900-V1.0.2.16_10.0.32.zip,emulation_failed,107,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R8000-V1.0.4.18_10.1.49.zip,emulation_failed,110,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R8300-V1.0.2.122_1.0.94.zip,emulation_failed,113,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R8500-V1.0.2.122_1.0.94.zip,emulation_failed,116,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,netgear_latest,R8900-V1.0.4.2.zip,success,119,armel,192.168.1.1,40,0,7,N/A,N/A (succeeded),N/A
+VPC-4,netgear_latest,R9000-V1.0.4.2.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN2000RPT-V1.0.1.24NA.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN2000RPTv2-V1.1.0.12.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN2000RPTv3-V1.0.1.32.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN2500RP-V1.0.0.30_1.0.58.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN2500RPv2-V1.0.1.54_1.0.68.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN3000RP_V1.0.2.64_1.1.86.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN3000RPv2-V1.0.0.68.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN3000RPv3-V1.0.2.70.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN3100RP-V1.0.0.16_1.0.20.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN3100RPv2-V1.0.0.56.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WN3500RP_V1.0.0.22_1.0.62.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WNDR3400-V1.0.0.52_20.0.60.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WNDR3400v2-V1.0.0.54_1.0.82.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WNDR3400v3-V1.0.1.18_1.0.63.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,netgear_latest,WNDR3700-V1.0.16.98NA.zip,timeout,,,,,,,,inferred: WNDR3700 family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,WNDR3700v2_WNDR37AVv2-V1.0.1.14.zip,timeout,,,,,,,,inferred: WNDR3700V family has 0% success across 3+ historical attempts (documented chronic dead-end),No - proven dead end for this family
+VPC-4,netgear_latest,WNDR3700v3-V1.0.0.42_1.0.33.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR3700v4-V1.0.2.102.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR3700v5_V1.1.0.54_1.0.1.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR3800-V1.0.0.52.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR4000-V1.0.2.10_9.1.89.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR4300-V1.0.2.104.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR4300v2-V1.0.0.56.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR4500-V1.0.1.46_1.0.76.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR4500v2-V1.0.0.72_1.0.45.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDR4500v3-V1.0.0.56.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNDRMACv2-V1.0.0.20.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR1000v2-V1.1.2.60NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR1000v3-V1.0.2.72_60.0.96NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR2000v2-V1.2.0.8_36.0.60NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR2000v5-V1.0.0.68.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR2200-V1.0.1.102.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR2500-V1.0.0.34NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR3500L_V1.2.2.48_35.0.55NA.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR3500Lv2-V1.2.0.54_50.0.94.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,WNR612v3_WNR500_V1.0.0.26.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,XR450-V2.3.2.22.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,XR500-V2.3.2.22.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,wn1000rp-V1.0.0.52.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,wnr2000v3-V1.1.2.18.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,wnr2000v4-V1.0.0.70.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,netgear_latest,wnr612v2-V1.0.0.3_1.0.2.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEG-082WS_1.00.010.zip,success,1,armel,192.168.0.1,0,0,12,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEG-160WS_1.00.16.zip,emulation_failed,2,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEG-204WS_1.00.010.zip,emulation_failed,3,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEG-240WS_1.00.18.zip,emulation_failed,4,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEG-284WS_1.00.010.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEG-30284_1.00.016.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEG-40128_1.00.015.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEG-424WS_4.00.020.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEG-448WS_1.00.17.zip,emulation_failed,9,armel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEW-410APBplus_0.0.0.zip,success,10,mipsel,192.168.1.250,9,1,0,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-411BRPplus_2.07.zip,emulation_failed,11,mipsel,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEW-430APB_2.12b02.zip,emulation_failed,12,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEW-432BRP_3.10B20.zip,emulation_failed,13,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEW-434APB_v1.01.b02.zip,emulation_failed,14,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEW-435BRM_1012.zip,success,15,armel,192.168.0.1,29,0,6,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-436BRM_v1.01.04.zip,emulation_failed,16,mipseb,,0,0,0,,"check-mode rejected (no valid IP/service detected) - verified from report data, exact root cause not individually re-inspected in logs",Maybe - depends on whether it is architecture-level (no) or a flaky boot (yes); not individually confirmed
+VPC-4,trendnet_latest,TEW-632BRP_1.010B32.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-634GRU_1.0R.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-635BRM_1.00.03.zip,success,19,mipseb,192.168.10.1,20,1,0,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-636APB_v1005.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-637AP_3.1.3.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-638APB_3.1.5.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-639GR_3_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-640MB_1.0R.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-647GA_1.01.75.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-650AP_1.0.2.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-651BR_2.x_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-652BRP_3.04B01.zip,success,46,mipseb,192.168.0.1,10,0,0,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-652BRU_1.00b12.zip,success,49,mipseb,192.168.0.1,6,0,0,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-654TR_V1.10.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-655BR3G_0.0.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-656BRG_1.01C4.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-657BRM_1.00.1.zip,success,61,mipseb,192.168.10.1,20,1,0,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-658BRM_1.03.B15.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-659BRV_1.00.02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-672GR_1.0.9.161.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-673GRU_v1.00b40.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-676APBO_1.02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-680MB_1.0.1.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-687GA_1.0.1.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-690AP_1_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-691GR_1_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-692GR_1_.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-711BR_2.01B01.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-712BR_v1.01B02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-713RE_1.02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-714TRU_0.0.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-716BRG_0.0.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-718BRM_1.00.11.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-721BRM_1.02.B07.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-722BRM_1.02.B08.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-730APO_1.1.1.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-732BR_1.02B03.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-733GR_v1.03B01.zip,success,127,mipsel,192.168.10.1,0,0,0,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-734APO_v1.0R.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-736RE_1.1.3.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-737HRE_V1.02.B02.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-738APBO_1.1.12.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-739APBO_1.1.12.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-740APBO2K_2.01K.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-740APBO_2.01.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-750DAP_1.01B03.zip,success,150,mipsel,169.254.1.0,1,0,5,N/A,N/A (succeeded),N/A
+VPC-4,trendnet_latest,TEW-751DR_v1.03B03.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-752DRU_v1.03B01.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-753DAP_2.0.3.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-755AP_1.08B04.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-800MB_1.0.1.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-810DR_1.13B04.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-811DRU_1.0.10.0.zip,timeout,,,,,,,,"genuine timeout, no per-file log data available to confirm exact cause (could be a real slow boot, an undiagnosed hang, or a kernel panic the detection fix missed)","Yes - worth one retry, cause unconfirmed"
+VPC-4,trendnet_latest,TEW-812DRU_2.1.2.0.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-813DRU_1.02B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-814DAP_1.01.B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-815DAP_1.0.2.0.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-816DRM_v1.0.0.4.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-817DTR_1.02B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-818DRU_1.0.14.6.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-820AP_1.01.B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-821DAP_1.08B04.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-822DRE_1.03B02.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-823DRU_0.0.0.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-823DRU_1.02B01.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-824DRU_1.03b02.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-825DAP_1.08B04.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-827DRU_2.04B03.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-828DRU_1.0.7.2.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-828DRU_3-r27490.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-WLC100P_V2.03b03.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TEW-WLC100_V2.03b03.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TFC-1600MM_2.03.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,THA-101_v1.03.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,THA-103AC_1.00_F-20170120.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPE-1020WS_1.00.25.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPE-1620WS_1.00.010.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPE-224WS_4.00.020.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPE-2840WS_1.00.10.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPE-30102WS_1.00.16.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPE-4840WS_1.00.9.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPE-5028WS_0.0.0.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPL-410AP_1.00.04.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TPL-430AP_1.00B08.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TW100-BRM504_0.01.21.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once
+VPC-4,trendnet_latest,TW100-BRV214_1.00.08.zip,pending,,,,,,,,not yet attempted,N/A - not yet run once

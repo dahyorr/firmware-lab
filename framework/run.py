@@ -25,12 +25,13 @@ def main(firmware_path: Path, brand: str, profile: str) -> int:
     try:
         result = analyse_firmware(firmware_path, brand, profile=profile, publisher=pub)
     except subprocess.TimeoutExpired as e:
+        # firmae_runner already killed this image's own qemu/run.sh processes
+        # before raising - no cleanup needed here. A blanket pkill would kill
+        # sibling images running concurrently on the same host.
         print(f"[-] Timed out: {e}")
-        subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
         return 1
     except Exception as e:
         print(f"[-] Error: {type(e).__name__}: {e}")
-        subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
         return 1
 
     print(f"\n[*] run_id : {result.run_id}")

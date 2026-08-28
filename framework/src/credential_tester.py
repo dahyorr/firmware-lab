@@ -9,18 +9,39 @@ R-1: the orchestrator validates the IP before calling this module.
 
 Success detection uses positive indicators only (not absence of failure
 keywords), because embedded firmware login pages frequently return HTTP 200
-for every request regardless of credential validity:
-  - New session cookie set in the POST response
-  - 302/301 redirect to a URL that does not contain a login-path pattern
-  - Response body contains admin-specific content ("logout", "sign out")
+for every request regardless of credential validity.
+
+HTTP Basic auth: the decisive signal is that the server must DISTINGUISH a
+wrong password from a right one. A sentinel (known-wrong) password is sent
+first; a real credential is only a success if the server responds
+differently to it AND accepts it (non-4xx). If the server returns the same
+status for the sentinel and the real attempt, it is not validating
+credentials at that endpoint, and no success is recorded. Cookie/body
+heuristics are NOT used for Basic auth: both the sentinel and the real
+request carry an Authorization header, so any cookie-on-auth behaviour fires
+for both and cannot distinguish valid from invalid.
+
+HTTP form login: compared against a same-path sentinel-wrong-password POST,
+using a new session cookie, a redirect away from a login path, or a body
+that both differs from the sentinel and carries a success keyword.
 """
 
+import logging
 from dataclasses import dataclass, asdict
 
 import requests
 
 from src.probe import ServiceFinding
 from src.events import NullPublisher
+
+# Embedded SSH servers (e.g. old Dropbear builds) routinely offer only
+# legacy KEX/cipher algorithms that modern paramiko refuses to negotiate.
+# paramiko's Transport runs as a background thread and logs that failure
+# itself (self._log(ERROR, ...)) regardless of what _test_ssh's own
+# try/except catches on the calling thread - with no logging configured
+# elsewhere, Python's handler-of-last-resort prints it as a raw traceback.
+# This is expected, frequent, and not a real error - silence it here.
+logging.getLogger("paramiko").setLevel(logging.CRITICAL)
 
 DEFAULT_CREDENTIALS: list[tuple[str, str]] = [
     # Most common IoT/router defaults
@@ -125,6 +146,14 @@ def test_credentials(
     results: list[CredentialResult] = []
 
     for svc in services:
+        # nmap reports "tcpwrapped" when a port accepts a connection then
+        # closes without completing the service handshake. These are not
+        # confirmed HTTP services; the corrected Basic-auth logic below will
+        # reject them anyway, but they are skipped here to avoid wasting
+        # requests on ports that do not speak HTTP.
+        if svc.service.lower() == "tcpwrapped":
+            continue
+
         if svc.service.lower() in HTTP_SERVICE_NAMES or svc.port in (80, 8080, 8181, 8182):
             pub.progress("credential_tester", f"testing HTTP on port {svc.port}")
             results.extend(_test_http(ip, svc))
@@ -141,22 +170,12 @@ def _test_http(ip: str, svc: ServiceFinding) -> list[CredentialResult]:
     base_url = f"http://{ip}:{svc.port}"
     results = []
 
-    # Capture pre-auth baseline: cookies and body before any login attempt.
-    baseline_cookies: set[str] = set()
-    try:
-        s = requests.Session()
-        s.verify = False
-        baseline_resp = s.get(base_url, timeout=_REQUEST_TIMEOUT)
-        baseline_cookies = set(s.cookies.keys())
-    except requests.RequestException:
-        pass
-
     for username, password in DEFAULT_CREDENTIALS:
-        hit = _try_http_basic(base_url, svc, username, password, baseline_cookies)
+        hit = _try_http_basic(base_url, svc, username, password)
         if hit:
             results.append(hit)
             continue
-        hit = _try_http_post(base_url, svc, username, password, baseline_cookies)
+        hit = _try_http_post(base_url, svc, username, password)
         if hit:
             results.append(hit)
 
@@ -168,21 +187,50 @@ def _try_http_basic(
     svc: ServiceFinding,
     username: str,
     password: str,
-    baseline_cookies: set[str],
 ) -> CredentialResult | None:
+    """
+    HTTP Basic auth success detection.
+
+    The decisive signal is that the server must respond DIFFERENTLY to a
+    wrong password than to a right one. A sentinel (known-wrong) password
+    establishes the baseline. A real credential is a success only if:
+      - the server responds with a different status code than for the
+        sentinel (so it is actually validating credentials), AND
+      - the real attempt is accepted (status < 400, i.e. not 401/403).
+
+    If the sentinel and the real attempt get the same status, the endpoint
+    is not authenticating (e.g. HTTP 200 for everything, or 401 for
+    everything), and no success is recorded. Cookie and body heuristics are
+    deliberately NOT used here: both requests carry an Authorization header,
+    so any cookie-on-auth behaviour fires identically for valid and invalid
+    attempts and cannot distinguish them.
+    """
     try:
+        # Baseline: same username with a known-wrong sentinel password.
+        s_wrong = requests.Session()
+        s_wrong.verify = False
+        wrong = s_wrong.get(base_url, auth=(username, _SENTINEL_PASSWORD),
+                            timeout=_REQUEST_TIMEOUT)
+
+        # Real attempt.
         s = requests.Session()
         s.verify = False
-        resp = s.get(base_url, auth=(username, password), timeout=_REQUEST_TIMEOUT)
-        if resp.status_code == 401:
+        resp = s.get(base_url, auth=(username, password),
+                     timeout=_REQUEST_TIMEOUT)
+
+        # Server does not distinguish wrong from right -> not authenticating.
+        if resp.status_code == wrong.status_code:
             return None
-        new_cookies = set(s.cookies.keys()) - baseline_cookies
-        if new_cookies or _body_suggests_success(resp.text):
-            return CredentialResult(
-                port=svc.port, service=svc.service,
-                username=username, password=password,
-                success=True, method="http_basic",
-            )
+
+        # The valid attempt must itself be accepted (not 401/403/4xx).
+        if resp.status_code >= 400:
+            return None
+
+        return CredentialResult(
+            port=svc.port, service=svc.service,
+            username=username, password=password,
+            success=True, method="http_basic",
+        )
     except requests.RequestException:
         pass
     return None
@@ -193,13 +241,13 @@ def _try_http_post(
     svc: ServiceFinding,
     username: str,
     password: str,
-    baseline_cookies: set[str],
 ) -> CredentialResult | None:
     for path in HTTP_LOGIN_PATHS:
         try:
             # Baseline: post a sentinel wrong password to this path first.
             # If the server returns the same response for any credential, it's
-            # not actually authenticating (e.g. HNAP1 returning device info for all POSTs).
+            # not actually authenticating (e.g. HNAP1 returning device info
+            # for all POSTs).
             s_wrong = requests.Session()
             s_wrong.verify = False
             wrong = s_wrong.post(
@@ -218,17 +266,24 @@ def _try_http_post(
                 allow_redirects=False,
             )
 
-            # Skip if status code identical to wrong-password attempt — same response
+            # Skip if status code identical to wrong-password attempt for
+            # non-200/302 codes — same response means no authentication.
             if resp.status_code == wrong.status_code and resp.status_code not in (200, 302):
                 continue
 
-            new_cookies = set(s.cookies.keys()) - baseline_cookies
+            # New session cookie relative to the sentinel attempt. Both
+            # requests POST credentials, so a cookie appearing for the real
+            # attempt but not the sentinel is a genuine positive signal.
+            new_cookies = set(s.cookies.keys()) - set(s_wrong.cookies.keys())
             if new_cookies:
                 return CredentialResult(
                     port=svc.port, service=svc.service,
                     username=username, password=password,
                     success=True, method="http_post",
                 )
+
+            # Redirect to a non-login page that differs from the sentinel's
+            # redirect target.
             if resp.status_code in (301, 302):
                 location = resp.headers.get("Location", "").lower()
                 wrong_loc = wrong.headers.get("Location", "").lower()
@@ -238,8 +293,10 @@ def _try_http_post(
                         username=username, password=password,
                         success=True, method="http_post",
                     )
+
+            # 200 body that both differs from the sentinel AND carries a
+            # success indicator.
             if resp.status_code == 200:
-                # Body must differ from wrong-password AND contain a success indicator
                 if resp.text != wrong.text and _body_suggests_success(resp.text):
                     return CredentialResult(
                         port=svc.port, service=svc.service,

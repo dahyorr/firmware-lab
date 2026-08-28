@@ -104,15 +104,18 @@ def run_one(vendor: str, firmware_path: Path, profile: str) -> dict:
         _print_summary(result)
 
     except subprocess.TimeoutExpired as e:
+        # firmae_runner._run_check_with_early_exit already killed this
+        # image's own qemu/run.sh processes before raising - no cleanup
+        # needed here. A blanket `pkill qemu-system` would kill sibling
+        # images running concurrently on the same host (see
+        # notes/vpc-run-failure-diagnoses.md).
         print(f"[-] Timed out: {e}")
         summary["status"] = "timeout"
         summary["error"]  = str(e)
-        subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
     except Exception as e:
         print(f"[-] Error: {type(e).__name__}: {e}")
         summary["status"] = "error"
         summary["error"]  = f"{type(e).__name__}: {e}"
-        subprocess.run(["sudo", "pkill", "qemu-system"], check=False)
 
     summary["duration_seconds"] = round(time.monotonic() - start, 1)
     return summary
