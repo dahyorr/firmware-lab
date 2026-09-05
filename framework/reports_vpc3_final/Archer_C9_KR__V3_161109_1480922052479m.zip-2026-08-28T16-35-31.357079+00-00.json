@@ -1,0 +1,79 @@
+{
+  "run_id": "04404112",
+  "timestamp": "2026-08-28T16:35:31.357079+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/Archer_C9_KR__V3_161109_1480922052479m.zip",
+    "name": "Archer_C9_KR__V3_161109_1480922052479m.zip",
+    "sha256": "67e664c5c3989d8924668036a0d334d456614f915a4f5033ec6be8f6e4bc2ad9",
+    "size_bytes": 13513204
+  },
+  "emulation": {
+    "image_id": 159,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 21.3,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.62",
+        "raw_banner": "53/tcp open  domain  dnsmasq 2.62"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "BusyBox http 1.19.4",
+        "raw_banner": "80/tcp open  http    BusyBox http 1.19.4"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 16:34 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.013s latency).\nNot shown: 65533 closed ports\nPORT   STATE SERVICE VERSION\n53/tcp open  domain  dnsmasq 2.62\n80/tcp open  http    BusyBox http 1.19.4\nService Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 21.25 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /cgi-bin/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

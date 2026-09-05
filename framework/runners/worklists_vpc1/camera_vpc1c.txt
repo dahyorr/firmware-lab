@@ -1,0 +1,4 @@
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-5009L_REVA_FIRMWARE_1.08.11.zip
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-8200LH_REVA_FIRMWARE_1.02.03.zip
+tplink_ipcamera|/root/project/firmware/tplink_ipcamera/NC200_v2.1.8_171109.zip
+trendnet_ipcamera|/root/project/firmware/trendnet_ipcamera/FW_TV-IP551W_V1_1.07.01.zip

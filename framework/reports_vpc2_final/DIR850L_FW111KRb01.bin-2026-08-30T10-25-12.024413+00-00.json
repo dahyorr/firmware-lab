@@ -1,0 +1,22 @@
+{
+  "run_id": "2dc66a6a",
+  "timestamp": "2026-08-30T10:25:12.024413+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR850L_FW111KRb01.bin",
+    "name": "DIR850L_FW111KRb01.bin",
+    "sha256": "f86411ad5cb4ef28aa7707f0da53c62b6a0b45e4f532aef32bbae5b043342965",
+    "size_bytes": 9621648
+  },
+  "emulation": {
+    "image_id": 150,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

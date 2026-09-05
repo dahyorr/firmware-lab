@@ -49,8 +49,19 @@ async def run_ws(run_id: str, websocket: WebSocket):
         await websocket.send_json({"type": "done"})
         return
 
-    q = rm.subscribe(run_id)
+    # Subscribe and snapshot the backlog atomically, then replay it so a client
+    # that connects mid-run (or reconnects) sees the current state and every
+    # event so far instead of an indefinite "waiting for run to start".
+    q, backlog = rm.subscribe_with_history(run_id)
     try:
+        if state:
+            await websocket.send_json(
+                {"type": "status", "status": state.status, "state": state.to_dict()}
+            )
+        for event in backlog:
+            await websocket.send_json(event)
+            if event.get("type") == "done":
+                return
         while True:
             event = await asyncio.wait_for(q.get(), timeout=300)
             await websocket.send_json(event)

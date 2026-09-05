@@ -1,0 +1,2 @@
+vpc=1 scratch_id=10 name=DGN2200_Firmware_Version_1.0.0.20_-_Initial_Release__NA_ brand=netgear_dgn2200_firmware_version_1_0_0_20_initial_release_na
+matched_regex: /dev/gpio: No such device

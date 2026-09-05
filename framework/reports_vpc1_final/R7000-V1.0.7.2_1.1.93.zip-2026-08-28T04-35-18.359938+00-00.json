@@ -1,0 +1,221 @@
+{
+  "run_id": "f94459f8",
+  "timestamp": "2026-08-28T04:35:18.359938+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R7000-V1.0.7.2_1.1.93.zip",
+    "name": "R7000-V1.0.7.2_1.1.93.zip",
+    "sha256": "5a4066155275cde69b450ff84e398f3bc3402bc60224ee7f0edf184cc2dd68b1",
+    "size_bytes": 27977471
+  },
+  "emulation": {
+    "image_id": 126,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 193.8,
+    "services": [
+      {
+        "port": 21,
+        "protocol": "tcp",
+        "service": "ftp",
+        "version": "Bftpd 1.6.6",
+        "raw_banner": "21/tcp   open  ftp        Bftpd 1.6.6"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.15-OpenDNS-1",
+        "raw_banner": "53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp   open  tcpwrapped"
+      },
+      {
+        "port": 548,
+        "protocol": "tcp",
+        "service": "afp",
+        "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+        "raw_banner": "548/tcp  open  afp        Netatalk 2.2.5 (name: R7000; protocol 3.3)"
+      },
+      {
+        "port": 631,
+        "protocol": "tcp",
+        "service": "ipp?",
+        "version": "",
+        "raw_banner": "631/tcp  open  ipp?"
+      },
+      {
+        "port": 5000,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "5000/tcp open  tcpwrapped"
+      },
+      {
+        "port": 8200,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8200/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 04:31 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.043s latency).\nNot shown: 65528 closed ports\nPORT     STATE SERVICE    VERSION\n21/tcp   open  ftp        Bftpd 1.6.6\n53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1\n80/tcp   open  tcpwrapped\n548/tcp  open  afp        Netatalk 2.2.5 (name: R7000; protocol 3.3)\n631/tcp  open  ipp?\n5000/tcp open  tcpwrapped\n8200/tcp open  tcpwrapped\nService Info: Host: 192.168.1.1; OS: Unix\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 193.79 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2001-0065",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Buffer overflow in bftpd 1.0.13 allows remote attackers to cause a denial of service and possibly execute arbitrary commands via a long SITE CHOWN command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0065"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2007-2010",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Double free vulnerability in bftpd before 1.8 allows remote authenticated users to cause a denial of service (daemon crash) via a (1) get or (2) mget command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-2010"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2007-2051",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Buffer overflow in the parsecmd function in bftpd before 1.8 has unknown impact and attack vectors related to the confstr variable.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-2051"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2009-4593",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The bftpdutmp_log function in bftpdutmp.c in Bftpd before 2.4 does not place a '\\0' character at the end of the string value of the ut.bu_host structure member, which might allow remote attackers to cause a denial of service (daemon crash) via unspecified vectors. NOTE: some of these details are obtained from third party information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4593"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2017-16892",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "In Bftpd before 4.7, there is a memory leak in the file rename function.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16892"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2020-6162",
+      "cvss_score": 9.1,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in Bftpd 5.3. Under certain circumstances, an out-of-bounds read is triggered due to an uninitialized value. The daemon crashes at startup in the hidegroups_init function in dirlist.c.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-6162"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2020-6835",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in Bftpd before 5.4. There is a heap-based off-by-one error during file-transfer error checking.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-6835"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2025-11947",
+      "cvss_score": 4.5,
+      "severity": "MEDIUM",
+      "description": "A weakness has been identified in bftpd up to 6.2. Impacted is the function expand_groups of the file options.c of the component Configuration File Handler. Executing a manipulation can lead to heap-based buffer overflow. It is possible to launch the attack on the local host. Attacks of this nature are highly complex. The exploitability is considered difficult. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11947"
+    },
+    {
+      "port": 21,
+      "service": "ftp",
+      "version": "Bftpd 1.6.6",
+      "cve_id": "CVE-2026-19830",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in TRENDnet TEW-816DRM GURNC4.OT182B-C-TN-R1B028-US.EN. This impacts an unknown function of the file /etc/bftpd.conf of the component bftpd. The manipulation of the argument USERLIMIT_GLOBAL results in allocation of resources. It is possible to launch the attack remotely. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19830"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+      "cve_id": "CVE-2026-44047",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An SQL injection vulnerability in the MySQL CNID backend in Netatalk 3.1.0 through 4.4.2 allows a remote authenticated attacker to obtain unauthorized access to data, modify data, or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44047"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+      "cve_id": "CVE-2026-44048",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A stack-based buffer overflow via UCS-2 type confusion in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44048"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+      "cve_id": "CVE-2026-44049",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An out-of-bounds write due to improper null termination in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service via crafted character data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44049"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 21,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "FTP service exposed \u2014 plaintext file transfer (version: Bftpd 1.6.6)",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    }
+  ]
+}

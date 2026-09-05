@@ -1,0 +1,140 @@
+# CATEGORY: interrupt_panic
+# vpc=4 scratch_id=265 name=TL-WR841N_V11_150616 brand=tplink_tl_wr841n_v11_150616
+matched_regex: Fatal exception in interrupt
+# source log: qemu.final.serial.log  (244360 lines total)
+# scratch metadata: name='TL-WR841N_V11_150616'  brand='tplink_tl_wr841n_v11_150616'  architecture='mipseb'  ip='192.168.0.1'  ip.0='192.168.0.1'  result='true'
+# signature: /Fatal exception in interrupt/  first hit at line 244359
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #17 Sat Oct 31 17:56:16 KST 2020
+[    0.000000] earlycon: Early serial console at I/O port 0x3f8 (options '38400n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] CPU0 revision is: 00019300 (MIPS 24Kc)
+[    0.000000] FPU revision is: 00739300
+[    0.000000] Software DMA cache coherency enabled
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00001000 @ 00000000 (reserved)
+[    0.000000]  memory: 000ef000 @ 00001000 (ROM data)
+[    0.000000]  memory: 00798000 @ 000f0000 (reserved)
+[    0.000000]  memory: 0f777000 @ 00888000 (usable)
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Wasting 69888 bytes for tracking 2184 unused pages
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x0000000000ffffff]
+[    0.000000]   Normal   [mem 0x0000000001000000-0x000000000fffefff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000000fffefff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffefff]
+[    0.000000] On node 0 totalpages: 65535
+[    0.000000] free_area_init_node: node 0, pgdat 8081d5b0, node_mem_map 81000000
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 4096 pages, LIFO batch:0
+[    0.000000]   Normal zone: 480 pages used for memmap
+[    0.000000]   Normal zone: 61439 pages, LIFO batch:15
+[    0.000000] Primary instruction cache 2kB, VIPT, 2-way, linesize 16 bytes.
+[    0.000000] Primary data cache 2kB, 2-way, VIPT, no aliases, linesize 16 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65023
+[    0.000000] Kernel command line: root=/dev/sda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 init=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=0 firmadyne.syscall=1
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+
+--- signature context (lines 244314-244360) ---
+[  229.776708] [<805bbb58>] br_handle_frame_finish+0x0/0x5cc
+[  229.777179] [<805c799c>] br_nf_pre_routing+0x3e0/0x6d4
+[  229.777658] [<805c6938>] br_nf_pre_routing_finish+0x0/0x35c
+[  229.778156] [<805bc124>] br_handle_frame+0x0/0x2fc
+[  229.778631] [<804e4df0>] nf_iterate+0x80/0xd0
+[  229.779069] [<8014aa8c>] generic_handle_irq+0x28/0x38
+[  229.779575] [<804e4df0>] nf_iterate+0x80/0xd0
+[  229.779973] [<804e4ecc>] nf_hook_slow+0x8c/0x140
+[  229.780429] [<80820000>] readwrite+0x1c/0x2c
+[  229.780844] [<805bc3d8>] br_handle_frame+0x2b4/0x2fc
+[  229.781261] [<804b1368>] csum_partial_ext+0x0/0x8
+[  229.781678] [<804b1330>] csum_block_add_ext+0x0/0x38
+[  229.782138] [<805bbb58>] br_handle_frame_finish+0x0/0x5cc
+[  229.782782] [<804c0224>] __netif_receive_skb_core+0x39c/0x6d4
+[  229.783738] [<80533f88>] inet_gro_receive+0x278/0x2ac
+[  229.784543] [<804c1114>] netif_receive_skb_internal+0x60/0x70
+[  229.785385] [<804c1c10>] napi_gro_receive+0x64/0xc8
+[  229.786102] [<804b78f0>] __napi_alloc_skb+0x24/0x5c
+[  229.786870] [<803ea8a8>] e1000_clean_rx_irq+0x3a0/0x450
+[  229.787658] [<80153190>] hrtimer_run_queues+0x74/0x220
+[  229.788457] [<8015a0b0>] update_wall_time+0xa70/0xac0
+[  229.789228] [<803e98ac>] e1000_clean+0x754/0x940
+[  229.789959] [<80820000>] readwrite+0x1c/0x2c
+[  229.790664] [<8014b2f0>] handle_irq_event+0x38/0x68
+[  229.791467] [<8014e128>] handle_level_irq+0x104/0x11c
+[  229.792234] [<801b2380>] lookup_fast+0x5c/0x314
+[  229.792921] [<80820000>] readwrite+0x1c/0x2c
+[  229.793404] [<804c14c8>] net_rx_action+0x110/0x2c0
+[  229.793974] [<80820000>] readwrite+0x1c/0x2c
+[  229.794462] [<8012458c>] __do_softirq+0x110/0x238
+[  229.794953] [<801248d8>] irq_exit+0x54/0xac
+[  229.795347] [<8010f520>] plat_irq_dispatch+0x60/0x90
+[  229.795808] [<802f6e10>] sprintf+0x28/0x34
+[  229.796178] [<801b5938>] kern_path+0x54/0x84
+[  229.796607] [<80104af0>] ret_from_irq+0x0/0x4
+[  229.797059] [<801a5a6c>] SyS_close+0x0/0x50
+[  229.797471] [<8010f91c>] handle_sys+0x11c/0x140
+[  229.797868] [<80105760>] handle_bp_int+0x18/0x38
+[  229.798273] [<80104ae0>] ret_from_exception+0x0/0x10
+[  229.798747] [<801a5a6c>] SyS_close+0x0/0x50
+[  229.799168] [<8010f91c>] handle_sys+0x11c/0x140
+[  229.799643] 
+[  229.799899] 
+Code: 807e49c4  00000000  804fd0d0 <00000001> 80000000  02000001  8f0d2000  00000000  00000000 
+[  229.801508] ---[ end trace c925ee0adbc53420 ]---
+[  229.802061] Kernel panic - not syncing: Fatal exception in interrupt
+[  229.802732] ---[ end Kernel panic - not syncing: Fatal exception in interrupt
+
+--- final tail (last 40 lines) ---
+[  229.779973] [<804e4ecc>] nf_hook_slow+0x8c/0x140
+[  229.780429] [<80820000>] readwrite+0x1c/0x2c
+[  229.780844] [<805bc3d8>] br_handle_frame+0x2b4/0x2fc
+[  229.781261] [<804b1368>] csum_partial_ext+0x0/0x8
+[  229.781678] [<804b1330>] csum_block_add_ext+0x0/0x38
+[  229.782138] [<805bbb58>] br_handle_frame_finish+0x0/0x5cc
+[  229.782782] [<804c0224>] __netif_receive_skb_core+0x39c/0x6d4
+[  229.783738] [<80533f88>] inet_gro_receive+0x278/0x2ac
+[  229.784543] [<804c1114>] netif_receive_skb_internal+0x60/0x70
+[  229.785385] [<804c1c10>] napi_gro_receive+0x64/0xc8
+[  229.786102] [<804b78f0>] __napi_alloc_skb+0x24/0x5c
+[  229.786870] [<803ea8a8>] e1000_clean_rx_irq+0x3a0/0x450
+[  229.787658] [<80153190>] hrtimer_run_queues+0x74/0x220
+[  229.788457] [<8015a0b0>] update_wall_time+0xa70/0xac0
+[  229.789228] [<803e98ac>] e1000_clean+0x754/0x940
+[  229.789959] [<80820000>] readwrite+0x1c/0x2c
+[  229.790664] [<8014b2f0>] handle_irq_event+0x38/0x68
+[  229.791467] [<8014e128>] handle_level_irq+0x104/0x11c
+[  229.792234] [<801b2380>] lookup_fast+0x5c/0x314
+[  229.792921] [<80820000>] readwrite+0x1c/0x2c
+[  229.793404] [<804c14c8>] net_rx_action+0x110/0x2c0
+[  229.793974] [<80820000>] readwrite+0x1c/0x2c
+[  229.794462] [<8012458c>] __do_softirq+0x110/0x238
+[  229.794953] [<801248d8>] irq_exit+0x54/0xac
+[  229.795347] [<8010f520>] plat_irq_dispatch+0x60/0x90
+[  229.795808] [<802f6e10>] sprintf+0x28/0x34
+[  229.796178] [<801b5938>] kern_path+0x54/0x84
+[  229.796607] [<80104af0>] ret_from_irq+0x0/0x4
+[  229.797059] [<801a5a6c>] SyS_close+0x0/0x50
+[  229.797471] [<8010f91c>] handle_sys+0x11c/0x140
+[  229.797868] [<80105760>] handle_bp_int+0x18/0x38
+[  229.798273] [<80104ae0>] ret_from_exception+0x0/0x10
+[  229.798747] [<801a5a6c>] SyS_close+0x0/0x50
+[  229.799168] [<8010f91c>] handle_sys+0x11c/0x140
+[  229.799643] 
+[  229.799899] 
+Code: 807e49c4  00000000  804fd0d0 <00000001> 80000000  02000001  8f0d2000  00000000  00000000 
+[  229.801508] ---[ end trace c925ee0adbc53420 ]---
+[  229.802061] Kernel panic - not syncing: Fatal exception in interrupt
+[  229.802732] ---[ end Kernel panic - not syncing: Fatal exception in interrupt

@@ -1,0 +1,2 @@
+vpc=2 scratch_id=104 name=Archer_C5400_US__V1_170731 brand=tplink_latest_archer_c5400_us_v1_170731
+matched_regex: reboot: (applet )?not found

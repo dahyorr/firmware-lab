@@ -1,0 +1,419 @@
+{
+  "run_id": "b7e60465",
+  "timestamp": "2026-08-28T17:08:08.637395+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-815DAP_1.0.2.0.zip",
+    "name": "TEW-815DAP_1.0.2.0.zip",
+    "sha256": "e6d758eea458bdf187aaf1cdfae1d17dc28f39d13755875c5f7dd5236c5726f8",
+    "size_bytes": 5373901
+  },
+  "emulation": {
+    "image_id": 211,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.10.100",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.100",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 23.0,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "DD-WRT milli_httpd",
+        "raw_banner": "80/tcp   open  http    DD-WRT milli_httpd"
+      },
+      {
+        "port": 1980,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Cisco DPC3828S WiFi cable modem",
+        "raw_banner": "1980/tcp open  http    Cisco DPC3828S WiFi cable modem"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 17:07 UTC\nNmap scan report for 192.168.10.100\nHost is up (0.021s latency).\nNot shown: 65533 closed ports\nPORT     STATE SERVICE VERSION\n80/tcp   open  http    DD-WRT milli_httpd\n1980/tcp open  http    Cisco DPC3828S WiFi cable modem\nService Info: OS: Linux; Device: WAP; CPE: cpe:/o:linux:linux_kernel, cpe:/h:cisco:dpc3828s\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 22.94 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2008-6974",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in apply.cgi in DD-WRT 24 sp1 and earlier allow remote attackers to hijack the authentication of administrators for requests that (1) execute arbitrary commands via the ping_ip parameter; (2) change the administrative credentials via the http_username and http_passwd parameters; (3) enable remote administration via the remote_management parameter; or (4) configure port forwarding via certain from, to, ip, and pro parameters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-6974"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2008-6975",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in apply.cgi in DD-WRT 24 sp2 allow remote attackers to hijack the authentication of administrators for requests that (1) execute arbitrary commands via the ping_ip parameter; (2) change the administrative credentials via the http_username and http_passwd parameters; (3) enable remote administration via the remote_management parameter; or (4) configure port forwarding via certain from, to, ip, and pro parameters.  NOTE: This issue reportedly exists because of a \"weak ... anti-CSRF fix\" implemented in 24 sp2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-6975"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2009-2765",
+      "cvss_score": 8.3,
+      "severity": null,
+      "description": "httpd.c in httpd in the management GUI in DD-WRT 24 sp1, and other versions before build 12533, allows remote attackers to execute arbitrary commands via shell metacharacters in a request to a cgi-bin/ URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-2765"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2009-2766",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "httpd.c in httpd in the management GUI in DD-WRT 24 sp1 does not require administrative authentication for programs under cgi-bin/, which allows remote attackers to change settings via HTTP requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-2766"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2012-6297",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Command Injection vulnerability exists via a CSRF in DD-WRT 24-sp2 from specially crafted configuration values containing shell meta-characters, which could let a remote malicious user cause a Denial of Service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6297"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2020-13976",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in DD-WRT through 16214. The Diagnostic page allows remote attackers to execute arbitrary commands via shell metacharacters in the host field of the ping command. Exploitation through CSRF might be possible. NOTE: software maintainers consider the report invalid because it refers to an old software version, requires administrative privileges, and does not provide access beyond that already available to administrative users",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13976"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2022-27631",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "A memory corruption vulnerability exists in the httpd unescape functionality of DD-WRT Revision 32270 - Revision 48599. A specially-crafted HTTP request can lead to memory corruption. An attacker can send a network request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-27631"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2021-47854",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "DD-WRT version 45723 contains a buffer overflow vulnerability in the UPNP network discovery service that allows remote attackers to potentially execute arbitrary code. Attackers can send crafted M-SEARCH packets with oversized UUID payloads to trigger buffer overflow conditions on the target device.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47854"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2021-27137",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "An issue was discovered in router/upnp/src/ssdp.c in DD-WRT before 45724. An unsafe strcpy in the UPnP handling functionality allows an unauthenticated remote attacker to send a request that would overflow an internal fixed buffer. Exploitation requires the DD-WRT user to enable UPnP (which is off by default, and only listens on internal interfaces by default). This occurs in ssdp_msearch (reachable by an M-SEARCH request).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27137"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-1306",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Cisco IOS 9.1 and earlier does not properly handle extended IP access lists when the IP route cache is enabled and the \"established\" keyword is set, which could allow attackers to bypass filters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1306"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-1466",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Vulnerability in Cisco routers versions 8.2 through 9.1 allows remote attackers to bypass access control lists when extended IP access lists are used on certain interfaces, the IP route cache is enabled, and the access list uses the \"established\" keyword.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1466"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-1216",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Cisco routers 9.17 and earlier allow remote attackers to bypass security restrictions via certain IP source routed packets that should normally be denied using the \"no ip source-route\" command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1216"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0161",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "In Cisco IOS 10.3, with the tacacs-ds or tacacs keyword, an extended IP access control list could bypass filtering.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0161"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0160",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Some classic Cisco IOS devices have a vulnerability in the PPP CHAP authentication to establish unauthorized PPP connections.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0160"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0230",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Buffer overflow in Cisco 7xx routers through the telnet service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0230"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0293",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "AAA authentication on Cisco systems allows attackers to execute commands without authorization.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0293"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-1582",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "By design, the \"established\" command on the Cisco PIX firewall allows connections from one host to arbitrary ports of a target host if an alternative conduit has already been allowed, which can cause administrators to configure less restrictive access controls than intended if they do not understand this functionality.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1582"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0159",
+      "cvss_score": 3.5,
+      "severity": "LOW",
+      "description": "Attackers can crash a Cisco IOS router or device, provided they can get to an interactive prompt (such as a login).  This applies to some IOS 9.x, 10.x, and 11.x releases.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0159"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0157",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Cisco PIX firewall and CBAC IP fragmentation attack results in a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0157"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0158",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Cisco PIX firewall manager (PFM) on Windows NT allows attackers to connect to port 8080 on the PFM server and retrieve any file whose name and location is known.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0158"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0162",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The \"established\" keyword in some Cisco IOS software allowed an attacker to bypass filtering.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0162"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0453",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "An attacker can identify a CISCO device by sending a SYN packet to port 1999, which is for the Cisco Discovery Protocol (CDP).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0453"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0063",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Cisco IOS 12.0 and other versions can be crashed by malicious UDP packets to the syslog port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0063"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0222",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Denial of service in Cisco IOS web server allows attackers to reboot the router using a long URL.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0222"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0430",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Cisco Catalyst LAN switches running Catalyst 5000 supervisor software allows remote attackers to perform a denial of service by forcing the supervisor module to reload.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0430"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0415",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "The HTTP server in Cisco 7xx series routers 3.2 through 4.2 is enabled by default, which allows remote attackers to change the router's configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0415"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0416",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Vulnerability in Cisco 7xx series routers allows a remote attacker to cause a system reload via a TCP connection to the router's TELNET port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0416"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0445",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "In Cisco routers under some versions of IOS 12.0 running NAT, some packets may not be filtered by input access list filters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0445"
+    },
+    {
+      "port": 1980,
+      "service": "http",
+      "version": "Cisco DPC3828S WiFi cable modem",
+      "cve_id": "CVE-1999-0775",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Cisco Gigabit Switch routers running IOS allow remote attackers to forward unauthorized packets due to improper handling of the \"established\" keyword in an access list.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0775"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 301 at /apply.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 301 at /syscmd.htm",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

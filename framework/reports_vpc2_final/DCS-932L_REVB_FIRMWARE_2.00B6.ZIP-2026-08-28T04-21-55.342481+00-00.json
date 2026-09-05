@@ -1,0 +1,22 @@
+{
+  "run_id": "75bf9aec",
+  "timestamp": "2026-08-28T04:21:55.342481+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DCS-932L_REVB_FIRMWARE_2.00B6.ZIP",
+    "name": "DCS-932L_REVB_FIRMWARE_2.00B6.ZIP",
+    "sha256": "d2f346db53d263fe0e905a2c142d2836c5105a57cabee6bc40bc655b1cc9d7ff",
+    "size_bytes": 4089152
+  },
+  "emulation": {
+    "image_id": 25,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

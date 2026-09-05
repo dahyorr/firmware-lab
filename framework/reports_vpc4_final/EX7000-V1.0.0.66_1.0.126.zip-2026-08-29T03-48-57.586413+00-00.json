@@ -1,0 +1,22 @@
+{
+  "run_id": "be960f1e",
+  "timestamp": "2026-08-29T03:48:57.586413+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear_latest/EX7000-V1.0.0.66_1.0.126.zip",
+    "name": "EX7000-V1.0.0.66_1.0.126.zip",
+    "sha256": "41ce03920d6224a0becd1552c3af06d41554f322f8e39bc20ff71eafe4aed2c8",
+    "size_bytes": 9779192
+  },
+  "emulation": {
+    "image_id": 202,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

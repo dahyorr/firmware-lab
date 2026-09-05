@@ -1,0 +1,22 @@
+{
+  "run_id": "fcf44498",
+  "timestamp": "2026-08-28T18:28:29.709076+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6300v2-V1.0.3.22_10.0.67.zip",
+    "name": "R6300v2-V1.0.3.22_10.0.67.zip",
+    "sha256": "e0852ef04eecba9cfe4646be36477cccab66a7828bb8a9528ddda0a7f48ceb77",
+    "size_bytes": 12826412
+  },
+  "emulation": {
+    "image_id": 34,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

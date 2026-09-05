@@ -1,0 +1,89 @@
+{
+  "run_id": "e6ab227b",
+  "timestamp": "2026-08-29T21:14:07.365981+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink_latest/TL-WR902AC_US__V1_160905.zip",
+    "name": "TL-WR902AC_US__V1_160905.zip",
+    "sha256": "68f5b9754b454e6f57a745906ca44173dff306790b135a087d9be68de36a291d",
+    "size_bytes": 5377350
+  },
+  "emulation": {
+    "image_id": 314,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 22.5,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 21:13 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.053s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 22.43 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-25074",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TP-Link TL-WR902AC(US)_V3_191209 routers were discovered to contain a stack overflow in the function DM_ Fillobjbystr(). This vulnerability allows unauthenticated attackers to execute arbitrary code.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25074"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-48194",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TP-Link TL-WR902AC devices through V3 0.9.1 allow remote authenticated attackers to execute arbitrary code or cause a Denial of Service (DoS) by uploading a crafted firmware update because the signature check is inadequate.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48194"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-36489",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Multiple TP-LINK products allow a network-adjacent unauthenticated attacker to execute arbitrary OS commands. Affected products/versions are as follows: TL-WR802N firmware versions prior to 'TL-WR802N(JP)_V4_221008', TL-WR841N firmware versions prior to 'TL-WR841N(JP)_V14_230506', and TL-WR902AC firmware versions prior to 'TL-WR902AC(JP)_V3_230506'.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-36489"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-44447",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "TP-Link TL-WR902AC loginFs Improper Authentication Information Disclosure Vulnerability. This vulnerability allows network-adjacent attackers to disclose sensitive information on affected installations of TP-Link TL-WR902AC routers. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the httpd service, which listens on TCP port 80 by default. The issue results from improper authentication. An attacker can leverage this vulnerability to disclose stored credentials, leading to further compromise. Was ZDI-CAN-21529.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44447"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-50225",
+      "cvss_score": 6.8,
+      "severity": "MEDIUM",
+      "description": "TP-Link TL-WR902AC dm_fillObjByStr Stack-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of TP-Link TL-WR902AC routers. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the libcmm.so module. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a fixed-length stack-based buffer. An attacker can leverage this vulnerability to execute code in the context of root.\n. Was ZDI-CAN-21819.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-50225"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2026-12001",
+      "cvss_score": null,
+      "severity": null,
+      "description": "A hardcoded credential\nvulnerability exists in the firmware of multiple TP-Link routers (TL-WR845N v4, TL-WR850N v3, TL-WR902AC v4, Archer C20 v6 & Archer MR200 v5). \u00a0Authentication-related credential material is\nembedded within a password file in the firmware image and may be recovered\nthrough firmware analysis.\n\n\n\n\n\nSuccessful\nexploitation could result in unauthorized access to privileged functions on\naffected devices.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12001"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

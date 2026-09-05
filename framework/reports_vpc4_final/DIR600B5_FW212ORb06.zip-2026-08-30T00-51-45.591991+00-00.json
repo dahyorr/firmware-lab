@@ -1,0 +1,93 @@
+{
+  "run_id": "691a77a0",
+  "timestamp": "2026-08-30T00:51:45.591991+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR600B5_FW212ORb06.zip",
+    "name": "DIR600B5_FW212ORb06.zip",
+    "sha256": "596f09c7f456ea7b74e4459a3fc441b2f83eacc907a8b6cca2832e09e6cfa682",
+    "size_bytes": 3659815
+  },
+  "emulation": {
+    "image_id": 322,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 34.3,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "53/tcp    open     domain  dnsmasq 2.45"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "D-Link DIR-600 WAP http config 2.12OR",
+        "raw_banner": "80/tcp    open     http    D-Link DIR-600 WAP http config 2.12OR"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-600 WAP UPnP 2.12OR (UPnP 1.0)",
+        "raw_banner": "49152/tcp open     upnp    D-Link DIR-600 WAP UPnP 2.12OR (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 00:50 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.093s latency).\nNot shown: 65531 closed ports\nPORT      STATE    SERVICE VERSION\n1/tcp     filtered tcpmux\n53/tcp    open     domain  dnsmasq 2.45\n80/tcp    open     http    D-Link DIR-600 WAP http config 2.12OR\n49152/tcp open     upnp    D-Link DIR-600 WAP UPnP 2.12OR (UPnP 1.0)\nService Info: OS: Linux; Device: WAP; CPE: cpe:/h:dlink:dir-600:2.12or, cpe:/o:linux:linux_kernel, cpe:/h:d-link:dir-600\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 34.29 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

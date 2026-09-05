@@ -1,0 +1,22 @@
+{
+  "run_id": "e4c50529",
+  "timestamp": "2026-08-30T11:23:55.940748+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N12E_C1_300438010410.ZIP",
+    "name": "FW_RT_N12E_C1_300438010410.ZIP",
+    "sha256": "f29a3e62d24673ee6e2d808a3697ba31335cd6ceed1a53334a7f0d63e8c60f76",
+    "size_bytes": 7435588
+  },
+  "emulation": {
+    "image_id": 395,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

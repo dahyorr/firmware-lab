@@ -1,0 +1,10 @@
+netgear|/root/project/firmware/netgear/WNAP320_Firmware_Version_2.0.3.zip|None|emulation_failed
+dlink|/root/project/firmware/dlink/DCS-932L_REVB_FIRMWARE_2.12.01.ZIP|310|emulation_failed
+asus_latest|/root/project/firmware/asus_latest/FW_RT_AC52U_B1_300438010528.ZIP|21|emulation_failed
+asus_latest|/root/project/firmware/asus_latest/FW_RT_ACRH13_30043808375.ZIP|101|emulation_failed
+asus_latest|/root/project/firmware/asus_latest/FW_RT_N12D1_30043808291.ZIP|151|emulation_failed
+belkin_latest|/root/project/firmware/belkin_latest/F9K1103_WW_1.10.23.bin|93|emulation_failed
+tplink|/root/project/firmware/tplink/Archer_C8_US__V3_160804_1476671716885q.zip|None|emulation_failed
+linksys_latest|/root/project/firmware/linksys_latest/FW_EA6700_1.1.41.183873_prod.img|79|emulation_failed
+trendnet_latest|/root/project/firmware/trendnet_latest/TEG-160WS_1.00.16.zip|2|emulation_failed
+trendnet_latest|/root/project/firmware/trendnet_latest/TEW-811DRU_1.0.10.0.zip|169|emulation_failed

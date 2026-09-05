@@ -1,0 +1,22 @@
+{
+  "run_id": "187ee0ea",
+  "timestamp": "2026-08-29T19:15:37.445746+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEG-424WS_4.00.020.zip",
+    "name": "TEG-424WS_4.00.020.zip",
+    "sha256": "31a56f445f9dd3f66f42b09dea99c65b97830aec2df9cf77cde8373615131c49",
+    "size_bytes": 8616750
+  },
+  "emulation": {
+    "image_id": 291,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

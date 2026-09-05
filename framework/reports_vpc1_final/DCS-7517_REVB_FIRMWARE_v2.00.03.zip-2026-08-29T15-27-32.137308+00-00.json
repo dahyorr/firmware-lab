@@ -1,0 +1,244 @@
+{
+  "run_id": "2fe2e58a",
+  "timestamp": "2026-08-29T15:27:32.137308+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-7517_REVB_FIRMWARE_v2.00.03.zip",
+    "name": "DCS-7517_REVB_FIRMWARE_v2.00.03.zip",
+    "sha256": "a0a21fd226e411b6790e6d423247e27790f58d5f24ad32b3ef6ebb78899110f3",
+    "size_bytes": 20231828
+  },
+  "emulation": {
+    "image_id": 292,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 189.7,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "",
+        "raw_banner": "80/tcp   open  http"
+      },
+      {
+        "port": 8080,
+        "protocol": "tcp",
+        "service": "nagios-nsca",
+        "version": "Nagios NSCA",
+        "raw_banner": "8080/tcp open  nagios-nsca Nagios NSCA"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 15:24 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.018s latency).\nNot shown: 64036 closed ports, 1497 filtered ports\nPORT     STATE SERVICE     VERSION\n80/tcp   open  http\n8080/tcp open  nagios-nsca Nagios NSCA\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port80-TCP:V=7.80%I=7%D=8/29%Time=6A92F9B6%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,111,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20close\\r\\\nSF:nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:08:05\\x20GMT\\r\\nAccept-Ranges\nSF::\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2001\\x20J\nSF:ul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x20no-stor\nSF:e,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\\x2014\\r\nSF:\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(HTTPOptions,111,\"HTTP/1\\.1\\x20404\\x20No\nSF:t\\x20Found\\r\\nConnection:\\x20close\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x20201\nSF:6\\x2005:08:10\\x20GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nContent-Type:\\x20tex\nSF:t/html\\r\\nExpires:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nC\nSF:ache-Control:\\x20no-cache,\\x20no-store,\\x20must-revalidate\\r\\nPragma:\\x\nSF:20no-cache\\r\\nContent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(RT\nSF:SPRequest,116,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20keep-\nSF:alive\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:08:15\\x20GMT\\r\\nAccep\nSF:t-Ranges:\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2\nSF:001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x2\nSF:0no-store,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\nSF:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(FourOhFourRequest,111,\"HTTP/1\\.\nSF:1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20close\\r\\nDate:\\x20Wed,\\x2009\nSF:\\x20Nov\\x202016\\x2005:08:25\\x20GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nConten\nSF:t-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:\nSF:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x20no-store,\\x20must-revalidat\nSF:e\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20\nSF:Found\\n\")%r(SIPOptions,116,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnect\nSF:ion:\\x20keep-alive\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:09:38\\x2\nSF:0GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpire\nSF:s:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x2\nSF:0no-cache,\\x20no-store,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nCo\nSF:ntent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 189.68 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2002-1959",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Nagios 1.0b1 through 1.0b3 allows remote attackers to execute arbitrary commands via shell metacharacters in plugin output.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1959"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2006-2162",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Buffer overflow in CGI scripts in Nagios 1.x before 1.4 and 2.x before 2.3 allows remote attackers to execute arbitrary code via a negative content length (Content-Length) HTTP header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2162"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2006-2489",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Integer overflow in CGI scripts in Nagios 1.x before 1.4.1 and 2.x before 2.3.1 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a content length (Content-Length) HTTP header.  NOTE: this is a different vulnerability than CVE-2006-2162.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2489"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2007-2709",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "PHP remote file inclusion vulnerability in functions/prepend_adm.php in NagiosQL 2005 2.00 allows remote attackers to execute arbitrary PHP code via a URL in the SETS[path][physical] parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-2709"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2007-2710",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "PHP remote file inclusion vulnerability in functions/prepend_adm.php in NagiosQL 2.00-P00 and earlier allows remote attackers to execute arbitrary PHP code via a URL in the SETS[path][IT] parameter.  NOTE: the provenance of this information is unknown; the details are obtained solely from third party information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-2710"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2007-5198",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Buffer overflow in the redir function in check_http.c in Nagios Plugins before 1.4.10, when running with the -f (follow) option, allows remote web servers to execute arbitrary code via Location header responses (redirects) with a large number of leading \"L\" characters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-5198"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2007-5623",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Buffer overflow in the check_snmp function in Nagios Plugins (nagios-plugins) 1.4.10 allows remote attackers to cause a denial of service (crash) via crafted snmpget replies.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-5623"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2007-5624",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in Nagios 2.x before 2.10 allows remote attackers to inject arbitrary web script or HTML via unknown vectors to unspecified CGI scripts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-5624"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2008-1360",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in Nagios before 2.11 allows remote attackers to inject arbitrary web script or HTML via unknown vectors to unspecified CGI scripts, a different issue than CVE-2007-5624.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1360"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2007-5803",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in CGI programs in Nagios before 2.12 might allow remote attackers to inject arbitrary web script or HTML via unspecified vectors, a different issue than CVE-2007-5624 and CVE-2008-1360.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-5803"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2008-5027",
+      "cvss_score": 6.5,
+      "severity": null,
+      "description": "The Nagios process in (1) Nagios before 3.0.5 and (2) op5 Monitor before 4.0.1 allows remote authenticated users to bypass authorization checks, and trigger execution of arbitrary programs by this process, via an (a) custom form or a (b) browser addon.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-5027"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2008-5028",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Cross-site request forgery (CSRF) vulnerability in cmd.cgi in (1) Nagios 3.0.5 and (2) op5 Monitor before 4.0.1 allows remote attackers to send commands to the Nagios process, and trigger execution of arbitrary programs by this process, via unspecified HTTP requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-5028"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2008-6373",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Unspecified vulnerability in Nagios before 3.0.6 has unspecified impact and remote attack vectors related to CGI programs, \"adaptive external commands,\" and \"writing newlines and submitting service comments.\"",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-6373"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2009-2288",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "statuswml.cgi in Nagios before 3.1.1 allows remote attackers to execute arbitrary commands via shell metacharacters in the (1) ping or (2) Traceroute parameters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-2288"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2010-3616",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "ISC DHCP server 4.2 before 4.2.0-P2, when configured to use failover partnerships, allows remote attackers to cause a denial of service (communications-interrupted state and DHCP client service loss) by connecting to a port that is only intended for a failover peer, as demonstrated by a Nagios check_tcp process check to TCP port 520.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-3616"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2011-1523",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in statusmap.c in statusmap.cgi in Nagios 3.2.3 and earlier allows remote attackers to inject arbitrary web script or HTML via the layer parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-1523"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2011-2179",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in config.c in config.cgi in (1) Nagios 3.2.3 and (2) Icinga before 1.4.1 allow remote attackers to inject arbitrary web script or HTML via the expand parameter, as demonstrated by an (a) command action or a (b) hosts action.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-2179"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2012-6096",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Multiple stack-based buffer overflows in the get_history function in history.cgi in Nagios Core before 3.4.4, and Icinga 1.6.x before 1.6.2, 1.7.x before 1.7.4, and 1.8.x before 1.8.4, might allow remote attackers to execute arbitrary code via a long (1) host_name variable (host parameter) or (2) svc_description variable.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6096"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2013-3500",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "The Foundation webapp admin interface in GroundWork Monitor Enterprise 6.7.0 uses the nagios account as the owner of writable files under /usr/local/groundwork, which allows context-dependent attackers to bypass intended filesystem restrictions by leveraging access to a GroundWork script.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3500"
+    },
+    {
+      "port": 8080,
+      "service": "nagios-nsca",
+      "version": "Nagios NSCA",
+      "cve_id": "CVE-2013-3504",
+      "cvss_score": 5.5,
+      "severity": null,
+      "description": "Directory traversal vulnerability in monarch.cgi in the MONARCH component in GroundWork Monitor Enterprise 6.7.0 allows remote authenticated users to overwrite arbitrary files by leveraging access to the nagios account.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3504"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

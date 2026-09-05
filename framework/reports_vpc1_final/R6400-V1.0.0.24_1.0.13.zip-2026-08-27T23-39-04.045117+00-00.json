@@ -1,0 +1,65 @@
+{
+  "run_id": "41cda8ee",
+  "timestamp": "2026-08-27T23:39:04.045117+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6400-V1.0.0.24_1.0.13.zip",
+    "name": "R6400-V1.0.0.24_1.0.13.zip",
+    "sha256": "2b074fe125d0d166ecbcda0b96667dd3f969bff524e7ba7b5cb1c2e64a7c24d3",
+    "size_bytes": 25233422
+  },
+  "emulation": {
+    "image_id": 63,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 83.5,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "telnet?",
+        "version": "",
+        "raw_banner": "23/tcp   open  telnet?"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.39",
+        "raw_banner": "53/tcp   open  domain   dnsmasq 2.39"
+      },
+      {
+        "port": 3333,
+        "protocol": "tcp",
+        "service": "napster",
+        "version": "",
+        "raw_banner": "3333/tcp open  napster"
+      },
+      {
+        "port": 5555,
+        "protocol": "tcp",
+        "service": "freeciv?",
+        "version": "",
+        "raw_banner": "5555/tcp open  freeciv?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 23:37 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.027s latency).\nNot shown: 65531 closed ports\nPORT     STATE SERVICE  VERSION\n23/tcp   open  telnet?\n53/tcp   open  domain   dnsmasq 2.39\n3333/tcp open  napster\n5555/tcp open  freeciv?\n2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port3333-TCP:V=7.80%I=7%D=8/27%Time=6A90CA5C%P=x86_64-pc-linux-gnu%r(NU\nSF:LL,1,\"1\")%r(GetRequest,1,\"1\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port5555-TCP:V=7.80%I=7%D=8/27%Time=6A90CA5C%P=x86_64-pc-linux-gnu%r(Ge\nSF:nericLines,C8,\"HTTP/1\\.1\\x20400\\x20Bad\\x20Request\\r\\nConnection:\\x20clo\nSF:se\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<HTML><HEAD><TITLE>400\\x20Bad\\x\nSF:20Request</TITLE></HEAD><BODY><H1>Bad\\x20Request</H1>The\\x20requested\\x\nSF:20was\\x20bad\\x20on\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(GetRequest\nSF:,CC,\"HTTP/1\\.1\\x20404\\x20Not\\x20found\\r\\nConnection:\\x20close\\r\\nConten\nSF:t-type:\\x20text/html\\r\\n\\r\\n<HTML><HEAD><TITLE>404\\x20Not\\x20Found</TIT\nSF:LE></HEAD><BODY><H1>Not\\x20Found</H1>The\\x20requested\\x20URL\\x20was\\x20\nSF:not\\x20found\\x20on\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(HTTPOption\nSF:s,E1,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\nConnection:\\x20close\\r\\\nSF:nContent-type:\\x20text/html\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\x20Not\\x20Imp\nSF:lemented</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1>The\\x20HTTP\\x20\nSF:Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x20server\\.</BODY></HT\nSF:ML>\\r\\n\")%r(RTSPRequest,E1,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\nC\nSF:onnection:\\x20close\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<HTML><HEAD><T\nSF:ITLE>501\\x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Implement\nSF:ed</H1>The\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\\nSF:x20server\\.</BODY></HTML>\\r\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 83.45 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    }
+  ]
+}

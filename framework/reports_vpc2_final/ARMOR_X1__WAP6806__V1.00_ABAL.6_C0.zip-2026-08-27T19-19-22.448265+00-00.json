@@ -1,0 +1,229 @@
+{
+  "run_id": "079c14ee",
+  "timestamp": "2026-08-27T19:19:22.448265+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/ZyXEL_latest/ARMOR_X1__WAP6806__V1.00_ABAL.6_C0.zip",
+    "name": "ARMOR_X1__WAP6806__V1.00_ABAL.6_C0.zip",
+    "sha256": "09b0dabe7ee834808e0e5e13cc81430d98c507bf87aa2e2e37f6b9ae2f6dadbd",
+    "size_bytes": 9976342
+  },
+  "emulation": {
+    "image_id": 27,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 18.8,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 19:19 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.035s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 18.73 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2000-1169",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "OpenSSH SSH client before 2.3.0 does not properly disable X11 or agent forwarding, which could allow a malicious SSH server to gain access to the X11 display and sniff X11 events, or gain access to the ssh-agent.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-1169"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2002-0402",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in X11 dissector in Ethereal 0.9.3 and earlier allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code while Ethereal is parsing keysyms.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0402"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2002-0517",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "Buffer overflow in X11 library (libX11) on Caldera Open UNIX 8.0.0, UnixWare 7.1.1, and possibly other operating systems, allows local users to gain root privileges via a long -xrm argument to programs such as (1) dtterm or (2) xterm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0517"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2004-0157",
+      "cvss_score": 4.6,
+      "severity": null,
+      "description": "x11.c in xonix 1.4 and earlier uses the current working directory to find and execute the rmail program, which allows local users to execute arbitrary code by modifying the path to point to a malicious rmail program.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-0157"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2004-2097",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "Multiple scripts on SuSE Linux 9.0 allow local users to overwrite arbitrary files via a symlink attack on (1) /tmp/fvwm-bug created by fvwm-bug, (2) /tmp/wmmenu created by wm-oldmenu2new, (3) /tmp/rates created by x11perfcomp, (4) /tmp/xf86debug.1.log created by xf86debug, (5) /tmp/.winpopup-new created by winpopup-send.sh, or (6) /tmp/initrd created by lvmcreate_initrd.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2097"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2005-0084",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in the X11 dissector in Ethereal 0.8.10 through 0.10.8 allows remote attackers to execute arbitrary code via a crafted packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0084"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2005-3248",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Unspecified vulnerability in the X11 dissector in Ethereal 0.10.12 and earlier allows remote attackers to cause a denial of service (divide-by-zero) via unknown vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-3248"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2006-0577",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "Lexmark X1185 printer allows local users to gain SYSTEM privileges by navigating to the \"Appearance\" dialog and selecting the \"Additional styles (skins) are available on the Lexmark web site\" option, which launches a web browser that is running with SYSTEM privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0577"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2006-0745",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "X.Org server (xorg-server) 1.0.0 and later, X11R6.9.0, and X11R7.0 inadvertently treats the address of the geteuid function as if it is the return value of a call to geteuid, which allows local users to bypass intended restrictions and (1) execute arbitrary code via the -modulepath command line option or (2) overwrite arbitrary files via -logfile.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0745"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2006-3470",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "The Dell Openmanage CD launches X11 and SSH daemons that do not require authentication, which allows remote attackers to gain privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-3470"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2006-4655",
+      "cvss_score": 4.6,
+      "severity": null,
+      "description": "Buffer overflow in the Strcmp function in the XKEYBOARD extension in X Window System X11R6.4 and earlier, as used in SCO UnixWare 7.1.3 and Sun Solaris 8 through 10, allows local users to gain privileges via a long _XKB_CHARSET environment variable value.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-4655"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2007-1003",
+      "cvss_score": 9.0,
+      "severity": null,
+      "description": "Integer overflow in ALLOCATE_LOCAL in the ProcXCMiscGetXIDList function in the XC-MISC extension in the X.Org X11 server (xserver) 7.1-1.1.0, and other versions before 20070403, allows remote authenticated users to execute arbitrary code via a large expression, which results in memory corruption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1003"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2007-3103",
+      "cvss_score": 6.2,
+      "severity": null,
+      "description": "The init.d script for the X.Org X11 xfs font server on various Linux distributions might allow local users to change the permissions of arbitrary files via a symlink attack on the /tmp/.font-unix temporary file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-3103"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2007-3851",
+      "cvss_score": 6.0,
+      "severity": null,
+      "description": "The drm/i915 component in the Linux kernel before 2.6.22.2, when used with i965G and later chipsets, allows local users with access to an X11 session and Direct Rendering Manager (DRM) to write to arbitrary memory locations and gain privileges via a crafted batchbuffer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-3851"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2007-4730",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Buffer overflow in the compNewPixmap function in compalloc.c in the Composite extension for the X.org X11 server before 1.4 allows local users to execute arbitrary code by copying data from a large pixel depth pixmap into a smaller pixel depth pixmap.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-4730"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2007-4752",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "ssh in OpenSSH before 4.7 does not properly handle when an untrusted cookie cannot be created and uses a trusted X11 cookie instead, which allows attackers to violate intended policy and gain privileges by causing an X client to be treated as trusted.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-4752"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2008-0037",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "X11 in Apple Mac OS X 10.5 through 10.5.1 does not properly handle when the \"Allow connections from network client\" preference is disabled, which allows remote attackers to bypass intended access restrictions and connect to the X server.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0037"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2008-1142",
+      "cvss_score": 3.7,
+      "severity": null,
+      "description": "rxvt 2.6.4 opens a terminal window on :0 if the DISPLAY environment variable is not set, which might allow local users to hijack X11 connections.  NOTE: it was later reported that rxvt-unicode, mrxvt, aterm, multi-aterm, and wterm are also affected.  NOTE: realistic attack scenarios require that the victim enters a command on the wrong machine.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1142"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2008-1692",
+      "cvss_score": 6.9,
+      "severity": null,
+      "description": "Eterm 0.9.4 opens a terminal window on :0 if -display is not specified and the DISPLAY environment variable is not set, which might allow local users to hijack X11 connections.  NOTE: realistic attack scenarios require that the victim enters a command on the wrong machine.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1692"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2008-1377",
+      "cvss_score": 9.0,
+      "severity": null,
+      "description": "The (1) SProcRecordCreateContext and (2) SProcRecordRegisterClients functions in the Record extension and the (3) SProcSecurityGenerateAuthorization function in the Security extension in the X server 1.4 in X.Org X11R7.3 allow context-dependent attackers to execute arbitrary code via requests with crafted length values that specify an arbitrary number of bytes to be swapped on the heap, which triggers heap corruption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1377"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

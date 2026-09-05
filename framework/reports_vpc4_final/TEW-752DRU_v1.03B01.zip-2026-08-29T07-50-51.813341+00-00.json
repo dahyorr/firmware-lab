@@ -1,0 +1,525 @@
+{
+  "run_id": "60c2be81",
+  "timestamp": "2026-08-29T07:50:51.813341+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-752DRU_v1.03B01.zip",
+    "name": "TEW-752DRU_v1.03B01.zip",
+    "sha256": "368d9da232da271c5f4702b95cfb6b1dba86d4f82fc77cc766a840d098560149",
+    "size_bytes": 7489066
+  },
+  "emulation": {
+    "image_id": 154,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.10.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 51.9,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "53/tcp    open  domain      dnsmasq 2.45"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Linux, HTTP/1.1, TEW-752DRU Ver 1.03",
+        "raw_banner": "80/tcp    open  http        Linux, HTTP/1.1, TEW-752DRU Ver 1.03"
+      },
+      {
+        "port": 139,
+        "protocol": "tcp",
+        "service": "netbios-ssn",
+        "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+        "raw_banner": "139/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)"
+      },
+      {
+        "port": 445,
+        "protocol": "tcp",
+        "service": "netbios-ssn",
+        "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+        "raw_banner": "445/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)"
+      },
+      {
+        "port": 5449,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "5449/tcp  open  unknown"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "",
+        "raw_banner": "49152/tcp open  upnp"
+      },
+      {
+        "port": 63481,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "63481/tcp open  domain      dnsmasq 2.45"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 07:49 UTC\nNmap scan report for 192.168.10.1\nHost is up (0.024s latency).\nNot shown: 65528 closed ports\nPORT      STATE SERVICE     VERSION\n53/tcp    open  domain      dnsmasq 2.45\n80/tcp    open  http        Linux, HTTP/1.1, TEW-752DRU Ver 1.03\n139/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)\n445/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)\n5449/tcp  open  unknown\n49152/tcp open  upnp\n63481/tcp open  domain      dnsmasq 2.45\n2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port80-TCP:V=7.80%I=7%D=8/29%Time=6A928F19%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,2055,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20Linux,\\x20HTTP/1\\.1,\\\nSF:x20TEW-752DRU\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x20\nSF:23:49:45\\x20GMT\\r\\n\\r\\n<!DOCTYPE\\x20HTML\\x20PUBLIC\\x20\\\"-//W3C//DTD\\x20\nSF:HTML\\x204\\.01\\x20Transitional//EN\\\"\\x20\\\"http://www\\.w3\\.org/TR/html4/l\nSF:oose\\.dtd\\\">\\n<html\\x20style=\\\"background:\\x20#000\\x20url\\(/pic/bg4\\.gi\nSF:f\\)\\x20top\\x20center;\\\">\\n<head>\\n\\t<!--link\\x20rel=\\\"shortcut\\x20icon\\\nSF:\"\\x20href=\\\"/favicon\\.ico\\\"\\x20-->\\t\\n\\t<link\\x20rel=\\\"stylesheet\\\"\\x20\nSF:href=\\\"/css/general\\.css\\\"\\x20type=\\\"text/css\\\">\\n\\t<meta\\x20http-equiv\nSF:=\\\"Content-Type\\\"\\x20content=\\\"no-cache\\\">\\n\\t<meta\\x20http-equiv=\\\"Pra\nSF:gma\\\"\\x20content=\\\"no-cache\\\"\\x20/>\\n\\t<meta\\x20http-equiv=\\\"Content-Ty\nSF:pe\\\"\\x20content=\\\"text/html;\\x20charset=utf-8\\\">\\n\\t<title>TRENDNET\\x20\nSF:\\|\\x20WIRELESS\\x20N\\x20ROUTER\\x20</title>\\t\\t\\n\\t\\t\\n\\t<script\\x20type=\nSF:\\\"text/javascript\\\"\\x20charset=\\\"utf-8\\\"\\x20src=\\\"\\./js/comm\\.js\\\"></sc\nSF:ript>\\n\\t<script\\x20type=\\\"text/javascript\\\"\\x20charset=\\\"utf-8\\\"\\x20sr\nSF:c=\\\"\\./js/libajax\\.js\\\"></script>\\n\\t<script\\x20type=\\\"text/javascript\\\nSF:\"\\x20charset=\\\"utf-8\\\"\\x20src=\\\"\\./js/postxml\\.js\\\"></script>\\n\\t<scrip\nSF:t\\x20type=\\\"text/javascript\\\"\\x20src=\\\"\\./js/jquer\")%r(HTTPOptions,122,\nSF:\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\nServer:\\x20Linux,\\x20HTTP/1\\\nSF:.1,\\x20TEW-752DRU\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\nSF:\\x2023:49:45\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x2\nSF:0\\x20\\x20127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x\nSF:20Not\\x20Implemented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\\nSF:x20or\\x20not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\")%r(FourOhFourReque\nSF:st,10B,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Linux,\\x20HTTP/1\nSF:\\.1,\\x20TEW-752DRU\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x20199\nSF:9\\x2023:49:45\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x\nSF:20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\nSF:\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20could\\x20not\\x20be\\x20f\nSF:ound\\x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port49152-TCP:V=7.80%I=7%D=8/29%Time=6A928F19%P=x86_64-pc-linux-gnu%r(F\nSF:ourOhFourRequest,10B,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Li\nSF:nux,\\x20UPnP/1\\.0,\\x20TEW-752DRU\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\nSF:\\x20Dec\\x201999\\x2023:49:45\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nCon\nSF:tent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n\nSF:<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20could\\x20\nSF:not\\x20be\\x20found\\x20on\\x20this\\x20server\\.\\n\")%r(GetRequest,10B,\"HTTP\nSF:/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Linux,\\x20UPnP/1\\.0,\\x20TEW-\nSF:752DRU\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2023:49:5\nSF:0\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x2011\nSF:0\\r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h\nSF:1>\\nThe\\x20resource\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x\nSF:20this\\x20server\\.\\n\")%r(HTTPOptions,122,\"HTTP/1\\.1\\x20501\\x20Not\\x20Im\nSF:plemented\\r\\nServer:\\x20Linux,\\x20UPnP/1\\.0,\\x20TEW-752DRU\\x20Ver\\x201\\\nSF:.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2023:49:50\\x20GMT\\r\\nContent\nSF:-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20127\\r\\n\\r\\n<title>501\nSF:\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20Implemented</h1>\\nYou\nSF:r\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20not\\x20allowed\\x20by\\\nSF:x20this\\x20server\\.\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 51.89 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Linux, HTTP/1.1, TEW-752DRU Ver 1.03",
+      "cve_id": "CVE-1999-0459",
+      "cvss_score": 4.6,
+      "severity": null,
+      "description": "Local users can perform a denial of service in Alpha Linux, using MILO to force a reboot.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0459"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0179",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Windows NT crashes or locks up when a Samba client executes a \"cd ..\" command on a file share.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0179"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0182",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Samba has a buffer overflow which allows a remote attacker to obtain root access by specifying a long password.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0182"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-1178",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Sambar Server 4.1 beta allows remote attackers to obtain sensitive information about the server via an HTTP request for the dumpenv.pl script.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1178"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-1288",
+      "cvss_score": 4.6,
+      "severity": null,
+      "description": "Samba 1.9.18 inadvertently includes a prototype application, wsmbconf, which is installed with incorrect permissions including the setgid bit, which allows local users to read and write files and possibly gain privileges via bugs in the program.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1288"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0810",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Denial of service in Samba NETBIOS name service daemon (nmbd).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0810"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0811",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Buffer overflow in Samba smbd program via a malformed message command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0811"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-1523",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in Sambar Web Server 4.2.1 allows remote attackers to cause a denial of service, and possibly execute arbitrary commands, via a long HTTP GET request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1523"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0213",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The Sambar server includes batch files ECHO.BAT and HELLO.BAT in the CGI directory, which allow remote attackers to execute commands via shell metacharacters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0213"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0509",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Buffer overflows in the finger and whois demonstration scripts in Sambar Server 4.3 allow remote attackers to execute arbitrary commands via a long hostname.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0509"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0812",
+      "cvss_score": 7.6,
+      "severity": null,
+      "description": "Race condition in Samba smbmnt allows local users to mount file systems in arbitrary locations.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0812"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0835",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "search.dll Sambar ISAPI Search utility in Sambar Server 4.4 Beta 3 allows remote attackers to read arbitrary directories by specifying the directory in the query parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0835"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0935",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 allows local users to overwrite arbitrary files via a symlink attack on the cgi.log file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0935"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0936",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 installs the cgi.log logging file with world readable permissions, which allows local users to read sensitive information such as user names and passwords.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0936"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0937",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 does not log login attempts in which the username is correct but the password is wrong, which allows remote attackers to conduct brute force password guessing attacks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0937"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0938",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 supplies a different error message when a valid username is provided versus an invalid name, which allows remote attackers to identify valid users on the server.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0938"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0939",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 allows remote attackers to cause a denial of service by repeatedly submitting a nonstandard URL in the GET HTTP request and forcing it to restart.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0939"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-1162",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the %m macro in the smb.conf configuration file in Samba before 2.2.0a allows remote attackers to overwrite certain files via a .. in a NETBIOS name, which is used as the name for a .log file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1162"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-0406",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "Samba before 2.2.0 allows local attackers to overwrite arbitrary files via a symlink attack using (1) a printer queue query, (2) the more command in smbclient, or (3) the mput command in smbclient.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0406"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-1010",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in pagecount CGI script in Sambar Server before 5.0 beta 5 allows remote attackers to overwrite arbitrary files via a .. (dot dot) attack on the page parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1010"
+    },
+    {
+      "port": 139,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-1106",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "The default configuration of Sambar Server 5 and earlier uses a symmetric key that is compiled into the binary program for encrypting passwords, which could allow local users to break all user passwords by cracking the key or modifying a copy of the sambar program to call the decryption procedure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1106"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0179",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Windows NT crashes or locks up when a Samba client executes a \"cd ..\" command on a file share.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0179"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0182",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Samba has a buffer overflow which allows a remote attacker to obtain root access by specifying a long password.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0182"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-1178",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Sambar Server 4.1 beta allows remote attackers to obtain sensitive information about the server via an HTTP request for the dumpenv.pl script.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1178"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-1288",
+      "cvss_score": 4.6,
+      "severity": null,
+      "description": "Samba 1.9.18 inadvertently includes a prototype application, wsmbconf, which is installed with incorrect permissions including the setgid bit, which allows local users to read and write files and possibly gain privileges via bugs in the program.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1288"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0810",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Denial of service in Samba NETBIOS name service daemon (nmbd).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0810"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0811",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Buffer overflow in Samba smbd program via a malformed message command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0811"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-1523",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in Sambar Web Server 4.2.1 allows remote attackers to cause a denial of service, and possibly execute arbitrary commands, via a long HTTP GET request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1523"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0213",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The Sambar server includes batch files ECHO.BAT and HELLO.BAT in the CGI directory, which allow remote attackers to execute commands via shell metacharacters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0213"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0509",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Buffer overflows in the finger and whois demonstration scripts in Sambar Server 4.3 allow remote attackers to execute arbitrary commands via a long hostname.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0509"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-1999-0812",
+      "cvss_score": 7.6,
+      "severity": null,
+      "description": "Race condition in Samba smbmnt allows local users to mount file systems in arbitrary locations.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0812"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0835",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "search.dll Sambar ISAPI Search utility in Sambar Server 4.4 Beta 3 allows remote attackers to read arbitrary directories by specifying the directory in the query parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0835"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0935",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 allows local users to overwrite arbitrary files via a symlink attack on the cgi.log file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0935"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0936",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 installs the cgi.log logging file with world readable permissions, which allows local users to read sensitive information such as user names and passwords.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0936"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0937",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 does not log login attempts in which the username is correct but the password is wrong, which allows remote attackers to conduct brute force password guessing attacks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0937"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0938",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 supplies a different error message when a valid username is provided versus an invalid name, which allows remote attackers to identify valid users on the server.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0938"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2000-0939",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Samba Web Administration Tool (SWAT) in Samba 2.0.7 allows remote attackers to cause a denial of service by repeatedly submitting a nonstandard URL in the GET HTTP request and forcing it to restart.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2000-0939"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-1162",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the %m macro in the smb.conf configuration file in Samba before 2.2.0a allows remote attackers to overwrite certain files via a .. in a NETBIOS name, which is used as the name for a .log file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1162"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-0406",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "Samba before 2.2.0 allows local attackers to overwrite arbitrary files via a symlink attack using (1) a printer queue query, (2) the more command in smbclient, or (3) the mput command in smbclient.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0406"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-1010",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in pagecount CGI script in Sambar Server before 5.0 beta 5 allows remote attackers to overwrite arbitrary files via a .. (dot dot) attack on the page parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1010"
+    },
+    {
+      "port": 445,
+      "service": "netbios-ssn",
+      "version": "Samba smbd 3.X - 4.X (workgroup: WORKGROUP)",
+      "cve_id": "CVE-2001-1106",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "The default configuration of Sambar Server 5 and earlier uses a symmetric key that is compiled into the binary program for encrypting passwords, which could allow local users to break all user passwords by cracking the key or modifying a copy of the sambar program to call the decryption procedure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1106"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: trendnet",
+      "severity": "info"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "adf3d3a3",
+  "timestamp": "2026-08-28T15:04:09.226547+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink_latest/RE350_V1_171214.zip",
+    "name": "RE350_V1_171214.zip",
+    "sha256": "77f12efc4b4f96b6d573db8a5a756f1fa851a650b258db8caede5e8d74ae355e",
+    "size_bytes": 5577845
+  },
+  "emulation": {
+    "image_id": 140,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": true
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

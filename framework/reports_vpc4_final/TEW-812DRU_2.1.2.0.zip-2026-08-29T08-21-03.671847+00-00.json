@@ -1,0 +1,22 @@
+{
+  "run_id": "567ebbda",
+  "timestamp": "2026-08-29T08:21:03.671847+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-812DRU_2.1.2.0.zip",
+    "name": "TEW-812DRU_2.1.2.0.zip",
+    "sha256": "d757d894c2cb7a176a0a9c545e9eac1377799b68a38f74c8275b7c7568056819",
+    "size_bytes": 7982088
+  },
+  "emulation": {
+    "image_id": 172,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,148 @@
+# CATEGORY: init_exec_eacces
+# vpc=4 scratch_id=269 name=DCS-6915_REVA_FIRMWARE_v1.11.00 brand=dlink_ipcamera_dcs_6915_reva_firmware_v1_11_00
+matched_regex: couldn.t execute it \(error -13\)
+# source log: qemu.initial.serial.log  (233 lines total)
+# scratch metadata: name='DCS-6915_REVA_FIRMWARE_v1.11.00'  brand='dlink_ipcamera_dcs_6915_reva_firmware_v1_11_00'  architecture='armel'
+# signature: /couldn.t execute it \(error -13\)/  first hit at line 224
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #18 Sat Oct 31 17:55:49 KST 2020
+[    0.000000] CPU: ARMv7 Processor [412fc0f1] revision 1 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine model: linux,dummy-virt
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] On node 0 totalpages: 65536
+[    0.000000] free_area_init_node: node 0, pgdat c061bfa8, node_mem_map cfdfa000
+[    0.000000]   Normal zone: 512 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 65536 pages, LIFO batch:15
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv0.2 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: firmadyne.syscall=1 root=/dev/vda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 rdinit=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=31
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 252388K/262144K available (4297K kernel code, 170K rwdata, 1580K rodata, 176K init, 148K bss, 9756K reserved, 0K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xd0800000 - 0xff000000   ( 744 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xd0000000   ( 256 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc05c5788   (5878 kB)
+[    0.000000]       .init : 0xc05c6000 - 0xc05f2000   ( 176 kB)
+[    0.000000]       .data : 0xc05f2000 - 0xc061c800   ( 170 kB)
+[    0.000000]        .bss : 0xc061f000 - 0xc06442d4   ( 149 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] Architected cp15 timer(s) running at 62.50MHz (virt).
+[    0.000000] clocksource arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1cd42e208c, max_idle_ns: 881590405314 ns
+[    0.000204] sched_clock: 56 bits at 62MHz, resolution 16ns, wraps every 4398046511096ns
+
+--- signature context (lines 179-233) ---
+[    0.504826] 0x000000300000-0x000000400000 : "NAND simulator partition 3"
+[    0.505907] 0x000000400000-0x000000500000 : "NAND simulator partition 4"
+[    0.506983] 0x000000500000-0x000000600000 : "NAND simulator partition 5"
+[    0.508098] 0x000000600000-0x000000700000 : "NAND simulator partition 6"
+[    0.509458] 0x000000700000-0x000000800000 : "NAND simulator partition 7"
+[    0.510509] 0x000000800000-0x000000900000 : "NAND simulator partition 8"
+[    0.511573] 0x000000900000-0x000000a00000 : "NAND simulator partition 9"
+[    0.512710] 0x000000a00000-0x000008000000 : "NAND simulator partition 10"
+[    0.516305] tun: Universal TUN/TAP device driver, 1.6
+[    0.516516] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.521902] PPP generic driver version 2.4.2
+[    0.524148] PPP BSD Compression module registered
+[    0.524425] PPP Deflate Compression module registered
+[    0.524766] PPP MPPE Compression module registered
+[    0.524952] NET: Registered protocol family 24
+[    0.525346] PPTP driver version 0.8.5
+[    0.526692] usbcore: registered new interface driver usb-storage
+[    0.529871] rtc-pl031 9010000.pl031: rtc core: registered pl031 as rtc0
+[    0.530717] hidraw: raw HID events driver (C) Jiri Kosina
+[    0.531318] usbcore: registered new interface driver usbhid
+[    0.531618] usbhid: USB HID core driver
+[    0.532168] Netfilter messages via NETLINK v0.30.
+[    0.533143] nf_conntrack version 0.5.0 (3943 buckets, 15772 max)
+[    0.534682] ctnetlink v0.93: registering with nfnetlink.
+[    0.536276] ipip: IPv4 over IPv4 tunneling driver
+[    0.538469] gre: GRE over IPv4 demultiplexor driver
+[    0.539009] ip_gre: GRE over IPv4 tunneling driver
+[    0.543817] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.545570] arp_tables: (C) 2002 David S. Miller
+[    0.546811] Initializing XFRM netlink socket
+[    0.547448] NET: Registered protocol family 10
+[    0.554377] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    0.555990] sit: IPv6 over IPv4 tunneling driver
+[    0.559575] NET: Registered protocol family 17
+[    0.560401] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    0.560988] Bridge firewalling registered
+[    0.561245] Ebtables v2.0 registered
+[    0.562787] 8021q: 802.1Q VLAN Support v1.8
+[    0.563725] Registering SWP/SWPB emulation handler
+[    0.566972] rtc-pl031 9010000.pl031: setting system clock to 2026-08-29 14:54:58 UTC (1788015298)
+[    0.583230] EXT4-fs (vda1): couldn't mount as ext3 due to feature incompatibilities
+[    0.585499] EXT4-fs (vda1): mounting ext2 file system using the ext4 subsystem
+[    0.600116] EXT4-fs (vda1): mounted filesystem without journal. Opts: (null)
+[    0.601404] VFS: Mounted root (ext2 filesystem) on device 254:1.
+[    0.641673] Freeing unused kernel memory: 176K (c05c6000 - c05f2000)
+[    0.665783] Starting init: /sbin/init exists but couldn't execute it (error -13)
+[    0.672632] Starting init: /bin/sh exists but couldn't execute it (error -13)
+[    0.673337] Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/init.txt for guidance.
+[    0.674765] CPU: 0 PID: 1 Comm: swapper Tainted: G        W       4.1.17+ #18
+[    0.675159] Hardware name: Generic DT based system
+[    0.675521] [<c001c8dc>] (unwind_backtrace) from [<c0019c70>] (show_stack+0x10/0x14)
+[    0.675933] [<c0019c70>] (show_stack) from [<c0410ac8>] (panic+0x70/0x1c8)
+[    0.676286] [<c0410ac8>] (panic) from [<c040f28c>] (kernel_init+0xb8/0xe4)
+[    0.676770] [<c040f28c>] (kernel_init) from [<c0016ce8>] (ret_from_fork+0x14/0x2c)
+[    0.677553] ---[ end Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/init.txt for guidance.
+
+--- final tail (last 40 lines) ---
+[    0.525346] PPTP driver version 0.8.5
+[    0.526692] usbcore: registered new interface driver usb-storage
+[    0.529871] rtc-pl031 9010000.pl031: rtc core: registered pl031 as rtc0
+[    0.530717] hidraw: raw HID events driver (C) Jiri Kosina
+[    0.531318] usbcore: registered new interface driver usbhid
+[    0.531618] usbhid: USB HID core driver
+[    0.532168] Netfilter messages via NETLINK v0.30.
+[    0.533143] nf_conntrack version 0.5.0 (3943 buckets, 15772 max)
+[    0.534682] ctnetlink v0.93: registering with nfnetlink.
+[    0.536276] ipip: IPv4 over IPv4 tunneling driver
+[    0.538469] gre: GRE over IPv4 demultiplexor driver
+[    0.539009] ip_gre: GRE over IPv4 tunneling driver
+[    0.543817] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.545570] arp_tables: (C) 2002 David S. Miller
+[    0.546811] Initializing XFRM netlink socket
+[    0.547448] NET: Registered protocol family 10
+[    0.554377] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    0.555990] sit: IPv6 over IPv4 tunneling driver
+[    0.559575] NET: Registered protocol family 17
+[    0.560401] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    0.560988] Bridge firewalling registered
+[    0.561245] Ebtables v2.0 registered
+[    0.562787] 8021q: 802.1Q VLAN Support v1.8
+[    0.563725] Registering SWP/SWPB emulation handler
+[    0.566972] rtc-pl031 9010000.pl031: setting system clock to 2026-08-29 14:54:58 UTC (1788015298)
+[    0.583230] EXT4-fs (vda1): couldn't mount as ext3 due to feature incompatibilities
+[    0.585499] EXT4-fs (vda1): mounting ext2 file system using the ext4 subsystem
+[    0.600116] EXT4-fs (vda1): mounted filesystem without journal. Opts: (null)
+[    0.601404] VFS: Mounted root (ext2 filesystem) on device 254:1.
+[    0.641673] Freeing unused kernel memory: 176K (c05c6000 - c05f2000)
+[    0.665783] Starting init: /sbin/init exists but couldn't execute it (error -13)
+[    0.672632] Starting init: /bin/sh exists but couldn't execute it (error -13)
+[    0.673337] Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/init.txt for guidance.
+[    0.674765] CPU: 0 PID: 1 Comm: swapper Tainted: G        W       4.1.17+ #18
+[    0.675159] Hardware name: Generic DT based system
+[    0.675521] [<c001c8dc>] (unwind_backtrace) from [<c0019c70>] (show_stack+0x10/0x14)
+[    0.675933] [<c0019c70>] (show_stack) from [<c0410ac8>] (panic+0x70/0x1c8)
+[    0.676286] [<c0410ac8>] (panic) from [<c040f28c>] (kernel_init+0xb8/0xe4)
+[    0.676770] [<c040f28c>] (kernel_init) from [<c0016ce8>] (ret_from_fork+0x14/0x2c)
+[    0.677553] ---[ end Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/init.txt for guidance.

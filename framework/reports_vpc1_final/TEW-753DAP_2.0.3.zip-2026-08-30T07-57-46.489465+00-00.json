@@ -1,0 +1,28 @@
+{
+  "run_id": "4740e45d",
+  "timestamp": "2026-08-30T07:57:46.489465+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-753DAP_2.0.3.zip",
+    "name": "TEW-753DAP_2.0.3.zip",
+    "sha256": "4f8b1e6e2a61bdb8b2dc026d31a221487e2809120a642ca7a6735d38bd8d6eae",
+    "size_bytes": 6831526
+  },
+  "emulation": {
+    "image_id": 406,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.10.100",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.100",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 07:55 UTC\nNmap scan report for 192.168.10.100\nHost is up.\nAll 65535 scanned ports on 192.168.10.100 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.06 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

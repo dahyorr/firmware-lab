@@ -1,0 +1,2 @@
+vpc=2 scratch_id=226 name=DIR-604M_FW2.00KR brand=dlink_dir_604m_fw2_00kr
+matched_regex: Unable to get semaphore key

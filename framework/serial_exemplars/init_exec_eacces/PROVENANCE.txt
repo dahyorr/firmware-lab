@@ -1,0 +1,2 @@
+vpc=4 scratch_id=269 name=DCS-6915_REVA_FIRMWARE_v1.11.00 brand=dlink_ipcamera_dcs_6915_reva_firmware_v1_11_00
+matched_regex: couldn.t execute it \(error -13\)

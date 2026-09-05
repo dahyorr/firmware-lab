@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-08-29T21:22:20.918202+00:00",
+  "profile": "comprehensive",
+  "total_firmware": 4,
+  "outcomes": {
+    "success": 0,
+    "emulation_failed": 2,
+    "timeout": 2,
+    "error": 0
+  },
+  "emulation_success_rate": 0.5,
+  "from_cache": 0,
+  "fresh_runs": 0,
+  "mean_duration_fresh": null,
+  "by_vendor": {
+    "dlink": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 1,
+      "timeout": 0,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 1.0
+    },
+    "tplink": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 1,
+      "timeout": 0,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 1.0
+    },
+    "dlink_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    },
+    "tplink_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    }
+  },
+  "results": [
+    {
+      "vendor": "dlink",
+      "firmware": "DIR-550A_v1.10KRb09.trx",
+      "brand": "dlink_dir_550a_v1_10krb09",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:39:09.068876+00:00",
+      "status": "emulation_failed",
+      "duration_seconds": 786.0,
+      "from_cache": false,
+      "architecture": "mipsel",
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "77c5854b",
+      "report_path": "/root/project/framework/reports/DIR-550A_v1.10KRb09.trx-2026-08-29T20-52-15.061857+00-00.json",
+      "error": null
+    },
+    {
+      "vendor": "tplink",
+      "firmware": "TL-WR841N_KR__V11_151201.zip",
+      "brand": "tplink_tl_wr841n_kr_v11_151201",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:52:15.065901+00:00",
+      "status": "emulation_failed",
+      "duration_seconds": 3.1,
+      "from_cache": false,
+      "architecture": "mipseb",
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "16b59762",
+      "report_path": "/root/project/framework/reports/TL-WR841N_KR__V11_151201.zip-2026-08-29T20-52-18.127187+00-00.json",
+      "error": null
+    },
+    {
+      "vendor": "dlink_ipcamera",
+      "firmware": "DCS-5025L_REVA_FIRMWARE_v1.03.07.zip",
+      "brand": "dlink_ipcamera_dcs_5025l_reva_firmware_v1_03_07",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:52:18.127523+00:00",
+      "status": "timeout",
+      "duration_seconds": 901.8,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'dlink_ipcamera_dcs_5025l_reva_firmware_v1_03_07', '/root/project/firmware/dlink_ipcamera/DCS-5025L_REVA_FIRMWARE_v1.03.07.zip']' timed out after 900 seconds"
+    },
+    {
+      "vendor": "tplink_ipcamera",
+      "firmware": "NC200_v2.1.8_171109.zip",
+      "brand": "tplink_ipcamera_nc200_v2_1_8_171109",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T21:07:19.962706+00:00",
+      "status": "timeout",
+      "duration_seconds": 901.0,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'tplink_ipcamera_nc200_v2_1_8_171109', '/root/project/firmware/tplink_ipcamera/NC200_v2.1.8_171109.zip']' timed out after 900 seconds"
+    }
+  ]
+}

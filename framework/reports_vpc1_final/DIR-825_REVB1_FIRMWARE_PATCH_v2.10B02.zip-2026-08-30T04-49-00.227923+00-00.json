@@ -1,0 +1,184 @@
+{
+  "run_id": "01d7e67a",
+  "timestamp": "2026-08-30T04:49:00.227923+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/DIR-825_REVB1_FIRMWARE_PATCH_v2.10B02.zip",
+    "name": "DIR-825_REVB1_FIRMWARE_PATCH_v2.10B02.zip",
+    "sha256": "7c86854f3b27d78d79a799b4b3ae6b809516f2d764f6227977f827d9c325b33a",
+    "size_bytes": 4904006
+  },
+  "emulation": {
+    "image_id": 370,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 94.8,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.78",
+        "raw_banner": "53/tcp    open  domain     dnsmasq 2.78"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp   open  ssl/https?"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open  ssl/vop?"
+      },
+      {
+        "port": 5449,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "5449/tcp  open  unknown"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8181/tcp  open  tcpwrapped"
+      },
+      {
+        "port": 8182,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8182/tcp  open  tcpwrapped"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "49152/tcp open  tcpwrapped"
+      },
+      {
+        "port": 63481,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.78",
+        "raw_banner": "63481/tcp open  domain     dnsmasq 2.78"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 04:47 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.027s latency).\nNot shown: 65402 closed ports, 124 filtered ports\nPORT      STATE SERVICE    VERSION\n53/tcp    open  domain     dnsmasq 2.78\n80/tcp    open  tcpwrapped\n443/tcp   open  ssl/https?\n4433/tcp  open  ssl/vop?\n5449/tcp  open  unknown\n8181/tcp  open  tcpwrapped\n8182/tcp  open  tcpwrapped\n49152/tcp open  tcpwrapped\n63481/tcp open  domain     dnsmasq 2.78\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 94.76 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

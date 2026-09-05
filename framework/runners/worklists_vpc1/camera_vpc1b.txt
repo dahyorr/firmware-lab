@@ -1,0 +1,4 @@
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-5000L_REVA_FIRMWARE_v1.04.01.zip
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-7517_REVB_FIRMWARE_v2.00.03.zip
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-960L_REVA_FIRMWARE_v1.06B01.zip
+trendnet_ipcamera|/root/project/firmware/trendnet_ipcamera/FW_TV-IP551WI_V1_1.07.01.zip

@@ -1,0 +1,22 @@
+{
+  "run_id": "3b535f06",
+  "timestamp": "2026-08-28T18:24:43.128240+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/belkin_latest/F9J1102_WW_2.03.11.bin",
+    "name": "F9J1102_WW_2.03.11.bin",
+    "sha256": "0c25cdc850307745492b75af101b7060f8d09ff59c9688679def2dcb87476de2",
+    "size_bytes": 7233536
+  },
+  "emulation": {
+    "image_id": 49,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

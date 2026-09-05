@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-08-29T15:52:47.036909+00:00",
+  "profile": "comprehensive",
+  "total_firmware": 4,
+  "outcomes": {
+    "success": 0,
+    "emulation_failed": 1,
+    "timeout": 3,
+    "error": 0
+  },
+  "emulation_success_rate": 0.25,
+  "from_cache": 0,
+  "fresh_runs": 0,
+  "mean_duration_fresh": null,
+  "by_vendor": {
+    "dlink_ipcamera": {
+      "total": 2,
+      "success": 0,
+      "emulation_failed": 1,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.5
+    },
+    "tplink_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    },
+    "trendnet_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    }
+  },
+  "results": [
+    {
+      "vendor": "dlink_ipcamera",
+      "firmware": "DCS-5010L_REVA_FIRMWARE_1.14_B09.zip",
+      "brand": "dlink_ipcamera_dcs_5010l_reva_firmware_1_14_b09",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T14:53:04.073666+00:00",
+      "status": "emulation_failed",
+      "duration_seconds": 880.2,
+      "from_cache": false,
+      "architecture": "mipsel",
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "7720fa6b",
+      "report_path": "/root/project/framework/reports/DCS-5010L_REVA_FIRMWARE_1.14_B09.zip-2026-08-29T15-07-44.248867+00-00.json",
+      "error": null
+    },
+    {
+      "vendor": "dlink_ipcamera",
+      "firmware": "DCS-930L_REVA_FIRMWARE_1.16.04.ZIP",
+      "brand": "dlink_ipcamera_dcs_930l_reva_firmware_1_16_04",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T15:07:44.249392+00:00",
+      "status": "timeout",
+      "duration_seconds": 900.9,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'dlink_ipcamera_dcs_930l_reva_firmware_1_16_04', '/root/project/firmware/dlink_ipcamera/DCS-930L_REVA_FIRMWARE_1.16.04.ZIP']' timed out after 900 seconds"
+    },
+    {
+      "vendor": "tplink_ipcamera",
+      "firmware": "NC220_v1.3.0_180105.zip",
+      "brand": "tplink_ipcamera_nc220_v1_3_0_180105",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T15:22:45.182784+00:00",
+      "status": "timeout",
+      "duration_seconds": 900.9,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'tplink_ipcamera_nc220_v1_3_0_180105', '/root/project/firmware/tplink_ipcamera/NC220_v1.3.0_180105.zip']' timed out after 900 seconds"
+    },
+    {
+      "vendor": "trendnet_ipcamera",
+      "firmware": "FW_TV-IP651WI_V1_1.07.01.zip",
+      "brand": "trendnet_ipcamera_fw_tv_ip651wi_v1_1_07_01",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T15:37:46.066565+00:00",
+      "status": "timeout",
+      "duration_seconds": 901.0,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'trendnet_ipcamera_fw_tv_ip651wi_v1_1_07_01', '/root/project/firmware/trendnet_ipcamera/FW_TV-IP651WI_V1_1.07.01.zip']' timed out after 900 seconds"
+    }
+  ]
+}

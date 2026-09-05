@@ -1,0 +1,65 @@
+{
+  "run_id": "2aee5765",
+  "timestamp": "2026-08-28T02:32:09.039203+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6700-V1.0.1.20_10.0.32.zip",
+    "name": "R6700-V1.0.1.20_10.0.32.zip",
+    "sha256": "9c6963a091ae2fffebe2380c48ee97b63b8756cfaa094f8a6633ea5a1077be0f",
+    "size_bytes": 31887648
+  },
+  "emulation": {
+    "image_id": 99,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 53.1,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "telnet?",
+        "version": "",
+        "raw_banner": "23/tcp  open  telnet?"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.39",
+        "raw_banner": "53/tcp  open  domain     dnsmasq 2.39"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "",
+        "raw_banner": "80/tcp  open  http"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp open  ssl/https?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 02:31 UTC\nWarning: 192.168.1.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.1.1\nHost is up (0.037s latency).\nNot shown: 65206 closed ports, 325 filtered ports\nPORT    STATE SERVICE    VERSION\n23/tcp  open  telnet?\n53/tcp  open  domain     dnsmasq 2.39\n80/tcp  open  http\n443/tcp open  ssl/https?\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port80-TCP:V=7.80%I=7%D=8/28%Time=6A90F317%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,2D,\"HTTP/1\\.0\\x20200\\x20OK\\r\\nContent-Type:\\x20text/plain\\r\\n\\r\\\nSF:n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 53.06 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    }
+  ]
+}

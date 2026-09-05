@@ -1,0 +1,28 @@
+{
+  "run_id": "9823ddbf",
+  "timestamp": "2026-08-28T08:42:26.179186+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/DIR822B1_FW202KRb06.bin",
+    "name": "DIR822B1_FW202KRb06.bin",
+    "sha256": "b06f7ddff9529404547505b429402786d683cf53d0e2d0e508762da78cbc6072",
+    "size_bytes": 6697104
+  },
+  "emulation": {
+    "image_id": 60,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 80.7,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:41 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.029s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 80.66 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "29569c48",
+  "timestamp": "2026-08-28T18:24:37.006006+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/belkin_latest/F7D7302_WW_1.00.23.bin",
+    "name": "F7D7302_WW_1.00.23.bin",
+    "sha256": "b204cb9d10c75e559d7c67ad6f21301fc16181bd862a160062cccc50b9719bae",
+    "size_bytes": 6262784
+  },
+  "emulation": {
+    "image_id": 43,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

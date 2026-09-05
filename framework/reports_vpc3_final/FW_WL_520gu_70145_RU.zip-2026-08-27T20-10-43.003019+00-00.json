@@ -1,0 +1,22 @@
+{
+  "run_id": "dcf70455",
+  "timestamp": "2026-08-27T20:10:43.003019+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_WL_520gu_70145_RU.zip",
+    "name": "FW_WL_520gu_70145_RU.zip",
+    "sha256": "d36037dd8f87b635b0ed11116f3fe220d28d42ecd5d8e70f3388c769b3d94578",
+    "size_bytes": 3958077
+  },
+  "emulation": {
+    "image_id": 35,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

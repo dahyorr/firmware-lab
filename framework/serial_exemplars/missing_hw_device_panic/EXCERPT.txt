@@ -1,0 +1,142 @@
+# CATEGORY: missing_hw_device_panic
+# vpc=1 scratch_id=423 name=F9K1103_WW_1.10.23 brand=belkin_latest_f9k1103_ww_1_10_23
+matched_regex: open spiflash: No such device|exitcode=0x00008f00
+# source log: qemu.initial.serial.log  (2809 lines total)
+# scratch metadata: name='F9K1103_WW_1.10.23'  brand='belkin_latest_f9k1103_ww_1_10_23'  architecture='mipsel'
+# signature: /open spiflash: No such device|exitcode=0x00008f00/  first hit at line 2806
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #28 Sat Oct 31 17:56:39 KST 2020
+[    0.000000] earlycon: Early serial console at I/O port 0x3f8 (options '38400n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] CPU0 revision is: 00019300 (MIPS 24Kc)
+[    0.000000] FPU revision is: 00739300
+[    0.000000] Software DMA cache coherency enabled
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00001000 @ 00000000 (reserved)
+[    0.000000]  memory: 000ef000 @ 00001000 (ROM data)
+[    0.000000]  memory: 00788000 @ 000f0000 (reserved)
+[    0.000000]  memory: 0f788000 @ 00878000 (usable)
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Wasting 69376 bytes for tracking 2168 unused pages
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x0000000000ffffff]
+[    0.000000]   Normal   [mem 0x0000000001000000-0x000000000fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] On node 0 totalpages: 65536
+[    0.000000] free_area_init_node: node 0, pgdat 808155b0, node_mem_map 81000000
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 4096 pages, LIFO batch:0
+[    0.000000]   Normal zone: 480 pages used for memmap
+[    0.000000]   Normal zone: 61440 pages, LIFO batch:15
+[    0.000000] Primary instruction cache 2kB, VIPT, 2-way, linesize 16 bytes.
+[    0.000000] Primary data cache 2kB, 2-way, VIPT, no aliases, linesize 16 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: firmadyne.syscall=1 root=/dev/sda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 init=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=31
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+
+--- signature context (lines 2761-2809) ---
+sem_get: Key: 411000fd
+nvram_get_buf: Unable to open key: /firmadyne/libnvram/WIFI_WPA_OBSCURE! Set default value to ""
+nvram_set: WIFI_WPA_OBSCURE = "1"
+sem_get: Key: 411000fd
+sem_get: Key: 411000fd
+Error Set CFG WIFI_WPA_OBSCURE = 1
+error: open mtd uboot
+Segmentation fault
+[    6.427987] cfg80211: Calling CRDA to update world regulatory domain
+[    7.951301] firmadyne: sys_socket[PID: 397 (iptables)]: family:2, type:3, protocol:255
+[    8.003602] firmadyne: sys_socket[PID: 399 (iptables)]: family:2, type:3, protocol:255
+[    8.049702] firmadyne: sys_socket[PID: 404 (iptables)]: family:2, type:3, protocol:255
+[    8.099237] firmadyne: sys_socket[PID: 409 (iptables)]: family:2, type:3, protocol:255
+nvram_get_buf: LAN_IP1
+sem_lock: Already initialized!
+sem_get: Key: 411000fd
+nvram_get_buf: 
+
+[NVRAM] 7 LAN_IP1
+
+sem_get: Key: 411000fd
+nvram_get_buf: = "192.168.169.1"
+[    8.224866] firmadyne: sys_socket[PID: 417 (ifconfig)]: family:2, type:1, protocol:0
+ifconfig: SIOCSIFADDR: No such device
+nvram_get_buf: LAN_BRNAME
+sem_lock: Already initialized!
+sem_get: Key: 411000fd
+nvram_get_buf: 
+
+[NVRAM] 10 LAN_BRNAME
+
+sem_get: Key: 411000fd
+nvram_get_buf: = "br0"
+[    9.377928] firmadyne: sys_socket[PID: 427 (ifconfig)]: family:2, type:1, protocol:0
+ifconfig: ioctl 0x8913 failed: No such device
+[    9.422734] firmadyne: sys_socket[PID: 433 (iwpriv)]: family:2, type:1, protocol:0
+rai0      no private ioctls.
+
+[    9.443911] firmadyne: sys_socket[PID: 434 (iwpriv)]: family:2, type:1, protocol:0
+rai0      no private ioctls.
+
+[    9.469505] firmadyne: sys_socket[PID: 435 (ifconfig)]: family:2, type:1, protocol:0
+ifconfig: ioctl 0x8913 failed: No such device
+Sending SIGTERM to all processes
+Terminated
+[    9.497117] Kernel panic - not syncing: Attempted to kill init! exitcode=0x00008f00
+[    9.497117] 
+[    9.497945] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00008f00
+[    9.497945] 
+
+--- final tail (last 40 lines) ---
+[    7.951301] firmadyne: sys_socket[PID: 397 (iptables)]: family:2, type:3, protocol:255
+[    8.003602] firmadyne: sys_socket[PID: 399 (iptables)]: family:2, type:3, protocol:255
+[    8.049702] firmadyne: sys_socket[PID: 404 (iptables)]: family:2, type:3, protocol:255
+[    8.099237] firmadyne: sys_socket[PID: 409 (iptables)]: family:2, type:3, protocol:255
+nvram_get_buf: LAN_IP1
+sem_lock: Already initialized!
+sem_get: Key: 411000fd
+nvram_get_buf: 
+
+[NVRAM] 7 LAN_IP1
+
+sem_get: Key: 411000fd
+nvram_get_buf: = "192.168.169.1"
+[    8.224866] firmadyne: sys_socket[PID: 417 (ifconfig)]: family:2, type:1, protocol:0
+ifconfig: SIOCSIFADDR: No such device
+nvram_get_buf: LAN_BRNAME
+sem_lock: Already initialized!
+sem_get: Key: 411000fd
+nvram_get_buf: 
+
+[NVRAM] 10 LAN_BRNAME
+
+sem_get: Key: 411000fd
+nvram_get_buf: = "br0"
+[    9.377928] firmadyne: sys_socket[PID: 427 (ifconfig)]: family:2, type:1, protocol:0
+ifconfig: ioctl 0x8913 failed: No such device
+[    9.422734] firmadyne: sys_socket[PID: 433 (iwpriv)]: family:2, type:1, protocol:0
+rai0      no private ioctls.
+
+[    9.443911] firmadyne: sys_socket[PID: 434 (iwpriv)]: family:2, type:1, protocol:0
+rai0      no private ioctls.
+
+[    9.469505] firmadyne: sys_socket[PID: 435 (ifconfig)]: family:2, type:1, protocol:0
+ifconfig: ioctl 0x8913 failed: No such device
+Sending SIGTERM to all processes
+Terminated
+[    9.497117] Kernel panic - not syncing: Attempted to kill init! exitcode=0x00008f00
+[    9.497117] 
+[    9.497945] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00008f00
+[    9.497945] 

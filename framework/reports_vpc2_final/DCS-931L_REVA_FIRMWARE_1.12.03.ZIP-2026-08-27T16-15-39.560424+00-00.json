@@ -1,0 +1,187 @@
+{
+  "run_id": "b920a256",
+  "timestamp": "2026-08-27T16:15:39.560424+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DCS-931L_REVA_FIRMWARE_1.12.03.ZIP",
+    "name": "DCS-931L_REVA_FIRMWARE_1.12.03.ZIP",
+    "sha256": "cb6eba2384fe53cbfe4edee2e45fd599de6f6fe4939b7eed1efbf83770a0e40c",
+    "size_bytes": 7826374
+  },
+  "emulation": {
+    "image_id": 14,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 62.0,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "telnet",
+        "version": "BusyBox telnetd 1.0",
+        "raw_banner": "23/tcp   open  telnet  BusyBox telnetd 1.0"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "mini_httpd 1.19 19dec2003",
+        "raw_banner": "80/tcp   open  http    mini_httpd 1.19 19dec2003"
+      },
+      {
+        "port": 1050,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "mini_httpd 1.19 19dec2003",
+        "raw_banner": "1050/tcp open  http    mini_httpd 1.19 19dec2003"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 16:14 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.00051s latency).\nNot shown: 65454 closed ports, 78 filtered ports\nPORT     STATE SERVICE VERSION\n23/tcp   open  telnet  BusyBox telnetd 1.0\n80/tcp   open  http    mini_httpd 1.19 19dec2003\n1050/tcp open  http    mini_httpd 1.19 19dec2003\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 61.96 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2009-4490",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.19 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2015-1548",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.21 and earlier allows remote attackers to obtain sensitive information from process memory via an HTTP request with a long protocol string, which triggers an incorrect response size calculation and an out-of-bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2017-17663",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The htpasswd implementation of mini_httpd before v1.28 and of thttpd before v2.28 is affected by a buffer overflow that can be exploited remotely to perform code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2018-18778",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "ACME mini_httpd before 1.30 lets remote users read arbitrary files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18778"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2026-68005",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue in ACME mini_httpd 1.30 and prior allows a remote attacker to cause a denial of service via the HTTP request header parser in the handle_request() function",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68005"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2009-4490",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.19 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2015-1548",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.21 and earlier allows remote attackers to obtain sensitive information from process memory via an HTTP request with a long protocol string, which triggers an incorrect response size calculation and an out-of-bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2017-17663",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The htpasswd implementation of mini_httpd before v1.28 and of thttpd before v2.28 is affected by a buffer overflow that can be exploited remotely to perform code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2018-18778",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "ACME mini_httpd before 1.30 lets remote users read arbitrary files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18778"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2026-68005",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue in ACME mini_httpd 1.30 and prior allows a remote attacker to cause a denial of service via the HTTP request header parser in the handle_request() function",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68005"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access (version: BusyBox telnetd 1.0)",
+      "severity": "high"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

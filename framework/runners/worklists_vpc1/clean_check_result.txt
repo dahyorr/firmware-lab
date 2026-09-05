@@ -1,0 +1,102 @@
+2|DGN1000NA_V1.1.00.40.zip|HAS_MARKER:Bad argument
+3|DGN1000_1.1.00.55_NA.zip|HAS_MARKER:Bad argument
+13|DGN3500-V1.1.00.36_1.00.36NA.zip|HAS_MARKER:No such device,Unable to open key
+16|DGND3300_Firmware_Version_1.1.00.32__North_America_.zip|HAS_MARKER:No such device,Unable to open key
+17|DGND3300_Firmware_Version_1.1.00.41__North_America_.zip|HAS_MARKER:No such device,Unable to open key
+18|DGND3300v2_Firmware_Version_2.1.00.41__North_America_.zip|HAS_MARKER:No such device,Unable to open key
+19|DGND3300v2_Firmware_Version_2.1.00.42__North_America_.zip|HAS_MARKER:No such device,Unable to open key
+20|DGND3300v2_Firmware_Version_2.1.00.48__North_America_.zip|HAS_MARKER:No such device,Unable to open key
+21|DGND3300v2_Firmware_Version_2.1.00.51__NA_Users_Only_.zip|CLEAN
+22|DGND3300v2_Firmware_Version_2.1.00.53__For_NA_Users_Only_.zip|HAS_MARKER:Unable to open key
+23|DGND3300v2_Initial_Release_Firmware_2.1.00.33__North_America_.zip|HAS_MARKER:No such device,Unable to open key
+55|DM111Pv2_Firmware_Version_2.00.19.zip|HAS_MARKER:No such device,Unable to open key
+58|DM111Pv2_Firmware_Version_2.00.25.zip|HAS_MARKER:No such device,Unable to open key
+61|DM111Pv2_Firmware_Version_2.00.26__North_America_.zip|HAS_MARKER:No such device,Unable to open key
+65|JNR1010-V1.0.0.24.zip|REPEATING_LOOP(x15):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+68|JNR1010-v1.0.0.32.zip|REPEATING_LOOP(x15):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+76|JNR1010V2-JWNR2000-JWNR2000v5-JWNR2010v5-JNR1010v2-WNR2020-WNR614-WNR618-FW_V1.1.0.28_1.0.1.zip|HAS_MARKER:No such device,Bad argument,Unable to open key
+78|JNR1010V2-JWNR2000-JWNR2000v5-JWNR2010v5-JNR1010v2-WNR2020-WNR614-WNR618_FW_V1.1.0.20_1.0.1.zip|HAS_MARKER:No such device,Unable to open key
+81|JNR1010_V1.0.0.16.zip|CLEAN
+92|JNR1010v2_WNR614v1_WNR618v1_WNR2020v1_JWNR2000v5_JWNR2010v5_FW_v1.1.0.12.zip|HAS_MARKER:No such device,Unable to open key
+112|JR6150-R6050-V1.0.0.22.zip|HAS_MARKER:Unable to open key
+115|JR6150-R6050-V1.0.0.34_1.0.1.zip|HAS_MARKER:Bad argument,Unable to open key
+125|JR6150_R6050-V1.0.1.2_1.0.1.zip|HAS_MARKER:Unable to open key
+129|JR6150_R6050-V1.0.1.7_1.0.1.zip|HAS_MARKER:Bad argument,Unable to open key
+140|JWNR2000-JWNR2000v5-JWNR2010v5-JNR1010v2-WNR2020-WNR614-WNR618_FW_V1.1.0.18_1.0.1.zip|HAS_MARKER:No such device,Unable to open key
+143|JWNR2000-V1.0.0.4_1.0.11.zip|REPEATING_LOOP(x34):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+146|JWNR2000_Firmware_Version_1.0.0.5__for_users_outside_North_America_only_.zip|REPEATING_LOOP(x34):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+149|JWNR2000_Firmware_Version_1.0.0.7__for_users_outside_North_America_only_.zip|REPEATING_LOOP(x34):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+152|JWNR2000v2_Firmware_Version_1.0.0.8__All_regions_except_North_America_.zip|REPEATING_LOOP(x34):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+155|JWNR2000v2_WNR1500-V1.0.0.10_1.0.4.zip|REPEATING_LOOP(x36):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+158|N150_N300_FW_V1.1.0.31_1.0.1.zip|HAS_MARKER:No such device,Unable to open key
+161|N300-1.1.0.32_101.zip|HAS_MARKER:No such device,Unable to open key
+209|PR2000-V1.0.0.14_1.0.1.zip|HAS_MARKER:No such device,Bad argument,Unable to open key
+212|PR2000-V1.0.0.15_1.0.1.zip|HAS_MARKER:No such device,Unable to open key
+215|PR2000_FW_V1.0.0.09_1.0.1.zip|HAS_MARKER:No such device,Bad argument,Unable to open key
+218|PR2000_V1.0.0.10_1.0.1.zip|HAS_MARKER:No such device,Bad argument,Unable to open key
+221|PR2000_V1.0.0.12_1.0.1.zip|HAS_MARKER:No such device,Bad argument,Unable to open key
+224|R6050_JR6150-V1.0.1.4_1.0.1.zip|HAS_MARKER:Unable to open key
+227|R6100-V1.0.0.24.zip|HAS_MARKER:No such device,Bad argument,sysctl: error
+229|R6100-V1.0.0.28.zip|HAS_MARKER:No such device,Bad argument,sysctl: error
+231|R6100-V1.0.0.38.zip|HAS_MARKER:No such device,Bad argument,sysctl: error
+233|R6100-V1.0.0.48.zip|HAS_MARKER:No such device,Bad argument,sysctl: error
+235|R6100-V1.0.0.62.zip|HAS_MARKER:No such device
+237|R6100-V1.0.1.10.zip|HAS_MARKER:No such device
+239|R6100-V1.0.1.12.zip|HAS_MARKER:No such device
+241|R6100_V1.0.0.52.zip|HAS_MARKER:No such device,Bad argument,sysctl: error
+266|R6220_FW_V1.1.0.31_1.0.1.zip|HAS_MARKER:Unable to open key
+268|R6220_FW_V1.1.0.34_1.0.1.zip|HAS_MARKER:Bad argument,Unable to open key
+270|R6220_V1.0.0.14_1.0.1_FW.zip|HAS_MARKER:Bad argument,Unable to open key
+272|R6220_V1.0.0.16_1.0.1_FW.zip|HAS_MARKER:Bad argument,Unable to open key
+274|R6220_V1.0.0.17_1.0.1_FW.zip|HAS_MARKER:Bad argument,Unable to open key
+38|R6300v2-V1.0.3.28_10.0.71.zip|REPEATING_LOOP(x15):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+138|R7500-V1.0.0.46.zip|HAS_MARKER:No such device
+141|R7500-V1.0.0.68.zip|HAS_MARKER:No such device,Bad argument
+144|R7500-V1.0.0.76.zip|HAS_MARKER:No such device
+147|R7500-V1.0.0.82.zip|HAS_MARKER:No such device
+150|R7500_V1.0.0.52.zip|HAS_MARKER:No such device
+153|R7500_V1.0.0.94.zip|HAS_MARKER:No such device,sysctl: error
+27|WNAP320_Firmware_Version_2.0.3.zip|HAS_MARKER:No such device
+29|WNAP320_Firmware_Version_2.0.zip|HAS_MARKER:No such device
+31|WNAP320_Firmware_Version_2.1.1.zip|CLEAN
+33|WNAP320_V2.1.5_firmware.zip|HAS_MARKER:No such device
+35|WNAP320_V2.1.6_firmware.zip|HAS_MARKER:No such device
+56|WNDR3700-V1.0.7.98NA.zip|REPEATING_LOOP(x23875):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:1, prot
+90|WNDR3700v4-V1.0.2.78.zip|HAS_MARKER:No such device
+106|WNDR3800-V1.0.0.18.zip|HAS_MARKER:No such device
+123|WNDR3800-V1.0.0.40.zip|HAS_MARKER:No such device
+139|WNDR4500v3-V1.0.0.26.zip|HAS_MARKER:No such device,Bad argument
+142|WNDR4500v3-V1.0.0.32.zip|HAS_MARKER:No such device
+145|WNR1000v2-V1.1.2.28NA.zip|HAS_MARKER:sysctl: error
+148|WNR1000v2-V1.1.2.54NA.zip|HAS_MARKER:sysctl: error
+151|WNR1000v2_Firmware_Version_1.1.2.50__North_America_.zip|HAS_MARKER:sysctl: error
+154|WNR2000v3_Firmware_Version_1.1.1.58.zip|HAS_MARKER:No such device
+156|WNR2000v3_Firmware_Version_1.1.2.2.zip|HAS_MARKER:No such device
+159|WNR2000v3_Initial_Release_Firmware_Version_1.0.1.26.zip|REPEATING_LOOP(x25397):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:1, prot
+190|WNR2000v3_Release_Firmware_Version_1.1.1.72.zip|HAS_MARKER:No such device
+192|WNR2000v3_V1.1.2.10.zip|HAS_MARKER:No such device
+194|WNR2000v3_V1.1.2.12.zip|HAS_MARKER:No such device
+196|WNR2000v4-V1.0.0.64.zip|HAS_MARKER:No such device
+198|WNR2000v5-V1.0.0.18.zip|HAS_MARKER:No such device
+200|WNR2000v5-V1.0.0.28.zip|HAS_MARKER:No such device
+202|WNR2000v5-V1.0.0.34.zip|HAS_MARKER:No such device
+204|WNR2000v5-V1.0.0.42.zip|HAS_MARKER:No such device
+208|WNR2000v5_V1.0.0.26.zip|HAS_MARKER:No such device
+211|WNR2200-V1.0.1.72.zip|REPEATING_LOOP(x34001):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:1, prot
+214|WNR2200-V1.0.1.76.zip|REPEATING_LOOP(x16589):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:2, prot
+217|WNR2200-V1.0.1.88.zip|REPEATING_LOOP(x39279):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:1, prot
+220|WNR2200-V1.0.1.96.zip|REPEATING_LOOP(x38668):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:1, prot
+223|WNR2200_Firmware_Version_1.0.0.32.zip|REPEATING_LOOP(x48421):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:2, prot
+226|WNR2200_Firmware_Version_1.0.1.62.zip|REPEATING_LOOP(x56444):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:2, prot
+228|WNR2500-V1.0.0.24NA.zip|HAS_MARKER:No such device,Bad argument
+230|WNR2500-V1.0.0.30NA.zip|HAS_MARKER:No such device,Bad argument
+232|WNR2500-V1.0.0.32NA.zip|HAS_MARKER:No such device,Bad argument
+234|WNR2500_V1.0.0.18NA.zip|HAS_MARKER:No such device,Bad argument
+258|XR500-V2.1.0.6.zip|HAS_MARKER:No such device,Bad argument,sysctl: error
+260|jnr1010-V1.0.0.14.zip|CLEAN
+262|jnr1010-v1.0.0.10.zip|CLEAN
+264|jnr1010-v1.0.0.11.zip|CLEAN
+267|jnr1010-v1.0.0.18.zip|REPEATING_LOOP(x15):firmadyne: sys_socket[PID:# (iptables)]: family:2, type:3, p
+269|wnr2000v3-V1.1.2.14.zip|HAS_MARKER:No such device
+271|wnr2000v3-V1.1.2.6.zip|HAS_MARKER:No such device
+273|wnr2200-V1.0.1.68.zip|REPEATING_LOOP(x56575):firmadyne: sys_socket[PID:# (klogd)]: family:1, type:2, prot

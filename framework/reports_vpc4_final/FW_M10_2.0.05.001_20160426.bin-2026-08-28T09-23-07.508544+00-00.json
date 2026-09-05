@@ -1,0 +1,229 @@
+{
+  "run_id": "9a711713",
+  "timestamp": "2026-08-28T09:23:07.508544+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_M10_2.0.05.001_20160426.bin",
+    "name": "FW_M10_2.0.05.001_20160426.bin",
+    "sha256": "8f96316d29277b972fa9c3fb8a363a0e74995d258fc8546bf1c84f9cc8c27878",
+    "size_bytes": 3842080
+  },
+  "emulation": {
+    "image_id": 102,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 18.7,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 09:22 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.021s latency).\nAll 65535 scanned ports on 192.168.1.1 are closed (65007) or filtered (528)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 18.64 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2005-3140",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Procom NetFORCE 800 4.02 M10 Build 20 and possibly other versions sends the NIS password map (passwd.nis) as a file attachment in diagnostic e-mail messages, which allows remote attackers to obtain the cleartext NIS password hashes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-3140"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2006-2490",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in Mobotix IP Network Cameras M1 1.9.4.7 and M10 2.0.5.2, and other versions before 2.2.3.18 for M10/D10 and 3.0.3.31 for M22, allow remote attackers to inject arbitrary web script or HTML via URL-encoded values in (1) the query string to help/help, (2) the get_image_info_abspath parameter to control/eventplayer, and (3) the source_ip parameter to events.tar.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2490"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2011-5261",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in serverreport.cgi in Axis M10 Series Network Cameras M1054 firmware 5.21 and earlier allows remote attackers to inject arbitrary web script or HTML via the pageTitle parameter to admin/showReport.shtml.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-5261"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2016-3962",
+      "cvss_score": 7.3,
+      "severity": "HIGH",
+      "description": "Stack-based buffer overflow in the NTP time-server interface on Meinberg IMS-LANTIME M3000, IMS-LANTIME M1000, IMS-LANTIME M500, LANTIME M900, LANTIME M600, LANTIME M400, LANTIME M300, LANTIME M200, LANTIME M100, SyncFire 1100, and LCES devices with firmware before 6.20.004 allows remote attackers to obtain sensitive information, modify data, or cause a denial of service via a crafted parameter in a POST request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3962"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2016-3988",
+      "cvss_score": 7.3,
+      "severity": "HIGH",
+      "description": "Multiple stack-based buffer overflows in the NTP time-server interface on Meinberg IMS-LANTIME M3000, IMS-LANTIME M1000, IMS-LANTIME M500, LANTIME M900, LANTIME M600, LANTIME M400, LANTIME M300, LANTIME M200, LANTIME M100, SyncFire 1100, and LCES devices with firmware before 6.20.004 allow remote attackers to obtain sensitive information, modify data, or cause a denial of service via a crafted parameter in a POST request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3988"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2016-3989",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "The NTP time-server interface on Meinberg IMS-LANTIME M3000, IMS-LANTIME M1000, IMS-LANTIME M500, LANTIME M900, LANTIME M600, LANTIME M400, LANTIME M300, LANTIME M200, LANTIME M100, SyncFire 1100, and LCES devices with firmware before 6.20.004 allows remote authenticated users to obtain root privileges for writing to unspecified scripts, and consequently obtain sensitive information or modify data, by leveraging access to the nobody account.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3989"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2015-2882",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Philips In.Sight B120/37 has a password of b120root for the backdoor root account, a password of /ADMIN/ for the backdoor admin account, a password of merlin for the backdoor mg3500 account, a password of M100-4674448 for the backdoor user account, and a password of M100-4674448 for the backdoor admin account.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-2882"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2017-14005",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An Unverified Password Change issue was discovered in ProMinent MultiFLEX M10a Controller web interface. When setting a new password for a user, the application does not require the user to know the original password. An attacker who is authenticated could change a user's password, enabling future access and possible configuration changes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14005"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2017-14007",
+      "cvss_score": 5.6,
+      "severity": "MEDIUM",
+      "description": "An Insufficient Session Expiration issue was discovered in ProMinent MultiFLEX M10a Controller web interface. The user's session is available for an extended period beyond the last activity, allowing an attacker to reuse an old session for authorization.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14007"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2017-14009",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "An Information Exposure issue was discovered in ProMinent MultiFLEX M10a Controller web interface. When an authenticated user uses the Change Password feature on the application, the current password for the user is specified in plaintext. This may allow an attacker who has been authenticated to gain access to the password.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14009"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2017-14011",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A Cross-Site Request Forgery issue was discovered in ProMinent MultiFLEX M10a Controller web interface. The application does not sufficiently verify requests, making it susceptible to cross-site request forgery. This may allow an attacker to execute unauthorized code, resulting in changes to the configuration of the device.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14011"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2017-14013",
+      "cvss_score": 5.6,
+      "severity": "MEDIUM",
+      "description": "A Client-Side Enforcement of Server-Side Security issue was discovered in ProMinent MultiFLEX M10a Controller web interface. The log out function in the application removes the user's session only on the client side. This may allow an attacker to bypass protection mechanisms, gain privileges, or assume the identity of an authenticated user.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14013"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2018-9157",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue was discovered on AXIS M1033-W (IP camera) Firmware version 5.40.5.1 devices. The upload web page doesn't verify the file type, and an attacker can upload a webshell by making a fileUpload.shtml request for a custom .shtml file, which is interpreted by the Apache HTTP Server mod_include module with \"<!--#exec cmd=\" support. The file needs to include a specific string to meet the internal system architecture. After the webshell upload, an attacker can use the webshell to perform remote code execution such as running a system command (ls, ping, cat /etc/passwd, etc.). NOTE: the vendor reportedly indicates that this is an intended feature or functionality",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-9157"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2018-9158",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue was discovered on AXIS M1033-W (IP camera) Firmware version 5.40.5.1 devices. They don't employ a suitable mechanism to prevent a DoS attack, which leads to a response time delay. An attacker can use the hping3 tool to perform an IPv4 flood attack, and the services are interrupted from attack start to end.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-9158"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2018-19009",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Pilz PNOZmulti Configurator prior to version 10.9 allows an authenticated attacker with local access to the system containing the PNOZmulti Configurator software to view sensitive credential data in clear-text. This sensitive data is applicable to only the PMI m107 diag HMI device. An attacker with access to this sensitive data and physical access to the PMI m107 diag can modify data on the HMI device.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19009"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2019-6820",
+      "cvss_score": 8.2,
+      "severity": "HIGH",
+      "description": "A CWE-306: Missing Authentication for Critical Function vulnerability exists which could cause a modification of device IP configuration (IP address, network mask and gateway IP address) when a specific Ethernet frame is received in all versions of: Modicon M100, Modicon M200, Modicon M221, ATV IMC drive controller, Modicon M241, Modicon M251, Modicon M258, Modicon LMC058, Modicon LMC078, PacDrive Eco ,PacDrive Pro, PacDrive Pro2",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-6820"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2019-5994",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Buffer overflow in PTP (Picture Transfer Protocol) of EOS series digital cameras (EOS-1D X firmware version 2.1.0 and earlier, EOS-1D X MKII firmware version 1.1.6 and earlier, EOS-1D C firmware version 1.4.1 and earlier, EOS 5D MARK III firmware version 1.3.5 and earlier, EOS 5D MARK IV firmware version 1.2.0 and earlier, EOS 5DS firmware version 1.1.2 and earlier, EOS 5DS R firmware version 1.1.2 and earlier, EOS 6D firmware version 1.1.8 and earlier, EOS 6D MARK II firmware version 1.0.4 and earlier, EOS 7D MARK II firmware version 1.1.2 and earlier, EOS 70 D firmware version 1.1.2 and earlier, EOS 80 D firmware version 1.0.2 and earlier, EOS KISS X7I / EOS D REBEL T5I / EOS 700D firmware version 1.1.5 and earlier, EOS KISS X8I / EOS D REBEL T6I / EOS 750D firmware version 1.0.0 and earlier, EOS KISS X9I / EOS D REBEL T7I / EOS 800D firmware version 1.0.1 and earlier, EOS KISS X7 / EOS D REBEL SL1 / EOS 100D firmware version 1.0.1 and earlier, EOS KISS X9 / EOS D REBEL SL2 / EOS 200D firmware version 1.0.1 and earlier, EOS KISS X10 / EOS D REBEL SL3 / EOS 200D / EOS 250D firmware version 1.0.1 and earlier, EOS 8000D / EOS D REBEL T6S / EOS 760D firmware version 1.0.0 and earlier, EOS 9000D / EOS 77D firmware version 1.0.2 and earlier, EOS KISS X70 / EOS D REBEL T5 / EOS 1200D firmware version 1.0.2 and earlier, EOS D REBEL T5 RE / EOS 1200D MG / EOS HI firmware version 1.0.2 and earlier, EOS KISS X80 / EOS D REBEL T6 / EOS 1300D firmware version 1.1.0 and earlier, EOS KISS X90 / EOS D REBEL T7 / EOS 1500D / EOS 2000D firmware version 1.0.0 and earlier, EOS D REBEL T100 / EOS 3000D / EOS 4000D firmware version 1.0.0 and earlier, EOS R firmware version 1.3.0 and earlier, EOS RP firmware version 1.2.0 and earlier, EOS RP GOLD firmware version 1.2.0 and earlier, EOS M2 firmware version 1.0.3 and earlier, EOS M3 firmware version 1.2.0 and earlier, EOS M5 firmware version 1.0.1 and earlier, EOS M6 firmware version 1.0.1 and earlier, EOS M6(China) firmware version 5.0.0 and earlier, EOS M10 firmware version 1.1.0 and earlier, EOS M100 firmware version 1.0.0 and earlier, EOS KISS M / EOS M50 firmware version 1.0.2 and earlier) and PowerShot SX740 HS firmware version 1.0.1 and earlier, PowerShot SX70 HS firmware version 1.1.0 and earlier, and PowerShot G5Xmark II firmware version 1.0.1 and earlier allows an attacker on the same network segment to trigger the affected product being unresponsive or to execute arbitrary code on the affected product via SendObjectInfo command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5994"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2019-5995",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "Missing authorization vulnerability exists in EOS series digital cameras (EOS-1D X firmware version 2.1.0 and earlier, EOS-1D X MKII firmware version 1.1.6 and earlier, EOS-1D C firmware version 1.4.1 and earlier, EOS 5D MARK III firmware version 1.3.5 and earlier, EOS 5D MARK IV firmware version 1.2.0 and earlier, EOS 5DS firmware version 1.1.2 and earlier, EOS 5DS R firmware version 1.1.2 and earlier, EOS 6D firmware version 1.1.8 and earlier, EOS 6D MARK II firmware version 1.0.4 and earlier, EOS 7D MARK II firmware version 1.1.2 and earlier, EOS 70 D firmware version 1.1.2 and earlier, EOS 80 D firmware version 1.0.2 and earlier, EOS KISS X7I / EOS D REBEL T5I / EOS 700D firmware version 1.1.5 and earlier, EOS KISS X8I / EOS D REBEL T6I / EOS 750D firmware version 1.0.0 and earlier, EOS KISS X9I / EOS D REBEL T7I / EOS 800D firmware version 1.0.1 and earlier, EOS KISS X7 / EOS D REBEL SL1 / EOS 100D firmware version 1.0.1 and earlier, EOS KISS X9 / EOS D REBEL SL2 / EOS 200D firmware version 1.0.1 and earlier, EOS KISS X10 / EOS D REBEL SL3 / EOS 200D / EOS 250D firmware version 1.0.1 and earlier, EOS 8000D / EOS D REBEL T6S / EOS 760D firmware version 1.0.0 and earlier, EOS 9000D / EOS 77D firmware version 1.0.2 and earlier, EOS KISS X70 / EOS D REBEL T5 / EOS 1200D firmware version 1.0.2 and earlier, EOS D REBEL T5 RE / EOS 1200D MG / EOS HI firmware version 1.0.2 and earlier, EOS KISS X80 / EOS D REBEL T6 / EOS 1300D firmware version 1.1.0 and earlier, EOS KISS X90 / EOS D REBEL T7 / EOS 1500D / EOS 2000D firmware version 1.0.0 and earlier, EOS D REBEL T100 / EOS 3000D / EOS 4000D firmware version 1.0.0 and earlier, EOS R firmware version 1.3.0 and earlier, EOS RP firmware version 1.2.0 and earlier, EOS RP GOLD firmware version 1.2.0 and earlier, EOS M2 firmware version 1.0.3 and earlier, EOS M3 firmware version 1.2.0 and earlier, EOS M5 firmware version 1.0.1 and earlier, EOS M6 firmware version 1.0.1 and earlier, EOS M6(China) firmware version 5.0.0 and earlier, EOS M10 firmware version 1.1.0 and earlier, EOS M100 firmware version 1.0.0 and earlier, EOS KISS M / EOS M50 firmware version 1.0.2 and earlier) and PowerShot SX740 HS firmware version 1.0.1 and earlier, PowerShot SX70 HS firmware version 1.1.0 and earlier, and PowerShot G5Xmark II firmware version 1.0.1 and earlier. A successful exploitation may result in a specially crafted firmware update or unofficial firmware update being applied without user's consent via unspecified vector.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5995"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2019-5998",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Buffer overflow in PTP (Picture Transfer Protocol) of EOS series digital cameras (EOS-1D X firmware version 2.1.0 and earlier, EOS-1D X MKII firmware version 1.1.6 and earlier, EOS-1D C firmware version 1.4.1 and earlier, EOS 5D MARK III firmware version 1.3.5 and earlier, EOS 5D MARK IV firmware version 1.2.0 and earlier, EOS 5DS firmware version 1.1.2 and earlier, EOS 5DS R firmware version 1.1.2 and earlier, EOS 6D firmware version 1.1.8 and earlier, EOS 6D MARK II firmware version 1.0.4 and earlier, EOS 7D MARK II firmware version 1.1.2 and earlier, EOS 70 D firmware version 1.1.2 and earlier, EOS 80 D firmware version 1.0.2 and earlier, EOS KISS X7I / EOS D REBEL T5I / EOS 700D firmware version 1.1.5 and earlier, EOS KISS X8I / EOS D REBEL T6I / EOS 750D firmware version 1.0.0 and earlier, EOS KISS X9I / EOS D REBEL T7I / EOS 800D firmware version 1.0.1 and earlier, EOS KISS X7 / EOS D REBEL SL1 / EOS 100D firmware version 1.0.1 and earlier, EOS KISS X9 / EOS D REBEL SL2 / EOS 200D firmware version 1.0.1 and earlier, EOS KISS X10 / EOS D REBEL SL3 / EOS 200D / EOS 250D firmware version 1.0.1 and earlier, EOS 8000D / EOS D REBEL T6S / EOS 760D firmware version 1.0.0 and earlier, EOS 9000D / EOS 77D firmware version 1.0.2 and earlier, EOS KISS X70 / EOS D REBEL T5 / EOS 1200D firmware version 1.0.2 and earlier, EOS D REBEL T5 RE / EOS 1200D MG / EOS HI firmware version 1.0.2 and earlier, EOS KISS X80 / EOS D REBEL T6 / EOS 1300D firmware version 1.1.0 and earlier, EOS KISS X90 / EOS D REBEL T7 / EOS 1500D / EOS 2000D firmware version 1.0.0 and earlier, EOS D REBEL T100 / EOS 3000D / EOS 4000D firmware version 1.0.0 and earlier, EOS R firmware version 1.3.0 and earlier, EOS RP firmware version 1.2.0 and earlier, EOS RP GOLD firmware version 1.2.0 and earlier, EOS M2 firmware version 1.0.3 and earlier, EOS M3 firmware version 1.2.0 and earlier, EOS M5 firmware version 1.0.1 and earlier, EOS M6 firmware version 1.0.1 and earlier, EOS M6(China) firmware version 5.0.0 and earlier, EOS M10 firmware version 1.1.0 and earlier, EOS M100 firmware version 1.0.0 and earlier, EOS KISS M / EOS M50 firmware version 1.0.2 and earlier) and PowerShot SX740 HS firmware version 1.0.1 and earlier, PowerShot SX70 HS firmware version 1.1.0 and earlier, and PowerShot G5Xmark II firmware version 1.0.1 and earlier allows an attacker on the same network segment to trigger the affected product being unresponsive or to execute arbitrary code on the affected product via notifybtstatus command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5998"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0.05.001",
+      "cve_id": "CVE-2019-5999",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Buffer overflow in PTP (Picture Transfer Protocol) of EOS series digital cameras (EOS-1D X firmware version 2.1.0 and earlier, EOS-1D X MKII firmware version 1.1.6 and earlier, EOS-1D C firmware version 1.4.1 and earlier, EOS 5D MARK III firmware version 1.3.5 and earlier, EOS 5D MARK IV firmware version 1.2.0 and earlier, EOS 5DS firmware version 1.1.2 and earlier, EOS 5DS R firmware version 1.1.2 and earlier, EOS 6D firmware version 1.1.8 and earlier, EOS 6D MARK II firmware version 1.0.4 and earlier, EOS 7D MARK II firmware version 1.1.2 and earlier, EOS 70 D firmware version 1.1.2 and earlier, EOS 80 D firmware version 1.0.2 and earlier, EOS KISS X7I / EOS D REBEL T5I / EOS 700D firmware version 1.1.5 and earlier, EOS KISS X8I / EOS D REBEL T6I / EOS 750D firmware version 1.0.0 and earlier, EOS KISS X9I / EOS D REBEL T7I / EOS 800D firmware version 1.0.1 and earlier, EOS KISS X7 / EOS D REBEL SL1 / EOS 100D firmware version 1.0.1 and earlier, EOS KISS X9 / EOS D REBEL SL2 / EOS 200D firmware version 1.0.1 and earlier, EOS KISS X10 / EOS D REBEL SL3 / EOS 200D / EOS 250D firmware version 1.0.1 and earlier, EOS 8000D / EOS D REBEL T6S / EOS 760D firmware version 1.0.0 and earlier, EOS 9000D / EOS 77D firmware version 1.0.2 and earlier, EOS KISS X70 / EOS D REBEL T5 / EOS 1200D firmware version 1.0.2 and earlier, EOS D REBEL T5 RE / EOS 1200D MG / EOS HI firmware version 1.0.2 and earlier, EOS KISS X80 / EOS D REBEL T6 / EOS 1300D firmware version 1.1.0 and earlier, EOS KISS X90 / EOS D REBEL T7 / EOS 1500D / EOS 2000D firmware version 1.0.0 and earlier, EOS D REBEL T100 / EOS 3000D / EOS 4000D firmware version 1.0.0 and earlier, EOS R firmware version 1.3.0 and earlier, EOS RP firmware version 1.2.0 and earlier, EOS RP GOLD firmware version 1.2.0 and earlier, EOS M2 firmware version 1.0.3 and earlier, EOS M3 firmware version 1.2.0 and earlier, EOS M5 firmware version 1.0.1 and earlier, EOS M6 firmware version 1.0.1 and earlier, EOS M6(China) firmware version 5.0.0 and earlier, EOS M10 firmware version 1.1.0 and earlier, EOS M100 firmware version 1.0.0 and earlier, EOS KISS M / EOS M50 firmware version 1.0.2 and earlier) and PowerShot SX740 HS firmware version 1.0.1 and earlier, PowerShot SX70 HS firmware version 1.1.0 and earlier, and PowerShot G5Xmark II firmware version 1.0.1 and earlier allows an attacker on the same network segment to trigger the affected product being unresponsive or to execute arbitrary code on the affected product via blerequest command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5999"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

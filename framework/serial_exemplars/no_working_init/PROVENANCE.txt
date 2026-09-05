@@ -1,0 +1,2 @@
+vpc=2 scratch_id=83 name=WRE6602_V1.00_ABKK.3_C0 brand=zyxel_latest_wre6602_v1_00_abkk_3_c0
+matched_regex: Kernel panic - not syncing: No working init found

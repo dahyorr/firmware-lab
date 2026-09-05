@@ -1,0 +1,49 @@
+{
+  "run_id": "a50cfa8e",
+  "timestamp": "2026-08-29T15:32:57.758593+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-930L_REVB_FIRMWARE_v2.16.01.zip",
+    "name": "DCS-930L_REVB_FIRMWARE_v2.16.01.zip",
+    "sha256": "53af91d7948270e3f3164535d45ec42c0d297230ec2faf419b9f55de7b66aa4b",
+    "size_bytes": 4134128
+  },
+  "emulation": {
+    "image_id": 278,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 14.3,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 15:32 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.012s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 14.30 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.16.01",
+      "cve_id": "CVE-2019-10999",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The D-Link DCS series of Wi-Fi cameras contains a stack-based buffer overflow in alphapd, the camera's web server. The overflow allows a remotely authenticated attacker to execute arbitrary code by providing a long string in the WEPEncryption parameter when requesting wireless.htm. Vulnerable devices include DCS-5009L (1.08.11 and below), DCS-5010L (1.14.09 and below), DCS-5020L (1.15.12 and below), DCS-5025L (1.03.07 and below), DCS-5030L (1.04.10 and below), DCS-930L (2.16.01 and below), DCS-931L (1.14.11 and below), DCS-932L (2.17.01 and below), DCS-933L (1.14.11 and below), and DCS-934L (1.05.04 and below).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10999"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.16.01",
+      "cve_id": "CVE-2025-14225",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was determined in D-Link DCS-930L 1.15.04. This affects an unknown part of the file /setSystemAdmin of the component alphapd. Executing manipulation of the argument AdminID can lead to command injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14225"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

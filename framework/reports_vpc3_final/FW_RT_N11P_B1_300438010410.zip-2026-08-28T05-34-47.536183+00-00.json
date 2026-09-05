@@ -1,0 +1,22 @@
+{
+  "run_id": "09b5960b",
+  "timestamp": "2026-08-28T05:34:47.536183+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N11P_B1_300438010410.zip",
+    "name": "FW_RT_N11P_B1_300438010410.zip",
+    "sha256": "d3277f7909a9cfb12fbd2a0737535ec8aa9aac97d2a16e58a9f582de134bf5d0",
+    "size_bytes": 7435588
+  },
+  "emulation": {
+    "image_id": 146,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

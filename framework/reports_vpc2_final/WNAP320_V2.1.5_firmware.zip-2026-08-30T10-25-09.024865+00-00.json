@@ -1,0 +1,337 @@
+{
+  "run_id": "2d7664c7",
+  "timestamp": "2026-08-30T10:25:09.024865+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNAP320_V2.1.5_firmware.zip",
+    "name": "WNAP320_V2.1.5_firmware.zip",
+    "sha256": "146e6b4fedb10ca98d3dea74f21aa3380acf7a21039fc325ad94277a68111d84",
+    "size_bytes": 5324946
+  },
+  "emulation": {
+    "image_id": 382,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.100",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.100",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 38.7,
+    "services": [
+      {
+        "port": 22,
+        "protocol": "tcp",
+        "service": "ssh",
+        "version": "Dropbear sshd 0.51 (protocol 2.0)",
+        "raw_banner": "22/tcp  open  ssh        Dropbear sshd 0.51 (protocol 2.0)"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "lighttpd 1.4.18",
+        "raw_banner": "80/tcp  open  http       lighttpd 1.4.18"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp open  ssl/https?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 10:23 UTC\nNmap scan report for 192.168.0.100\nHost is up (0.016s latency).\nNot shown: 65532 closed ports\nPORT    STATE SERVICE    VERSION\n22/tcp  open  ssh        Dropbear sshd 0.51 (protocol 2.0)\n80/tcp  open  http       lighttpd 1.4.18\n443/tcp open  ssl/https?\nService Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 38.63 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2013-4421",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buf_decompress function in packet.c in Dropbear SSH Server before 2013.59 allows remote attackers to cause a denial of service (memory consumption) via a compressed packet that has a large size when it is decompressed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4421"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2013-4434",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Dropbear SSH Server before 2013.59 generates error messages for a failed logon attempt with different time delays depending on whether the user account exists, which allows remote attackers to discover valid usernames.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4434"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2016-3116",
+      "cvss_score": 6.4,
+      "severity": "MEDIUM",
+      "description": "CRLF injection vulnerability in Dropbear SSH before 2016.72 allows remote authenticated users to bypass intended shell-command restrictions via crafted X11 forwarding data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3116"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2016-7406",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Format string vulnerability in Dropbear SSH before 2016.74 allows remote attackers to execute arbitrary code via format string specifiers in the (1) username or (2) host argument.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7406"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2016-7407",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The dropbearconvert command in Dropbear SSH before 2016.74 allows attackers to execute arbitrary code via a crafted OpenSSH key file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7407"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2016-7408",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The dbclient in Dropbear SSH before 2016.74 allows remote attackers to execute arbitrary code via a crafted (1) -m or (2) -c argument.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7408"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2016-7409",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "The dbclient and server in Dropbear SSH before 2016.74, when compiled with DEBUG_TRACE, allows local users to read process memory via the -v argument, related to a failed remote ident.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7409"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2017-9078",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The server in Dropbear before 2017.75 might allow post-authentication root remote code execution because of a double free in cleanup of TCP listeners when the -a option is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9078"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2017-9079",
+      "cvss_score": 4.7,
+      "severity": "MEDIUM",
+      "description": "Dropbear before 2017.75 might allow local users to read certain files as root, if the file has the authorized_keys file format with a command= option. This occurs because ~/.ssh/authorized_keys is read with root privileges and symlinks are followed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9079"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2018-15599",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "The recv_msg_userauth_request function in svr-auth.c in Dropbear through 2018.76 is prone to a user enumeration vulnerability because username validity affects how fields in SSH_MSG_USERAUTH messages are handled, a similar issue to CVE-2018-15473 in an unrelated codebase.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-15599"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 0.51 (protocol 2.0)",
+      "cve_id": "CVE-2017-2659",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "It was found that dropbear before version 2013.59 with GSSAPI leaks whether given username is valid or invalid. When an invalid username is given, the GSSAPI authentication failure was incorrectly counted towards the maximum allowed number of password attempts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-2659"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2005-0453",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buffer_urldecode function in Lighttpd 1.3.7 and earlier does not properly handle control characters, which allows remote attackers to obtain the source code for CGI and FastCGI scripts via a URL with a %00 (null) character after the file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0453"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2006-0760",
+      "cvss_score": 2.6,
+      "severity": null,
+      "description": "LightTPD 1.4.8 and earlier, when the web root is on a case-insensitive filesystem, allows remote attackers to bypass URL checks and obtain sensitive information via file extensions with unexpected capitalization, as demonstrated by a request for index.PHP when the configuration invokes the PHP interpreter only for \".php\" names.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0760"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2006-0814",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "response.c in Lighttpd 1.4.10 and possibly previous versions, when run on Windows, allows remote attackers to read arbitrary source code via requests that contain trailing (1) \".\" (dot) and (2) space characters, which are ignored by Windows, as demonstrated by PHP files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0814"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2007-1869",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.12 and 1.4.13 allows remote attackers to cause a denial of service (cpu and resource consumption) by disconnecting while lighttpd is parsing CRLF sequences, which triggers an infinite loop and file descriptor consumption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1869"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2007-1870",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "lighttpd before 1.4.14 allows attackers to cause a denial of service (crash) via a request to a file whose mtime is 0, which results in a NULL pointer dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1870"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2008-0983",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.18, and possibly other versions before 1.5.0, does not properly calculate the size of a file descriptor array, which allows remote attackers to cause a denial of service (crash) via a large number of connections, which triggers an out-of-bounds access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0983"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2008-1111",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mod_cgi in lighttpd 1.4.18 sends the source code of CGI scripts instead of a 500 error when a fork failure occurs, which might allow remote attackers to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1111"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2008-1270",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mod_userdir in lighttpd 1.4.18 and earlier, when userdir.path is not set, uses a default of $HOME, which might allow remote attackers to read arbitrary files, as demonstrated by accessing the ~nobody directory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1270"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2008-1531",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "The connection_state_machine function (connections.c) in lighttpd 1.4.19 and earlier, and 1.5.x before 1.5.0, allows remote attackers to cause a denial of service (active SSL connection loss) by triggering an SSL error, such as disconnecting before a download has finished, which causes all active SSL connections to be lost.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1531"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2008-4298",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Memory leak in the http_request_parse function in request.c in lighttpd before 1.4.20 allows remote attackers to cause a denial of service (memory consumption) via a large number of requests with duplicate request headers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4298"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2008-4359",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "lighttpd before 1.4.20 compares URIs to patterns in the (1) url.redirect and (2) url.rewrite configuration settings before performing URL decoding, which might allow remote attackers to bypass intended access restrictions, and obtain sensitive information or possibly modify data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4359"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2008-4360",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "mod_userdir in lighttpd before 1.4.20, when a case-insensitive operating system or filesystem is used, performs case-sensitive comparisons on filename components in configuration options, which might allow remote attackers to bypass intended access restrictions, as demonstrated by a request for a .PHP file when there is a configuration rule for .php files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4360"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2010-0295",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd before 1.4.26, and 1.5.x, allocates a buffer for each read operation that occurs for a request, which allows remote attackers to cause a denial of service (memory consumption) by breaking a request into small pieces that are sent at a slow rate.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0295"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.18",
+      "cve_id": "CVE-2011-4362",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Integer signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4362"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: netgear",
+      "severity": "info"
+    }
+  ]
+}

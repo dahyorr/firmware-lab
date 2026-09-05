@@ -1,0 +1,28 @@
+{
+  "run_id": "87f85b89",
+  "timestamp": "2026-08-27T22:06:14.288441+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/dir300_v1.05_a319.bin",
+    "name": "dir300_v1.05_a319.bin",
+    "sha256": "f25ee69297fde355400a7bbd2b28ac86635bbaddd83f589fbb2bb6ab7a123ea3",
+    "size_bytes": 2416768
+  },
+  "emulation": {
+    "image_id": 62,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 139.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 22:03 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.00043s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered (62299) or closed (3236)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 139.04 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

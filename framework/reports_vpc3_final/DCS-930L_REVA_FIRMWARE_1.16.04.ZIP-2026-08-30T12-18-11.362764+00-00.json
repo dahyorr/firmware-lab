@@ -1,0 +1,187 @@
+{
+  "run_id": "442ea43b",
+  "timestamp": "2026-08-30T12:18:11.362764+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-930L_REVA_FIRMWARE_1.16.04.ZIP",
+    "name": "DCS-930L_REVA_FIRMWARE_1.16.04.ZIP",
+    "sha256": "a79bdbea4cca1b8c49e615bcca95af448b5ef259943f25099890faf7212e6ee8",
+    "size_bytes": 4170716
+  },
+  "emulation": {
+    "image_id": 412,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 38.0,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "alphapd",
+        "raw_banner": "80/tcp   open  http       alphapd"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp  open  ssl/https?"
+      },
+      {
+        "port": 8770,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8770/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 12:15 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.013s latency).\nNot shown: 65532 closed ports\nPORT     STATE SERVICE    VERSION\n80/tcp   open  http       alphapd\n443/tcp  open  ssl/https?\n8770/tcp open  tcpwrapped\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port80-TCP:V=7.80%I=7%D=8/30%Time=6A941EEA%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,13F,\"HTTP/1\\.0\\x20401\\x20Authorization\\x20Required\\r\\nServer:\\x2\nSF:0alphapd\\r\\nDate:\\x20Sun\\x20Aug\\x2030\\x2012:15:38\\x202026\\r\\nPragma:\\x2\nSF:0no-cache\\r\\nCache-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\nSF:\\nContent-length:\\x20103\\r\\nWWW-Authenticate:\\x20Basic\\x20realm=\\\"_00\\\"\nSF:\\r\\n\\r\\n<html><body><h2>Error:\\x20Authorization\\x20Required</h2>\\r\\n<p>\nSF:Authentication\\x20was\\x20requested</p></body></html>\\r\\n\\r\\n\")%r(HTTPOp\nSF:tions,100,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nServer:\\x20alphapd\\r\\n\nSF:Date:\\x20Sun\\x20Aug\\x2030\\x2012:15:38\\x202026\\r\\nPragma:\\x20no-cache\\r\\\nSF:nCache-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\\nContent-le\nSF:ngth:\\x2089\\r\\n\\r\\n<html><body><h2>Error:\\x20Bad\\x20Request</h2>\\r\\n<p>\nSF:Bad\\x20request\\x20type\\(OPTIONS\\)</p></body></html>\\r\\n\\r\\n\")%r(RTSPReq\nSF:uest,100,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nServer:\\x20alphapd\\r\\nD\nSF:ate:\\x20Sun\\x20Aug\\x2030\\x2012:15:38\\x202026\\r\\nPragma:\\x20no-cache\\r\\n\nSF:Cache-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\\nContent-len\nSF:gth:\\x2089\\r\\n\\r\\n<html><body><h2>Error:\\x20Bad\\x20Request</h2>\\r\\n<p>B\nSF:ad\\x20request\\x20type\\(OPTIONS\\)</p></body></html>\\r\\n\\r\\n\")%r(X11Probe\nSF:,FB,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nServer:\\x20alphapd\\r\\nDate:\\\nSF:x20Sun\\x20Aug\\x2030\\x2012:15:38\\x202026\\r\\nPragma:\\x20no-cache\\r\\nCache\nSF:-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\\nContent-length:\\\nSF:x2084\\r\\n\\r\\n<html><body><h2>Error:\\x20Bad\\x20Request</h2>\\r\\n<p>Receiv\nSF:e\\x20data\\x20failure</p></body></html>\\r\\n\\r\\n\")%r(FourOhFourRequest,E3\nSF:,\"HTTP/1\\.1\\x20403\\x20Forbidden\\r\\nServer:\\x20alphapd\\r\\nDate:\\x20Sun\\x\nSF:20Aug\\x2030\\x2012:15:38\\x202026\\r\\nPragma:\\x20no-cache\\r\\nCache-Control\nSF::\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\\nContent-length:\\x2062\\r\\\nSF:n\\r\\n<html><body><h1>The\\x20request\\x20is\\x20forbidden\\.</h1></body></h\nSF:tml>\\r\\n\\r\\n\")%r(GenericLines,FB,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\\nSF:nServer:\\x20alphapd\\r\\nDate:\\x20Sun\\x20Aug\\x2030\\x2012:15:38\\x202026\\r\\\nSF:nPragma:\\x20no-cache\\r\\nCache-Control:\\x20no-cache\\r\\nContent-type:\\x20\nSF:text/html\\r\\nContent-length:\\x2084\\r\\n\\r\\n<html><body><h2>Error:\\x20Bad\nSF:\\x20Request</h2>\\r\\n<p>Receive\\x20data\\x20failure</p></body></html>\\r\\n\nSF:\\r\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 37.96 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "",
+      "success": true,
+      "method": "http_basic"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "username": "root",
+      "password": "7ujMko0admin",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /admin",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /cgi-bin/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /HNAP1/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /setup.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /goform/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /webproc",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /cgi-bin/webproc",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /apply.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /login.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /syscmd.htm",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /debug/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /stream",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /video",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /snapshot",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /axis-cgi/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /onvif/",
+      "severity": "low"
+    }
+  ]
+}

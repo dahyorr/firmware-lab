@@ -1,0 +1,22 @@
+{
+  "run_id": "0cb3d571",
+  "timestamp": "2026-08-28T04:34:51.248866+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N10U_B1_30043763754.zip",
+    "name": "FW_RT_N10U_B1_30043763754.zip",
+    "sha256": "c11201c86d8af37312ba15b8c00651903af7ec277e8d41b3ad5fcf4ffb0e6ed6",
+    "size_bytes": 8175771
+  },
+  "emulation": {
+    "image_id": 133,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

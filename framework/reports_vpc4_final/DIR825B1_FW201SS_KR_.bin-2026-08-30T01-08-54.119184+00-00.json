@@ -1,0 +1,28 @@
+{
+  "run_id": "ea005602",
+  "timestamp": "2026-08-30T01:08:54.119184+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR825B1_FW201SS_KR_.bin",
+    "name": "DIR825B1_FW201SS_KR_.bin",
+    "sha256": "344c319dd6ba3ba860bed65bf3f73b9c9f5fcc3412ee4676a592cd91d31d4aa0",
+    "size_bytes": 6291482
+  },
+  "emulation": {
+    "image_id": 325,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 18.0,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:08 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.030s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 18.01 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

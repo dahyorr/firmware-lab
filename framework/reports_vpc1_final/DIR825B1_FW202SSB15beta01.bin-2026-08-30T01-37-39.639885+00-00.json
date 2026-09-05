@@ -1,0 +1,219 @@
+{
+  "run_id": "c7aead3d",
+  "timestamp": "2026-08-30T01:37:39.639885+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR825B1_FW202SSB15beta01.bin",
+    "name": "DIR825B1_FW202SSB15beta01.bin",
+    "sha256": "8b5d2a8ba245945027bda6d167d8e24ec2bf4dd7352ee4b82d1070d1036eafcd",
+    "size_bytes": 6291482
+  },
+  "emulation": {
+    "image_id": 332,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 34.7,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "DD-WRT milli_httpd",
+        "raw_banner": "80/tcp open  http    DD-WRT milli_httpd"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:36 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.027s latency).\nNot shown: 65323 closed ports, 211 filtered ports\nPORT   STATE SERVICE VERSION\n80/tcp open  http    DD-WRT milli_httpd\nService Info: OS: Linux; Device: WAP; CPE: cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 34.66 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2008-6974",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in apply.cgi in DD-WRT 24 sp1 and earlier allow remote attackers to hijack the authentication of administrators for requests that (1) execute arbitrary commands via the ping_ip parameter; (2) change the administrative credentials via the http_username and http_passwd parameters; (3) enable remote administration via the remote_management parameter; or (4) configure port forwarding via certain from, to, ip, and pro parameters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-6974"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2008-6975",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in apply.cgi in DD-WRT 24 sp2 allow remote attackers to hijack the authentication of administrators for requests that (1) execute arbitrary commands via the ping_ip parameter; (2) change the administrative credentials via the http_username and http_passwd parameters; (3) enable remote administration via the remote_management parameter; or (4) configure port forwarding via certain from, to, ip, and pro parameters.  NOTE: This issue reportedly exists because of a \"weak ... anti-CSRF fix\" implemented in 24 sp2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-6975"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2009-2765",
+      "cvss_score": 8.3,
+      "severity": null,
+      "description": "httpd.c in httpd in the management GUI in DD-WRT 24 sp1, and other versions before build 12533, allows remote attackers to execute arbitrary commands via shell metacharacters in a request to a cgi-bin/ URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-2765"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2009-2766",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "httpd.c in httpd in the management GUI in DD-WRT 24 sp1 does not require administrative authentication for programs under cgi-bin/, which allows remote attackers to change settings via HTTP requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-2766"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2012-6297",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Command Injection vulnerability exists via a CSRF in DD-WRT 24-sp2 from specially crafted configuration values containing shell meta-characters, which could let a remote malicious user cause a Denial of Service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6297"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2020-13976",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in DD-WRT through 16214. The Diagnostic page allows remote attackers to execute arbitrary commands via shell metacharacters in the host field of the ping command. Exploitation through CSRF might be possible. NOTE: software maintainers consider the report invalid because it refers to an old software version, requires administrative privileges, and does not provide access beyond that already available to administrative users",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13976"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2022-27631",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "A memory corruption vulnerability exists in the httpd unescape functionality of DD-WRT Revision 32270 - Revision 48599. A specially-crafted HTTP request can lead to memory corruption. An attacker can send a network request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-27631"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2021-47854",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "DD-WRT version 45723 contains a buffer overflow vulnerability in the UPNP network discovery service that allows remote attackers to potentially execute arbitrary code. Attackers can send crafted M-SEARCH packets with oversized UUID payloads to trigger buffer overflow conditions on the target device.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47854"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "DD-WRT milli_httpd",
+      "cve_id": "CVE-2021-27137",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "An issue was discovered in router/upnp/src/ssdp.c in DD-WRT before 45724. An unsafe strcpy in the UPnP handling functionality allows an unauthenticated remote attacker to send a request that would overflow an internal fixed buffer. Exploitation requires the DD-WRT user to enable UPnP (which is off by default, and only listens on internal interfaces by default). This occurs in ssdp_msearch (reachable by an M-SEARCH request).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27137"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

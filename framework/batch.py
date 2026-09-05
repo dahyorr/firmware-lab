@@ -11,6 +11,7 @@ Examples:
 
 import json
 import re
+import signal
 import subprocess
 import sys
 import time
@@ -24,6 +25,51 @@ from src.orchestrator import analyse_firmware
 
 REPORTS_DIR  = config.REPORTS_DIR
 SUMMARY_DIR  = REPORTS_DIR / "_summaries"
+
+# Every individual pipeline stage (nmap, credential probing, web probing,
+# CVE lookup) already carries its own timeout, but nothing bounds the total
+# wall-clock time for one image's *whole* pipeline. Found in practice: a
+# stuck in-process socket to the emulated device's own IP (192.168.168.1:80,
+# SYN-SENT) survived 40+ minutes despite every individual timeout= being set
+# correctly, freezing an entire batch/retry queue behind it. SIGALRM is a
+# last-resort net that interrupts whatever blocking call is currently stuck,
+# in-process, regardless of which stage or library it's in.
+_WHOLE_RUN_TIMEOUT = 1500  # generous: covers extraction + boot + full probe chain
+
+
+class _WholeRunTimeout(Exception):
+    pass
+
+
+def _alarm_handler(signum, frame):
+    raise _WholeRunTimeout()
+
+
+def _watchdog_cleanup(firmware_path: Path) -> None:
+    """Best-effort scoped cleanup after the whole-run watchdog fires.
+
+    Looks up this firmware's most recent image_id and reuses firmae_runner's
+    existing per-image-scoped kill helpers - never a blanket pkill, since
+    other images may be running concurrently on the same host.
+    """
+    try:
+        import psycopg2
+        from src import firmae_runner
+
+        with psycopg2.connect(**config.DB_CONFIG) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT id FROM image WHERE filename = %s ORDER BY id DESC LIMIT 1",
+                    (firmware_path.name,),
+                )
+                row = cur.fetchone()
+        if row is None:
+            return
+        image_id = row[0]
+        firmae_runner._kill_image_processes(image_id)
+        firmae_runner._cleanup_tap_interfaces(image_id)
+    except Exception as e:
+        print(f"[-] watchdog cleanup failed (non-fatal): {type(e).__name__}: {e}")
 
 
 def derive_brand(firmware_path: Path, vendor: str) -> str:
@@ -80,6 +126,8 @@ def run_one(vendor: str, firmware_path: Path, profile: str) -> dict:
 
     pub = make_publisher("pending", config.VALKEY_HOST, config.VALKEY_PORT)
 
+    old_alarm_handler = signal.signal(signal.SIGALRM, _alarm_handler)
+    signal.alarm(_WHOLE_RUN_TIMEOUT)
     try:
         print(f"\n{'='*70}")
         print(f"[*] [{vendor}] {firmware_path.name}  brand={brand}  profile={profile}")
@@ -103,6 +151,11 @@ def run_one(vendor: str, firmware_path: Path, profile: str) -> dict:
 
         _print_summary(result)
 
+    except _WholeRunTimeout:
+        print(f"[-] Stuck past whole-run watchdog ceiling ({_WHOLE_RUN_TIMEOUT}s) - abandoning and cleaning up")
+        summary["status"] = "timeout"
+        summary["error"]  = f"whole-run watchdog fired after {_WHOLE_RUN_TIMEOUT}s (stuck past per-stage timeouts)"
+        _watchdog_cleanup(firmware_path)
     except subprocess.TimeoutExpired as e:
         # firmae_runner._run_check_with_early_exit already killed this
         # image's own qemu/run.sh processes before raising - no cleanup
@@ -116,6 +169,9 @@ def run_one(vendor: str, firmware_path: Path, profile: str) -> dict:
         print(f"[-] Error: {type(e).__name__}: {e}")
         summary["status"] = "error"
         summary["error"]  = f"{type(e).__name__}: {e}"
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_alarm_handler)
 
     summary["duration_seconds"] = round(time.monotonic() - start, 1)
     return summary

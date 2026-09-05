@@ -1,0 +1,28 @@
+{
+  "run_id": "7fba4586",
+  "timestamp": "2026-08-30T01:13:41.489469+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR845LA1_FW101KRb01.bin",
+    "name": "DIR845LA1_FW101KRb01.bin",
+    "sha256": "4e87dca6d0cf1d64c54964980b5be06242239018ac09146a0a9010f042be9996",
+    "size_bytes": 8761492
+  },
+  "emulation": {
+    "image_id": 328,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 55.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:12 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.039s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered (43263) or closed (22272)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 55.06 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

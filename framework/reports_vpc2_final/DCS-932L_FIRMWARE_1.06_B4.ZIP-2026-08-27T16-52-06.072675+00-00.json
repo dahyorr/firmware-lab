@@ -1,0 +1,52 @@
+{
+  "run_id": "ffc606ca",
+  "timestamp": "2026-08-27T16:52:06.072675+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DCS-932L_FIRMWARE_1.06_B4.ZIP",
+    "name": "DCS-932L_FIRMWARE_1.06_B4.ZIP",
+    "sha256": "723863ab4238d256337e59c516c37f625b3b094e9a4d29fccafab3bbb9f98b4e",
+    "size_bytes": 3860127
+  },
+  "emulation": {
+    "image_id": 17,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 112.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "alphapd",
+        "raw_banner": "80/tcp  open  http       alphapd"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp open  ssl/https?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 16:49 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.013s latency).\nNot shown: 65533 closed ports\nPORT    STATE SERVICE    VERSION\n80/tcp  open  http       alphapd\n443/tcp open  ssl/https?\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port80-TCP:V=7.80%I=7%D=8/27%Time=6A906AB7%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,127,\"HTTP/1\\.0\\x20401\\x20Authorization\\x20Required\\r\\nServer:\\x2\nSF:0alphapd\\r\\nDate:\\x20Thu\\x20Aug\\x2027\\x2012:49:58\\x202026\\r\\nPragma:\\x2\nSF:0no-cache\\r\\nCache-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\nSF:\\nWWW-Authenticate:\\x20Basic\\x20realm=\\\"\\\"\\r\\n\\r\\n<html><body><h2>Error\nSF::\\x20Authorization\\x20Required</h2>\\r\\n<p>Authentication\\x20was\\x20requ\nSF:ested</p></body></html>\\r\\n\\r\\n\")%r(HTTPOptions,EC,\"HTTP/1\\.0\\x20400\\x2\nSF:0Bad\\x20Request\\r\\nServer:\\x20alphapd\\r\\nDate:\\x20Thu\\x20Aug\\x2027\\x201\nSF:2:49:58\\x202026\\r\\nPragma:\\x20no-cache\\r\\nCache-Control:\\x20no-cache\\r\\\nSF:nContent-type:\\x20text/html\\r\\n\\r\\n<html><body><h2>Error:\\x20Bad\\x20Req\nSF:uest</h2>\\r\\n<p>Bad\\x20request\\x20type\\(OPTIONS\\)</p></body></html>\\r\\n\nSF:\\r\\n\")%r(RTSPRequest,EC,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nServer:\\\nSF:x20alphapd\\r\\nDate:\\x20Thu\\x20Aug\\x2027\\x2012:49:58\\x202026\\r\\nPragma:\\\nSF:x20no-cache\\r\\nCache-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\nSF:\\r\\n\\r\\n<html><body><h2>Error:\\x20Bad\\x20Request</h2>\\r\\n<p>Bad\\x20requ\nSF:est\\x20type\\(OPTIONS\\)</p></body></html>\\r\\n\\r\\n\")%r(FourOhFourRequest,\nSF:E8,\"HTTP/1\\.0\\x20404\\x20File\\x20Not\\x20Found\\r\\nServer:\\x20alphapd\\r\\nD\nSF:ate:\\x20Thu\\x20Aug\\x2027\\x2012:50:03\\x202026\\r\\nPragma:\\x20no-cache\\r\\n\nSF:Cache-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<html><\nSF:body><h2>Error:\\x20File\\x20Not\\x20Found</h2>\\r\\n<p>File\\x20Not\\x20Found\nSF:\\.</p></body></html>\\r\\n\\r\\n\")%r(Help,E9,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Re\nSF:quest\\r\\nServer:\\x20alphapd\\r\\nDate:\\x20Thu\\x20Aug\\x2027\\x2012:50:24\\x2\nSF:02026\\r\\nPragma:\\x20no-cache\\r\\nCache-Control:\\x20no-cache\\r\\nContent-t\nSF:ype:\\x20text/html\\r\\n\\r\\n<html><body><h2>Error:\\x20Bad\\x20Request</h2>\\\nSF:r\\n<p>Bad\\x20request\\x20type\\(HELP\\)</p></body></html>\\r\\n\\r\\n\")%r(SSLS\nSF:essionReq,E7,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nServer:\\x20alphapd\\\nSF:r\\nDate:\\x20Thu\\x20Aug\\x2027\\x2012:50:24\\x202026\\r\\nPragma:\\x20no-cache\nSF:\\r\\nCache-Control:\\x20no-cache\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<ht\nSF:ml><body><h2>Error:\\x20Bad\\x20Request</h2>\\r\\n<p>Bad\\x20request\\x20type\nSF:\\(\\x16\\x03\\)</p></body></html>\\r\\n\\r\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 112.08 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": []
+}

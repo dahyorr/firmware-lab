@@ -1,0 +1,28 @@
+{
+  "run_id": "8ba1d437",
+  "timestamp": "2026-08-28T22:01:33.813922+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC53U_30043808228_v2.ZIP",
+    "name": "FW_RT_AC53U_30043808228_v2.ZIP",
+    "sha256": "1607b61e876e5df8742b6e16bd016ff4539cb933936995c0084a6c5a89011d04",
+    "size_bytes": 29970164
+  },
+  "emulation": {
+    "image_id": 23,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 21:59 UTC\nNmap scan report for 192.168.1.1\nHost is up.\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.03 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

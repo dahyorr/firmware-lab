@@ -1,0 +1,371 @@
+{
+  "run_id": "cc5eb951",
+  "timestamp": "2026-08-30T01:38:22.257776+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR868LB1_FW200KR-K02.bin",
+    "name": "DIR868LB1_FW200KR-K02.bin",
+    "sha256": "fedabcafcf778da1bcfb7b30a5b544c2ca760572477d947b52f74c6d237b7185",
+    "size_bytes": 13111448
+  },
+  "emulation": {
+    "image_id": 334,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 59.1,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "telnet",
+        "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+        "raw_banner": "23/tcp    open     telnet     D-Link 524, DIR-300, or WBR-1310 WAP telnetd"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "D-Link DIR-850L WAP http config 1.13",
+        "raw_banner": "80/tcp    open     http       D-Link DIR-850L WAP http config 1.13"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp   open     ssl/https?"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open     ssl/vop?"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "D-Link SharePort web access 1.0 (model DIR-850L, version 1.13)",
+        "raw_banner": "8181/tcp  open     http       D-Link SharePort web access 1.0 (model DIR-850L, version 1.13)"
+      },
+      {
+        "port": 8182,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "D-Link DIR-850L WAP http config 1.13",
+        "raw_banner": "8182/tcp  open     http       D-Link DIR-850L WAP http config 1.13"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-850L WAP UPnP 1.13 (UPnP 1.0)",
+        "raw_banner": "49152/tcp open     upnp       D-Link DIR-850L WAP UPnP 1.13 (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:34 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.072s latency).\nNot shown: 65524 closed ports\nPORT      STATE    SERVICE    VERSION\n23/tcp    open     telnet     D-Link 524, DIR-300, or WBR-1310 WAP telnetd\n80/tcp    open     http       D-Link DIR-850L WAP http config 1.13\n443/tcp   open     ssl/https?\n4433/tcp  open     ssl/vop?\n8181/tcp  open     http       D-Link SharePort web access 1.0 (model DIR-850L, version 1.13)\n8182/tcp  open     http       D-Link DIR-850L WAP http config 1.13\n29797/tcp filtered unknown\n31649/tcp filtered unknown\n38787/tcp filtered unknown\n49152/tcp open     upnp       D-Link DIR-850L WAP UPnP 1.13 (UPnP 1.0)\n53656/tcp filtered unknown\nService Info: OS: Linux; Devices: WAP, storage-misc; CPE: cpe:/h:dlink:dir-850l:1.13, cpe:/o:linux:linux_kernel, cpe:/h:d-link:dir-850l\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 59.01 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2001-1137",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "D-Link DI-704 Internet Gateway firmware earlier than V2.56b6 allows remote attackers to cause a denial of service (reboot) via malformed IP datagram fragments.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1137"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2001-1220",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "D-Link DWL-1000AP Firmware 3.2.28 #483 Wireless LAN Access Point stores the administrative password in plaintext in the default Management Information Base (MIB), which allows remote attackers to gain administrative privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1220"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2001-1221",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "D-Link DWL-1000AP Firmware 3.2.28 #483 Wireless LAN Access Point uses a default SNMP community string of 'public' which allows remote attackers to gain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1221"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2002-1068",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The web server for D-Link DP-300 print server allows remote attackers to cause a denial of service (hang) via a large HTTP POST request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1068"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2002-1069",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The remote administration capability for the D-Link DI-804 router 4.68 allows remote attackers to bypass authentication and release DHCP addresses or obtain sensitive information via a direct web request to the pages (1) release.htm, (2) Device Status, or (3) Device Information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1069"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2002-1810",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "D-Link DWL-900AP+ Access Point 2.1 and 2.2 allows remote attackers to access the TFTP server without authentication and read the config.img file, which contains sensitive information such as the administrative password, the WEP encryption keys, and network configuration information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1810"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2002-1865",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Buffer overflow in the Embedded HTTP server, as used in (1) D-Link DI-804 4.68, Dl-704 V2.56b6, and Dl-704 V2.56b5 and (2) Linksys Etherfast BEFW11S4 Wireless AP + Cable/DSL Router 1.37.2 through 1.42.7 and Linksys WAP11 1.3 and 1.4, allows remote attackers to cause a denial of service (crash) via a long header, as demonstrated using the Host header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1865"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2002-2137",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "GlobalSunTech Wireless Access Points (1) WISECOM GL2422AP-0T, and possibly OEM products such as (2) D-Link DWL-900AP+ B1 2.1 and 2.2, (3) ALLOY GL-2422AP-S, (4) EUSSO GL2422-AP, and (5) LINKSYS WAP11-V2.2, allow remote attackers to obtain sensitive information like WEP keys, the administrator password, and the MAC filter via a \"getsearch\" request to UDP port 27155.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2137"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2003-1264",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "TFTP server in Longshine Wireless Access Point (WAP) LCS-883R-AC-B, and in D-Link DI-614+ 2.0 which is based on it, allows remote attackers to obtain the WEP secret and gain administrator privileges by downloading the configuration file (config.img) and other files without authentication.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1264"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2003-1346",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "D-Link wireless access point DWL-900AP+ 2.2, 2.3 and possibly 2.5 allows remote attackers to set factory default settings by upgrading the firmware using AirPlus Access Point Manager.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1346"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2004-0661",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Integer signedness error in D-Link AirPlus DI-614+ running firmware 2.30 and earlier allows remote attackers to cause a denial of service (IP lease depletion) via a DHCP request with the LEASETIME option set to -1, which makes the DHCP lease valid for thirteen or more years.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-0661"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2004-1650",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "D-Link DCS-900 Internet Camera listens on UDP port 62976 for an IP address, which allows remote attackers to change the IP address of the camera via a UDP broadcast packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-1650"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2004-0615",
+      "cvss_score": 5.1,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in D-Link DI-614+ SOHO router running firmware 2.30, and DI-704 SOHO router running firmware 2.60B2, and DI-624, allows remote attackers to inject arbitrary script or HTML via the DHCP HOSTNAME option in a DHCP request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-0615"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2005-1680",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "D-Link DSL-502T, DSL-504T, DSL-562T, and DSL-G604T, when /cgi-bin/firmwarecfg is executed, allows remote attackers to bypass authentication (1) if their IP address already exists in /var/tmp/fw_ip or (2) if their request is the first, which causes /var/tmp/fw_ip to be created and contain their IP address.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-1680"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2005-1827",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "D-Link DSL-504T allows remote attackers to bypass authentication and gain privileges, such as upgrade firmware, restart the router or restore a saved configuration, via a direct request to firmwarecfg.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-1827"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2005-1828",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "D-Link DSL-504T stores usernames and passwords in cleartext in the router configuration file, which allows remote attackers to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-1828"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2005-4723",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "D-Link DI-524 Wireless Router, DI-624 Wireless Router, and DI-784 allow remote attackers to cause a denial of service (device reboot) via a series of crafted fragmented UDP packets, possibly involving a missing fragment.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-4723"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2006-0784",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "D-Link DWL-G700AP with firmware 2.00 and 2.01 allows remote attackers to cause a denial of service (CAMEO HTTP service crash) via a request composed of \"GET\" followed by a space and two newlines, possibly triggering the crash due to missing arguments.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0784"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2006-2337",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in webcm in the D-Link DSL-G604T Wireless ADSL Router Modem allows remote attackers to read arbitrary files via an absolute path in the getpage parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2337"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "D-Link 524, DIR-300, or WBR-1310 WAP telnetd",
+      "cve_id": "CVE-2006-2653",
+      "cvss_score": 2.6,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in login_error.shtml for D-Link DSA-3100 allows remote attackers to inject arbitrary HTML or web script via an encoded uname parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2653"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access (version: D-Link 524, DIR-300, or WBR-1310 WAP telnetd)",
+      "severity": "high"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

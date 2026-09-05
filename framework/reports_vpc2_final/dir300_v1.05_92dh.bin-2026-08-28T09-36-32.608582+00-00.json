@@ -1,0 +1,51 @@
+{
+  "run_id": "d1a381a1",
+  "timestamp": "2026-08-28T09:36:32.608582+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/dir300_v1.05_92dh.bin",
+    "name": "dir300_v1.05_92dh.bin",
+    "sha256": "7bc0f2e5035ff1ed63029e52604ba1fa56df261a608ace9eeb255f5c2cac8405",
+    "size_bytes": 2404480
+  },
+  "emulation": {
+    "image_id": 58,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 83.9,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "23/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-300 WAP UPnP 1.05 (UPnP 1.0)",
+        "raw_banner": "49152/tcp open  upnp       D-Link DIR-300 WAP UPnP 1.05 (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 09:35 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.00018s latency).\nNot shown: 64577 closed ports, 956 filtered ports\nPORT      STATE SERVICE    VERSION\n23/tcp    open  tcpwrapped\n49152/tcp open  upnp       D-Link DIR-300 WAP UPnP 1.05 (UPnP 1.0)\nService Info: OS: Linux; Device: WAP; CPE: cpe:/h:d-link:dir-300, cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 83.84 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    }
+  ]
+}

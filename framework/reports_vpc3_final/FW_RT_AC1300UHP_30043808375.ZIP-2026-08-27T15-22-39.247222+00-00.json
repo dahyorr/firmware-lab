@@ -1,0 +1,22 @@
+{
+  "run_id": "71cca9df",
+  "timestamp": "2026-08-27T15:22:39.247222+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC1300UHP_30043808375.ZIP",
+    "name": "FW_RT_AC1300UHP_30043808375.ZIP",
+    "sha256": "eccd20d9532fe7e8156afbc28bd8911fb049486b236356745106f1b55bddb710",
+    "size_bytes": 24034174
+  },
+  "emulation": {
+    "image_id": 10,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

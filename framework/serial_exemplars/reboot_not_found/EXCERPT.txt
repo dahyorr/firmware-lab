@@ -1,0 +1,164 @@
+# CATEGORY: reboot_not_found
+# vpc=2 scratch_id=104 name=Archer_C5400_US__V1_170731 brand=tplink_latest_archer_c5400_us_v1_170731
+matched_regex: reboot: (applet )?not found
+# source log: qemu.final.serial.log  (1162167 lines total)
+# scratch metadata: name='Archer_C5400_US__V1_170731'  brand='tplink_latest_archer_c5400_us_v1_170731'  architecture='armel'  ip='192.168.1.1'  ip.0='192.168.1.1'
+# signature: /reboot: (applet )?not found/  first hit at line 144863
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #18 Sat Oct 31 17:55:49 KST 2020
+[    0.000000] CPU: ARMv7 Processor [412fc0f1] revision 1 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine model: linux,dummy-virt
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Truncating RAM at 0x40000000-0x80000000 to -0x6f800000
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] On node 0 totalpages: 194560
+[    0.000000] free_area_init_node: node 0, pgdat c061bfa8, node_mem_map ef20a000
+[    0.000000]   Normal zone: 1520 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 194560 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv0.2 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 193040
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 rdinit=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=0 firmadyne.syscall=1
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 763856K/778240K available (4297K kernel code, 170K rwdata, 1580K rodata, 176K init, 148K bss, 14384K reserved, 0K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc05c5788   (5878 kB)
+[    0.000000]       .init : 0xc05c6000 - 0xc05f2000   ( 176 kB)
+[    0.000000]       .data : 0xc05f2000 - 0xc061c800   ( 170 kB)
+[    0.000000]        .bss : 0xc061f000 - 0xc06442d4   ( 149 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] Architected cp15 timer(s) running at 62.50MHz (virt).
+[    0.000000] clocksource arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1cd42e208c, max_idle_ns: 881590405314 ns
+
+--- signature context (lines 144818-144888) ---
+sysinit: nvram_set_default: Loading built-in default values = 1!
+[   66.690858] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.691076] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: nvram_set_default: Checking for symbol "router_defaults"...
+[   66.691521] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.691767] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: nvram_set_default: Checking for symbol "Nvrams"...
+[   66.692205] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.698361] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.698918] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[   66.699166] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.699472] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[   66.699744] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.700025] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[   66.700247] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.700533] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[   66.700827] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.701128] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[   66.701354] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.701633] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[   66.701864] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.702187] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[   66.709253] firmadyne: sys_socket[PID: 2698 (iptables)]: family:1, type:1, protocol:0
+[   66.709653] firmadyne: sys_socket[PID: 2698 (iptables)]: family:2, type:3, protocol:255
+[   66.711794] firmadyne: sys_setsockopt[PID: 2698 (iptables)]: fd:4, level:0, optname:64
+[   66.712260] firmadyne: sys_setsockopt[PID: 2698 (iptables)]: fd:4, level:0, optname:65
+[   66.712817] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: nvram_set_default_image: Copying overrides from defaults folder!
+[   66.713516] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.713750] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: sem_get: Key: 412ccc33
+[   66.714145] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.714359] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: cp: can't stat '/firmadyne/libnvram.override/*': No such file or directory
+[   66.714830] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.715042] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: sem_get: Key: 412ccc33
+[   66.715407] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.715645] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: sem_get: Key: 412ccc33
+[   66.716081] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.716295] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: sem_get: Key: 412ccc33
+[   66.716671] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.716886] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: /etc/rc.common: line 98: reboot: not found
+[   66.717418] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.717669] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: loading access_control
+[   66.718053] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.718270] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: loading administration management
+[   66.718691] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.718901] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: iptables: No chain/target/match by that name.
+[   66.719308] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.719548] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: fw unload_local_mgnt
+[   66.719965] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.720181] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: nvram_get_buf: username
+[   66.720554] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.720778] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: sem_lock: Triggering NVRAM initialization!
+[   66.721260] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.721475] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+sysinit: nvram_init: Initializing NVRAM...
+[   66.721880] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:2, protocol:0
+[   66.722091] firmadyne: sys_socket[PID: 59 (logger)]: family:1, type:1, protocol:0
+[   66.722643] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[   66.723167] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+
+--- final tail (last 40 lines) ---
+[  377.042692] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.043248] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.043950] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.044401] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.045047] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.045468] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.046159] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.046586] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.047229] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.047654] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.048272] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.048684] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.049293] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.049704] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.050287] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.050716] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.051430] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.051916] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.052587] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.053067] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.053946] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.054454] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.055117] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.055516] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.056171] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.056584] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.057200] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.057624] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.058287] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.058744] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.059510] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.060003] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.060517] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.060799] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.061129] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.061551] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.062003] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.062509] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0
+[  377.063205] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:2, protocol:0
+[  377.063741] firmadyne: sys_socket[PID: 216 (klogd)]: family:1, type:1, protocol:0

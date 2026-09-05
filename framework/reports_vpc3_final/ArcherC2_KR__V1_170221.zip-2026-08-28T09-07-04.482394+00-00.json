@@ -1,0 +1,28 @@
+{
+  "run_id": "fb1a9141",
+  "timestamp": "2026-08-28T09:07:04.482394+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/ArcherC2_KR__V1_170221.zip",
+    "name": "ArcherC2_KR__V1_170221.zip",
+    "sha256": "9e49cf7dfb6e25dcf9d60874b41cae9ecff1554a2450767577772db3b0051587",
+    "size_bytes": 6676467
+  },
+  "emulation": {
+    "image_id": 63,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 14.3,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 09:06 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.010s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 14.26 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,209 @@
+{
+  "run_id": "ec247781",
+  "timestamp": "2026-08-27T16:02:43.199796+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC1900P_300438432738.ZIP",
+    "name": "FW_RT_AC1900P_300438432738.ZIP",
+    "sha256": "a2b2a4b47bbfd1d545a2845aa1e855a0fb844307eaa7bfc0158fc4d48c36d63b",
+    "size_bytes": 44601560
+  },
+  "emulation": {
+    "image_id": 13,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 105.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "httpd/2.0",
+        "raw_banner": "80/tcp open  http    httpd/2.0"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 16:00 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.034s latency).\nNot shown: 65534 closed ports\nPORT   STATE SERVICE VERSION\n80/tcp open  http    httpd/2.0\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port80-TCP:V=7.80%I=7%D=8/27%Time=6A905F27%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,1A6,\"HTTP/1\\.0\\x20200\\x20Ok\\r\\nServer:\\x20httpd/2\\.0\\r\\nDate:\\x2\nSF:0Thu,\\x2001\\x20Jan\\x201970\\x2000:02:37\\x20GMT\\r\\nCache-Control:\\x20no-c\nSF:ache,\\x20no-store,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nExpires\nSF::\\x200\\r\\nContent-Type:\\x20text/html\\r\\nSet-Cookie:\\x20asus_token=qQE42\nSF:mJHiPo8ac9YvIPjGyPZRd8BtBm;\\x20HttpOnly;\\r\\nConnection:\\x20close\\r\\n\\r\\\nSF:n<html><head>\\r\\n<script>parent\\.location\\.href='/QIS_wizard\\.htm\\?flag\nSF:=welcome';</script>\\n<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20content=\\\"\nSF:text/html\\\">\\r\\n</head></html>\\r\\n\")%r(HTTPOptions,15C,\"HTTP/1\\.0\\x2050\nSF:1\\x20Not\\x20Implemented\\r\\nServer:\\x20httpd/2\\.0\\r\\nx-frame-options:\\x2\nSF:0SAMEORIGIN\\r\\nx-xss-protection:\\x201;\\x20mode=block\\r\\nDate:\\x20Thu,\\x\nSF:2001\\x20Jan\\x201970\\x2000:02:37\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\\nSF:nConnection:\\x20close\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\x20Not\\x20Implement\nSF:ed</TITLE></HEAD>\\n<BODY\\x20BGCOLOR=\\\"#cc9999\\\"><H4>501\\x20Not\\x20Imple\nSF:mented</H4>\\nThat\\x20method\\x20is\\x20not\\x20implemented\\.\\n</BODY></HTM\nSF:L>\\n\")%r(RTSPRequest,15C,\"HTTP/1\\.0\\x20501\\x20Not\\x20Implemented\\r\\nSer\nSF:ver:\\x20httpd/2\\.0\\r\\nx-frame-options:\\x20SAMEORIGIN\\r\\nx-xss-protectio\nSF:n:\\x201;\\x20mode=block\\r\\nDate:\\x20Thu,\\x2001\\x20Jan\\x201970\\x2000:02:3\nSF:7\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\x20close\\r\\n\\r\\n<\nSF:HTML><HEAD><TITLE>501\\x20Not\\x20Implemented</TITLE></HEAD>\\n<BODY\\x20BG\nSF:COLOR=\\\"#cc9999\\\"><H4>501\\x20Not\\x20Implemented</H4>\\nThat\\x20method\\x2\nSF:0is\\x20not\\x20implemented\\.\\n</BODY></HTML>\\n\")%r(FourOhFourRequest,13A\nSF:,\"HTTP/1\\.0\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20httpd/2\\.0\\r\\nx-frame-\nSF:options:\\x20SAMEORIGIN\\r\\nx-xss-protection:\\x201;\\x20mode=block\\r\\nDate\nSF::\\x20Thu,\\x2001\\x20Jan\\x201970\\x2000:02:42\\x20GMT\\r\\nContent-Type:\\x20t\nSF:ext/html\\r\\nConnection:\\x20close\\r\\n\\r\\n<HTML><HEAD><TITLE>404\\x20Not\\x\nSF:20Found</TITLE></HEAD>\\n<BODY\\x20BGCOLOR=\\\"#cc9999\\\"><H4>404\\x20Not\\x20\nSF:Found</H4>\\nFile\\x20not\\x20found\\.\\n</BODY></HTML>\\n\")%r(Help,145,\"HTTP\nSF:/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nServer:\\x20httpd/2\\.0\\r\\nx-frame-opti\nSF:ons:\\x20SAMEORIGIN\\r\\nx-xss-protection:\\x201;\\x20mode=block\\r\\nDate:\\x2\nSF:0Thu,\\x2001\\x20Jan\\x201970\\x2000:02:58\\x20GMT\\r\\nContent-Type:\\x20text/\nSF:html\\r\\nConnection:\\x20close\\r\\n\\r\\n<HTML><HEAD><TITLE>400\\x20Bad\\x20Re\nSF:quest</TITLE></HEAD>\\n<BODY\\x20BGCOLOR=\\\"#cc9999\\\"><H4>400\\x20Bad\\x20Re\nSF:quest</H4>\\nCan't\\x20parse\\x20request\\.\\n</BODY></HTML>\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 105.11 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0236",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0236"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-1068",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Oracle Webserver 2.1, when serving PL/SQL stored procedures, allows remote attackers to cause a denial of service via a long HTTP GET request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1068"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0071",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0071"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0267",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in NCSA HTTP daemon v1.3 allows remote command execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0267"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-1416",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "AnswerBook2 (AB2) web server dwhttpd 3.1a4 allows remote attackers to cause a denial of service (resource exhaustion) via an HTTP POST request with a large content-length.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1416"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0633",
+      "cvss_score": null,
+      "severity": null,
+      "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: None.  Reason: this candidate is solely about a configuration that does not directly introduce security vulnerabilities, so it is more appropriate to cover under the Common Configuration Enumeration (CCE).  Notes: the former description is: \"The HTTP/WWW service is running.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0633"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-1412",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "A possible interaction between Apple MacOS X release 1.0 and Apache HTTP server allows remote attackers to cause a denial of service (crash) via a flood of HTTP GET requests to CGI programs, which generates a large number of processes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1412"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0929",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Novell NetWare with Novell-HTTP-Server or YAWN web servers allows remote attackers to conduct a denial of service via a large number of HTTP GET requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0929"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

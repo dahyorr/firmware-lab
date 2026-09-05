@@ -1,0 +1,22 @@
+{
+  "run_id": "33fdbe63",
+  "timestamp": "2026-08-28T13:08:16.859116+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R8000-V1.0.0.68_1.0.27.zip",
+    "name": "R8000-V1.0.0.68_1.0.27.zip",
+    "sha256": "988ed93a6321d37f767aa8d352ab5d7352ea4eee4e849ea40c8be84b96b28ae7",
+    "size_bytes": 24461967
+  },
+  "emulation": {
+    "image_id": 182,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

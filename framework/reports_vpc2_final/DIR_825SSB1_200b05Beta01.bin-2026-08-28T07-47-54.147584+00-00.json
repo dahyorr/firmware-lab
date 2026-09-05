@@ -1,0 +1,135 @@
+{
+  "run_id": "3b33bdd7",
+  "timestamp": "2026-08-28T07:47:54.147584+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR_825SSB1_200b05Beta01.bin",
+    "name": "DIR_825SSB1_200b05Beta01.bin",
+    "sha256": "b7fb09ceb969ee8948dd669d1c6b235be0876bcca05dd639a734aa5fe42a9b11",
+    "size_bytes": 6291482
+  },
+  "emulation": {
+    "image_id": 157,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 58.8,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp  open  tcpwrapped"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp open  ssl/https?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 07:45 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.036s latency).\nNot shown: 65533 closed ports\nPORT    STATE SERVICE    VERSION\n80/tcp  open  tcpwrapped\n443/tcp open  ssl/https?\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 58.75 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

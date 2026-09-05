@@ -1,0 +1,149 @@
+{
+  "run_id": "4fd9f702",
+  "timestamp": "2026-08-30T02:17:18.031164+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR868LB1_FW200KR-K04.bin",
+    "name": "DIR868LB1_FW200KR-K04.bin",
+    "sha256": "036635a9c730bdb2f8b1dd4463b5d2216ad4531db89e43a24cef725e664c1769",
+    "size_bytes": 13111448
+  },
+  "emulation": {
+    "image_id": 340,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 37.7,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "53/tcp    open  domain       dnsmasq 2.45"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "WebServer",
+        "raw_banner": "80/tcp    open  http         WebServer"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "intermapper?",
+        "version": "",
+        "raw_banner": "8181/tcp  open  intermapper?"
+      },
+      {
+        "port": 8182,
+        "protocol": "tcp",
+        "service": "vmware-fdm?",
+        "version": "",
+        "raw_banner": "8182/tcp  open  vmware-fdm?"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "49152/tcp open  unknown"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 02:16 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.048s latency).\nNot shown: 64902 closed ports, 628 filtered ports\nPORT      STATE SERVICE      VERSION\n53/tcp    open  domain       dnsmasq 2.45\n80/tcp    open  http         WebServer\n8181/tcp  open  intermapper?\n8182/tcp  open  vmware-fdm?\n49152/tcp open  unknown\n4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port80-TCP:V=7.80%I=7%D=8/30%Time=6A939288%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,4F9,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20\nSF:Fri,\\x2031\\x20Dec\\x201999\\x2018:16:40\\x20GMT\\r\\n\\r\\n<!DOCTYPE\\x20HTML\\x\nSF:20PUBLIC\\x20\\\"-//W3C//DTD\\x20XHTML\\x201\\.0\\x20Strict//EN\\\"\\r\\n\\\"http://\nSF:www\\.w3\\.org/TR/xhtml1/DTD/xhtml1-strict\\.dtd\\\">\\r\\n\\r\\n<html\\x20xmlns=\nSF:\\x20\\\"http://www\\.w3c\\.org/1999/xhtml\\\">\\r\\n\\r\\n<head>\\r\\n<title>D-LINK\nSF:</title>\\r\\n<meta\\x20http-equiv=\\\"X-UA-Compatible\\\"\\x20content=\\\"IE=9\\\"\nSF:>\\r\\n<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20content=\\\"text/html;\\x20ch\nSF:arset=utf-8\\\">\\r\\n<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20content=\\\"tex\nSF:t/css\\\">\\r\\n<meta\\x20name=\\\"viewport\\\"\\x20content=\\\"width=device-width\\\nSF:\">\\r\\n</head>\\r\\n<body>\\r\\n\\t<iframe\\x20class=\\\"login_frame\\\"\\x20id=\\\"d\nSF:efaultframe\\\"\\x20src=\\\"\\\"\\x20frameborder=\\\"0\\\"\\x20width=\\\"100%\\\"\\x20hei\nSF:ght=\\\"100%\\\"\\x20style=\\\"overflow:\\x20auto;-webkit-overflow-scrolling:to\nSF:uch;\\\"></iframe>\\r\\n</body>\\r\\n<script\\x20type=\\\"text/javascript\\\">\\r\\n\nSF:\\ttry\\r\\n\\t{\\r\\n\\t\\t//var\\x20url\\x20=\\x20window\\.location\\.pathname;\\r\\\nSF:n\\t\\t//sessionStorage\\.setItem\\(\\\"RedirectUrl\\\",\\x20url\\);\\r\\n\\t}\\r\\n\\t\nSF:catch\\x20\\(error\\)\\r\\n\\t{\\r\\n\\t\\t//localStorage\\.setItem\\x20is\\x20usele\nSF:ss\\x20when\\x20the\\x20private\\x20bro\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x205\nSF:01\\x20Not\\x20Implemented\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Fri,\\x2031\nSF:\\x20Dec\\x201999\\x2018:16:40\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nCon\nSF:tent-Length:\\x20\\x20\\x20127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</ti\nSF:tle>\\n<h1>501\\x20Not\\x20Implemented</h1>\\nYour\\x20request\\x20was\\x20not\nSF:\\x20understood\\x20or\\x20not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\")%r(\nSF:FourOhFourRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20We\nSF:bServer\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16:40\\x20GMT\\r\\nCon\nSF:tent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title\nSF:>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20reso\nSF:urce\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20serve\nSF:r\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port8181-TCP:V=7.80%I=7%D=8/30%Time=6A939288%P=x86_64-pc-linux-gnu%r(Ge\nSF:tRequest,2506,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20WebServer\\r\\nDate:\\\nSF:x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16:40\\x20GMT\\r\\n\\r\\n<html>\\n\\t<head>\nSF:\\n\\t\\t<title>D-LINK</title>\\n\\t\\t<meta\\x20http-equiv=\\\"X-UA-Compatible\\\nSF:\"\\x20content=\\\"IE=9\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20con\nSF:tent=\\\"text/html;\\x20charset=utf-8\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"Conten\nSF:t-Type\\\"\\x20content=\\\"text/css\\\">\\n\\t\\t<link\\x20rel=\\\"stylesheet\\\"\\x20t\nSF:ype=\\\"text/css\\\"\\x20href=\\\"css/style_sharePort\\.css\\\"\\x20media=\\\"all\\\"\\\nSF:x20/>\\n\\t\\t<link\\x20rel=stylesheet\\x20type=\\\"text/css\\\"\\x20href=\\\"/css/\nSF:jquery\\.selectbox\\.css\\\"\\x20/>\\n\\t\\t<script\\x20type=\\\"text/javascript\\\"\nSF:\\x20src=\\\"js/jquery-1\\.8\\.2\\.min\\.js\\\"\\x20tppabs=\\\"/webaccess/js/jquery\nSF:-1\\.8\\.2\\.min\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\"text/javascript\\\"\\\nSF:x20src=\\\"js/jquery\\.selectbox-0\\.2_new\\.js\\\"\\x20tppabs=\\\"/webaccess/js/\nSF:jquery\\.selectbox-0\\.2_new\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\"text/\nSF:javascript\\\"\\x20src=\\\"fancybox/json2\\.js\\\"\\x20tppabs=\\\"/webaccess/fancy\nSF:box/json2\\.js\\\"></script>\\n\\x20\\x20\\x20\\x20<script\\x20language=\\\"JavaSc\nSF:ript\\\"\\x20src=\\\"js/object\\.js\\\"\\x20tppabs=\\\"/webaccess/js/object\\.js\\\">\nSF:</script>\\n\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\nSF:\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16\nSF::45\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20\nSF:127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20\nSF:Implemented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20\nSF:not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\")%r(FourOhFourRequest,F0,\"HT\nSF:TP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Fri,\nSF:\\x2031\\x20Dec\\x201999\\x2018:16:45\\x20GMT\\r\\nContent-Type:\\x20text/html\\\nSF:r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</ti\nSF:tle>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20cou\nSF:ld\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port8182-TCP:V=7.80%I=7%D=8/30%Time=6A93928D%P=x86_64-pc-linux-gnu%r(Ge\nSF:tRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20WebServer\\r\nSF:\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16:45\\x20GMT\\r\\nContent-Type\nSF::\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20N\nSF:ot\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resource\\x20r\nSF:equested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\\.\\n\")%r\nSF:(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\nServer:\\x20\nSF:WebServer\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16:45\\x20GMT\\r\\nC\nSF:ontent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20127\\r\\n\\r\\n<tit\nSF:le>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20Implemented</h1\nSF:>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20not\\x20allowed\\\nSF:x20by\\x20this\\x20server\\.\\n\")%r(FourOhFourRequest,F0,\"HTTP/1\\.1\\x20404\\\nSF:x20Not\\x20Found\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x\nSF:201999\\x2018:16:45\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Leng\nSF:th:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n<h1>404\\x\nSF:20Not\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20could\\x20not\\x20be\nSF:\\x20found\\x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port49152-TCP:V=7.80%I=7%D=8/30%Time=6A939288%P=x86_64-pc-linux-gnu%r(F\nSF:ourOhFourRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Web\nSF:Server\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16:40\\x20GMT\\r\\nCont\nSF:ent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>\nSF:404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resou\nSF:rce\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\nSF:\\.\\n\")%r(GetRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20\nSF:WebServer\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16:45\\x20GMT\\r\\nC\nSF:ontent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<tit\nSF:le>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20re\nSF:source\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20ser\nSF:ver\\.\\n\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\n\nSF:Server:\\x20WebServer\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2018:16:45\\\nSF:x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20127\\\nSF:r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20Impl\nSF:emented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20not\\\nSF:x20allowed\\x20by\\x20this\\x20server\\.\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 37.67 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

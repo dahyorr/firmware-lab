@@ -1,0 +1,201 @@
+{
+  "run_id": "d5ae57fa",
+  "timestamp": "2026-08-30T00:50:26.823880+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR-505_FIRMWARE_1.07.ZIP",
+    "name": "DIR-505_FIRMWARE_1.07.ZIP",
+    "sha256": "90c9efcca599a3174db09b4f67633fa20d67cb9cb19fda9b48e261a26be329aa",
+    "size_bytes": 6836500
+  },
+  "emulation": {
+    "image_id": 322,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 38.8,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.41",
+        "raw_banner": "53/tcp   open  domain     dnsmasq 2.41"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http?",
+        "version": "",
+        "raw_banner": "80/tcp   open  http?"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "443/tcp  open  tcpwrapped"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp open  ssl/vop?"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "lighttpd 1.4.28",
+        "raw_banner": "8181/tcp open  http       lighttpd 1.4.28"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 00:49 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.022s latency).\nNot shown: 65530 closed ports\nPORT     STATE SERVICE    VERSION\n53/tcp   open  domain     dnsmasq 2.41\n80/tcp   open  http?\n443/tcp  open  tcpwrapped\n4433/tcp open  ssl/vop?\n8181/tcp open  http       lighttpd 1.4.28\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 38.77 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2005-0453",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buffer_urldecode function in Lighttpd 1.3.7 and earlier does not properly handle control characters, which allows remote attackers to obtain the source code for CGI and FastCGI scripts via a URL with a %00 (null) character after the file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0453"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2006-0760",
+      "cvss_score": 2.6,
+      "severity": null,
+      "description": "LightTPD 1.4.8 and earlier, when the web root is on a case-insensitive filesystem, allows remote attackers to bypass URL checks and obtain sensitive information via file extensions with unexpected capitalization, as demonstrated by a request for index.PHP when the configuration invokes the PHP interpreter only for \".php\" names.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0760"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2006-0814",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "response.c in Lighttpd 1.4.10 and possibly previous versions, when run on Windows, allows remote attackers to read arbitrary source code via requests that contain trailing (1) \".\" (dot) and (2) space characters, which are ignored by Windows, as demonstrated by PHP files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0814"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2007-1869",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.12 and 1.4.13 allows remote attackers to cause a denial of service (cpu and resource consumption) by disconnecting while lighttpd is parsing CRLF sequences, which triggers an infinite loop and file descriptor consumption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1869"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2007-1870",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "lighttpd before 1.4.14 allows attackers to cause a denial of service (crash) via a request to a file whose mtime is 0, which results in a NULL pointer dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1870"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2008-0983",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.18, and possibly other versions before 1.5.0, does not properly calculate the size of a file descriptor array, which allows remote attackers to cause a denial of service (crash) via a large number of connections, which triggers an out-of-bounds access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0983"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2008-1111",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mod_cgi in lighttpd 1.4.18 sends the source code of CGI scripts instead of a 500 error when a fork failure occurs, which might allow remote attackers to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1111"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2008-4298",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Memory leak in the http_request_parse function in request.c in lighttpd before 1.4.20 allows remote attackers to cause a denial of service (memory consumption) via a large number of requests with duplicate request headers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4298"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2010-0295",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd before 1.4.26, and 1.5.x, allocates a buffer for each read operation that occurs for a request, which allows remote attackers to cause a denial of service (memory consumption) by breaking a request into small pieces that are sent at a slow rate.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0295"
+    },
+    {
+      "port": 8181,
+      "service": "http",
+      "version": "lighttpd 1.4.28",
+      "cve_id": "CVE-2011-4362",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Integer signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4362"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

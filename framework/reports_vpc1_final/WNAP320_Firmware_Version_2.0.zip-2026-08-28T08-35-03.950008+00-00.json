@@ -1,0 +1,139 @@
+{
+  "run_id": "37bc432e",
+  "timestamp": "2026-08-28T08:35:03.950008+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNAP320_Firmware_Version_2.0.zip",
+    "name": "WNAP320_Firmware_Version_2.0.zip",
+    "sha256": "d8fabd3a2ef539d8b0c0ee8f6fafbe523522c45b71e452588552bb6c7ef642a7",
+    "size_bytes": 5371497
+  },
+  "emulation": {
+    "image_id": 29,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.100",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.100",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:32 UTC\nNmap scan report for 192.168.0.100\nHost is up.\nAll 65535 scanned ports on 192.168.0.100 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.06 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2016-1555",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "(1) boardData102.php, (2) boardData103.php, (3) boardDataJP.php, (4) boardDataNA.php, and (5) boardDataWW.php in Netgear WN604 before 3.3.3 and WN802Tv2, WNAP210v2, WNAP320, WNDAP350, WNDAP360, and WNDAP660 before 3.5.5.0 allow remote attackers to execute arbitrary commands.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1555"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2016-1556",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Information disclosure in Netgear WN604 before 3.3.3; WNAP210, WNAP320, WNDAP350, and WNDAP360 before 3.5.5.0; and WND930 before 2.0.11 allows remote attackers to read the wireless WPS PIN or passphrase by visiting unauthenticated webpages.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1556"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2016-1557",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Netgear WNAP320, WNDAP350, and WNDAP360 before 3.5.5.0 reveal wireless passwords and administrative usernames and passwords over SNMP.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1557"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2017-18806",
+      "cvss_score": 6.7,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by command injection. This affects WAC510 before 1.3.0.10, WAC120 before 2.1.4, WNDAP620 before 2.1.3, WND930 before 2.1.2, WN604 before 3.3.7, WNDAP660 before 3.7.4.0, WNDAP350 before 3.7.4.0, WNAP320 before 3.7.4.0, WNAP210v2 before 3.7.4.0, and WNDAP360 before 3.7.4.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18806"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2017-18805",
+      "cvss_score": 6.7,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by command injection. This affects WAC510 before 1.3.0.10, WAC120 before 2.1.4, WNDAP620 before 2.1.3, WND930 before 2.1.2, WN604 before 3.3.7, WNDAP660 before 3.7.4.0, WNDAP350 before 3.7.4.0, WNAP320 before 3.7.4.0, WNAP210v2 before 3.7.4.0, and WNDAP360 before 3.7.4.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18805"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2018-21120",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by CSRF. This affects WAC120 before 2.1.7, WAC505 before 5.0.5.4, WAC510 before 5.0.5.4, WNAP320 before 3.7.11.4, WNAP210v2 before 3.7.11.4, WNDAP350 before 3.7.11.4, WNDAP360 before 3.7.11.4, WNDAP660 before 3.7.11.4, WNDAP620 before 2.1.7, WND930 before 2.1.5, and WN604 before 3.3.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-21120"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2018-21094",
+      "cvss_score": 7.3,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by incorrect configuration of security settings. This affects WAC120 before 2.1.7, WAC505 before 5.0.5.4, WAC510 before 5.0.5.4, WNAP320 before 3.7.11.4, WNAP210v2 before 3.7.11.4, WNDAP350 before 3.7.11.4, WNDAP360 before 3.7.11.4, WNDAP660 before 3.7.11.4, WNDAP620 before 2.1.7, WND930 before 2.1.5, and WN604 before 3.3.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-21094"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2018-21096",
+      "cvss_score": 7.4,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by CSRF. This affects WAC120 before 2.1.7, WAC505 before 5.0.5.4, WAC510 before 5.0.5.4, WNAP320 before 3.7.11.4, WNAP210v2 before 3.7.11.4, WNDAP350 before 3.7.11.4, WNDAP360 before 3.7.11.4, WNDAP660 before 3.7.11.4, WNDAP620 before 2.1.7, WND930 before 2.1.5, and WN604 before 3.3.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-21096"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2018-21097",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects WAC505 before 5.0.5.4, WAC510 before 5.0.5.4, WAC120 before 2.1.7, WN604 before 3.3.10, WNAP320 before 3.7.11.4, WNAP210v2 before 3.7.11.4, WNDAP350 before 3.7.11.4, WNDAP360 before 3.7.11.4, WNDAP660 before 3.7.11.4, WNDAP620 before 2.1.7, and WND930 before 2.1.5.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-21097"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2017-18863",
+      "cvss_score": 7.1,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command execution via a PHP form. This affects WN604 3.3.3 and earlier, WNAP210v2 3.5.20.0 and earlier, WNAP320 3.5.20.0 and earlier, WNDAP350 3.5.20.0 and earlier, WNDAP360 3.5.20.0 and earlier, WNDAP620 2.0.11 and earlier, WNDAP660 3.5.20.0 and earlier, WND930 2.0.11 and earlier, and WAC120 2.0.7 and earlier.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18863"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.0",
+      "cve_id": "CVE-2022-31876",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "netgear wnap320 router WNAP320_V2.0.3_firmware is vulnerable to Incorrect Access Control via /recreate.php, which can leak all users cookies.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31876"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

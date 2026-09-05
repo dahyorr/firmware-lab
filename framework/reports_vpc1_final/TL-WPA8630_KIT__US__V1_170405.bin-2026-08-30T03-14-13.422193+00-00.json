@@ -1,0 +1,59 @@
+{
+  "run_id": "1bc49bb6",
+  "timestamp": "2026-08-30T03:14:13.422193+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink_latest/TL-WPA8630_KIT__US__V1_170405.bin",
+    "name": "TL-WPA8630_KIT__US__V1_170405.bin",
+    "sha256": "20348f8db0af8f08049fd11e1187d33667d0ab3419ee600781e1b268bf5344ce",
+    "size_bytes": 8192568
+  },
+  "emulation": {
+    "image_id": 351,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.254",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.254",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.2,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 03:11 UTC\nNmap scan report for 192.168.0.254\nHost is up.\nAll 65535 scanned ports on 192.168.0.254 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.12 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-27837",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TP-Link TL-WPA8630P (US)_ V2_ Version 171011 was discovered to contain a command injection vulnerability via the key parameter in the function sub_ 40A774.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-27837"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-27836",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TP-Link TL-WPA8630P (US)_ V2_ Version 171011 was discovered to contain a command injection vulnerability via the devicePwd parameter in the function sub_ 40A80C.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-27836"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2024-57357",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "An issue in TPLINK TL-WPA 8630 TL-WPA8630(US)_V2_2.0.4 Build 20230427 allows a remote attacker to execute arbitrary code via function sub_4256CC, which allows command injection by injecting 'devpwd'.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57357"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

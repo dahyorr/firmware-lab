@@ -1,0 +1,111 @@
+{
+  "run_id": "927fe9a0",
+  "timestamp": "2026-08-29T07:44:45.869451+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-751DR_v1.03B03.zip",
+    "name": "TEW-751DR_v1.03B03.zip",
+    "sha256": "a3a74d0cd4aa7e94cec636b8e9ddd6c2bdc517806165c935d602e6cc26e4b685",
+    "size_bytes": 6587101
+  },
+  "emulation": {
+    "image_id": 152,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.10.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 49.3,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "53/tcp    open  domain  dnsmasq 2.45"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Linux, HTTP/1.1, TEW-751DR Ver 1.03",
+        "raw_banner": "80/tcp    open  http    Linux, HTTP/1.1, TEW-751DR Ver 1.03"
+      },
+      {
+        "port": 5449,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "5449/tcp  open  unknown"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "",
+        "raw_banner": "49152/tcp open  upnp"
+      },
+      {
+        "port": 63481,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "63481/tcp open  domain  dnsmasq 2.45"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 07:43 UTC\nNmap scan report for 192.168.10.1\nHost is up (0.027s latency).\nNot shown: 65530 closed ports\nPORT      STATE SERVICE VERSION\n53/tcp    open  domain  dnsmasq 2.45\n80/tcp    open  http    Linux, HTTP/1.1, TEW-751DR Ver 1.03\n5449/tcp  open  unknown\n49152/tcp open  upnp\n63481/tcp open  domain  dnsmasq 2.45\n2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port80-TCP:V=7.80%I=7%D=8/29%Time=6A928DB9%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,533A,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20Linux,\\x20HTTP/1\\.1,\\\nSF:x20TEW-751DR\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x202\nSF:3:43:52\\x20GMT\\r\\n\\r\\n<!DOCTYPE\\x20HTML\\x20PUBLIC\\x20\\\"-//W3C//DTD\\x20H\nSF:TML\\x204\\.01\\x20Transitional//EN\\\"\\x20\\\"http://www\\.w3\\.org/TR/html4/lo\nSF:ose\\.dtd\\\">\\n<html\\x20style=\\\"background:\\x20#000\\x20url\\(/pic/bg4\\.gif\nSF:\\)\\x20top\\x20center;\\\">\\n<head>\\n\\t<!--link\\x20rel=\\\"shortcut\\x20icon\\\"\nSF:\\x20href=\\\"/favicon\\.ico\\\"\\x20-->\\t\\n\\t<link\\x20rel=\\\"stylesheet\\\"\\x20h\nSF:ref=\\\"/css/general\\.css\\\"\\x20type=\\\"text/css\\\">\\n\\t<meta\\x20http-equiv=\nSF:\\\"Content-Type\\\"\\x20content=\\\"no-cache\\\">\\n\\t<meta\\x20http-equiv=\\\"Prag\nSF:ma\\\"\\x20content=\\\"no-cache\\\"\\x20/>\\n\\t<meta\\x20http-equiv=\\\"Content-Typ\nSF:e\\\"\\x20content=\\\"text/html;\\x20charset=utf-8\\\">\\n\\t<title>TRENDNET\\x20\\\nSF:|\\x20WIRELESS\\x20N\\x20ROUTER\\x20</title>\\t\\t\\n\\t\\t\\n\\t<script\\x20type=\\\nSF:\"text/javascript\\\"\\x20charset=\\\"utf-8\\\"\\x20src=\\\"\\./js/comm\\.js\\\"></scr\nSF:ipt>\\n\\t<script\\x20type=\\\"text/javascript\\\"\\x20charset=\\\"utf-8\\\"\\x20src\nSF:=\\\"\\./js/libajax\\.js\\\"></script>\\n\\t<script\\x20type=\\\"text/javascript\\\"\nSF:\\x20charset=\\\"utf-8\\\"\\x20src=\\\"\\./js/postxml\\.js\\\"></script>\\n\\t<script\nSF:\\x20type=\\\"text/javascript\\\"\\x20src=\\\"\\./js/jquery\")%r(HTTPOptions,121,\nSF:\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\nServer:\\x20Linux,\\x20HTTP/1\\\nSF:.1,\\x20TEW-751DR\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\\nSF:x2023:43:52\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\nSF:\\x20\\x20127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x2\nSF:0Not\\x20Implemented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x\nSF:20or\\x20not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\")%r(FourOhFourReques\nSF:t,10A,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Linux,\\x20HTTP/1\\\nSF:.1,\\x20TEW-751DR\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\\nSF:x2023:43:52\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\nSF:\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x\nSF:20Found</h1>\\nThe\\x20resource\\x20requested\\x20could\\x20not\\x20be\\x20fou\nSF:nd\\x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port49152-TCP:V=7.80%I=7%D=8/29%Time=6A928DB9%P=x86_64-pc-linux-gnu%r(F\nSF:ourOhFourRequest,10A,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Li\nSF:nux,\\x20UPnP/1\\.0,\\x20TEW-751DR\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\\nSF:x20Dec\\x201999\\x2023:43:52\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nCont\nSF:ent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n<\nSF:h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20could\\x20n\nSF:ot\\x20be\\x20found\\x20on\\x20this\\x20server\\.\\n\")%r(GetRequest,10A,\"HTTP/\nSF:1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Linux,\\x20UPnP/1\\.0,\\x20TEW-7\nSF:51DR\\x20Ver\\x201\\.03\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2023:43:57\\\nSF:x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\\nSF:r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\nSF:\\nThe\\x20resource\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20\nSF:this\\x20server\\.\\n\")%r(HTTPOptions,121,\"HTTP/1\\.1\\x20501\\x20Not\\x20Impl\nSF:emented\\r\\nServer:\\x20Linux,\\x20UPnP/1\\.0,\\x20TEW-751DR\\x20Ver\\x201\\.03\nSF:\\r\\nDate:\\x20Fri,\\x2031\\x20Dec\\x201999\\x2023:43:57\\x20GMT\\r\\nContent-Ty\nSF:pe:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20127\\r\\n\\r\\n<title>501\\x2\nSF:0Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20Implemented</h1>\\nYour\\x\nSF:20request\\x20was\\x20not\\x20understood\\x20or\\x20not\\x20allowed\\x20by\\x20\nSF:this\\x20server\\.\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 49.25 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Linux, HTTP/1.1, TEW-751DR Ver 1.03",
+      "cve_id": "CVE-1999-0459",
+      "cvss_score": 4.6,
+      "severity": null,
+      "description": "Local users can perform a denial of service in Alpha Linux, using MILO to force a reboot.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0459"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: trendnet",
+      "severity": "info"
+    }
+  ]
+}

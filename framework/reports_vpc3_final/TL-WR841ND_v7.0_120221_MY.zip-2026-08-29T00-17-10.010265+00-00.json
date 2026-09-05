@@ -1,0 +1,99 @@
+{
+  "run_id": "40aefeb0",
+  "timestamp": "2026-08-29T00:17:10.010265+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/TL-WR841ND_v7.0_120221_MY.zip",
+    "name": "TL-WR841ND_v7.0_120221_MY.zip",
+    "sha256": "e6d9c3f4abe1a80ad48efd0c73f9a4043639eee69636c048b28b392e4787ca92",
+    "size_bytes": 3145942
+  },
+  "emulation": {
+    "image_id": 263,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.0,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 00:14 UTC\nNmap scan report for 192.168.1.1\nHost is up.\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 142.94 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "7.0",
+      "cve_id": "CVE-2015-3035",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Directory traversal vulnerability in TP-LINK Archer C5 (1.2) with firmware before 150317, C7 (2.0) with firmware before 150304, and C8 (1.0) with firmware before 150316, Archer C9 (1.0), TL-WDR3500 (1.0), TL-WDR3600 (1.0), and TL-WDR4300 (1.0) with firmware before 150302, TL-WR740N (5.0) and TL-WR741ND (5.0) with firmware before 150312, and TL-WR841N (9.0), TL-WR841N (10.0), TL-WR841ND (9.0), and TL-WR841ND (10.0) with firmware before 150310 allows remote attackers to read arbitrary files via a .. (dot dot) in the PATH_INFO to login/.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3035"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "7.0",
+      "cve_id": "CVE-2024-9284",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in TP-LINK TL-WR841ND up to 20240920. It has been rated as critical. Affected by this issue is some unknown functionality of the file /userRpm/popupSiteSurveyRpm.htm. The manipulation of the argument ssid leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9284"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "7.0",
+      "cve_id": "CVE-2025-25897",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A buffer overflow vulnerability was discovered in TP-Link TL-WR841ND V11 via the 'ip' parameter at /userRpm/WanStaticIpV6CfgRpm.htm. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25897"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "7.0",
+      "cve_id": "CVE-2025-25898",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A buffer overflow vulnerability was discovered in TP-Link TL-WR841ND V11 via the pskSecret parameter at /userRpm/WlanSecurityRpm.htm. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25898"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "7.0",
+      "cve_id": "CVE-2025-25899",
+      "cvss_score": 3.5,
+      "severity": "LOW",
+      "description": "A buffer overflow vulnerability was discovered in TP-Link TL-WR841ND V11 via the 'gw' parameter at /userRpm/WanDynamicIpV6CfgRpm.htm. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25899"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "7.0",
+      "cve_id": "CVE-2025-25900",
+      "cvss_score": 4.9,
+      "severity": "MEDIUM",
+      "description": "A buffer overflow vulnerability was discovered in TP-Link TL-WR841ND V11 via the username and password parameters at /userRpm/PPPoEv6CfgRpm.htm. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25900"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "7.0",
+      "cve_id": "CVE-2025-25901",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A buffer overflow vulnerability was discovered in TP-Link TL-WR841ND V11, triggered by the dnsserver1 and dnsserver2 parameters at /userRpm/WanSlaacCfgRpm.htm. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25901"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "f4338de9",
+  "timestamp": "2026-08-28T02:09:49.491798+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_ACRH13_30043808375.ZIP",
+    "name": "FW_RT_ACRH13_30043808375.ZIP",
+    "sha256": "33d023d110d8a1990329a3fb656232e9076c239e5325090e5a2a121e778c62ec",
+    "size_bytes": 24034168
+  },
+  "emulation": {
+    "image_id": 101,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

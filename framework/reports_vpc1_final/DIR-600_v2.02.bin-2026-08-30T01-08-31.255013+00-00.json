@@ -1,0 +1,107 @@
+{
+  "run_id": "45476596",
+  "timestamp": "2026-08-30T01:08:31.255013+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR-600_v2.02.bin",
+    "name": "DIR-600_v2.02.bin",
+    "sha256": "25344aa48a8ffcfc69c89f066a627439f3dc41adcbaf06b8d949df4cf4d2db8b",
+    "size_bytes": 3240064
+  },
+  "emulation": {
+    "image_id": 326,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 175.5,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "23/tcp    open     tcpwrapped"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain?",
+        "version": "",
+        "raw_banner": "53/tcp    open     domain?"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Mathopd httpd 1.5p6",
+        "raw_banner": "80/tcp    open     http       Mathopd httpd 1.5p6"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-600 WAP UPnP 2.02 (UPnP 1.0)",
+        "raw_banner": "49152/tcp open     upnp       D-Link DIR-600 WAP UPnP 2.02 (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:05 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.044s latency).\nNot shown: 65530 closed ports\nPORT      STATE    SERVICE    VERSION\n1/tcp     filtered tcpmux\n23/tcp    open     tcpwrapped\n53/tcp    open     domain?\n80/tcp    open     http       Mathopd httpd 1.5p6\n49152/tcp open     upnp       D-Link DIR-600 WAP UPnP 2.02 (UPnP 1.0)\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port53-TCP:V=7.80%I=7%D=8/30%Time=6A9381EC%P=x86_64-pc-linux-gnu%r(DNSV\nSF:ersionBindReqTCP,20,\"\\0\\x1e\\0\\x06\\x85\\x83\\0\\x01\\0\\0\\0\\0\\0\\0\\x07version\\\nSF:x04bind\\0\\0\\x10\\0\\x03\")%r(DNSStatusRequestTCP,E,\"\\0\\x0c\\0\\0\\x94\\x83\\0\\0\nSF:\\0\\0\\0\\0\\0\\0\")%r(GenericLines,4,\"\\0\\x02\\r\\n\")%r(TerminalServerCookie,2A\nSF:,\"\\0\\(\\0\\*\\xa5\\x83\\0\\0\\0\\0\\0Cookie:\\x20mstshash=nmap\\r\\n\\x01\\0\\x08\\0\\x0\nSF:3\\0\\0\\0\")%r(LPDString,9,\"\\0\\x07ef\\xe5\\x83lt\\n\")%r(TerminalServer,B,\"\\0\\\nSF:t\\0\\x0b\\x86\\x83\\0\\0\\0\\0\\0\")%r(WMSRequest,AF,\"\\0\\xad\\0\\xfd\\xce\\x83\\x0b\\x\nSF:b0\\xa0\\0\\0\\0MMS\\x14\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\x12\\0\\0\\0\\x01\\0\\x03\\0\nSF:\\xf0\\xf0\\xf0\\xf0\\x0b\\0\\x04\\0\\x1c\\0\\x03\\0N\\0S\\0P\\0l\\0a\\0y\\0e\\0r\\0/\\x009\\\nSF:0\\.\\x000\\0\\.\\x000\\0\\.\\x002\\x009\\x008\\x000\\0;\\0\\x20\\0{\\x000\\x000\\x000\\x0\nSF:00\\0A\\0A\\x000\\x000\\0-\\x000\\0A\\x000\\x000\\0-\\x000\\x000\\0a\\x000\\0-\\0A\\0A\\x\nSF:000\\0A\\0-\\x000\\x000\\x000\\x000\\0A\\x000\\0A\\0A\\x000\\0A\\0A\\x000\\0}\\0\\0\\0\\xe\nSF:0m\\xdf_\")%r(oracle-tns,5A,\"\\0X\\0\\0\\x85\\x83\\0\\0\\x016\\x01,\\0\\0\\x08\\0\\x7f\\\nSF:xff\\x7f\\x08\\0\\0\\0\\x01\\0\\x20\\0:\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\0\\x004\\xe6\\0\nSF:\\0\\0\\x01\\0\\0\\0\\0\\0\\0\\0\\0\\(CONNECT_DATA=\\(COMMAND=version\\)\\)\")%r(afp,5,\nSF:\"\\0\\x03\\0\\x01\\x84\");\nService Info: OSs: Unix, Linux; Device: WAP; CPE: cpe:/h:d-link:dir-600, cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 175.43 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

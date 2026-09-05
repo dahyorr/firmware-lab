@@ -1,0 +1,22 @@
+{
+  "run_id": "c26f8aa9",
+  "timestamp": "2026-08-29T15:08:29.966566+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-934L_REVA_FIRMWARE_1.05.04.ZIP",
+    "name": "DCS-934L_REVA_FIRMWARE_1.05.04.ZIP",
+    "sha256": "a08458dd4e9f96f6af7d291a6bcad0503e62cab7554a0220442b11152d8e1f89",
+    "size_bytes": 4151862
+  },
+  "emulation": {
+    "image_id": 268,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

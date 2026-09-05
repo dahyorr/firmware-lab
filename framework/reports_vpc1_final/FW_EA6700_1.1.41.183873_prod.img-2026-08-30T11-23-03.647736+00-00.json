@@ -1,0 +1,1079 @@
+{
+  "run_id": "434e26d5",
+  "timestamp": "2026-08-30T11:23:03.647736+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA6700_1.1.41.183873_prod.img",
+    "name": "FW_EA6700_1.1.41.183873_prod.img",
+    "sha256": "072e35e5ec2ce061001992644d83f267c3aea08c622311dd56b44f43b2663394",
+    "size_bytes": 17191168
+  },
+  "emulation": {
+    "image_id": 428,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 98.0,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.55",
+        "raw_banner": "53/tcp    open  domain     dnsmasq 2.55"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "lighttpd 1.4.39",
+        "raw_banner": "80/tcp    open  http       lighttpd 1.4.39"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/http",
+        "version": "lighttpd 1.4.39",
+        "raw_banner": "443/tcp   open  ssl/http   lighttpd 1.4.39"
+      },
+      {
+        "port": 2601,
+        "protocol": "tcp",
+        "service": "zebra",
+        "version": "Quagga routing software",
+        "raw_banner": "2601/tcp  open  zebra      Quagga routing software"
+      },
+      {
+        "port": 10000,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "lighttpd 1.4.39",
+        "raw_banner": "10000/tcp open  http       lighttpd 1.4.39"
+      },
+      {
+        "port": 10080,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "lighttpd 1.4.39",
+        "raw_banner": "10080/tcp open  http       lighttpd 1.4.39"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "Portable SDK for UPnP devices 1.6.19 (Linux 4.1.17+; UPnP 1.0)",
+        "raw_banner": "49152/tcp open  upnp       Portable SDK for UPnP devices 1.6.19 (Linux 4.1.17+; UPnP 1.0)"
+      },
+      {
+        "port": 51000,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "51000/tcp open  unknown"
+      },
+      {
+        "port": 52000,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "lighttpd 1.4.39",
+        "raw_banner": "52000/tcp open  http       lighttpd 1.4.39"
+      },
+      {
+        "port": 52367,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "52367/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 11:17 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.023s latency).\nNot shown: 65525 closed ports\nPORT      STATE SERVICE    VERSION\n53/tcp    open  domain     dnsmasq 2.55\n80/tcp    open  http       lighttpd 1.4.39\n443/tcp   open  ssl/http   lighttpd 1.4.39\n2601/tcp  open  zebra      Quagga routing software\n10000/tcp open  http       lighttpd 1.4.39\n10080/tcp open  http       lighttpd 1.4.39\n49152/tcp open  upnp       Portable SDK for UPnP devices 1.6.19 (Linux 4.1.17+; UPnP 1.0)\n51000/tcp open  unknown\n52000/tcp open  http       lighttpd 1.4.39\n52367/tcp open  tcpwrapped\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port51000-TCP:V=7.80%I=7%D=8/30%Time=6A941173%P=x86_64-pc-linux-gnu%r(G\nSF:etRequest,2C1,\"HTTP/1\\.0\\x20200\\x20OK\\r\\nContent-Type:\\x20text/html;\\x2\nSF:0charset=utf-8\\r\\nExpires:\\x200\\r\\nCache-Control:\\x20no-cache\\r\\nPragma\nSF::\\x20no-cache\\r\\nConnection:\\x20close\\r\\n\\r\\n<html><head><noscript><met\nSF:a\\x20http-equiv=Refresh\\x20Content=\\\"0;\\x20URL=http://192\\.168\\.3\\.1:10\nSF:080/ui/dynamic/guest-login\\.html\\\"></noscript><script\\x20language='java\nSF:script'\\x20type='text/javascript'>function\\x20init\\(_frm\\)\\x20{\\x20if\\x\nSF:20\\(_frm\\.sent\\.value\\x20==\\x200\\)\\x20{\\x20_frm\\.sent\\.value=1;\\x20_frm\nSF:\\.submit\\(\\);\\x20}\\x20}</script></head><body\\x20onload=init\\(auth\\)><fo\nSF:rm\\x20name=auth\\x20action='http://192\\.168\\.3\\.1:10080/ui/dynamic/guest\nSF:-login\\.html'\\x20METHOD=GET><input\\x20type=hidden\\x20name='mac_addr'\\x2\nSF:0value='ee:96:f2:9b:5f:89'>\\n<input\\x20type=hidden\\x20name='ip_addr'\\x2\nSF:0value='192\\.168\\.1\\.2'>\\n<input\\x20type=hidden\\x20id=sent\\x20value='0'\nSF:></form></body></html>\")%r(HTTPOptions,43,\"HTTP/1\\.0\\x20403\\x20Unauthor\nSF:ized\\r\\nContent-Length:\\x200\\r\\nConnection:\\x20close\\r\\n\\r\\n\")%r(FourOh\nSF:FourRequest,2C1,\"HTTP/1\\.0\\x20200\\x20OK\\r\\nContent-Type:\\x20text/html;\\\nSF:x20charset=utf-8\\r\\nExpires:\\x200\\r\\nCache-Control:\\x20no-cache\\r\\nPrag\nSF:ma:\\x20no-cache\\r\\nConnection:\\x20close\\r\\n\\r\\n<html><head><noscript><m\nSF:eta\\x20http-equiv=Refresh\\x20Content=\\\"0;\\x20URL=http://192\\.168\\.3\\.1:\nSF:10080/ui/dynamic/guest-login\\.html\\\"></noscript><script\\x20language='ja\nSF:vascript'\\x20type='text/javascript'>function\\x20init\\(_frm\\)\\x20{\\x20if\nSF:\\x20\\(_frm\\.sent\\.value\\x20==\\x200\\)\\x20{\\x20_frm\\.sent\\.value=1;\\x20_f\nSF:rm\\.submit\\(\\);\\x20}\\x20}</script></head><body\\x20onload=init\\(auth\\)><\nSF:form\\x20name=auth\\x20action='http://192\\.168\\.3\\.1:10080/ui/dynamic/gue\nSF:st-login\\.html'\\x20METHOD=GET><input\\x20type=hidden\\x20name='mac_addr'\\\nSF:x20value='ee:96:f2:9b:5f:89'>\\n<input\\x20type=hidden\\x20name='ip_addr'\\\nSF:x20value='192\\.168\\.1\\.2'>\\n<input\\x20type=hidden\\x20id=sent\\x20value='\nSF:0'></form></body></html>\");\nService Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel:4.1.17%2B\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 97.92 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2005-0453",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buffer_urldecode function in Lighttpd 1.3.7 and earlier does not properly handle control characters, which allows remote attackers to obtain the source code for CGI and FastCGI scripts via a URL with a %00 (null) character after the file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0453"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0760",
+      "cvss_score": 2.6,
+      "severity": null,
+      "description": "LightTPD 1.4.8 and earlier, when the web root is on a case-insensitive filesystem, allows remote attackers to bypass URL checks and obtain sensitive information via file extensions with unexpected capitalization, as demonstrated by a request for index.PHP when the configuration invokes the PHP interpreter only for \".php\" names.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0760"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0814",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "response.c in Lighttpd 1.4.10 and possibly previous versions, when run on Windows, allows remote attackers to read arbitrary source code via requests that contain trailing (1) \".\" (dot) and (2) space characters, which are ignored by Windows, as demonstrated by PHP files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0814"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1869",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.12 and 1.4.13 allows remote attackers to cause a denial of service (cpu and resource consumption) by disconnecting while lighttpd is parsing CRLF sequences, which triggers an infinite loop and file descriptor consumption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1869"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1870",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "lighttpd before 1.4.14 allows attackers to cause a denial of service (crash) via a request to a file whose mtime is 0, which results in a NULL pointer dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1870"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-0983",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.18, and possibly other versions before 1.5.0, does not properly calculate the size of a file descriptor array, which allows remote attackers to cause a denial of service (crash) via a large number of connections, which triggers an out-of-bounds access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0983"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-1111",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mod_cgi in lighttpd 1.4.18 sends the source code of CGI scripts instead of a 500 error when a fork failure occurs, which might allow remote attackers to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1111"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-4298",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Memory leak in the http_request_parse function in request.c in lighttpd before 1.4.20 allows remote attackers to cause a denial of service (memory consumption) via a large number of requests with duplicate request headers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4298"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2010-0295",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd before 1.4.26, and 1.5.x, allocates a buffer for each read operation that occurs for a request, which allows remote attackers to cause a denial of service (memory consumption) by breaking a request into small pieces that are sent at a slow rate.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0295"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2011-4362",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Integer signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4362"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2003-0795",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The vty layer in Quagga before 0.96.4, and Zebra 0.93b and earlier, does not verify that sub-negotiation is taking place when processing the SE marker, which allows remote attackers to cause a denial of service (crash) via a malformed telnet command to the telnet CLI port, which may trigger a null dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-0795"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2003-0858",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "Zebra 0.93b and earlier, and quagga before 0.95, allows local users to cause a denial of service by sending spoofed messages as other users to the kernel netlink interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-0858"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2006-2223",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "RIPd in Quagga 0.98 and 0.99 before 20060503 does not properly implement configurations that (1) disable RIPv1 or (2) require plaintext or MD5 authentication, which allows remote attackers to obtain sensitive information (routing state) via REQUEST packets such as SEND UPDATE.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2223"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2006-2224",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "RIPd in Quagga 0.98 and 0.99 before 20060503 does not properly enforce RIPv2 authentication requirements, which allows remote attackers to modify routing state via RIPv1 RESPONSE packets.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2224"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2006-2276",
+      "cvss_score": 4.9,
+      "severity": null,
+      "description": "bgpd in Quagga 0.98 and 0.99 before 20060504 allows local users to cause a denial of service (CPU consumption) via a certain sh ip bgp command entered in the telnet interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2276"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2007-1995",
+      "cvss_score": 6.3,
+      "severity": null,
+      "description": "bgpd/bgp_attr.c in Quagga 0.98.6 and earlier, and 0.99.6 and earlier 0.99 versions, does not validate length values in the MP_REACH_NLRI and MP_UNREACH_NLRI attributes, which allows remote attackers to cause a denial of service (daemon crash or exit) via crafted UPDATE messages that trigger an assertion error or out of bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1995"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2007-4826",
+      "cvss_score": 3.5,
+      "severity": null,
+      "description": "bgpd in Quagga before 0.99.9 allows explicitly configured BGP peers to cause a denial of service (crash) via a malformed (1) OPEN message or (2) a COMMUNITY attribute, which triggers a NULL pointer dereference. NOTE: vector 2 only exists when debugging is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-4826"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2008-1160",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "ZyXEL ZyWALL 1050 has a hard-coded password for the Quagga and Zebra processes that is not changed when it is set by a user, which allows remote attackers to gain privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1160"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2009-1572",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The BGP daemon (bgpd) in Quagga 0.99.11 and earlier allows remote attackers to cause a denial of service (crash) via an AS path containing ASN elements whose string representation is longer than expected, which triggers an assert error.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1572"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-2948",
+      "cvss_score": 6.5,
+      "severity": null,
+      "description": "Stack-based buffer overflow in the bgp_route_refresh_receive function in bgp_packet.c in bgpd in Quagga before 0.99.17 allows remote authenticated users to cause a denial of service (daemon crash) or possibly execute arbitrary code via a malformed Outbound Route Filtering (ORF) record in a BGP ROUTE-REFRESH (RR) message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-2948"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-2949",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "bgpd in Quagga before 0.99.17 does not properly parse AS paths, which allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via an unknown AS type in an AS path attribute in a BGP UPDATE message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-2949"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-1674",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The extended-community parser in bgpd in Quagga before 0.99.18 allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via a malformed Extended Communities attribute.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-1674"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-1675",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "bgpd in Quagga before 0.99.18 allows remote attackers to cause a denial of service (session reset) via a malformed AS_PATHLIMIT path attribute.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-1675"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3323",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The OSPFv3 implementation in ospf6d in Quagga before 0.99.19 allows remote attackers to cause a denial of service (out-of-bounds memory access and daemon crash) via a Link State Update message with an invalid IPv6 prefix length.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3323"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3324",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The ospf6_lsa_is_changed function in ospf6_lsa.c in the OSPFv3 implementation in ospf6d in Quagga before 0.99.19 allows remote attackers to cause a denial of service (assertion failure and daemon exit) via trailing zero values in the Link State Advertisement (LSA) header list of an IPv6 Database Description message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3324"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3325",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "ospf_packet.c in ospfd in Quagga before 0.99.19 allows remote attackers to cause a denial of service (daemon crash) via (1) a 0x0a type field in an IPv4 packet header or (2) a truncated IPv4 Hello packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3325"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3326",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The ospf_flood function in ospf_flood.c in ospfd in Quagga before 0.99.19 allows remote attackers to cause a denial of service (daemon crash) via an invalid Link State Advertisement (LSA) type in an IPv4 Link State Update message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3326"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3327",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Heap-based buffer overflow in the ecommunity_ecom2str function in bgp_ecommunity.c in bgpd in Quagga before 0.99.19 allows remote attackers to cause a denial of service (daemon crash) or possibly execute arbitrary code by sending a crafted BGP UPDATE message over IPv4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3327"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2012-0249",
+      "cvss_score": 3.3,
+      "severity": null,
+      "description": "Buffer overflow in the ospf_ls_upd_list_lsa function in ospf_packet.c in the OSPFv2 implementation in ospfd in Quagga before 0.99.20.1 allows remote attackers to cause a denial of service (assertion failure and daemon exit) via a Link State Update (aka LS Update) packet that is smaller than the length specified in its header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-0249"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2012-0250",
+      "cvss_score": 3.3,
+      "severity": null,
+      "description": "Buffer overflow in the OSPFv2 implementation in ospfd in Quagga before 0.99.20.1 allows remote attackers to cause a denial of service (daemon crash) via a Link State Update (aka LS Update) packet containing a network-LSA link-state advertisement for which the data-structure length is smaller than the value in the Length header field.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-0250"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2005-0453",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buffer_urldecode function in Lighttpd 1.3.7 and earlier does not properly handle control characters, which allows remote attackers to obtain the source code for CGI and FastCGI scripts via a URL with a %00 (null) character after the file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0453"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0760",
+      "cvss_score": 2.6,
+      "severity": null,
+      "description": "LightTPD 1.4.8 and earlier, when the web root is on a case-insensitive filesystem, allows remote attackers to bypass URL checks and obtain sensitive information via file extensions with unexpected capitalization, as demonstrated by a request for index.PHP when the configuration invokes the PHP interpreter only for \".php\" names.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0760"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0814",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "response.c in Lighttpd 1.4.10 and possibly previous versions, when run on Windows, allows remote attackers to read arbitrary source code via requests that contain trailing (1) \".\" (dot) and (2) space characters, which are ignored by Windows, as demonstrated by PHP files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0814"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1869",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.12 and 1.4.13 allows remote attackers to cause a denial of service (cpu and resource consumption) by disconnecting while lighttpd is parsing CRLF sequences, which triggers an infinite loop and file descriptor consumption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1869"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1870",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "lighttpd before 1.4.14 allows attackers to cause a denial of service (crash) via a request to a file whose mtime is 0, which results in a NULL pointer dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1870"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-0983",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.18, and possibly other versions before 1.5.0, does not properly calculate the size of a file descriptor array, which allows remote attackers to cause a denial of service (crash) via a large number of connections, which triggers an out-of-bounds access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0983"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-1111",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mod_cgi in lighttpd 1.4.18 sends the source code of CGI scripts instead of a 500 error when a fork failure occurs, which might allow remote attackers to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1111"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-4298",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Memory leak in the http_request_parse function in request.c in lighttpd before 1.4.20 allows remote attackers to cause a denial of service (memory consumption) via a large number of requests with duplicate request headers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4298"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2010-0295",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd before 1.4.26, and 1.5.x, allocates a buffer for each read operation that occurs for a request, which allows remote attackers to cause a denial of service (memory consumption) by breaking a request into small pieces that are sent at a slow rate.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0295"
+    },
+    {
+      "port": 10000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2011-4362",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Integer signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4362"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2005-0453",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buffer_urldecode function in Lighttpd 1.3.7 and earlier does not properly handle control characters, which allows remote attackers to obtain the source code for CGI and FastCGI scripts via a URL with a %00 (null) character after the file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0453"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0760",
+      "cvss_score": 2.6,
+      "severity": null,
+      "description": "LightTPD 1.4.8 and earlier, when the web root is on a case-insensitive filesystem, allows remote attackers to bypass URL checks and obtain sensitive information via file extensions with unexpected capitalization, as demonstrated by a request for index.PHP when the configuration invokes the PHP interpreter only for \".php\" names.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0760"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0814",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "response.c in Lighttpd 1.4.10 and possibly previous versions, when run on Windows, allows remote attackers to read arbitrary source code via requests that contain trailing (1) \".\" (dot) and (2) space characters, which are ignored by Windows, as demonstrated by PHP files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0814"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1869",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.12 and 1.4.13 allows remote attackers to cause a denial of service (cpu and resource consumption) by disconnecting while lighttpd is parsing CRLF sequences, which triggers an infinite loop and file descriptor consumption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1869"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1870",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "lighttpd before 1.4.14 allows attackers to cause a denial of service (crash) via a request to a file whose mtime is 0, which results in a NULL pointer dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1870"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-0983",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.18, and possibly other versions before 1.5.0, does not properly calculate the size of a file descriptor array, which allows remote attackers to cause a denial of service (crash) via a large number of connections, which triggers an out-of-bounds access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0983"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-1111",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mod_cgi in lighttpd 1.4.18 sends the source code of CGI scripts instead of a 500 error when a fork failure occurs, which might allow remote attackers to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1111"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-4298",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Memory leak in the http_request_parse function in request.c in lighttpd before 1.4.20 allows remote attackers to cause a denial of service (memory consumption) via a large number of requests with duplicate request headers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4298"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2010-0295",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd before 1.4.26, and 1.5.x, allocates a buffer for each read operation that occurs for a request, which allows remote attackers to cause a denial of service (memory consumption) by breaking a request into small pieces that are sent at a slow rate.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0295"
+    },
+    {
+      "port": 10080,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2011-4362",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Integer signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4362"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2005-0453",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buffer_urldecode function in Lighttpd 1.3.7 and earlier does not properly handle control characters, which allows remote attackers to obtain the source code for CGI and FastCGI scripts via a URL with a %00 (null) character after the file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0453"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0760",
+      "cvss_score": 2.6,
+      "severity": null,
+      "description": "LightTPD 1.4.8 and earlier, when the web root is on a case-insensitive filesystem, allows remote attackers to bypass URL checks and obtain sensitive information via file extensions with unexpected capitalization, as demonstrated by a request for index.PHP when the configuration invokes the PHP interpreter only for \".php\" names.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0760"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2006-0814",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "response.c in Lighttpd 1.4.10 and possibly previous versions, when run on Windows, allows remote attackers to read arbitrary source code via requests that contain trailing (1) \".\" (dot) and (2) space characters, which are ignored by Windows, as demonstrated by PHP files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-0814"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1869",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.12 and 1.4.13 allows remote attackers to cause a denial of service (cpu and resource consumption) by disconnecting while lighttpd is parsing CRLF sequences, which triggers an infinite loop and file descriptor consumption.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1869"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2007-1870",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "lighttpd before 1.4.14 allows attackers to cause a denial of service (crash) via a request to a file whose mtime is 0, which results in a NULL pointer dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1870"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-0983",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd 1.4.18, and possibly other versions before 1.5.0, does not properly calculate the size of a file descriptor array, which allows remote attackers to cause a denial of service (crash) via a large number of connections, which triggers an out-of-bounds access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-0983"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-1111",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mod_cgi in lighttpd 1.4.18 sends the source code of CGI scripts instead of a 500 error when a fork failure occurs, which might allow remote attackers to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1111"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2008-4298",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Memory leak in the http_request_parse function in request.c in lighttpd before 1.4.20 allows remote attackers to cause a denial of service (memory consumption) via a large number of requests with duplicate request headers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4298"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2010-0295",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "lighttpd before 1.4.26, and 1.5.x, allocates a buffer for each read operation that occurs for a request, which allows remote attackers to cause a denial of service (memory consumption) by breaking a request into small pieces that are sent at a slow rate.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0295"
+    },
+    {
+      "port": 52000,
+      "service": "http",
+      "version": "lighttpd 1.4.39",
+      "cve_id": "CVE-2011-4362",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Integer signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4362"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: linksys",
+      "severity": "info"
+    },
+    {
+      "port": 10000,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /admin",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /cgi-bin/",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /HNAP1/",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /setup.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /goform/",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /webproc",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /cgi-bin/webproc",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /apply.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /login.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /syscmd.htm",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /debug/",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /stream",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /video",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /snapshot",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /axis-cgi/",
+      "severity": "low"
+    },
+    {
+      "port": 10000,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /onvif/",
+      "severity": "low"
+    },
+    {
+      "port": 10080,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 10080,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 10080,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 10080,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 10080,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: linksys",
+      "severity": "info"
+    },
+    {
+      "port": 52000,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /setup.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /stream",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /video",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /snapshot",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /image",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 52000,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 52000,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 52000,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 52000,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 52000,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: linksys",
+      "severity": "info"
+    },
+    {
+      "port": 443,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 443,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 443,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 443,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 443,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: linksys",
+      "severity": "info"
+    }
+  ]
+}

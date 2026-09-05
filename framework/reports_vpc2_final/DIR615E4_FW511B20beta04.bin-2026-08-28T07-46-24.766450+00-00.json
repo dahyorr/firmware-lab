@@ -1,0 +1,28 @@
+{
+  "run_id": "a1029ce7",
+  "timestamp": "2026-08-28T07:46:24.766450+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR615E4_FW511B20beta04.bin",
+    "name": "DIR615E4_FW511B20beta04.bin",
+    "sha256": "812b195dc11b4b8568a1eb57433a1ac8a69843b633e13af27fd3aca83400023b",
+    "size_bytes": 3538968
+  },
+  "emulation": {
+    "image_id": 47,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 81.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 07:45 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.00018s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed (61503) or filtered (4032)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 81.03 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

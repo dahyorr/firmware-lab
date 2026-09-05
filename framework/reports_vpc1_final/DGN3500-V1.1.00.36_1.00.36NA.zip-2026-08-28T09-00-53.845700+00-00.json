@@ -1,0 +1,39 @@
+{
+  "run_id": "d076f715",
+  "timestamp": "2026-08-28T09:00:53.845700+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DGN3500-V1.1.00.36_1.00.36NA.zip",
+    "name": "DGN3500-V1.1.00.36_1.00.36NA.zip",
+    "sha256": "7b5c583e3e4e5f1afa3f0a0cf5b29552eb88a6ff990aafdb9216702fc64867f1",
+    "size_bytes": 8287266
+  },
+  "emulation": {
+    "image_id": 13,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 142.7,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:58 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.13s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 142.68 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.00.36",
+      "cve_id": "CVE-2023-38924",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "Netgear DGN3500 1.1.00.37 was discovered to contain a buffer overflow via the http_password parameter at setup.cgi.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38924"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

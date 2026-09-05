@@ -1,0 +1,76 @@
+{
+  "run_id": "e2ec2008",
+  "timestamp": "2026-08-28T03:05:24.379601+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/JNR3210_V1.10.26_1.0.8.zip",
+    "name": "JNR3210_V1.10.26_1.0.8.zip",
+    "sha256": "5f9fbdcfc914d6437956578d13764722220526cf66f18cda7d1ca551fe56cf24",
+    "size_bytes": 7512270
+  },
+  "emulation": {
+    "image_id": 110,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 56.5,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "23/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "53/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 32764,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "32764/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 03:04 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.037s latency).\nNot shown: 45164 closed ports, 20367 filtered ports\nPORT      STATE SERVICE    VERSION\n23/tcp    open  tcpwrapped\n53/tcp    open  tcpwrapped\n80/tcp    open  tcpwrapped\n32764/tcp open  tcpwrapped\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 56.42 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.10.26",
+      "cve_id": "CVE-2020-17409",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "This vulnerability allows network-adjacent attackers to disclose sensitive information on affected installations of NETGEAR R6120, R6080, R6260, R6220, R6020, JNR3210, and WNR2020 routers with firmware 1.0.66. Authentication is not required to exploit this vulnerability. The specific flaw exists within the mini_httpd service, which listens on TCP port 80 by default. The issue results from incorrect string matching logic when accessing protected pages. An attacker can leverage this vulnerability to disclose stored credentials, leading to further compromise. Was ZDI-CAN-10754.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-17409"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    }
+  ]
+}

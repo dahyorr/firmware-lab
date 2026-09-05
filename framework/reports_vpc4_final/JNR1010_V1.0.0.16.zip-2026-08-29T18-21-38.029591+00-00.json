@@ -1,0 +1,387 @@
+{
+  "run_id": "cadd9408",
+  "timestamp": "2026-08-29T18:21:38.029591+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/JNR1010_V1.0.0.16.zip",
+    "name": "JNR1010_V1.0.0.16.zip",
+    "sha256": "5d4cfcd64025c73117a1ddfcfd5c1f1ddc87db509ae7b3cbad5a3eb68d14ef1f",
+    "size_bytes": 3619246
+  },
+  "emulation": {
+    "image_id": 283,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 25.9,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "telnet",
+        "version": "BusyBox telnetd",
+        "raw_banner": "23/tcp   open  telnet  BusyBox telnetd"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "mini_httpd 1.19 19dec2003",
+        "raw_banner": "80/tcp   open  http    mini_httpd 1.19 19dec2003"
+      },
+      {
+        "port": 1050,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "mini_httpd 1.19 19dec2003",
+        "raw_banner": "1050/tcp open  http    mini_httpd 1.19 19dec2003"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 18:20 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.035s latency).\nNot shown: 65532 closed ports\nPORT     STATE SERVICE VERSION\n23/tcp   open  telnet  BusyBox telnetd\n80/tcp   open  http    mini_httpd 1.19 19dec2003\n1050/tcp open  http    mini_httpd 1.19 19dec2003\nService Info: Host: localhost\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 25.88 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2006-1058",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "BusyBox 1.1.1 does not use a salt when generating passwords, which makes it easier for local users to guess passwords from a stolen password file using techniques such as rainbow tables.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1058"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2006-5050",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in httpd in Rob Landley BusyBox allows remote attackers to read arbitrary files via URL-encoded \"%2e%2e/\" sequences in the URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-5050"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2011-2716",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "The DHCP client (udhcpc) in BusyBox before 1.20.0 allows remote DHCP servers to execute arbitrary commands via shell metacharacters in the (1) HOST_NAME, (2) DOMAIN_NAME, (3) NIS_DOMAIN, and (4) TFTP_SERVER_NAME host name options.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-2716"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2013-1813",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "util-linux/mdev.c in BusyBox before 1.21.0 uses 0777 permissions for parent directories when creating nested directories under /dev/, which allows local users to have unknown impact and attack vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-1813"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2016-6301",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "The recv_and_process_client_pkt function in networking/ntpd.c in busybox allows remote attackers to cause a denial of service (CPU and bandwidth consumption) via a forged NTP packet, which triggers a communication loop.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6301"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2016-2147",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Integer overflow in the DHCP client (udhcpc) in BusyBox before 1.25.0 allows remote attackers to cause a denial of service (crash) via a malformed RFC1035-encoded domain name, which triggers an out-of-bounds heap write.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-2147"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2016-2148",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Heap-based buffer overflow in the DHCP client (udhcpc) in BusyBox before 1.25.0 allows remote attackers to have unspecified impact via vectors involving OPTION_6RD parsing.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-2148"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2014-9645",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "The add_probe function in modutils/modprobe.c in BusyBox before 1.23.0 allows local users to bypass intended restrictions on loading kernel modules via a / (slash) character in a module name, as demonstrated by an \"ifconfig /usbserial up\" command or a \"mount -t /snd_pcm none /\" command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-9645"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2017-5671",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Honeywell Intermec PM23, PM42, PM43, PC23, PC43, PD43, and PC42 industrial printers before 10.11.013310 and 10.12.x before 10.12.013309 have /usr/bin/lua installed setuid to the itadmin account, which allows local users to conduct a BusyBox jailbreak attack and obtain root privileges by overwriting the /etc/shadow file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-5671"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2011-5325",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Directory traversal vulnerability in the BusyBox implementation of tar before 1.22.0 v5 allows remote attackers to point to files outside the current working directory via a symlink.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-5325"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2017-14115",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "The AT&T U-verse 9.2.2h0d83 firmware for the Arris NVG589 and NVG599 devices, when IP Passthrough mode is not used, configures ssh-permanent-enable WAN SSH logins to the remotessh account with the 5SaP9I26 password, which allows remote attackers to access a \"Terminal shell v1.0\" service, and subsequently obtain unrestricted root privileges, by establishing an SSH session and then entering certain shell metacharacters and BusyBox commands.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14115"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2017-14116",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "The AT&T U-verse 9.2.2h0d83 firmware for the Arris NVG599 device, when IP Passthrough mode is not used, configures WAN access to a caserver https service with the tech account and an empty password, which allows remote attackers to obtain root privileges by establishing a session on port 49955 and then installing new software, such as BusyBox with \"nc -l\" support.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14116"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2016-5791",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An Improper Authentication issue was discovered in JanTek JTC-200, all versions. The improper authentication could provide an undocumented BusyBox Linux shell accessible over the TELNET service without any authentication.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-5791"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2017-15873",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "The get_next_block function in archival/libarchive/decompress_bunzip2.c in BusyBox 1.27.2 has an Integer Overflow that may lead to a write access violation.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-15873"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2017-15874",
+      "cvss_score": 5.0,
+      "severity": "MEDIUM",
+      "description": "archival/libarchive/decompress_unlzma.c in BusyBox 1.27.2 has an Integer Underflow that leads to a read access violation.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-15874"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2017-16544",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "In the add_match function in libbb/lineedit.c in BusyBox through 1.27.2, the tab autocomplete feature of the shell, used to get a list of filenames in a directory, does not sanitize filenames and results in executing any escape sequence in the terminal. This could potentially result in code execution, arbitrary file writes, or other attacks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16544"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2018-0099",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability in the web management GUI of the Cisco D9800 Network Transport Receiver could allow an authenticated, remote attacker to perform a command injection attack. The vulnerability is due to insufficient input validation of GUI command arguments. An attacker could exploit this vulnerability by injecting crafted arguments into a vulnerable GUI command. An exploit could allow the attacker to execute commands on the underlying BusyBox operating system. These commands are run at the privilege level of the authenticated user. The attacker needs valid device credentials for this attack. Cisco Bug IDs: CSCvg74691.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0099"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2018-1000500",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "Busybox contains a Missing SSL certificate validation vulnerability in The \"busybox wget\" applet that can result in arbitrary code execution. This attack appear to be exploitable via Simply download any file over HTTPS using \"busybox wget https://compromised-domain.com/important-file\".",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000500"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2018-1000517",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "BusyBox project BusyBox wget version prior to commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e contains a Buffer Overflow vulnerability in Busybox wget that can result in heap buffer overflow. This attack appear to be exploitable via network connectivity. This vulnerability appears to have been fixed in after commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000517"
+    },
+    {
+      "port": 23,
+      "service": "telnet",
+      "version": "BusyBox telnetd",
+      "cve_id": "CVE-2017-3209",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "The DBPOWER U818A WIFI quadcopter drone provides FTP access over its own local access point, and allows full file permissions to the anonymous user. The DBPower U818A WIFI quadcopter drone runs an FTP server that by default allows anonymous access without a password, and provides full filesystem read/write permissions to the anonymous user. A remote user within range of the open access point on the drone may utilize the anonymous user of the FTP server to read arbitrary files, such as images and video recorded by the device, or to replace system files such as /etc/shadow to gain further access to the device. Furthermore, the DBPOWER U818A WIFI quadcopter drone uses BusyBox 1.20.2, which was released in 2012, and may be vulnerable to other known BusyBox vulnerabilities.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-3209"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2009-4490",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.19 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2015-1548",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.21 and earlier allows remote attackers to obtain sensitive information from process memory via an HTTP request with a long protocol string, which triggers an incorrect response size calculation and an out-of-bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2017-17663",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The htpasswd implementation of mini_httpd before v1.28 and of thttpd before v2.28 is affected by a buffer overflow that can be exploited remotely to perform code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2018-18778",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "ACME mini_httpd before 1.30 lets remote users read arbitrary files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18778"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2026-68005",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue in ACME mini_httpd 1.30 and prior allows a remote attacker to cause a denial of service via the HTTP request header parser in the handle_request() function",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68005"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2009-4490",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.19 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2015-1548",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.21 and earlier allows remote attackers to obtain sensitive information from process memory via an HTTP request with a long protocol string, which triggers an incorrect response size calculation and an out-of-bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2017-17663",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The htpasswd implementation of mini_httpd before v1.28 and of thttpd before v2.28 is affected by a buffer overflow that can be exploited remotely to perform code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2018-18778",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "ACME mini_httpd before 1.30 lets remote users read arbitrary files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18778"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2026-68005",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue in ACME mini_httpd 1.30 and prior allows a remote attacker to cause a denial of service via the HTTP request header parser in the handle_request() function",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68005"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access (version: BusyBox telnetd)",
+      "severity": "high"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

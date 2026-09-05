@@ -1,0 +1,28 @@
+{
+  "run_id": "f6657321",
+  "timestamp": "2026-08-27T19:19:22.563126+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR850L_FW109KRb02_d9ie.bin",
+    "name": "DIR850L_FW109KRb02_d9ie.bin",
+    "sha256": "65aea37b36f06406166977392ce9558e07be1406f4fd6f04ef5acb0d7d04083a",
+    "size_bytes": 9584784
+  },
+  "emulation": {
+    "image_id": 28,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 19.0,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 19:19 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.016s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 18.96 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

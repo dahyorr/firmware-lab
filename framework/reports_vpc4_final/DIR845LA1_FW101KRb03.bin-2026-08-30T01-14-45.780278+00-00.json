@@ -1,0 +1,149 @@
+{
+  "run_id": "7ee9ff39",
+  "timestamp": "2026-08-30T01:14:45.780278+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR845LA1_FW101KRb03.bin",
+    "name": "DIR845LA1_FW101KRb03.bin",
+    "sha256": "21b4468207589302105feb32a575a7ed8ea3a3d3094172da333bae52f7d7358b",
+    "size_bytes": 8650900
+  },
+  "emulation": {
+    "image_id": 329,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 54.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp   open  ssl/https?"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open  ssl/vop?"
+      },
+      {
+        "port": 5449,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "5449/tcp  open  unknown"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8181/tcp  open  tcpwrapped"
+      },
+      {
+        "port": 63481,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "63481/tcp open  domain     dnsmasq 2.45"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:13 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.027s latency).\nNot shown: 65529 closed ports\nPORT      STATE SERVICE    VERSION\n80/tcp    open  tcpwrapped\n443/tcp   open  ssl/https?\n4433/tcp  open  ssl/vop?\n5449/tcp  open  unknown\n8181/tcp  open  tcpwrapped\n63481/tcp open  domain     dnsmasq 2.45\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 54.01 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "run_id": "16493d4c",
+  "timestamp": "2026-08-28T09:43:10.078846+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR820LA1_FW101KRB02.bin",
+    "name": "DIR820LA1_FW101KRB02.bin",
+    "sha256": "df9079a53020c55134e1cc014bfbf76bb1a12a103066bf3360692c4ad023b48d",
+    "size_bytes": 5693508
+  },
+  "emulation": {
+    "image_id": 67,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 103.4,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "23/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain?",
+        "version": "",
+        "raw_banner": "53/tcp    open  domain?"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Mathopd httpd 1.5p6",
+        "raw_banner": "80/tcp    open  http       Mathopd httpd 1.5p6"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-300 WAP UPnP 1.05 (UPnP 1.0)",
+        "raw_banner": "49152/tcp open  upnp       D-Link DIR-300 WAP UPnP 1.05 (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 09:35 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.015s latency).\nNot shown: 64570 closed ports, 961 filtered ports\nPORT      STATE SERVICE    VERSION\n23/tcp    open  tcpwrapped\n53/tcp    open  domain?\n80/tcp    open  http       Mathopd httpd 1.5p6\n49152/tcp open  upnp       D-Link DIR-300 WAP UPnP 1.05 (UPnP 1.0)\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port53-TCP:V=7.80%I=7%D=8/28%Time=6A91566F%P=x86_64-pc-linux-gnu%r(DNSV\nSF:ersionBindReqTCP,20,\"\\0\\x1e\\0\\x06\\x85\\x83\\0\\x01\\0\\0\\0\\0\\0\\0\\x07version\\\nSF:x04bind\\0\\0\\x10\\0\\x03\")%r(DNSStatusRequestTCP,E,\"\\0\\x0c\\0\\0\\x94\\x83\\0\\0\nSF:\\0\\0\\0\\0\\0\\0\")%r(GenericLines,4,\"\\0\\x02\\r\\n\")%r(TerminalServerCookie,2A\nSF:,\"\\0\\(\\0\\*\\xa5\\x83\\0\\0\\0\\0\\0Cookie:\\x20mstshash=nmap\\r\\n\\x01\\0\\x08\\0\\x0\nSF:3\\0\\0\\0\");\nService Info: OSs: Unix, Linux; Device: WAP; CPE: cpe:/h:d-link:dir-300, cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 103.41 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    }
+  ]
+}

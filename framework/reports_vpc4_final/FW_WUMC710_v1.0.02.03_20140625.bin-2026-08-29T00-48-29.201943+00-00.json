@@ -1,0 +1,22 @@
+{
+  "run_id": "b342d723",
+  "timestamp": "2026-08-29T00:48:29.201943+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_WUMC710_v1.0.02.03_20140625.bin",
+    "name": "FW_WUMC710_v1.0.02.03_20140625.bin",
+    "sha256": "3cd893faaa9a55624785ecb8c3fbc3712d1878dc8b4158da9c53f8c0c012f81c",
+    "size_bytes": 3960852
+  },
+  "emulation": {
+    "image_id": 162,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

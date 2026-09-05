@@ -1,0 +1,28 @@
+{
+  "run_id": "e9a5fcb3",
+  "timestamp": "2026-08-28T08:42:40.137756+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC1200G_300438250624.ZIP",
+    "name": "FW_RT_AC1200G_300438250624.ZIP",
+    "sha256": "706faed7a35cf19ecb8f8a0f408b034f73607f3edf2c51fc9d3e864ce8ac0515",
+    "size_bytes": 14991576
+  },
+  "emulation": {
+    "image_id": 6,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 94.6,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:41 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.056s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 94.63 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,2 @@
+vpc=1 scratch_id=100 name=WNDR3700v4_V1.0.1.52 brand=netgear_wndr3700v4_v1_0_1_52
+matched_regex: Exceeded CRDA call max attempts

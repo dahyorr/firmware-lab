@@ -1,0 +1,28 @@
+{
+  "run_id": "322aa35c",
+  "timestamp": "2026-08-28T18:29:24.834675+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear_latest/JWNR2000v3_JWNR2010v3_JWNR2000Tv3-v1.0.0.32.zip",
+    "name": "JWNR2000v3_JWNR2010v3_JWNR2000Tv3-v1.0.0.32.zip",
+    "sha256": "ed63c3979fd42d5471cd6d09139c59d66bbdcee44b1a9c342a5c3995558a9891",
+    "size_bytes": 3629820
+  },
+  "emulation": {
+    "image_id": 226,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 93.8,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 18:27 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.00041s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed (48813) or filtered (16722)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 93.74 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

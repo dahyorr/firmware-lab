@@ -1,0 +1,36 @@
+{
+  "run_id": "c2556b09",
+  "timestamp": "2026-08-30T01:06:20.684555+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR-645_REVA_FIRMWARE_PATCH_1.04.B13.ZIP",
+    "name": "DIR-645_REVA_FIRMWARE_PATCH_1.04.B13.ZIP",
+    "sha256": "65cdd020be90237fdcc0702d0a771498fa019a29313c880d737f72b677509519",
+    "size_bytes": 7679597
+  },
+  "emulation": {
+    "image_id": 325,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 88.1,
+    "services": [
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-600 WAP UPnP 2.02 (UPnP 1.0)",
+        "raw_banner": "49152/tcp open  upnp    D-Link DIR-600 WAP UPnP 2.02 (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:04 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.00026s latency).\nNot shown: 60321 closed ports, 5213 filtered ports\nPORT      STATE SERVICE VERSION\n49152/tcp open  upnp    D-Link DIR-600 WAP UPnP 2.02 (UPnP 1.0)\nService Info: OS: Linux; Device: WAP; CPE: cpe:/h:d-link:dir-600, cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 88.07 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

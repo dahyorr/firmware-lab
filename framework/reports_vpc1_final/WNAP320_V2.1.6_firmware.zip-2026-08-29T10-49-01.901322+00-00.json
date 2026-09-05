@@ -1,0 +1,22 @@
+{
+  "run_id": "7d4c3d0f",
+  "timestamp": "2026-08-29T10:49:01.901322+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNAP320_V2.1.6_firmware.zip",
+    "name": "WNAP320_V2.1.6_firmware.zip",
+    "sha256": "69ca86f2c2264624393c7bb3d995ec61be47cb53f2335527f3c5f663e8339464",
+    "size_bytes": 5351676
+  },
+  "emulation": {
+    "image_id": null,
+    "success": false,
+    "architecture": null,
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

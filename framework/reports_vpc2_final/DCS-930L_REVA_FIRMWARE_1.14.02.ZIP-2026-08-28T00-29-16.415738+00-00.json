@@ -1,0 +1,22 @@
+{
+  "run_id": "3c4dd48b",
+  "timestamp": "2026-08-28T00:29:16.415738+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DCS-930L_REVA_FIRMWARE_1.14.02.ZIP",
+    "name": "DCS-930L_REVA_FIRMWARE_1.14.02.ZIP",
+    "sha256": "88cff07ea874491243b63e1e3cc3a955d82dfa16d7ae0ff10bb1d0fb238009f6",
+    "size_bytes": 4098580
+  },
+  "emulation": {
+    "image_id": 5,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

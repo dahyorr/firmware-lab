@@ -1,0 +1,201 @@
+{
+  "run_id": "f50c3622",
+  "timestamp": "2026-08-28T13:06:34.461264+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear_latest/DST6501-V1.0.1.6.zip",
+    "name": "DST6501-V1.0.1.6.zip",
+    "sha256": "5956fa65185c3a750270f5e4d593f201dd943f5112151aed5ea4d845aabc2260",
+    "size_bytes": 7192339
+  },
+  "emulation": {
+    "image_id": 175,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 26.9,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "mini_httpd 1.19 19dec2003",
+        "raw_banner": "80/tcp   open  http    mini_httpd 1.19 19dec2003"
+      },
+      {
+        "port": 1050,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "mini_httpd 1.19 19dec2003",
+        "raw_banner": "1050/tcp open  http    mini_httpd 1.19 19dec2003"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 13:05 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.031s latency).\nNot shown: 65533 closed ports\nPORT     STATE SERVICE VERSION\n80/tcp   open  http    mini_httpd 1.19 19dec2003\n1050/tcp open  http    mini_httpd 1.19 19dec2003\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 26.88 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2009-4490",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.19 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2015-1548",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.21 and earlier allows remote attackers to obtain sensitive information from process memory via an HTTP request with a long protocol string, which triggers an incorrect response size calculation and an out-of-bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2017-17663",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The htpasswd implementation of mini_httpd before v1.28 and of thttpd before v2.28 is affected by a buffer overflow that can be exploited remotely to perform code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2018-18778",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "ACME mini_httpd before 1.30 lets remote users read arbitrary files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18778"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2026-68005",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue in ACME mini_httpd 1.30 and prior allows a remote attacker to cause a denial of service via the HTTP request header parser in the handle_request() function",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68005"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2009-4490",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.19 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2015-1548",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "mini_httpd 1.21 and earlier allows remote attackers to obtain sensitive information from process memory via an HTTP request with a long protocol string, which triggers an incorrect response size calculation and an out-of-bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2017-17663",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The htpasswd implementation of mini_httpd before v1.28 and of thttpd before v2.28 is affected by a buffer overflow that can be exploited remotely to perform code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2018-18778",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "ACME mini_httpd before 1.30 lets remote users read arbitrary files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18778"
+    },
+    {
+      "port": 1050,
+      "service": "http",
+      "version": "mini_httpd 1.19 19dec2003",
+      "cve_id": "CVE-2026-68005",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue in ACME mini_httpd 1.30 and prior allows a remote attacker to cause a denial of service via the HTTP request header parser in the handle_request() function",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68005"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 1050,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 1050,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 1050,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 1050,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

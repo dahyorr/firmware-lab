@@ -1,0 +1,515 @@
+{
+  "run_id": "b1e51341",
+  "timestamp": "2026-08-30T10:52:16.987160+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N12VP_30043804057.zip",
+    "name": "FW_RT_N12VP_30043804057.zip",
+    "sha256": "79819e373ee45b2e12aa3f94f974f94b4b9785ebf19c31ea3ed195fd63afd728",
+    "size_bytes": 7400124
+  },
+  "emulation": {
+    "image_id": 168,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 21.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Acme milli_httpd 2.0 (ASUS RT-AC-series router)",
+        "raw_banner": "80/tcp    open  http       Acme milli_httpd 2.0 (ASUS RT-AC-series router)"
+      },
+      {
+        "port": 9998,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "9998/tcp  open  tcpwrapped"
+      },
+      {
+        "port": 18017,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Asus wanduck WAN monitor httpd",
+        "raw_banner": "18017/tcp open  http       Asus wanduck WAN monitor httpd"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 10:51 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.012s latency).\nNot shown: 65532 closed ports\nPORT      STATE SERVICE    VERSION\n80/tcp    open  http       Acme milli_httpd 2.0 (ASUS RT-AC-series router)\n9998/tcp  open  tcpwrapped\n18017/tcp open  http       Asus wanduck WAN monitor httpd\nService Info: Device: broadband router\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 21.09 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Acme milli_httpd 2.0 (ASUS RT-AC-series router)",
+      "cve_id": "CVE-2001-0892",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Acme Thttpd Secure Webserver before 2.22, with the chroot option enabled, allows remote attackers to view sensitive files under the document root (such as .htpasswd) via a GET request with a trailing /.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0892"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Acme milli_httpd 2.0 (ASUS RT-AC-series router)",
+      "cve_id": "CVE-2001-1496",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Off-by-one buffer overflow in Basic Authentication in Acme Labs thttpd 1.95 through 2.20 allows remote attackers to cause a denial of service and possibly execute arbitrary code.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1496"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Acme milli_httpd 2.0 (ASUS RT-AC-series router)",
+      "cve_id": "CVE-2005-3124",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "syslogtocern in Acme thttpd before 2.23 allows local users to write arbitrary files via a symlink attack on a temporary file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-3124"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Acme milli_httpd 2.0 (ASUS RT-AC-series router)",
+      "cve_id": "CVE-2006-1078",
+      "cvss_score": 8.4,
+      "severity": "HIGH",
+      "description": "Multiple buffer overflows in htpasswd, as used in Acme thttpd 2.25b, and possibly other products such as Apache, might allow local users to gain privileges via (1) a long command line argument and (2) a long line in a file.  NOTE: since htpasswd is normally installed as a non-setuid program, and the exploit is through command line options, perhaps this issue should not be included in CVE.  However, if there are some typical or recommended configurations that use htpasswd with sudo privileges, or common products that access htpasswd remotely, then perhaps it should be included.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1078"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Acme milli_httpd 2.0 (ASUS RT-AC-series router)",
+      "cve_id": "CVE-2006-1079",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "htpasswd, as used in Acme thttpd 2.25b and possibly other products such as Apache, might allow local users to gain privileges via shell metacharacters in a command line argument, which is used in a call to the system function.  NOTE: since htpasswd is normally installed as a non-setuid program, and the exploit is through command line options, perhaps this issue should not be included in CVE.  However, if there are some typical or recommended configurations that use htpasswd with sudo privileges, or common products that access htpasswd remotely, then perhaps it should be included.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1079"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Acme milli_httpd 2.0 (ASUS RT-AC-series router)",
+      "cve_id": "CVE-2014-4927",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Buffer overflow in ACME micro_httpd, as used in D-Link DSL2750U and DSL2740U and NetGear WGR614 and MR-ADSL-DG834 routers allows remote attackers to cause a denial of service (crash) via a long string in the URI in a GET request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-4927"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2005-1393",
+      "cvss_score": 4.6,
+      "severity": null,
+      "description": "Multiple buffer overflows in ArcGIS for ESRI ArcInfo Workstation 9.0 allow local users to execute arbitrary code via long command line arguments to (1) asmaster, (2) asuser, (3) asutility, (4) se, or (5) asrecovery.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-1393"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2005-3489",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in Asus Video Security 3.5.0.0 and earlier, when using authorization, allows remote attackers to execute arbitrary code via a long username/password string.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-3489"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2005-3490",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web server in Asus Video Security 3.5.0.0 and earlier allows remote attackers to read arbitrary files via \"../\" or \"..\\\" sequences in the URL.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-3490"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2008-1491",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Stack-based buffer overflow in the DPC Proxy server (DpcProxy.exe) in ASUS Remote Console (aka ARC or ASMB3) 2.0.0.19 and 2.0.0.24 allows remote attackers to execute arbitrary code via a long string to TCP port 623.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1491"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2009-0656",
+      "cvss_score": 6.9,
+      "severity": null,
+      "description": "Asus SmartLogon 1.0.0005 allows physically proximate attackers to bypass \"security functions\" by presenting an image with a modified viewpoint that matches the posture of a stored image of the authorized notebook user.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-0656"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2009-3091",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Unspecified vulnerability on the ASUS WL-330gE has unknown impact and remote attack vectors, as demonstrated by a certain module in VulnDisco Pack Professional 8.11.  NOTE: as of 20090903, this disclosure has no actionable information. However, because the VulnDisco Pack author is a reliable researcher, the issue is being assigned a CVE identifier for tracking purposes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3091"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2009-3092",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Buffer overflow on the ASUS WL-500W wireless router has unknown impact and remote attack vectors, as demonstrated by a certain module in VulnDisco Pack Professional 8.11.  NOTE: as of 20090903, this disclosure has no actionable information. However, because the VulnDisco Pack author is a reliable researcher, the issue is being assigned a CVE identifier for tracking purposes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3092"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2009-3093",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Unspecified vulnerability on the ASUS WL-500W wireless router has unknown impact and remote attack vectors, as demonstrated by a certain module in VulnDisco Pack Professional 8.11.  NOTE: as of 20090903, this disclosure has no actionable information. However, because the VulnDisco Pack author is a reliable researcher, the issue is being assigned a CVE identifier for tracking purposes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3093"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2011-4497",
+      "cvss_score": 3.3,
+      "severity": null,
+      "description": "QIS_wizard.htm on the ASUS RT-N56U router with firmware before 1.0.1.4o allows remote attackers to obtain the administrator password via a flag=detect request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4497"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2012-4924",
+      "cvss_score": 9.3,
+      "severity": null,
+      "description": "Buffer overflow in the CxDbgPrint function in the ipswcom.dll ActiveX component 1.0.0.1 for ASUS Net4Switch 1.0.0020 allows remote attackers to execute arbitrary code via a long parameter to the Alert method.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-4924"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2012-2619",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "The Broadcom BCM4325 and BCM4329 Wi-Fi chips, as used in certain Acer, Apple, Asus, Ford, HTC, Kyocera, LG, Malata, Motorola, Nokia, Pantech, Samsung, and Sony products, allow remote attackers to cause a denial of service (out-of-bounds read and Wi-Fi outage) via an RSN 802.11i information element.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-2619"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2013-4937",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Multiple unspecified vulnerabilities in the AiCloud feature on the ASUS RT-AC66U, RT-N66U, RT-N65U, RT-N14U, RT-N16, RT-N56U, and DSL-N55U with firmware before 3.0.4.372 have unknown impact and attack vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4937"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2013-3610",
+      "cvss_score": 6.1,
+      "severity": null,
+      "description": "qis/QIS_finish.htm on the ASUS RT-N10E router with firmware before 2.0.0.25 does not require authentication, which allows remote attackers to discover the administrator password via a direct request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3610"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2013-7293",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The ASUS WL-330NUL router has a configuration process that relies on accessing the 192.168.1.1 IP address, but the documentation advises users to instead access a DNS hostname that does not always resolve to 192.168.1.1, which makes it easier for remote attackers to hijack the configuration traffic by controlling the server associated with that hostname.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-7293"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2013-6343",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Multiple buffer overflows in web.c in httpd on the ASUS RT-N56U and RT-AC66U routers with firmware 3.0.0.4.374_979 allow remote attackers to execute arbitrary code via the (1) apps_name or (2) apps_flag parameter to APP_Installation.asp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-6343"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2013-5948",
+      "cvss_score": 8.5,
+      "severity": null,
+      "description": "The Network Analysis tab (Main_Analysis_Content.asp) in the ASUS RT-AC68U and other RT series routers with firmware before 3.0.0.4.374.5047 allows remote authenticated users to execute arbitrary commands via shell metacharacters in the Target field (destIP parameter).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-5948"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2014-2719",
+      "cvss_score": 6.3,
+      "severity": null,
+      "description": "Advanced_System_Content.asp in the ASUS RT series routers with firmware before 3.0.0.4.374.5517, when an administrator session is active, allows remote authenticated users to obtain the administrator user name and password by reading the source code.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-2719"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2014-2925",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in Advanced_Wireless_Content.asp in ASUS RT-AC68U and other RT series routers with firmware before 3.0.0.4.374.5047 allows remote attackers to inject arbitrary web script or HTML via the current_page parameter to apply.cgi.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-2925"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2014-2718",
+      "cvss_score": 7.1,
+      "severity": null,
+      "description": "ASUS RT-AC68U, RT-AC66R, RT-AC66U, RT-AC56R, RT-AC56U, RT-N66R, RT-N66U, RT-N56R, RT-N56U, and possibly other RT-series routers before firmware 3.0.0.4.376.x do not verify the integrity of firmware (1) update information or (2) downloaded updates, which allows man-in-the-middle (MITM) attackers to execute arbitrary code via a crafted image.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-2718"
+    },
+    {
+      "port": 18017,
+      "service": "http",
+      "version": "Asus wanduck WAN monitor httpd",
+      "cve_id": "CVE-2014-9583",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "common.c in infosvr in ASUS WRT firmware 3.0.0.4.376_1071, 3.0.0.376.2524-g0013f52, and other versions, as used in RT-AC66U, RT-N66U, and other routers, does not properly check the MAC address for a request, which allows remote attackers to bypass authentication and execute arbitrary commands via a NET_CMD_ID_MANU_CMD packet to UDP port 9999.  NOTE: this issue was incorrectly mapped to CVE-2014-10000, but that ID is invalid due to its use as an example of the 2014 CVE ID syntax change.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-9583"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /admin",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /cgi-bin/",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /HNAP1/",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /setup.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /goform/",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /webproc",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /cgi-bin/webproc",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /apply.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /login.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /syscmd.htm",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /debug/",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /stream",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /video",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /snapshot",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /axis-cgi/",
+      "severity": "low"
+    },
+    {
+      "port": 18017,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /onvif/",
+      "severity": "low"
+    }
+  ]
+}

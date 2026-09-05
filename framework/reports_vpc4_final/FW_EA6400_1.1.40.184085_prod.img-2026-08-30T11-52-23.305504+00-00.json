@@ -1,0 +1,22 @@
+{
+  "run_id": "7474bdc0",
+  "timestamp": "2026-08-30T11:52:23.305504+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA6400_1.1.40.184085_prod.img",
+    "name": "FW_EA6400_1.1.40.184085_prod.img",
+    "sha256": "f036c9dd5d0564b17347d781ad81f2216b718c43c9a63595208bb45d07e05aa6",
+    "size_bytes": 17191168
+  },
+  "emulation": {
+    "image_id": 75,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

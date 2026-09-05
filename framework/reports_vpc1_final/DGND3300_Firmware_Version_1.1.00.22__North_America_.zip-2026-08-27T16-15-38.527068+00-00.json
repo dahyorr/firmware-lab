@@ -1,0 +1,490 @@
+{
+  "run_id": "d13cd7fb",
+  "timestamp": "2026-08-27T16:15:38.527068+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DGND3300_Firmware_Version_1.1.00.22__North_America_.zip",
+    "name": "DGND3300_Firmware_Version_1.1.00.22__North_America_.zip",
+    "sha256": "15ac942222485da030ad352910a1b33ddc44f7b148342c81adaed3d53b9ff2bb",
+    "size_bytes": 3721015
+  },
+  "emulation": {
+    "image_id": 15,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 23.6,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Netgear DGND3300 router http config",
+        "raw_banner": "80/tcp    open  http    Netgear DGND3300 router http config"
+      },
+      {
+        "port": 5100,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+        "raw_banner": "5100/tcp  open  upnp    MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)"
+      },
+      {
+        "port": 32764,
+        "protocol": "tcp",
+        "service": "scmm",
+        "version": "SerComm manufacturer backdoor",
+        "raw_banner": "32764/tcp open  scmm    SerComm manufacturer backdoor"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 16:14 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.024s latency).\nNot shown: 65532 closed ports\nPORT      STATE SERVICE VERSION\n80/tcp    open  http    Netgear DGND3300 router http config\n5100/tcp  open  upnp    MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)\n32764/tcp open  scmm    SerComm manufacturer backdoor\nService Info: Devices: router, WAP, broadband router; CPE: cpe:/h:netgear:dgnd3300, cpe:/h:netgear:wndr3300\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 23.61 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2001-0514",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "SNMP service in Atmel 802.11b VNET-B Access Point 1.3 and earlier, as used in Netgear ME102 and Linksys WAP11, accepts arbitrary community strings with requested MIB modifications, which allows remote attackers to obtain sensitive information such as WEP keys, cause a denial of service, or gain access to the network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0514"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-0127",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Netgear RP114 Cable/DSL Web Safe Router Firmware 3.26, when configured to block traffic below port 1024, allows remote attackers to cause a denial of service (hang) via a port scan of the WAN port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0127"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-0238",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Cross-site scripting vulnerability in web administration interface for NetGear RT314 and RT311 Gateway Routers allows remote attackers to execute arbitrary script on another client via a URL that contains the script.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0238"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-1877",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "NETGEAR FM114P allows remote attackers to bypass access restrictions for web sites via a URL that uses the IP address instead of the hostname.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1877"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-1892",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "NETGEAR FVS318 running firmware 1.1 stores the username and password in a readable format when a backup of the configuration file is made, which allows local users to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1892"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-2020",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Netgear RP114 Cable/DSL Web Safe Router Firmware 3.26 uses a default administrator password and accepts admin logins on the external interface, which allows remote attackers to gain privileges if the password is not changed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2020"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-2116",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Netgear RM-356 and RT-338 series SOHO routers allow remote attackers to cause a denial of service (crash) via a UDP port scan, as demonstrated using nmap.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2116"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-2354",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Netgear FM114P firmware 1.3 wireless firewall allows remote attackers to cause a denial of service (crash or hang) via a large number of TCP connection requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2354"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2002-2355",
+      "cvss_score": 7.1,
+      "severity": null,
+      "description": "Netgear FM114P firmware 1.3 wireless firewall, when configured to backup configuration information, stores DDNS (DynDNS) user name and password, MAC address filtering table and possibly other information in cleartext, which could allow local users to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2355"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2003-1427",
+      "cvss_score": 6.4,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web configuration interface in Netgear FM114P 1.4 allows remote attackers to read arbitrary files, such as the netgear.cfg configuration file, via a hex-encoded (%2e%2e%2f) ../ (dot dot slash) in the port parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1427"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2004-2032",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Netgear RP114 allows remote attackers to bypass the keyword based URL filtering by requesting a long URL, as demonstrated using a large number of %20 (hex-encoded space) sequences.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2032"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2004-0611",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Web-Based Administration in Netgear FVS318 VPN Router allows remote attackers to cause a denial of service (no new connections) via a large number of open HTTP connections.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-0611"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2004-2556",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "NetGear WG602 (aka WG602v1) Wireless Access Point firmware 1.04.0 and 1.5.67 has a hardcoded account of username \"super\" and password \"5777364\", which allows remote attackers to modify the configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2556"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2004-2557",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "NetGear WG602 (aka WG602v1) Wireless Access Point 1.7.14 has a hardcoded account of username \"superman\" and password \"21241036\", which allows remote attackers to modify the configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2557"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2005-0290",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "NETGEAR FVS318 running firmware 2.4, and possibly other versions, allows remote attackers to bypass the filters using hex encoded URLs, as demonstrated using a hex encoded file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0290"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2005-0291",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in the log viewer in NETGEAR FVS318 running firmware 2.4, and possibly other versions, allows remote attackers to inject arbitrary web script or HTML via a blocked URL phrase.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0291"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2005-0328",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Zyxel P310, P314, P324 and Netgear RT311, RT314 running the latest firmware, allows remote attackers on the WAN to obtain the IP address of the LAN side interface by pinging a valid LAN IP address, which generates an ARP reply from the WAN address side that maps the LAN IP address to the WAN's MAC address.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0328"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2005-4220",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Netgear RP114, and possibly other versions and devices, allows remote attackers to cause a denial of service via a SYN flood attack between one system on the internal interface and another on the external interface, which temporarily stops routing between the interfaces, as demonstrated using nmap.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-4220"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2006-1002",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "NETGEAR WGT624 Wireless DSL router has a default account of super_username \"Gearguy\" and super_passwd \"Geardog\", which allows remote attackers to modify the configuration.  NOTE: followup posts have suggested that this might not occur with all WGT624 routers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1002"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGND3300 router http config",
+      "cve_id": "CVE-2006-1003",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The backup configuration option in NETGEAR WGT624 Wireless Firewall Router stores sensitive information in cleartext, which allows remote attackers to obtain passwords and gain privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1003"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2013-0229",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "The ProcessSSDPRequest function in minissdp.c in the SSDP handler in MiniUPnP MiniUPnPd before 1.4 allows remote attackers to cause a denial of service (service crash) via a crafted request that triggers a buffer over-read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-0229"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2013-0230",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Stack-based buffer overflow in the ExecuteSoapAction function in the SOAPAction handler in the HTTP service in MiniUPnP MiniUPnPd 1.0 allows remote attackers to execute arbitrary code via a long quoted method.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-0230"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2013-1461",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "The ExecuteSoapAction function in the SOAPAction handler in the HTTP service in MiniUPnP MiniUPnPd 1.0 allows remote attackers to cause a denial of service (NULL pointer dereference and service crash) via a SOAPAction header that lacks a # (pound sign) character, a different vulnerability than CVE-2013-0230.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-1461"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2013-1462",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Integer signedness error in the ExecuteSoapAction function in the SOAPAction handler in the HTTP service in MiniUPnP MiniUPnPd 1.0 allows remote attackers to cause a denial of service (incorrect memory copy) via a SOAPAction header that lacks a \" (double quote) character, a different vulnerability than CVE-2013-0230.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-1462"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2014-3985",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The getHTTPResponse function in miniwget.c in MiniUPnP 1.9 allows remote attackers to cause a denial of service (crash) via crafted headers that trigger an out-of-bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-3985"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2015-6031",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Buffer overflow in the IGDstartelt function in igd_desc_parse.c in the MiniUPnP client (aka MiniUPnPc) before 1.9.20150917 allows remote UPNP servers to cause a denial of service (application crash) and possibly execute arbitrary code via an \"oversized\" XML element name.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-6031"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2017-8798",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Integer signedness error in MiniUPnP MiniUPnPc v1.4.20101221 through v2.0 allows remote attackers to cause a denial of service or possibly have unspecified other impact.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8798"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2017-1000494",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Uninitialized stack variable vulnerability in NameValueParserEndElt (upnpreplyparse.c) in miniupnpd < 2.0 allows an attacker to cause Denial of Service (Segmentation fault and Memory Corruption) or possibly have unspecified other impact",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-1000494"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2019-12106",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "The updateDevice function in minissdpd.c in MiniUPnP MiniSSDPd 1.4 and 1.5 allows a remote attacker to crash the process due to a Use After Free vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12106"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2019-12107",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "The upnp_event_prepare function in upnpevents.c in MiniUPnP MiniUPnPd through 2.1 allows a remote attacker to leak information from the heap due to improper validation of an snprintf return value.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12107"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2019-12108",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A Denial Of Service vulnerability in MiniUPnP MiniUPnPd through 2.1 exists due to a NULL pointer dereference in GetOutboundPinholeTimeout in upnpsoap.c for int_port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12108"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2019-12109",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A Denial Of Service vulnerability in MiniUPnP MiniUPnPd through 2.1 exists due to a NULL pointer dereference in GetOutboundPinholeTimeout in upnpsoap.c for rem_port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12109"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2019-12110",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An AddPortMapping Denial Of Service vulnerability in MiniUPnP MiniUPnPd through 2.1 exists due to a NULL pointer dereference in upnpredirect.c.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12110"
+    },
+    {
+      "port": 5100,
+      "service": "upnp",
+      "version": "MiniUPnP 1.0 (Netgear DG834G or WNDR3300 WAP; UPnP 1.0)",
+      "cve_id": "CVE-2019-12111",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A Denial Of Service vulnerability in MiniUPnP MiniUPnPd through 2.1 exists due to a NULL pointer dereference in copyIPv6IfDifferent in pcpserver.c.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12111"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27132",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "SerComm AG Combo VD625 AGSOT_2.1.0 devices allow CRLF injection (for HTTP header injection) in the download function via the Content-Disposition header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27132"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-44080",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "A Command Injection vulnerability in httpd web server (setup.cgi) in SerComm h500s, FW: lowi-h500s-v3.4.22 allows logged in administrators to arbitrary OS commands as root in the device via the connection_type parameter of the statussupport_diagnostic_tracing.json endpoint.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44080"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27702",
+      "cvss_score": 7.3,
+      "severity": "HIGH",
+      "description": "Sercomm Router Etisalat Model S3- AC2100 is affected by Incorrect Access Control via the diagnostic utility in the router dashboard.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27702"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27703",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "Sercomm Model Etisalat Model S3- AC2100 is affected by Cross Site Scripting (XSS) via the firmware update page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27703"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2022-4985",
+      "cvss_score": null,
+      "severity": null,
+      "description": "Vodafone H500s devices running firmware v3.5.10 (hardware model Sercomm VFH500) expose the WiFi access point password via an unauthenticated HTTP endpoint. By sending a crafted GET request to /data/activation.json with specific headers and cookies, a remote attacker can retrieve a JSON document that contains the wifi_password field. This allows an unauthenticated attacker to obtain the WiFi credentials and gain unauthorized access to the wireless network, compromising confidentiality of network traffic and attached systems.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4985"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67112",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Use of a hard-coded AES-256-CBC key in the configuration backup/restore implementation of Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote authenticated users to decrypt, modify, and re-encrypt device configurations, enabling credential manipulation and privilege escalation via the GUI import/export functions.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67112"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67113",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "OS command injection in the CWMP client (/ftl/bin/cwmp) of Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers controlling the ACS endpoint to execute arbitrary commands as root via a crafted TR-069 Download URL that is passed unescaped into the firmware upgrade pipeline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67113"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67114",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Use of a deterministic credential generation algorithm in /ftl/bin/calc_f2 in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers to derive valid administrative/root credentials from the device's MAC address, enabling authentication bypass and full device access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67114"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67115",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A path traversal vulnerability in /ftl/web/setup.cgi in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote authenticated users to read arbitrary files from the filesystem via crafted values in the log_type parameter to /logsave.htm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67115"
+    }
+  ],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "password",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": []
+}

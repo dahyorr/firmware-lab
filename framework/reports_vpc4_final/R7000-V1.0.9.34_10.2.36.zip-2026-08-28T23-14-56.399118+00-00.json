@@ -1,0 +1,22 @@
+{
+  "run_id": "925f83c7",
+  "timestamp": "2026-08-28T23:14:56.399118+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear_latest/R7000-V1.0.9.34_10.2.36.zip",
+    "name": "R7000-V1.0.9.34_10.2.36.zip",
+    "sha256": "6309264efce04ae651adb34bf7697089b273ebc6100ba2e78b0c1bf10e89281e",
+    "size_bytes": 31782845
+  },
+  "emulation": {
+    "image_id": 88,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

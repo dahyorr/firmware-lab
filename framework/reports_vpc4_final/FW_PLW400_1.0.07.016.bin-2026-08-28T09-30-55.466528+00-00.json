@@ -1,0 +1,22 @@
+{
+  "run_id": "b4c6ca78",
+  "timestamp": "2026-08-28T09:30:55.466528+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_PLW400_1.0.07.016.bin",
+    "name": "FW_PLW400_1.0.07.016.bin",
+    "sha256": "3397019599229f9608a9c5601d6a2b1333d053ee68e3042f613fff6d8682c68e",
+    "size_bytes": 4785152
+  },
+  "emulation": {
+    "image_id": 108,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

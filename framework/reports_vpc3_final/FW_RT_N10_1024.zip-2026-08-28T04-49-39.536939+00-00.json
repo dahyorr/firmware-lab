@@ -1,0 +1,22 @@
+{
+  "run_id": "969cb547",
+  "timestamp": "2026-08-28T04:49:39.536939+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N10_1024.zip",
+    "name": "FW_RT_N10_1024.zip",
+    "sha256": "6188e3ec2827a19b0d6a539762115e7773bbf026969e97eb567da498ea0559a4",
+    "size_bytes": 3859546
+  },
+  "emulation": {
+    "image_id": 134,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

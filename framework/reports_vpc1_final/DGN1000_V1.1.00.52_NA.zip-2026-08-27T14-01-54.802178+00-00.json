@@ -1,0 +1,350 @@
+{
+  "run_id": "3f0371e7",
+  "timestamp": "2026-08-27T14:01:54.802178+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DGN1000_V1.1.00.52_NA.zip",
+    "name": "DGN1000_V1.1.00.52_NA.zip",
+    "sha256": "0741ed35e5443911dcfbfde0c8a0ca7d8fc6011b653d864af563775aa006b264",
+    "size_bytes": 3043274
+  },
+  "emulation": {
+    "image_id": 6,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 39.7,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Netgear DGN1000 router http config",
+        "raw_banner": "80/tcp    open  http    Netgear DGN1000 router http config"
+      },
+      {
+        "port": 5005,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "",
+        "raw_banner": "5005/tcp  open  upnp"
+      },
+      {
+        "port": 32764,
+        "protocol": "tcp",
+        "service": "scmm",
+        "version": "SerComm manufacturer backdoor",
+        "raw_banner": "32764/tcp open  scmm    SerComm manufacturer backdoor"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 14:00 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.032s latency).\nNot shown: 65532 closed ports\nPORT      STATE SERVICE VERSION\n80/tcp    open  http    Netgear DGN1000 router http config\n5005/tcp  open  upnp\n32764/tcp open  scmm    SerComm manufacturer backdoor\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port5005-TCP:V=7.80%I=7%D=8/27%Time=6A90432E%P=x86_64-pc-linux-gnu%r(Ge\nSF:nericLines,11B,\"\\x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\\x20text/\nSF:html\\r\\nConnection:\\x20close\\r\\nContent-Length:\\x20149\\r\\nServer:\\x20\\x\nSF:20Unspecified,\\x20UPnP/1\\.0,\\x20Unspecified\\r\\n\\r\\n<HTML><HEAD><TITLE>5\nSF:01\\x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1\nSF:>The\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x20ser\nSF:ver\\.</BODY></HTML>\\r\\n\")%r(GetRequest,10E,\"HTTP/1\\.0\\x20404\\x20Not\\x20\nSF:Found\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\x20close\\r\\nContent-\nSF:Length:\\x20134\\r\\nServer:\\x20\\x20Unspecified,\\x20UPnP/1\\.0,\\x20Unspecif\nSF:ied\\r\\n\\r\\n<HTML><HEAD><TITLE>404\\x20Not\\x20Found</TITLE></HEAD><BODY><\nSF:H1>Not\\x20Found</H1>The\\x20requested\\x20URL\\x20was\\x20not\\x20found\\x20o\nSF:n\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(HTTPOptions,123,\"HTTP/1\\.0\\\nSF:x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\\x20text/html\\r\\nConnectio\nSF:n:\\x20close\\r\\nContent-Length:\\x20149\\r\\nServer:\\x20\\x20Unspecified,\\x2\nSF:0UPnP/1\\.0,\\x20Unspecified\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\x20Not\\x20Impl\nSF:emented</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1>The\\x20HTTP\\x20M\nSF:ethod\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x20server\\.</BODY></HTM\nSF:L>\\r\\n\")%r(RTSPRequest,123,\"RTSP/1\\.0\\x20501\\x20Not\\x20Implemented\\r\\nC\nSF:ontent-Type:\\x20text/html\\r\\nConnection:\\x20close\\r\\nContent-Length:\\x2\nSF:0149\\r\\nServer:\\x20\\x20Unspecified,\\x20UPnP/1\\.0,\\x20Unspecified\\r\\n\\r\\\nSF:n<HTML><HEAD><TITLE>501\\x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>N\nSF:ot\\x20Implemented</H1>The\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\nSF:\\x20by\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(FourOhFourRequest,10E,\nSF:\"HTTP/1\\.0\\x20404\\x20Not\\x20Found\\r\\nContent-Type:\\x20text/html\\r\\nConn\nSF:ection:\\x20close\\r\\nContent-Length:\\x20134\\r\\nServer:\\x20\\x20Unspecifie\nSF:d,\\x20UPnP/1\\.0,\\x20Unspecified\\r\\n\\r\\n<HTML><HEAD><TITLE>404\\x20Not\\x2\nSF:0Found</TITLE></HEAD><BODY><H1>Not\\x20Found</H1>The\\x20requested\\x20URL\nSF:\\x20was\\x20not\\x20found\\x20on\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r\nSF:(SIPOptions,122,\"SIP/2\\.0\\x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\nSF:\\x20text/html\\r\\nConnection:\\x20close\\r\\nContent-Length:\\x20149\\r\\nServ\nSF:er:\\x20\\x20Unspecified,\\x20UPnP/1\\.0,\\x20Unspecified\\r\\n\\r\\n<HTML><HEAD\nSF:><TITLE>501\\x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Implem\nSF:ented</H1>The\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x20th\nSF:is\\x20server\\.</BODY></HTML>\\r\\n\");\nService Info: Devices: router, broadband router; CPE: cpe:/h:netgear:dgn1000\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 39.71 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2001-0514",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "SNMP service in Atmel 802.11b VNET-B Access Point 1.3 and earlier, as used in Netgear ME102 and Linksys WAP11, accepts arbitrary community strings with requested MIB modifications, which allows remote attackers to obtain sensitive information such as WEP keys, cause a denial of service, or gain access to the network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0514"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-0127",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Netgear RP114 Cable/DSL Web Safe Router Firmware 3.26, when configured to block traffic below port 1024, allows remote attackers to cause a denial of service (hang) via a port scan of the WAN port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0127"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-0238",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Cross-site scripting vulnerability in web administration interface for NetGear RT314 and RT311 Gateway Routers allows remote attackers to execute arbitrary script on another client via a URL that contains the script.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0238"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-1877",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "NETGEAR FM114P allows remote attackers to bypass access restrictions for web sites via a URL that uses the IP address instead of the hostname.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1877"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-1892",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "NETGEAR FVS318 running firmware 1.1 stores the username and password in a readable format when a backup of the configuration file is made, which allows local users to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1892"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-2020",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Netgear RP114 Cable/DSL Web Safe Router Firmware 3.26 uses a default administrator password and accepts admin logins on the external interface, which allows remote attackers to gain privileges if the password is not changed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2020"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-2116",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Netgear RM-356 and RT-338 series SOHO routers allow remote attackers to cause a denial of service (crash) via a UDP port scan, as demonstrated using nmap.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2116"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-2354",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Netgear FM114P firmware 1.3 wireless firewall allows remote attackers to cause a denial of service (crash or hang) via a large number of TCP connection requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2354"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2002-2355",
+      "cvss_score": 7.1,
+      "severity": null,
+      "description": "Netgear FM114P firmware 1.3 wireless firewall, when configured to backup configuration information, stores DDNS (DynDNS) user name and password, MAC address filtering table and possibly other information in cleartext, which could allow local users to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2355"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2003-1427",
+      "cvss_score": 6.4,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web configuration interface in Netgear FM114P 1.4 allows remote attackers to read arbitrary files, such as the netgear.cfg configuration file, via a hex-encoded (%2e%2e%2f) ../ (dot dot slash) in the port parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1427"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2004-2032",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Netgear RP114 allows remote attackers to bypass the keyword based URL filtering by requesting a long URL, as demonstrated using a large number of %20 (hex-encoded space) sequences.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2032"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2004-0611",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Web-Based Administration in Netgear FVS318 VPN Router allows remote attackers to cause a denial of service (no new connections) via a large number of open HTTP connections.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-0611"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2004-2556",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "NetGear WG602 (aka WG602v1) Wireless Access Point firmware 1.04.0 and 1.5.67 has a hardcoded account of username \"super\" and password \"5777364\", which allows remote attackers to modify the configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2556"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2004-2557",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "NetGear WG602 (aka WG602v1) Wireless Access Point 1.7.14 has a hardcoded account of username \"superman\" and password \"21241036\", which allows remote attackers to modify the configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2557"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2005-0290",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "NETGEAR FVS318 running firmware 2.4, and possibly other versions, allows remote attackers to bypass the filters using hex encoded URLs, as demonstrated using a hex encoded file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0290"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2005-0291",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in the log viewer in NETGEAR FVS318 running firmware 2.4, and possibly other versions, allows remote attackers to inject arbitrary web script or HTML via a blocked URL phrase.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0291"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2005-0328",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Zyxel P310, P314, P324 and Netgear RT311, RT314 running the latest firmware, allows remote attackers on the WAN to obtain the IP address of the LAN side interface by pinging a valid LAN IP address, which generates an ARP reply from the WAN address side that maps the LAN IP address to the WAN's MAC address.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0328"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2005-4220",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Netgear RP114, and possibly other versions and devices, allows remote attackers to cause a denial of service via a SYN flood attack between one system on the internal interface and another on the external interface, which temporarily stops routing between the interfaces, as demonstrated using nmap.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-4220"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2006-1002",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "NETGEAR WGT624 Wireless DSL router has a default account of super_username \"Gearguy\" and super_passwd \"Geardog\", which allows remote attackers to modify the configuration.  NOTE: followup posts have suggested that this might not occur with all WGT624 routers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1002"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear DGN1000 router http config",
+      "cve_id": "CVE-2006-1003",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The backup configuration option in NETGEAR WGT624 Wireless Firewall Router stores sensitive information in cleartext, which allows remote attackers to obtain passwords and gain privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1003"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27132",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "SerComm AG Combo VD625 AGSOT_2.1.0 devices allow CRLF injection (for HTTP header injection) in the download function via the Content-Disposition header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27132"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-44080",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "A Command Injection vulnerability in httpd web server (setup.cgi) in SerComm h500s, FW: lowi-h500s-v3.4.22 allows logged in administrators to arbitrary OS commands as root in the device via the connection_type parameter of the statussupport_diagnostic_tracing.json endpoint.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44080"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27702",
+      "cvss_score": 7.3,
+      "severity": "HIGH",
+      "description": "Sercomm Router Etisalat Model S3- AC2100 is affected by Incorrect Access Control via the diagnostic utility in the router dashboard.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27702"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27703",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "Sercomm Model Etisalat Model S3- AC2100 is affected by Cross Site Scripting (XSS) via the firmware update page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27703"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2022-4985",
+      "cvss_score": null,
+      "severity": null,
+      "description": "Vodafone H500s devices running firmware v3.5.10 (hardware model Sercomm VFH500) expose the WiFi access point password via an unauthenticated HTTP endpoint. By sending a crafted GET request to /data/activation.json with specific headers and cookies, a remote attacker can retrieve a JSON document that contains the wifi_password field. This allows an unauthenticated attacker to obtain the WiFi credentials and gain unauthorized access to the wireless network, compromising confidentiality of network traffic and attached systems.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4985"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67112",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Use of a hard-coded AES-256-CBC key in the configuration backup/restore implementation of Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote authenticated users to decrypt, modify, and re-encrypt device configurations, enabling credential manipulation and privilege escalation via the GUI import/export functions.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67112"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67113",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "OS command injection in the CWMP client (/ftl/bin/cwmp) of Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers controlling the ACS endpoint to execute arbitrary commands as root via a crafted TR-069 Download URL that is passed unescaped into the firmware upgrade pipeline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67113"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67114",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Use of a deterministic credential generation algorithm in /ftl/bin/calc_f2 in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers to derive valid administrative/root credentials from the device's MAC address, enabling authentication bypass and full device access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67114"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67115",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A path traversal vulnerability in /ftl/web/setup.cgi in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote authenticated users to read arbitrary files from the filesystem via crafted values in the log_type parameter to /logsave.htm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67115"
+    }
+  ],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "password",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": []
+}

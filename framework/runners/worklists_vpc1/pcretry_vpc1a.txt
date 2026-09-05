@@ -1,0 +1,4 @@
+ZyXEL_latest|/root/project/firmware/ZyXEL_latest/NBG6604_V1.00_ABIR.3_C0.zip|57|emulation_failed
+tplink_latest|/root/project/firmware/tplink_latest/RE350_V1_171214.zip|140|emulation_failed
+tplink_ipcamera|/root/project/firmware/tplink_ipcamera/NC220_v1.3.0_180105.zip|None|timeout
+trendnet_ipcamera|/root/project/firmware/trendnet_ipcamera/FW_TV-IP551WI_V1_1.07.01.zip|None|timeout

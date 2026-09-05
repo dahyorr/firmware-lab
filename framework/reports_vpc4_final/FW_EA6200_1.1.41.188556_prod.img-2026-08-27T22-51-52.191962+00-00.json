@@ -1,0 +1,22 @@
+{
+  "run_id": "8b2bc757",
+  "timestamp": "2026-08-27T22:51:52.191962+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA6200_1.1.41.188556_prod.img",
+    "name": "FW_EA6200_1.1.41.188556_prod.img",
+    "sha256": "cc39496cdb740fbf019e195ffe01423940888a09f56ab505d81347faf2d28980",
+    "size_bytes": 16417024
+  },
+  "emulation": {
+    "image_id": 65,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

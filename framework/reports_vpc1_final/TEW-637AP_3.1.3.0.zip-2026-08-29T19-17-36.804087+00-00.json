@@ -1,0 +1,259 @@
+{
+  "run_id": "34940fba",
+  "timestamp": "2026-08-29T19:17:36.804087+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-637AP_3.1.3.0.zip",
+    "name": "TEW-637AP_3.1.3.0.zip",
+    "sha256": "08d9ca750f12ef373436f42b65ea51c0a48a4420cc6294b8cdd6d2e06454ade2",
+    "size_bytes": 1797126
+  },
+  "emulation": {
+    "image_id": 306,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.254",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.254",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 23.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "GoAhead WebServer",
+        "raw_banner": "80/tcp open  http    GoAhead WebServer"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 19:16 UTC\nNmap scan report for 192.168.1.254\nHost is up (0.022s latency).\nNot shown: 65534 closed ports\nPORT   STATE SERVICE VERSION\n80/tcp open  http    GoAhead WebServer\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 23.09 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2001-0228",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in GoAhead web server 2.1 and earlier allows remote attackers to read arbitrary files via a .. attack in an HTTP GET request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0228"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2001-0385",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "GoAhead webserver 2.1 allows remote attackers to cause a denial of service via an HTTP request to the /aux directory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0385"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2001-0647",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Orange Web Server 2.1, based on GoAhead, allows a remote attacker to perform a denial of service via an HTTP GET request that does not include the HTTP version.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0647"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-1603",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "GoAhead Web Server 2.1.7 and earlier allows remote attackers to obtain the source code of ASP files via a URL terminated with a /, \\, %2f (encoded /), %20 (encoded space), or %00 (encoded null) character, which returns the ASP source code unparsed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1603"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-0680",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Directory traversal vulnerability in GoAhead Web Server 2.1 allows remote attackers to read arbitrary files via a URL with an encoded / (%5C) in a .. (dot dot) sequence.  NOTE: it is highly likely that this candidate will be REJECTED because it has been reported to be a duplicate of CVE-2001-0228.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0680"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-0681",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Cross-site scripting vulnerability in GoAhead Web Server 2.1 allows remote attackers to execute script as other web users via script in a URL that generates a \"404 not found\" message, which does not quote the script.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0681"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-1951",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in GoAhead WebServer 2.1 allows remote attackers to execute arbitrary code via a long HTTP GET request with a large number of subdirectories.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1951"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2003-0169",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "hpnst.exe in the GoAhead-Webs webserver for HP Instant TopTools before 5.55 allows remote attackers to cause a denial of service (CPU consumption) via a request to hpnst.exe that calls itself, which causes an infinite loop.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-0169"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2007-6702",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "goform/QuickStart_c0 on the GoAhead Web Server on the FS4104-AW (aka rooter) VDSL device contains a password in the typepassword field, which allows remote attackers to obtain this password by reading the HTML source, a different vulnerability than CVE-2002-1603.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-6702"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-2427",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The security handler in GoAhead WebServer before 2.1.1 allows remote attackers to bypass authentication and obtain access to protected web content via \"an extra slash in a URL,\" a different vulnerability than CVE-2002-1603.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2427"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-2428",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "webs.c in GoAhead WebServer before 2.1.4 allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via an HTTP POST request that contains a Content-Length header but no body data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2428"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-2429",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "webs.c in GoAhead WebServer before 2.1.4 allows remote attackers to cause a denial of service (daemon crash) via an HTTP POST request that contains a negative integer in the Content-Length header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2429"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-2430",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "GoAhead WebServer before 2.1.1 allows remote attackers to cause a denial of service (CPU consumption) by performing a socket disconnect to terminate a request before it has been fully processed by the server.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2430"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2002-2431",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Unspecified vulnerability in GoAhead WebServer before 2.1.4 allows remote attackers to cause \"incorrect behavior\" via unknown \"malicious code,\" related to incorrect use of the socketInputBuffered function by sockGen.c.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2431"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2003-1568",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "GoAhead WebServer before 2.1.6 allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via an invalid URL, related to the websSafeUrl function.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1568"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2003-1569",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "GoAhead WebServer before 2.1.5 on Windows 95, 98, and ME allows remote attackers to cause a denial of service (daemon crash) via an HTTP request with a (1) con, (2) nul, (3) clock$, or (4) config$ device name in a path component, different vectors than CVE-2001-0385.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1569"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2008-6926",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Directory traversal vulnerability in autoinstall4imagesgalleryupgrade.php in the Fantastico De Luxe Module for cPanel allows remote attackers to include and execute arbitrary local files via directory traversal sequences in the scriptpath_show parameter in a GoAhead action.  NOTE: this issue only crosses privilege boundaries when security settings such as disable_functions and safe_mode are active, since exploitation requires uploading of executable code to a home directory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-6926"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2011-4273",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in GoAhead Webserver 2.18 allow remote attackers to inject arbitrary web script or HTML via (1) the group parameter to goform/AddGroup, related to addgroup.asp; (2) the url parameter to goform/AddAccessLimit, related to addlimit.asp; or the (3) user (aka User ID) or (4) group parameter to goform/AddUser, related to adduser.asp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-4273"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2009-5111",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "GoAhead WebServer allows remote attackers to cause a denial of service (daemon outage) via partial HTTP requests, as demonstrated by Slowloris.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-5111"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "GoAhead WebServer",
+      "cve_id": "CVE-2013-3606",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "The login page in the GoAhead web server on Dell PowerConnect 3348 1.2.1.3, 3524p 2.0.0.48, and 5324 2.0.1.4 switches allows remote attackers to cause a denial of service (device outage) via a long username.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3606"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    }
+  ]
+}

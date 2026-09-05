@@ -1,0 +1,377 @@
+{
+  "run_id": "dbd8e259",
+  "timestamp": "2026-08-27T16:07:57.658267+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DGN3500-V1.1.00.37NA.zip",
+    "name": "DGN3500-V1.1.00.37NA.zip",
+    "sha256": "419284c667b7ac82f047481f928518fd7094e7d9b5e34abd1dd4a1ce3de196d4",
+    "size_bytes": 8383830
+  },
+  "emulation": {
+    "image_id": 14,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 44.2,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Netgear WNDR3300 WAP http config",
+        "raw_banner": "80/tcp   open     http       Netgear WNDR3300 WAP http config"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp  open     ssl/https?"
+      },
+      {
+        "port": 5100,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "",
+        "raw_banner": "5100/tcp open     upnp"
+      },
+      {
+        "port": 8080,
+        "protocol": "tcp",
+        "service": "soap",
+        "version": "gSOAP 2.7",
+        "raw_banner": "8080/tcp open     soap       gSOAP 2.7"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 15:47 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.032s latency).\nNot shown: 65529 closed ports\nPORT     STATE    SERVICE    VERSION\n20/tcp   filtered ftp-data\n21/tcp   filtered ftp\n80/tcp   open     http       Netgear WNDR3300 WAP http config\n443/tcp  open     ssl/https?\n5100/tcp open     upnp\n8080/tcp open     soap       gSOAP 2.7\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port5100-TCP:V=7.80%I=7%D=8/27%Time=6A905C1A%P=x86_64-pc-linux-gnu%r(Ge\nSF:nericLines,11A,\"\\x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\\x20text/\nSF:html\\r\\nConnection:\\x20close\\r\\nContent-Length:\\x20149\\r\\nServer:\\x20Un\nSF:specified,\\x20UPnP/1\\.0\\x20,Unspecified\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\x\nSF:20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1>The\nSF:\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x20server\\\nSF:.</BODY></HTML>\\r\\n\")%r(GetRequest,10D,\"HTTP/1\\.0\\x20404\\x20Not\\x20Foun\nSF:d\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\x20close\\r\\nContent-Leng\nSF:th:\\x20134\\r\\nServer:\\x20Unspecified,\\x20UPnP/1\\.0\\x20,Unspecified\\r\\n\\\nSF:r\\n<HTML><HEAD><TITLE>404\\x20Not\\x20Found</TITLE></HEAD><BODY><H1>Not\\x\nSF:20Found</H1>The\\x20requested\\x20URL\\x20was\\x20not\\x20found\\x20on\\x20thi\nSF:s\\x20server\\.</BODY></HTML>\\r\\n\")%r(HTTPOptions,122,\"HTTP/1\\.0\\x20501\\x\nSF:20Not\\x20Implemented\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\x20cl\nSF:ose\\r\\nContent-Length:\\x20149\\r\\nServer:\\x20Unspecified,\\x20UPnP/1\\.0\\x\nSF:20,Unspecified\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\x20Not\\x20Implemented</TIT\nSF:LE></HEAD><BODY><H1>Not\\x20Implemented</H1>The\\x20HTTP\\x20Method\\x20is\\\nSF:x20not\\x20implemented\\x20by\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(R\nSF:TSPRequest,122,\"RTSP/1\\.0\\x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\nSF:\\x20text/html\\r\\nConnection:\\x20close\\r\\nContent-Length:\\x20149\\r\\nServ\nSF:er:\\x20Unspecified,\\x20UPnP/1\\.0\\x20,Unspecified\\r\\n\\r\\n<HTML><HEAD><TI\nSF:TLE>501\\x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Implemente\nSF:d</H1>The\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x\nSF:20server\\.</BODY></HTML>\\r\\n\")%r(FourOhFourRequest,10D,\"HTTP/1\\.0\\x2040\nSF:4\\x20Not\\x20Found\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\x20close\nSF:\\r\\nContent-Length:\\x20134\\r\\nServer:\\x20Unspecified,\\x20UPnP/1\\.0\\x20,\nSF:Unspecified\\r\\n\\r\\n<HTML><HEAD><TITLE>404\\x20Not\\x20Found</TITLE></HEAD\nSF:><BODY><H1>Not\\x20Found</H1>The\\x20requested\\x20URL\\x20was\\x20not\\x20fo\nSF:und\\x20on\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(SIPOptions,121,\"SIP\nSF:/2\\.0\\x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\\x20text/html\\r\\nCon\nSF:nection:\\x20close\\r\\nContent-Length:\\x20149\\r\\nServer:\\x20Unspecified,\\\nSF:x20UPnP/1\\.0\\x20,Unspecified\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\x20Not\\x20Im\nSF:plemented</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1>The\\x20HTTP\\x2\nSF:0Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x20server\\.</BODY></H\nSF:TML>\\r\\n\");\nService Info: Device: WAP; CPE: cpe:/h:netgear:wndr3300\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 44.16 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2001-0514",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "SNMP service in Atmel 802.11b VNET-B Access Point 1.3 and earlier, as used in Netgear ME102 and Linksys WAP11, accepts arbitrary community strings with requested MIB modifications, which allows remote attackers to obtain sensitive information such as WEP keys, cause a denial of service, or gain access to the network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-0514"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-0127",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Netgear RP114 Cable/DSL Web Safe Router Firmware 3.26, when configured to block traffic below port 1024, allows remote attackers to cause a denial of service (hang) via a port scan of the WAN port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0127"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-0238",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Cross-site scripting vulnerability in web administration interface for NetGear RT314 and RT311 Gateway Routers allows remote attackers to execute arbitrary script on another client via a URL that contains the script.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-0238"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-1877",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "NETGEAR FM114P allows remote attackers to bypass access restrictions for web sites via a URL that uses the IP address instead of the hostname.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1877"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-1892",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "NETGEAR FVS318 running firmware 1.1 stores the username and password in a readable format when a backup of the configuration file is made, which allows local users to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1892"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-2020",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Netgear RP114 Cable/DSL Web Safe Router Firmware 3.26 uses a default administrator password and accepts admin logins on the external interface, which allows remote attackers to gain privileges if the password is not changed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2020"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-2116",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Netgear RM-356 and RT-338 series SOHO routers allow remote attackers to cause a denial of service (crash) via a UDP port scan, as demonstrated using nmap.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2116"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-2354",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Netgear FM114P firmware 1.3 wireless firewall allows remote attackers to cause a denial of service (crash or hang) via a large number of TCP connection requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2354"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2002-2355",
+      "cvss_score": 7.1,
+      "severity": null,
+      "description": "Netgear FM114P firmware 1.3 wireless firewall, when configured to backup configuration information, stores DDNS (DynDNS) user name and password, MAC address filtering table and possibly other information in cleartext, which could allow local users to obtain sensitive information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-2355"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2003-1427",
+      "cvss_score": 6.4,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web configuration interface in Netgear FM114P 1.4 allows remote attackers to read arbitrary files, such as the netgear.cfg configuration file, via a hex-encoded (%2e%2e%2f) ../ (dot dot slash) in the port parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1427"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2004-2032",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Netgear RP114 allows remote attackers to bypass the keyword based URL filtering by requesting a long URL, as demonstrated using a large number of %20 (hex-encoded space) sequences.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2032"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2004-0611",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Web-Based Administration in Netgear FVS318 VPN Router allows remote attackers to cause a denial of service (no new connections) via a large number of open HTTP connections.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-0611"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2004-2556",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "NetGear WG602 (aka WG602v1) Wireless Access Point firmware 1.04.0 and 1.5.67 has a hardcoded account of username \"super\" and password \"5777364\", which allows remote attackers to modify the configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2556"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2004-2557",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "NetGear WG602 (aka WG602v1) Wireless Access Point 1.7.14 has a hardcoded account of username \"superman\" and password \"21241036\", which allows remote attackers to modify the configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-2557"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2005-0290",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "NETGEAR FVS318 running firmware 2.4, and possibly other versions, allows remote attackers to bypass the filters using hex encoded URLs, as demonstrated using a hex encoded file extension.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0290"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2005-0291",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in the log viewer in NETGEAR FVS318 running firmware 2.4, and possibly other versions, allows remote attackers to inject arbitrary web script or HTML via a blocked URL phrase.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0291"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2005-0328",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Zyxel P310, P314, P324 and Netgear RT311, RT314 running the latest firmware, allows remote attackers on the WAN to obtain the IP address of the LAN side interface by pinging a valid LAN IP address, which generates an ARP reply from the WAN address side that maps the LAN IP address to the WAN's MAC address.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-0328"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2005-4220",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Netgear RP114, and possibly other versions and devices, allows remote attackers to cause a denial of service via a SYN flood attack between one system on the internal interface and another on the external interface, which temporarily stops routing between the interfaces, as demonstrated using nmap.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-4220"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2006-1002",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "NETGEAR WGT624 Wireless DSL router has a default account of super_username \"Gearguy\" and super_passwd \"Geardog\", which allows remote attackers to modify the configuration.  NOTE: followup posts have suggested that this might not occur with all WGT624 routers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1002"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Netgear WNDR3300 WAP http config",
+      "cve_id": "CVE-2006-1003",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The backup configuration option in NETGEAR WGT624 Wireless Firewall Router stores sensitive information in cleartext, which allows remote attackers to obtain passwords and gain privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1003"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2017-9765",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "Integer overflow in the soap_get function in Genivia gSOAP 2.7.x and 2.8.x before 2.8.48, as used on Axis cameras and other devices, allows remote attackers to execute arbitrary code or cause a denial of service (stack-based buffer overflow and application crash) via a large XML document, aka Devil's Ivy. NOTE: the large document would be blocked by many common web-server configurations on general-purpose computers.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9765"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2019-6973",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Sricam IP CCTV cameras are vulnerable to denial of service via multiple incomplete HTTP requests because the web server (based on gSOAP 2.8.x) is configured for an iterative queueing approach (aka non-threaded operation) with a timeout of several seconds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-6973"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2020-13574",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A denial-of-service vulnerability exists in the WS-Security plugin functionality of Genivia gSOAP 2.8.107. A specially crafted SOAP request can lead to denial of service. An attacker can send an HTTP request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13574"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2020-13575",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A denial-of-service vulnerability exists in the WS-Addressing plugin functionality of Genivia gSOAP 2.8.107. A specially crafted SOAP request can lead to denial of service. An attacker can send an HTTP request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13575"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2020-13576",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "A code execution vulnerability exists in the WS-Addressing plugin functionality of Genivia gSOAP 2.8.107. A specially crafted SOAP request can lead to remote code execution. An attacker can send an HTTP request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13576"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2020-13577",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A denial-of-service vulnerability exists in the WS-Security plugin functionality of Genivia gSOAP 2.8.107. A specially crafted SOAP request can lead to denial of service. An attacker can send an HTTP request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13577"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2020-13578",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A denial-of-service vulnerability exists in the WS-Security plugin functionality of Genivia gSOAP 2.8.107. A specially crafted SOAP request can lead to denial of service. An attacker can send an HTTP request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13578"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2021-21783",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "A code execution vulnerability exists in the WS-Addressing plugin functionality of Genivia gSOAP 2.8.107. A specially crafted SOAP request can lead to remote code execution. An attacker can send an HTTP request to trigger this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21783"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2024-4227",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "In Genivia gSOAP with a specific configuration an unauthenticated remote attacker can generate a high CPU load when forcing to parse an XML having duplicate ID attributes which can lead to a DoS.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4227"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2024-26293",
+      "cvss_score": null,
+      "severity": null,
+      "description": "The Avid Nexis Agent uses a vulnerable gSOAP\nversion. An undocumented vulnerability impacting gSOAP v2.8 makes the application vulnerable to an Unauthenticated Path Traversal vulnerability.\nThis issue affects Avid NEXIS E-series: before 2025.5.1; Avid NEXIS F-series: before 2025.5.1; Avid NEXIS PRO+: before 2025.5.1; System Director Appliance (SDA+): before 2025.5.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-26293"
+    },
+    {
+      "port": 8080,
+      "service": "soap",
+      "version": "gSOAP 2.7",
+      "cve_id": "CVE-2019-25355",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "gSOAP 2.8 contains a directory traversal vulnerability that allows unauthenticated attackers to access system files by manipulating HTTP path traversal techniques. Attackers can retrieve sensitive files like /etc/passwd by sending crafted GET requests with multiple '../' directory traversal sequences.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25355"
+    }
+  ],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "password",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": []
+}

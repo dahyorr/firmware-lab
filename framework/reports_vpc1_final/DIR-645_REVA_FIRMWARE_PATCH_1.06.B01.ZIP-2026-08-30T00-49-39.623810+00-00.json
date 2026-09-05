@@ -1,0 +1,109 @@
+{
+  "run_id": "6d63fd71",
+  "timestamp": "2026-08-30T00:49:39.623810+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR-645_REVA_FIRMWARE_PATCH_1.06.B01.ZIP",
+    "name": "DIR-645_REVA_FIRMWARE_PATCH_1.06.B01.ZIP",
+    "sha256": "81fda6ce1789b12b05ffe179b7a88dc6b7d550cd838fcd0ba4412b131e5c1f61",
+    "size_bytes": 7705181
+  },
+  "emulation": {
+    "image_id": 323,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 49.4,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 00:48 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.054s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed (47779) or filtered (17756)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 49.37 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2013-7389",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in D-Link DIR-645 Router (Rev. A1) with firmware before 1.04B11 allow remote attackers to inject arbitrary web script or HTML via the (1) deviceid parameter to parentalcontrols/bind.php, (2) RESULT parameter to info.php, or (3) receiver parameter to bsc_sms_send.php.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-7389"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2013-7471",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered in soap.cgi?service=WANIPConn1 on D-Link DIR-845 before v1.02b03, DIR-600 before v2.17b01, DIR-645 before v1.04b11, DIR-300 rev. B, and DIR-865 devices. There is Command Injection via shell metacharacters in the NewInternalClient, NewExternalPort, or NewInternalPort element of a SOAP POST request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-7471"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2019-18852",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Certain D-Link devices have a hardcoded Alphanetworks user account with TELNET access because of /etc/config/image_sign or /etc/alpha_config/image_sign. This affects DIR-600 B1 V2.01 for WW, DIR-890L A1 v1.03, DIR-615 J1 v100 (for DCN), DIR-645 A1 v1.03, DIR-815 A1 v1.01, DIR-823 A1 v1.01, and DIR-842 C1 v3.00.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18852"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2021-43722",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "D-Link DIR-645 1.03 A1 is vulnerable to Buffer Overflow. The hnap_main function in the cgibin handler uses sprintf to format the soapaction header onto the stack and has no limit on the size.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-43722"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2023-36089",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Authentication Bypass vulnerability in D-Link DIR-645 firmware version 1.03 allows remote attackers to gain escalated privileges via function phpcgi_main in cgibin. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-36089"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2018-25115",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Multiple D-Link DIR-series routers, including DIR-110, DIR-412, DIR-600, DIR-610, DIR-615, DIR-645, and DIR-815 firmware version 1.03, contain a vulnerability in the service.cgi endpoint that allows remote attackers to execute arbitrary system commands without authentication. The flaw stems from improper input handling in the EVENT=CHECKFW parameter, which is passed directly to the system shell without sanitization. A crafted HTTP POST request can inject commands that are executed with root privileges, resulting in full device compromise. These router models are no longer supported at the time of assignment and affected version ranges may vary. Exploitation evidence was first observed by the Shadowserver Foundation on 2025-08-21 UTC.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25115"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2025-10689",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was identified in D-Link DIR-645 105B01. This issue affects the function soapcgi_main of the file /soap.cgi. Such manipulation of the argument service leads to command injection. The attack can be launched remotely. The exploit is publicly available and might be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10689"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.06",
+      "cve_id": "CVE-2026-5815",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability was detected in D-Link DIR-645 1.01/1.02/1.03. Impacted is the function hedwigcgi_main of the file /cgi-bin/hedwig.cgi. The manipulation results in stack-based buffer overflow. The attack can be launched remotely. The exploit is now public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5815"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

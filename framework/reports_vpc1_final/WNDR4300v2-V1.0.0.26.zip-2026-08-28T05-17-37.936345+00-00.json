@@ -1,0 +1,329 @@
+{
+  "run_id": "df708497",
+  "timestamp": "2026-08-28T05:17:37.936345+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNDR4300v2-V1.0.0.26.zip",
+    "name": "WNDR4300v2-V1.0.0.26.zip",
+    "sha256": "37451e2bcf9f6afd8320368ac5db62472f65b25c8be02687415a60ce7db64c27",
+    "size_bytes": 14114810
+  },
+  "emulation": {
+    "image_id": 133,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 209.8,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.39",
+        "raw_banner": "53/tcp   open  domain     dnsmasq 2.39"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "OpenWrt uHTTPd",
+        "raw_banner": "80/tcp   open  http       OpenWrt uHTTPd"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp  open  ssl/https?"
+      },
+      {
+        "port": 631,
+        "protocol": "tcp",
+        "service": "ipp?",
+        "version": "",
+        "raw_banner": "631/tcp  open  ipp?"
+      },
+      {
+        "port": 3333,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "3333/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 05:12 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.020s latency).\nNot shown: 65530 closed ports\nPORT     STATE SERVICE    VERSION\n53/tcp   open  domain     dnsmasq 2.39\n80/tcp   open  http       OpenWrt uHTTPd\n443/tcp  open  ssl/https?\n631/tcp  open  ipp?\n3333/tcp open  tcpwrapped\nService Info: OS: Linux; Device: WAP; CPE: cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 209.82 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2017-17867",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Inteno iopsys 2.0-3.14 and 4.0 devices allow remote authenticated users to execute arbitrary OS commands by modifying the leasetrigger field in the odhcpd configuration to specify an arbitrary program, as demonstrated by a program located on an SMB share. This issue existed because the /etc/uci-defaults directory was not being used to secure the OpenWrt configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17867"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2018-11116",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "OpenWrt mishandles access control in /etc/config/rpcd and the /usr/share/rpcd/acl.d files, which allows remote authenticated users to call arbitrary methods (i.e., achieve ubus access over HTTP) that were only supposed to be accessible to a specific user, as demonstrated by the file, log, and service namespaces, potentially leading to remote Information Disclosure or Code Execution. NOTE: The developer disputes this as a vulnerability, indicating that rpcd functions appropriately",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-11116"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2018-19630",
+      "cvss_score": 6.1,
+      "severity": "MEDIUM",
+      "description": "cgi_handle_request in uhttpd in OpenWrt through 18.06.1 and LEDE through 17.01 has unauthenticated reflected XSS via the URI, as demonstrated by a cgi-bin/?[XSS] URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19630"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-12272",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "In OpenWrt LuCI through 0.10, the endpoints admin/status/realtime/bandwidth_status and admin/status/realtime/wireless_status of the web application are affected by a command injection vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12272"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2017-9385",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered on Vera Veralite 1.7.481 devices. The device has an additional OpenWRT interface in addition to the standard web interface which allows the highest privileges a user can obtain on the device. This web interface uses root as the username and the password in the /etc/cmh/cmh.conf file which can be extracted by an attacker using a directory traversal attack, and then log in to the device with the highest privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9385"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-15513",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An issue was discovered in OpenWrt libuci (aka Library for the Unified Configuration Interface) before 15.05.1 as used on Motorola CX2L MWR04L 1.01 and C1 MWR03 1.01 devices. /tmp/.uci/network locking is mishandled after reception of a long SetWanSettings command, leading to a device hang.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-15513"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-17367",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "OpenWRT firmware version 18.06.4 is vulnerable to CSRF via wireless/radio0.network1, wireless/radio1.network1, firewall, firewall/zones, firewall/forwards, firewall/rules, network/wan, network/wan6, or network/lan under /cgi-bin/luci/admin/network/.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17367"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-5101",
+      "cvss_score": 4.0,
+      "severity": "MEDIUM",
+      "description": "An exploitable information leak vulnerability exists in the ustream-ssl library of OpenWrt, versions 18.06.4 and 15.05.1. When connecting to a remote server, the server's SSL certificate is checked but no action is taken when the certificate is invalid. An attacker could exploit this behavior by performing a man-in-the-middle attack, providing any certificate, leading to the theft of all the data sent by the client during the first request.An exploitable information leak vulnerability exists in the ustream-ssl library of OpenWrt, versions 18.06.4 and 15.05.1. When connecting to a remote server, the server's SSL certificate is checked but no action is taken when the certificate is invalid. An attacker could exploit this behavior by performing a man-in-the-middle attack, providing any certificate, leading to the theft of all the data sent by the client during the first request. After an SSL connection is initialized via _ustream_ssl_init, and after any data (e.g. the client's HTTP request) is written to the stream using ustream_printf, the code eventually enters the function _ustream_ssl_poll, which is used to dispatch the read/write events",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5101"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-5102",
+      "cvss_score": 4.0,
+      "severity": "MEDIUM",
+      "description": "An exploitable information leak vulnerability exists in the ustream-ssl library of OpenWrt, versions 18.06.4 and 15.05.1. When connecting to a remote server, the server's SSL certificate is checked but no action is taken when the certificate is invalid. An attacker could exploit this behavior by performing a man-in-the-middle attack, providing any certificate, leading to the theft of all the data sent by the client during the first request.An exploitable information leak vulnerability exists in the ustream-ssl library of OpenWrt, versions 18.06.4 and 15.05.1. When connecting to a remote server, the server's SSL certificate is checked but no action is taken when the certificate is invalid. An attacker could exploit this behavior by performing a man-in-the-middle attack, providing any certificate, leading to the theft of all the data sent by the client during the first request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5102"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-18992",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "OpenWrt 18.06.4 allows XSS via these Name fields to the cgi-bin/luci/admin/network/firewall/rules URI: \"Open ports on router\" and \"New forward rule\" and \"New Source NAT\" (this can occur, for example, on a TP-Link Archer C7 device).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18992"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-18993",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "OpenWrt 18.06.4 allows XSS via the \"New port forward\" Name field to the cgi-bin/luci/admin/network/firewall/forwards URI (this can occur, for example, on a TP-Link Archer C7 device).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18993"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2019-19945",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "uhttpd in OpenWrt through 18.06.5 and 19.x through 19.07.0-rc2 has an integer signedness error. This leads to out-of-bounds access to a heap buffer and a subsequent crash. It can be triggered with an HTTP POST request to a CGI script, specifying both \"Transfer-Encoding: chunked\" and a large negative Content-Length value.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-19945"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-7248",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "libubox in OpenWrt before 18.06.7 and 19.x before 19.07.1 has a tagged binary data JSON serialization vulnerability that may cause a stack based buffer overflow.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7248"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-7982",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "An issue was discovered in OpenWrt 18.06.0 to 18.06.6 and 19.07.0, and LEDE 17.01.0 to 17.01.7. A bug in the fork of the opkg package manager before 2020-01-25 prevents correct parsing of embedded checksums in the signed repository index, allowing a man-in-the-middle attacker to inject arbitrary package payloads (which are installed without verification).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7982"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-10871",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "In OpenWrt LuCI git-20.x, remote unauthenticated attackers can retrieve the list of installed packages and services. NOTE: the vendor disputes the significance of this report because, for instances reachable by an unauthenticated actor, the same information is available in other (more complex) ways, and there is no plan to restrict the information further",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-10871"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-11963",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "IQrouter through 3.3.1, when unconfigured, has multiple remote code execution vulnerabilities in the web-panel because of Bash Shell Metacharacter Injection. Note: The vendor claims that this vulnerability can only occur on a brand-new network that, after initiating the forced initial configuration (which has a required step for setting a secure password on the system), makes this CVE invalid. This vulnerability is \u201ctrue for any unconfigured release of OpenWRT, and true of many other new Linux distros prior to being configured for the first time\u201d",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11963"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-11964",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "In IQrouter through 3.3.1, the Lua function diag_set_password in the web-panel allows remote attackers to change the root password arbitrarily. Note: The vendor claims that this vulnerability can only occur on a brand-new network that, after initiating the forced initial configuration (which has a required step for setting a secure password on the system), makes this CVE invalid. This vulnerability is \u201ctrue for any unconfigured release of OpenWRT, and true of many other new Linux distros prior to being configured for the first time\u201d",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11964"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-11965",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "In IQrouter through 3.3.1, there is a root user without a password, which allows attackers to gain full remote access via SSH. Note: The vendor claims that this vulnerability can only occur on a brand-new network that, after initiating the forced initial configuration (which has a required step for setting a secure password on the system), makes this CVE invalid. This vulnerability is \u201ctrue for any unconfigured release of OpenWRT, and true of many other new Linux distros prior to being configured for the first time\u201d",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11965"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-11966",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "In IQrouter through 3.3.1, the Lua function reset_password in the web-panel allows remote attackers to change the root password arbitrarily. Note: The vendor claims that this vulnerability can only occur on a brand-new network that, after initiating the forced initial configuration (which has a required step for setting a secure password on the system), makes this CVE invalid. This vulnerability is \u201ctrue for any unconfigured release of OpenWRT, and true of many other new Linux distros prior to being configured for the first time\u201d",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11966"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "OpenWrt uHTTPd",
+      "cve_id": "CVE-2020-11967",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "In IQrouter through 3.3.1, remote attackers can control the device (restart network, reboot, upgrade, reset) because of Incorrect Access Control. Note: The vendor claims that this vulnerability can only occur on a brand-new network that, after initiating the forced initial configuration (which has a required step for setting a secure password on the system), makes this CVE invalid. This vulnerability is \u201ctrue for any unconfigured release of OpenWRT, and true of many other new Linux distros prior to being configured for the first time\u201d",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11967"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /cgi-bin/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

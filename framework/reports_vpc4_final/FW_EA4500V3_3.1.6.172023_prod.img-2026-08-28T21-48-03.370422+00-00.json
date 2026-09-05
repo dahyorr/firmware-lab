@@ -1,0 +1,22 @@
+{
+  "run_id": "17e0a042",
+  "timestamp": "2026-08-28T21:48:03.370422+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA4500V3_3.1.6.172023_prod.img",
+    "name": "FW_EA4500V3_3.1.6.172023_prod.img",
+    "sha256": "389835eb6ca7278c0c6d36fb4288f3041cad2e73c412e10f9c8fd6ba8845c1d8",
+    "size_bytes": 17432832
+  },
+  "emulation": {
+    "image_id": 59,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

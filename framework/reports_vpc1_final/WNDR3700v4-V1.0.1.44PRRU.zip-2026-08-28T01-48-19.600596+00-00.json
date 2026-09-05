@@ -1,0 +1,28 @@
+{
+  "run_id": "c30a6cdb",
+  "timestamp": "2026-08-28T01:48:19.600596+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNDR3700v4-V1.0.1.44PRRU.zip",
+    "name": "WNDR3700v4-V1.0.1.44PRRU.zip",
+    "sha256": "9ad0706a06f304cd50df752971b1a030aab8d29e67e9fd5f7286d414240408e9",
+    "size_bytes": 10267078
+  },
+  "emulation": {
+    "image_id": 86,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 125.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 01:46 UTC\nWarning: 192.168.1.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.1.1\nHost is up (0.00037s latency).\nAll 65535 scanned ports on 192.168.1.1 are filtered (47688) or closed (17847)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 125.11 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

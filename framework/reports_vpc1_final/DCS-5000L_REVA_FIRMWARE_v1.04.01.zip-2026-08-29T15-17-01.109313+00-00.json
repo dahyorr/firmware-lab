@@ -1,0 +1,49 @@
+{
+  "run_id": "ce302096",
+  "timestamp": "2026-08-29T15:17:01.109313+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-5000L_REVA_FIRMWARE_v1.04.01.zip",
+    "name": "DCS-5000L_REVA_FIRMWARE_v1.04.01.zip",
+    "sha256": "af74b1b2ce974a1449a2803d0cd2b7771316731846fd670e9b0ef6a40807af7c",
+    "size_bytes": 4831354
+  },
+  "emulation": {
+    "image_id": 286,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 53.4,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 15:16 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.025s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed (40549) or filtered (24986)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 53.33 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.04.01",
+      "cve_id": "CVE-2021-41503",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "DCS-5000L v1.05 and DCS-932L v2.17 and older are affecged by Incorrect Acess Control. The use of the basic authentication for the devices command interface allows attack vectors that may compromise the cameras configuration and allow malicious users on the LAN to access the device. NOTE: This vulnerability only affects products that are no longer supported by the maintainer",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41503"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.04.01",
+      "cve_id": "CVE-2021-41504",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "An Elevated Privileges issue exists in D-Link DCS-5000L v1.05 and DCS-932L v2.17 and older. The use of the digest-authentication for the devices command interface may allow further attack vectors that may compromise the cameras configuration and allow malicious users on the LAN to access the device. NOTE: This vulnerability only affects products that are no longer supported by the maintainer",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41504"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

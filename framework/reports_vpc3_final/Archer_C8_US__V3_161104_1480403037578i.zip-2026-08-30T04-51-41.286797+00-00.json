@@ -1,0 +1,22 @@
+{
+  "run_id": "c9def302",
+  "timestamp": "2026-08-30T04:51:41.286797+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/Archer_C8_US__V3_161104_1480403037578i.zip",
+    "name": "Archer_C8_US__V3_161104_1480403037578i.zip",
+    "sha256": "f79d15aff204dd46303579b9e33f2a1713aa2c58b81ef33add8138f6db92d9a9",
+    "size_bytes": 14802494
+  },
+  "emulation": {
+    "image_id": null,
+    "success": false,
+    "architecture": null,
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

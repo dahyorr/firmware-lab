@@ -1,0 +1,300 @@
+{
+  "run_id": "f8c96188",
+  "timestamp": "2026-08-30T11:26:52.357702+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA2700_1.1.40.166516_prod.img",
+    "name": "FW_EA2700_1.1.40.166516_prod.img",
+    "sha256": "6f16a0f99cfff5f16d8c8d1748c4eb7f51c2916079e7126a919b6c2e5849319d",
+    "size_bytes": 13680896
+  },
+  "emulation": {
+    "image_id": 397,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 41.2,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain?",
+        "version": "",
+        "raw_banner": "53/tcp    open  domain?"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http?",
+        "version": "",
+        "raw_banner": "80/tcp    open  http?"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "https?",
+        "version": "",
+        "raw_banner": "443/tcp   open  https?"
+      },
+      {
+        "port": 2601,
+        "protocol": "tcp",
+        "service": "zebra",
+        "version": "Quagga routing software",
+        "raw_banner": "2601/tcp  open  zebra             Quagga routing software"
+      },
+      {
+        "port": 10000,
+        "protocol": "tcp",
+        "service": "snet-sensor-mgmt?",
+        "version": "",
+        "raw_banner": "10000/tcp open  snet-sensor-mgmt?"
+      },
+      {
+        "port": 10080,
+        "protocol": "tcp",
+        "service": "amanda?",
+        "version": "",
+        "raw_banner": "10080/tcp open  amanda?"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "49152/tcp open  unknown"
+      },
+      {
+        "port": 51000,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "51000/tcp open  unknown"
+      },
+      {
+        "port": 52000,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "52000/tcp open  unknown"
+      },
+      {
+        "port": 52367,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "52367/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 11:25 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.012s latency).\nNot shown: 65525 closed ports\nPORT      STATE SERVICE           VERSION\n53/tcp    open  domain?\n80/tcp    open  http?\n443/tcp   open  https?\n2601/tcp  open  zebra             Quagga routing software\n10000/tcp open  snet-sensor-mgmt?\n10080/tcp open  amanda?\n49152/tcp open  unknown\n51000/tcp open  unknown\n52000/tcp open  unknown\n52367/tcp open  tcpwrapped\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 41.19 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2003-0795",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The vty layer in Quagga before 0.96.4, and Zebra 0.93b and earlier, does not verify that sub-negotiation is taking place when processing the SE marker, which allows remote attackers to cause a denial of service (crash) via a malformed telnet command to the telnet CLI port, which may trigger a null dereference.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-0795"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2003-0858",
+      "cvss_score": 2.1,
+      "severity": null,
+      "description": "Zebra 0.93b and earlier, and quagga before 0.95, allows local users to cause a denial of service by sending spoofed messages as other users to the kernel netlink interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-0858"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2006-2223",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "RIPd in Quagga 0.98 and 0.99 before 20060503 does not properly implement configurations that (1) disable RIPv1 or (2) require plaintext or MD5 authentication, which allows remote attackers to obtain sensitive information (routing state) via REQUEST packets such as SEND UPDATE.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2223"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2006-2224",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "RIPd in Quagga 0.98 and 0.99 before 20060503 does not properly enforce RIPv2 authentication requirements, which allows remote attackers to modify routing state via RIPv1 RESPONSE packets.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2224"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2006-2276",
+      "cvss_score": 4.9,
+      "severity": null,
+      "description": "bgpd in Quagga 0.98 and 0.99 before 20060504 allows local users to cause a denial of service (CPU consumption) via a certain sh ip bgp command entered in the telnet interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-2276"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2007-1995",
+      "cvss_score": 6.3,
+      "severity": null,
+      "description": "bgpd/bgp_attr.c in Quagga 0.98.6 and earlier, and 0.99.6 and earlier 0.99 versions, does not validate length values in the MP_REACH_NLRI and MP_UNREACH_NLRI attributes, which allows remote attackers to cause a denial of service (daemon crash or exit) via crafted UPDATE messages that trigger an assertion error or out of bounds read.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-1995"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2007-4826",
+      "cvss_score": 3.5,
+      "severity": null,
+      "description": "bgpd in Quagga before 0.99.9 allows explicitly configured BGP peers to cause a denial of service (crash) via a malformed (1) OPEN message or (2) a COMMUNITY attribute, which triggers a NULL pointer dereference. NOTE: vector 2 only exists when debugging is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-4826"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2008-1160",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "ZyXEL ZyWALL 1050 has a hard-coded password for the Quagga and Zebra processes that is not changed when it is set by a user, which allows remote attackers to gain privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1160"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2009-1572",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The BGP daemon (bgpd) in Quagga 0.99.11 and earlier allows remote attackers to cause a denial of service (crash) via an AS path containing ASN elements whose string representation is longer than expected, which triggers an assert error.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1572"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-2948",
+      "cvss_score": 6.5,
+      "severity": null,
+      "description": "Stack-based buffer overflow in the bgp_route_refresh_receive function in bgp_packet.c in bgpd in Quagga before 0.99.17 allows remote authenticated users to cause a denial of service (daemon crash) or possibly execute arbitrary code via a malformed Outbound Route Filtering (ORF) record in a BGP ROUTE-REFRESH (RR) message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-2948"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-2949",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "bgpd in Quagga before 0.99.17 does not properly parse AS paths, which allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via an unknown AS type in an AS path attribute in a BGP UPDATE message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-2949"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-1674",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The extended-community parser in bgpd in Quagga before 0.99.18 allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via a malformed Extended Communities attribute.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-1674"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2010-1675",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "bgpd in Quagga before 0.99.18 allows remote attackers to cause a denial of service (session reset) via a malformed AS_PATHLIMIT path attribute.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-1675"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3323",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The OSPFv3 implementation in ospf6d in Quagga before 0.99.19 allows remote attackers to cause a denial of service (out-of-bounds memory access and daemon crash) via a Link State Update message with an invalid IPv6 prefix length.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3323"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3324",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The ospf6_lsa_is_changed function in ospf6_lsa.c in the OSPFv3 implementation in ospf6d in Quagga before 0.99.19 allows remote attackers to cause a denial of service (assertion failure and daemon exit) via trailing zero values in the Link State Advertisement (LSA) header list of an IPv6 Database Description message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3324"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3325",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "ospf_packet.c in ospfd in Quagga before 0.99.19 allows remote attackers to cause a denial of service (daemon crash) via (1) a 0x0a type field in an IPv4 packet header or (2) a truncated IPv4 Hello packet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3325"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3326",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The ospf_flood function in ospf_flood.c in ospfd in Quagga before 0.99.19 allows remote attackers to cause a denial of service (daemon crash) via an invalid Link State Advertisement (LSA) type in an IPv4 Link State Update message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3326"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2011-3327",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Heap-based buffer overflow in the ecommunity_ecom2str function in bgp_ecommunity.c in bgpd in Quagga before 0.99.19 allows remote attackers to cause a denial of service (daemon crash) or possibly execute arbitrary code by sending a crafted BGP UPDATE message over IPv4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-3327"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2012-0249",
+      "cvss_score": 3.3,
+      "severity": null,
+      "description": "Buffer overflow in the ospf_ls_upd_list_lsa function in ospf_packet.c in the OSPFv2 implementation in ospfd in Quagga before 0.99.20.1 allows remote attackers to cause a denial of service (assertion failure and daemon exit) via a Link State Update (aka LS Update) packet that is smaller than the length specified in its header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-0249"
+    },
+    {
+      "port": 2601,
+      "service": "zebra",
+      "version": "Quagga routing software",
+      "cve_id": "CVE-2012-0250",
+      "cvss_score": 3.3,
+      "severity": null,
+      "description": "Buffer overflow in the OSPFv2 implementation in ospfd in Quagga before 0.99.20.1 allows remote attackers to cause a denial of service (daemon crash) via a Link State Update (aka LS Update) packet containing a network-LSA link-state advertisement for which the data-structure length is smaller than the value in the Length header field.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-0250"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

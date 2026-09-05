@@ -1,0 +1,14 @@
+dlink_latest|/root/project/firmware/dlink_latest/DIR-515_FIRMWARE_1.02.ZIP|175|emulation_failed
+trendnet_latest|/root/project/firmware/trendnet_latest/TPE-30102WS_1.00.16.zip|251|emulation_failed
+asus_latest|/root/project/firmware/asus_latest/FW_RT_AC68W_300438432738.ZIP|82|timeout
+linksys_latest|/root/project/firmware/linksys_latest/FW_LAPAC1200_LAPAC1750_1.1.01.000.img|93|timeout
+belkin_latest|/root/project/firmware/belkin_latest/F9K1105_WW_2.10.07.bin|99|timeout
+netgear|/root/project/firmware/netgear/jnr1010-V1.0.0.14.zip|260|timeout
+trendnet_latest|/root/project/firmware/trendnet_latest/TFC-1600MM_2.03.zip|244|timeout
+belkin_latest|/root/project/firmware/belkin_latest/F9K1009_WW_2.00.09.img|71|timeout
+asus_latest|/root/project/firmware/asus_latest/FW_RT_AC68R_300438432738.ZIP|73|timeout
+netgear|/root/project/firmware/netgear/jnr1010-v1.0.0.11.zip|264|timeout
+trendnet_latest|/root/project/firmware/trendnet_latest/TEW-436BRM_v1.01.04.zip|16|emulation_failed
+trendnet_latest|/root/project/firmware/trendnet_latest/TEW-637AP_3.1.3.0.zip|21|timeout
+asus_latest|/root/project/firmware/asus_latest/FW_RT_AC68U_300438432738.ZIP|79|timeout
+dlink_latest|/root/project/firmware/dlink_latest/DIR-605L_REVA_FIRMWARE_PATCH_v1.17B01_BETA.zip|179|emulation_failed

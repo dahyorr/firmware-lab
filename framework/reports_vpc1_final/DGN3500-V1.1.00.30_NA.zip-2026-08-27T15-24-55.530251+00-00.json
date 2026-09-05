@@ -1,0 +1,219 @@
+{
+  "run_id": "e621dd62",
+  "timestamp": "2026-08-27T15:24:55.530251+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DGN3500-V1.1.00.30_NA.zip",
+    "name": "DGN3500-V1.1.00.30_NA.zip",
+    "sha256": "b8d0d6c20439f8be9cf885874cbc9aeef28f17c154ce1f55febe3d0e76903800",
+    "size_bytes": 8694150
+  },
+  "emulation": {
+    "image_id": 12,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 34.6,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.15-OpenDNS-1",
+        "raw_banner": "53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp   open  tcpwrapped"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp  open  ssl/https?"
+      },
+      {
+        "port": 5000,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "5000/tcp open  tcpwrapped"
+      },
+      {
+        "port": 8200,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8200/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 15:24 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.016s latency).\nNot shown: 65530 closed ports\nPORT     STATE SERVICE    VERSION\n53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1\n80/tcp   open  tcpwrapped\n443/tcp  open  ssl/https?\n5000/tcp open  tcpwrapped\n8200/tcp open  tcpwrapped\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 34.55 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /setup.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /stream",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /video",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /snapshot",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /image",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: netgear",
+      "severity": "info"
+    }
+  ]
+}

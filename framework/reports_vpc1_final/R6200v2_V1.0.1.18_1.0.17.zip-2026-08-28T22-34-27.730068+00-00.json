@@ -1,0 +1,22 @@
+{
+  "run_id": "707781d8",
+  "timestamp": "2026-08-28T22:34:27.730068+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6200v2_V1.0.1.18_1.0.17.zip",
+    "name": "R6200v2_V1.0.1.18_1.0.17.zip",
+    "sha256": "fb70c62ed15abd82b9d7c0b61af7e969833c6cbf9e1dfbda440a5ecc73fbff21",
+    "size_bytes": 9729196
+  },
+  "emulation": {
+    "image_id": 265,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,51 @@
+{
+  "run_id": "59fbee7c",
+  "timestamp": "2026-08-29T15:27:21.911369+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-8200LH_REVA_FIRMWARE_1.02.03.zip",
+    "name": "DCS-8200LH_REVA_FIRMWARE_1.02.03.zip",
+    "sha256": "cd8db4b3bce59c72b81749314bbe927349032aae00877936fe94c41caba47d90",
+    "size_bytes": 6821208
+  },
+  "emulation": {
+    "image_id": 289,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 190.3,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "",
+        "raw_banner": "80/tcp   open  http"
+      },
+      {
+        "port": 8080,
+        "protocol": "tcp",
+        "service": "http-proxy",
+        "version": "",
+        "raw_banner": "8080/tcp open  http-proxy"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 15:17 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.017s latency).\nNot shown: 64282 closed ports, 1251 filtered ports\nPORT     STATE SERVICE    VERSION\n80/tcp   open  http\n8080/tcp open  http-proxy\n2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port80-TCP:V=7.80%I=7%D=8/29%Time=6A92F80C%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,111,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20close\\r\\\nSF:nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:00:58\\x20GMT\\r\\nAccept-Ranges\nSF::\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2001\\x20J\nSF:ul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x20no-stor\nSF:e,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\\x2014\\r\nSF:\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(HTTPOptions,111,\"HTTP/1\\.1\\x20404\\x20No\nSF:t\\x20Found\\r\\nConnection:\\x20close\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x20201\nSF:6\\x2005:01:03\\x20GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nContent-Type:\\x20tex\nSF:t/html\\r\\nExpires:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nC\nSF:ache-Control:\\x20no-cache,\\x20no-store,\\x20must-revalidate\\r\\nPragma:\\x\nSF:20no-cache\\r\\nContent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(RT\nSF:SPRequest,116,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20keep-\nSF:alive\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:01:08\\x20GMT\\r\\nAccep\nSF:t-Ranges:\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2\nSF:001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x2\nSF:0no-store,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\nSF:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(FourOhFourRequest,111,\"HTTP/1\\.\nSF:1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20close\\r\\nDate:\\x20Wed,\\x2009\nSF:\\x20Nov\\x202016\\x2005:01:18\\x20GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nConten\nSF:t-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:\nSF:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x20no-store,\\x20must-revalidat\nSF:e\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20\nSF:Found\\n\")%r(SIPOptions,116,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnect\nSF:ion:\\x20keep-alive\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:02:31\\x2\nSF:0GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpire\nSF:s:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x2\nSF:0no-cache,\\x20no-store,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nCo\nSF:ntent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port8080-TCP:V=7.80%I=7%D=8/29%Time=6A92F807%P=x86_64-pc-linux-gnu%r(Ge\nSF:tRequest,111,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20close\\\nSF:r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:00:58\\x20GMT\\r\\nAccept-Rang\nSF:es:\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2001\\x2\nSF:0Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x20no-st\nSF:ore,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\\x2014\nSF:\\r\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(HTTPOptions,111,\"HTTP/1\\.1\\x20404\\x20\nSF:Not\\x20Found\\r\\nConnection:\\x20close\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202\nSF:016\\x2005:00:58\\x20GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nContent-Type:\\x20t\nSF:ext/html\\r\\nExpires:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\\nSF:nCache-Control:\\x20no-cache,\\x20no-store,\\x20must-revalidate\\r\\nPragma:\nSF:\\x20no-cache\\r\\nContent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(\nSF:RTSPRequest,116,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20kee\nSF:p-alive\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:00:58\\x20GMT\\r\\nAcc\nSF:ept-Ranges:\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\\nSF:x2001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\\nSF:x20no-store,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nContent-Lengt\nSF:h:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\")%r(FourOhFourRequest,111,\"HTTP/1\nSF:\\.1\\x20404\\x20Not\\x20Found\\r\\nConnection:\\x20close\\r\\nDate:\\x20Wed,\\x20\nSF:09\\x20Nov\\x202016\\x2005:00:58\\x20GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nCont\nSF:ent-Type:\\x20text/html\\r\\nExpires:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:0\nSF:0:00\\x20GMT\\r\\nCache-Control:\\x20no-cache,\\x20no-store,\\x20must-revalid\nSF:ate\\r\\nPragma:\\x20no-cache\\r\\nContent-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x\nSF:20Found\\n\")%r(SIPOptions,116,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nConne\nSF:ction:\\x20keep-alive\\r\\nDate:\\x20Wed,\\x2009\\x20Nov\\x202016\\x2005:02:21\\\nSF:x20GMT\\r\\nAccept-Ranges:\\x20bytes\\r\\nContent-Type:\\x20text/html\\r\\nExpi\nSF:res:\\x20Mon,\\x2001\\x20Jul\\x201980\\x2000:00:00\\x20GMT\\r\\nCache-Control:\\\nSF:x20no-cache,\\x20no-store,\\x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\n\nSF:Content-Length:\\x2014\\r\\n\\r\\n404\\x20Not\\x20Found\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 190.26 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    }
+  ]
+}

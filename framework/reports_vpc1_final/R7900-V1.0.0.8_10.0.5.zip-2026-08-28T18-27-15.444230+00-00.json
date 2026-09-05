@@ -1,0 +1,22 @@
+{
+  "run_id": "880663a6",
+  "timestamp": "2026-08-28T18:27:15.444230+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R7900-V1.0.0.8_10.0.5.zip",
+    "name": "R7900-V1.0.0.8_10.0.5.zip",
+    "sha256": "2e3ef2716803be48915fedff7e552587c27eba0c6b8fcc658b96df4c84c50e64",
+    "size_bytes": 26421289
+  },
+  "emulation": {
+    "image_id": 174,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

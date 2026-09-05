@@ -1,0 +1,22 @@
+{
+  "run_id": "415b7365",
+  "timestamp": "2026-08-29T17:31:46.090469+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/DIR-600L_REVA_FIRMWARE_PATCH_1.17.B01_WW.ZIP",
+    "name": "DIR-600L_REVA_FIRMWARE_PATCH_1.17.B01_WW.ZIP",
+    "sha256": "b5db5beabb3dde30d9ffb0d76d189fe82696f24924c48d3e3eff46f38c8e345d",
+    "size_bytes": 3142663
+  },
+  "emulation": {
+    "image_id": 279,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

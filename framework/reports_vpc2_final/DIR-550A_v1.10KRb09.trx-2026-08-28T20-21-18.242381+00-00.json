@@ -1,0 +1,22 @@
+{
+  "run_id": "d01c0fb2",
+  "timestamp": "2026-08-28T20:21:18.242381+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR-550A_v1.10KRb09.trx",
+    "name": "DIR-550A_v1.10KRb09.trx",
+    "sha256": "fa81f92eeb50b86d9667e59ba536e799f08e1f21922a1bd231e299e86bdd89c9",
+    "size_bytes": 4808704
+  },
+  "emulation": {
+    "image_id": 191,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

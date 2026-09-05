@@ -1,0 +1,4 @@
+dlink|/root/project/firmware/dlink/DCS-932L_REVB_FIRMWARE_2.12.01.ZIP|124|emulation_failed
+tplink_latest|/root/project/firmware/tplink_latest/TL-WR902AC_US__V1_160905.zip|235|emulation_failed
+trendnet_ipcamera|/root/project/firmware/trendnet_ipcamera/FW_TV-IP651WI_V1_1.07.01.zip|None|timeout
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-5009L_REVA_FIRMWARE_1.08.11.zip|None|timeout

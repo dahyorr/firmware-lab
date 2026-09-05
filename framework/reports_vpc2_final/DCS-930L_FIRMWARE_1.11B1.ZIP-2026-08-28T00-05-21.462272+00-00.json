@@ -1,0 +1,22 @@
+{
+  "run_id": "ac591eb8",
+  "timestamp": "2026-08-28T00:05:21.462272+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DCS-930L_FIRMWARE_1.11B1.ZIP",
+    "name": "DCS-930L_FIRMWARE_1.11B1.ZIP",
+    "sha256": "1543429d7bdb20e98b0235912d74b9554391403d45641506dcabed92340b9fcb",
+    "size_bytes": 3960975
+  },
+  "emulation": {
+    "image_id": 3,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

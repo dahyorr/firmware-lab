@@ -1,0 +1,22 @@
+{
+  "run_id": "3b16fee7",
+  "timestamp": "2026-08-30T06:52:31.097217+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-751DR_v1.03B03.zip",
+    "name": "TEW-751DR_v1.03B03.zip",
+    "sha256": "a3a74d0cd4aa7e94cec636b8e9ddd6c2bdc517806165c935d602e6cc26e4b685",
+    "size_bytes": 6587101
+  },
+  "emulation": {
+    "image_id": null,
+    "success": false,
+    "architecture": null,
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

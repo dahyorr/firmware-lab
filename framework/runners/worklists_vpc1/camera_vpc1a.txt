@@ -1,0 +1,4 @@
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-3511_REVA_FIRMWARE_1.01.ZIP
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-7513_REVB_FIRMWARE_v2.01.00.zip
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-950G_FIRMWARE_1.08.ZIP
+trendnet_ipcamera|/root/project/firmware/trendnet_ipcamera/FW_TV-IP302PI_V1_1.02.38.zip

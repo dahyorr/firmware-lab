@@ -1,0 +1,229 @@
+{
+  "run_id": "fa3f5f45",
+  "timestamp": "2026-08-30T07:13:11.261260+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-827DRU_2.04B03.zip",
+    "name": "TEW-827DRU_2.04B03.zip",
+    "sha256": "d09ff27162f906c3f3680370ab5dd8013b07cee18b728cfa2bcc2594a05846d0",
+    "size_bytes": 14609667
+  },
+  "emulation": {
+    "image_id": 239,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.10.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 07:10 UTC\nNmap scan report for 192.168.10.1\nHost is up.\nAll 65535 scanned ports on 192.168.10.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.02 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13148",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the UDP Ports To Open in Add Gaming Rule.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13148"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13149",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the key passwd in Routing RIP Settings.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13149"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13150",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication). The command injection exists in the key ip_addr.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13150"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13151",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the action set_sta_enrollee_pin_5g and the key wps_sta_enrollee_pin.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13151"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13152",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the IP Address in Add Gaming Rule.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13152"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13153",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the Private Port in Add Virtual Server.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13153"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13154",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the TCP Ports To Open in Add Gaming Rule.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13154"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13155",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the IP Address in Add Virtual Server.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13155"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13280",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU with firmware up to and including 2.04B03 contains a stack-based buffer overflow while returning an error message to the user about failure to resolve a hostname during a ping or traceroute attempt. This allows an authenticated user to execute arbitrary code. The exploit can be exercised on the local intranet or remotely if remote administration is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13280"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13277",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU with firmware up to and including 2.04B03 allows an unauthenticated attacker to execute setup wizard functionality, giving this attacker the ability to change configuration values, potentially leading to a denial of service. The request can be made on the local intranet or remotely if remote administration is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13277"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13276",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TRENDnet TEW-827DRU with firmware up to and including 2.04B03 contains a stack-based buffer overflow in the ssi binary. The overflow allows an unauthenticated user to execute arbitrary code by providing a sufficiently long query string when POSTing to any valid cgi, txt, asp, or js file. The vulnerability can be exercised on the local intranet or remotely if remote administration is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13276"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13278",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TRENDnet TEW-827DRU with firmware up to and including 2.04B03 contains multiple command injections when processing user input for the setup wizard, allowing an unauthenticated user to run arbitrary commands on the device. The vulnerability can be exercised on the local intranet or remotely if remote administration is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13278"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2019-13279",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TRENDnet TEW-827DRU with firmware up to and including 2.04B03 contains multiple stack-based buffer overflows when processing user input for the setup wizard, allowing an unauthenticated user to execute arbitrary code. The vulnerability can be exercised on the local intranet or remotely if remote administration is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13279"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2020-14074",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU devices through 2.06B04 contain a stack-based buffer overflow in the ssi binary. The overflow allows an authenticated user to execute arbitrary code by POSTing to apply.cgi via the action kick_ban_wifi_mac_allow with a sufficiently long qcawifi.wifi0_vap0.maclist key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14074"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2020-14075",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU devices through 2.06B04 contain multiple command injections in apply.cgi via the action pppoe_connect, ru_pppoe_connect, or dhcp_connect with the key wan_ifname (or wan0_dns), allowing an authenticated user to run arbitrary commands on the device.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14075"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2020-14077",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU devices through 2.06B04 contain a stack-based buffer overflow in the ssi binary. The overflow allows an authenticated user to execute arbitrary code by POSTing to apply.cgi via the action set_sta_enrollee_pin_wifi1 (or set_sta_enrollee_pin_wifi0) with a sufficiently long wps_sta_enrollee_pin key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14077"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2020-14078",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU devices through 2.06B04 contain a stack-based buffer overflow in the ssi binary. The overflow allows an authenticated user to execute arbitrary code by POSTing to apply.cgi via the action wifi_captive_portal_login with a sufficiently long REMOTE_ADDR key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14078"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2020-14079",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU devices through 2.06B04 contain a stack-based buffer overflow in the ssi binary. The overflow allows an authenticated user to execute arbitrary code by POSTing to apply.cgi via the action auto_up_fw (or auto_up_lp) with a sufficiently long update_file_name key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14079"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2020-14080",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TRENDnet TEW-827DRU devices through 2.06B04 contain a stack-based buffer overflow in the ssi binary. The overflow allows an unauthenticated user to execute arbitrary code by POSTing to apply_sec.cgi via the action ping_test with a sufficiently long ping_ipaddr key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14080"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "2.04",
+      "cve_id": "CVE-2020-14081",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-827DRU devices through 2.06B04 contain multiple command injections in apply.cgi via the action send_log_email with the key auth_acname (or auth_passwd), allowing an authenticated user to run arbitrary commands on the device.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14081"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

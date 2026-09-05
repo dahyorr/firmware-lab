@@ -1,0 +1,147 @@
+{
+  "run_id": "3476be2d",
+  "timestamp": "2026-08-28T08:10:10.187534+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/DIR-885L_REVA_FIRMWARE_PATCH_v1.20B02.zip",
+    "name": "DIR-885L_REVA_FIRMWARE_PATCH_v1.20B02.zip",
+    "sha256": "d59fb6240936265c7d03ac52cf487f2245ec5ad9b96899dc2b72df593c2ef5de",
+    "size_bytes": 45365237
+  },
+  "emulation": {
+    "image_id": 53,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 49.5,
+    "services": [
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open  ssl/vop?"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "intermapper?",
+        "version": "",
+        "raw_banner": "8181/tcp  open  intermapper?"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "49152/tcp open  unknown"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:09 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.014s latency).\nNot shown: 65532 closed ports\nPORT      STATE SERVICE      VERSION\n4433/tcp  open  ssl/vop?\n8181/tcp  open  intermapper?\n49152/tcp open  unknown\n3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port4433-TCP:V=7.80%T=SSL%I=7%D=8/28%Time=6A91424C%P=x86_64-pc-linux-gn\nSF:u%r(GetRequest,104A,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20WebServer\\r\\n\nSF:Date:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:30\\x20GMT\\r\\n\\r\\n<html>\\n\\t\nSF:<head>\\n\\t\\t<title>D-LINK</title>\\n\\t\\t<meta\\x20http-equiv=\\\"X-UA-Compa\nSF:tible\\\"\\x20content=\\\"IE=9\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"Content-Type\\\"\\\nSF:x20content=\\\"text/html;\\x20charset=utf-8\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"\nSF:Content-Type\\\"\\x20content=\\\"text/css\\\">\\n\\t\\t<link\\x20rel=\\\"stylesheet\\\nSF:\"\\x20type=\\\"text/css\\\"\\x20href=\\\"css/style_sharePort\\.css\\\"\\x20media=\\\"\nSF:all\\\"\\x20/>\\n\\t\\t<link\\x20rel=stylesheet\\x20type=\\\"text/css\\\"\\x20href=\\\nSF:\"/css/jquery\\.selectbox\\.css\\\"\\x20/>\\n\\t\\t<script\\x20type=\\\"text/javasc\nSF:ript\\\"\\x20src=\\\"js/jquery-1\\.8\\.2\\.min\\.js\\\"\\x20tppabs=\\\"/webaccess/js/\nSF:jquery-1\\.8\\.2\\.min\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\"text/javascr\nSF:ipt\\\"\\x20src=\\\"js/jquery\\.selectbox-0\\.2_new\\.js\\\"\\x20tppabs=\\\"/webacce\nSF:ss/js/jquery\\.selectbox-0\\.2_new\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\nSF:\"text/javascript\\\"\\x20src=\\\"fancybox/json2\\.js\\\"\\x20tppabs=\\\"/webaccess\nSF:/fancybox/json2\\.js\\\"></script>\\n\\x20\\x20\\x20\\x20<script\\x20language=\\\"\nSF:JavaScript\\\"\\x20src=\\\"js/object\\.js\\\"\\x20tppabs=\\\"/webaccess/js/object\\\nSF:.js\\\"></script>\\n\")%r(FourOhFourRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20\nSF:Found\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x20\nSF:16:10:43\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x2\nSF:0\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20F\nSF:ound</h1>\\nThe\\x20resource\\x20requested\\x20could\\x20not\\x20be\\x20found\\\nSF:x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port8181-TCP:V=7.80%I=7%D=8/28%Time=6A91423E%P=x86_64-pc-linux-gnu%r(Ge\nSF:tRequest,104A,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20WebServer\\r\\nDate:\\\nSF:x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:17\\x20GMT\\r\\n\\r\\n<html>\\n\\t<head>\nSF:\\n\\t\\t<title>D-LINK</title>\\n\\t\\t<meta\\x20http-equiv=\\\"X-UA-Compatible\\\nSF:\"\\x20content=\\\"IE=9\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20con\nSF:tent=\\\"text/html;\\x20charset=utf-8\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"Conten\nSF:t-Type\\\"\\x20content=\\\"text/css\\\">\\n\\t\\t<link\\x20rel=\\\"stylesheet\\\"\\x20t\nSF:ype=\\\"text/css\\\"\\x20href=\\\"css/style_sharePort\\.css\\\"\\x20media=\\\"all\\\"\\\nSF:x20/>\\n\\t\\t<link\\x20rel=stylesheet\\x20type=\\\"text/css\\\"\\x20href=\\\"/css/\nSF:jquery\\.selectbox\\.css\\\"\\x20/>\\n\\t\\t<script\\x20type=\\\"text/javascript\\\"\nSF:\\x20src=\\\"js/jquery-1\\.8\\.2\\.min\\.js\\\"\\x20tppabs=\\\"/webaccess/js/jquery\nSF:-1\\.8\\.2\\.min\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\"text/javascript\\\"\\\nSF:x20src=\\\"js/jquery\\.selectbox-0\\.2_new\\.js\\\"\\x20tppabs=\\\"/webaccess/js/\nSF:jquery\\.selectbox-0\\.2_new\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\"text/\nSF:javascript\\\"\\x20src=\\\"fancybox/json2\\.js\\\"\\x20tppabs=\\\"/webaccess/fancy\nSF:box/json2\\.js\\\"></script>\\n\\x20\\x20\\x20\\x20<script\\x20language=\\\"JavaSc\nSF:ript\\\"\\x20src=\\\"js/object\\.js\\\"\\x20tppabs=\\\"/webaccess/js/object\\.js\\\">\nSF:</script>\\n\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\nSF:\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10\nSF::22\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20\nSF:127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20\nSF:Implemented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20\nSF:not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\")%r(FourOhFourRequest,F0,\"HT\nSF:TP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Wed,\nSF:\\x2027\\x20Sep\\x202017\\x2016:10:22\\x20GMT\\r\\nContent-Type:\\x20text/html\\\nSF:r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</ti\nSF:tle>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20cou\nSF:ld\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port49152-TCP:V=7.80%I=7%D=8/28%Time=6A91423E%P=x86_64-pc-linux-gnu%r(F\nSF:ourOhFourRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Web\nSF:Server\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:16\\x20GMT\\r\\nCont\nSF:ent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>\nSF:404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resou\nSF:rce\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\nSF:\\.\\n\")%r(GetRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20\nSF:WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:21\\x20GMT\\r\\nC\nSF:ontent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<tit\nSF:le>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20re\nSF:source\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20ser\nSF:ver\\.\\n\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\n\nSF:Server:\\x20WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:21\\\nSF:x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20127\\\nSF:r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20Impl\nSF:emented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20not\\\nSF:x20allowed\\x20by\\x20this\\x20server\\.\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 49.45 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.20",
+      "cve_id": "CVE-2016-5681",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Stack-based buffer overflow in dws/api/Login on D-Link DIR-850L B1 2.07 before 2.07WWB05, DIR-817 Ax, DIR-818LW Bx before 2.05b03beta03, DIR-822 C1 3.01 before 3.01WWb02, DIR-823 A1 1.00 before 1.00WWb05, DIR-895L A1 1.11 before 1.11WWb04, DIR-890L A1 1.09 before 1.09b14, DIR-885L A1 1.11 before 1.11WWb07, DIR-880L A1 1.07 before 1.07WWb08, DIR-868L B1 2.03 before 2.03WWb01, and DIR-868L C1 3.00 before 3.00WWb01 devices allows remote attackers to execute arbitrary code via a long session cookie.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-5681"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.20",
+      "cve_id": "CVE-2018-12103",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "An issue was discovered on D-Link DIR-890L with firmware 1.21B02beta01 and earlier, DIR-885L/R with firmware 1.21B03beta01 and earlier, and DIR-895L/R with firmware 1.21B04beta04 and earlier devices (all hardware revisions). Due to the predictability of the /docs/captcha_(number).jpeg URI, being local to the network, but unauthenticated to the administrator's panel, an attacker can disclose the CAPTCHAs used by the access point and can elect to load the CAPTCHA of their choosing, leading to unauthorized login attempts to the access point.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-12103"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.20",
+      "cve_id": "CVE-2016-6563",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Processing malformed SOAP messages when performing the HNAP Login action causes a buffer overflow in the stack in some D-Link DIR routers. The vulnerable XML fields within the SOAP body are: Action, Username, LoginPassword, and Captcha. The following products are affected: DIR-823, DIR-822, DIR-818L(W), DIR-895L, DIR-890L, DIR-885L, DIR-880L, DIR-868L, and DIR-850L.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6563"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.20",
+      "cve_id": "CVE-2019-16190",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "SharePort Web Access on D-Link DIR-868L REVB through 2.03, DIR-885L REVA through 1.20, and DIR-895L REVA through 1.21 devices allows Authentication Bypass, as demonstrated by a direct request to folder_view.php or category_view.php.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16190"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.20",
+      "cve_id": "CVE-2020-29323",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "The D-link router DIR-885L-MFC 1.15b02, v1.21b05 is vulnerable to credentials disclosure in telnet service through decompilation of firmware, that allows an unauthenticated attacker to gain access to the firmware and to extract sensitive data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-29323"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.20",
+      "cve_id": "CVE-2023-36090",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Authentication Bypass vulnerability in D-Link DIR-885L FW102b01 allows remote attackers to gain escalated privileges via phpcgi. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-36090"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 8181,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

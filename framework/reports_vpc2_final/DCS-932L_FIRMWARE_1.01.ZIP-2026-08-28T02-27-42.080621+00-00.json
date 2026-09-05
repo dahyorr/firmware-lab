@@ -1,0 +1,163 @@
+{
+  "run_id": "134eec8d",
+  "timestamp": "2026-08-28T02:27:42.080621+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DCS-932L_FIRMWARE_1.01.ZIP",
+    "name": "DCS-932L_FIRMWARE_1.01.ZIP",
+    "sha256": "499291808064f106192de4a21cf484f7cbb78dc7c65cda7def6a09589becd11e",
+    "size_bytes": 3707149
+  },
+  "emulation": {
+    "image_id": 16,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.206.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.206.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 48.8,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Boa HTTPd 0.94.14rc21",
+        "raw_banner": "80/tcp    open  http       Boa HTTPd 0.94.14rc21"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp   open  ssl/https?"
+      },
+      {
+        "port": 57784,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Boa HTTPd 0.94.14rc21",
+        "raw_banner": "57784/tcp open  http       Boa HTTPd 0.94.14rc21"
+      },
+      {
+        "port": 60905,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Boa HTTPd 0.94.14rc21",
+        "raw_banner": "60905/tcp open  http       Boa HTTPd 0.94.14rc21"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 02:25 UTC\nNmap scan report for 192.168.206.1\nHost is up (0.013s latency).\nNot shown: 65531 closed ports\nPORT      STATE SERVICE    VERSION\n80/tcp    open  http       Boa HTTPd 0.94.14rc21\n443/tcp   open  ssl/https?\n57784/tcp open  http       Boa HTTPd 0.94.14rc21\n60905/tcp open  http       Boa HTTPd 0.94.14rc21\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 48.77 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: belkin",
+      "severity": "info"
+    },
+    {
+      "port": 57784,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 57784,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 57784,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 57784,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 57784,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: belkin",
+      "severity": "info"
+    },
+    {
+      "port": 60905,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 60905,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 60905,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 60905,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 60905,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: belkin",
+      "severity": "info"
+    }
+  ]
+}

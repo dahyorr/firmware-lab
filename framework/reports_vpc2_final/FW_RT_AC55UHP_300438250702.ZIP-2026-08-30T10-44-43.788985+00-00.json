@@ -1,0 +1,28 @@
+{
+  "run_id": "db86712d",
+  "timestamp": "2026-08-30T10:44:43.788985+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC55UHP_300438250702.ZIP",
+    "name": "FW_RT_AC55UHP_300438250702.ZIP",
+    "sha256": "0a524c2fcf192f08a08197d441e65333b7997c3bd0bec0fc389a3b3442d65c4e",
+    "size_bytes": 34562602
+  },
+  "emulation": {
+    "image_id": 385,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.0,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 10:42 UTC\nNmap scan report for 192.168.0.1\nHost is up.\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.02 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

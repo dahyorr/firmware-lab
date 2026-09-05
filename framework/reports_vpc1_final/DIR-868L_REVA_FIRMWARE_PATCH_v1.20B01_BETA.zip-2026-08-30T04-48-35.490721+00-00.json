@@ -1,0 +1,92 @@
+{
+  "run_id": "df554d0e",
+  "timestamp": "2026-08-30T04:48:35.490721+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/DIR-868L_REVA_FIRMWARE_PATCH_v1.20B01_BETA.zip",
+    "name": "DIR-868L_REVA_FIRMWARE_PATCH_v1.20B01_BETA.zip",
+    "sha256": "2b15951a1a5d30198631094a7473dbc1bc83e1a112f8ae2bcb245e5253b5c114",
+    "size_bytes": 22829315
+  },
+  "emulation": {
+    "image_id": 371,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 79.8,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.78",
+        "raw_banner": "53/tcp    open  domain       dnsmasq 2.78"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http?",
+        "version": "",
+        "raw_banner": "80/tcp    open  http?"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp   open  ssl/https?"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open  ssl/vop?"
+      },
+      {
+        "port": 5449,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "5449/tcp  open  unknown"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "intermapper?",
+        "version": "",
+        "raw_banner": "8181/tcp  open  intermapper?"
+      },
+      {
+        "port": 8182,
+        "protocol": "tcp",
+        "service": "vmware-fdm?",
+        "version": "",
+        "raw_banner": "8182/tcp  open  vmware-fdm?"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "49152/tcp open  unknown"
+      },
+      {
+        "port": 63481,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.78",
+        "raw_banner": "63481/tcp open  domain       dnsmasq 2.78"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 04:47 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.034s latency).\nNot shown: 65526 closed ports\nPORT      STATE SERVICE      VERSION\n53/tcp    open  domain       dnsmasq 2.78\n80/tcp    open  http?\n443/tcp   open  ssl/https?\n4433/tcp  open  ssl/vop?\n5449/tcp  open  unknown\n8181/tcp  open  intermapper?\n8182/tcp  open  vmware-fdm?\n49152/tcp open  unknown\n63481/tcp open  domain       dnsmasq 2.78\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 79.73 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

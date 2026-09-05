@@ -1,0 +1,36 @@
+{
+  "run_id": "5dcd824d",
+  "timestamp": "2026-08-28T08:55:28.386715+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/dcs930lb1_v2.14.05.bin",
+    "name": "dcs930lb1_v2.14.05.bin",
+    "sha256": "027884eabdaafdbc860a6ea74be387156eb16b7fa418752108ceaed403b3df2f",
+    "size_bytes": 4194304
+  },
+  "emulation": {
+    "image_id": 46,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 43.4,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http?",
+        "version": "",
+        "raw_banner": "80/tcp open  http?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:48 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.012s latency).\nNot shown: 65534 closed ports\nPORT   STATE SERVICE VERSION\n80/tcp open  http?\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 43.33 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

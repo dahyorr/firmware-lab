@@ -1,0 +1,89 @@
+{
+  "run_id": "5d7f08f5",
+  "timestamp": "2026-08-30T11:50:00.474763+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-811DRU_1.0.10.0.zip",
+    "name": "TEW-811DRU_1.0.10.0.zip",
+    "sha256": "bc3a0a1438f3a9d53f8326ec6a493ed2c16548cbf170596a06fc75b4cc33b5e7",
+    "size_bytes": 6698388
+  },
+  "emulation": {
+    "image_id": 435,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 17.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 11:49 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.033s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 17.01 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.10.0",
+      "cve_id": "CVE-2023-0612",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A vulnerability, which was classified as critical, was found in TRENDnet TEW-811DRU 1.0.10.0. Affected is an unknown function of the file /wireless/basic.asp of the component httpd. The manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-219936.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0612"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.10.0",
+      "cve_id": "CVE-2023-0613",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A vulnerability has been found in TRENDnet TEW-811DRU 1.0.10.0 and classified as critical. Affected by this vulnerability is an unknown functionality of the file /wireless/security.asp of the component httpd. The manipulation leads to memory corruption. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-219937 was assigned to this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0613"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.10.0",
+      "cve_id": "CVE-2023-0617",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A vulnerability was found in TRENDNet TEW-811DRU 1.0.10.0. It has been classified as critical. This affects an unknown part of the file /wireless/guestnetwork.asp of the component httpd. The manipulation leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-219957 was assigned to this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0617"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.10.0",
+      "cve_id": "CVE-2023-0637",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A vulnerability, which was classified as critical, was found in TRENDnet TEW-811DRU 1.0.10.0. This affects an unknown part of the file wan.asp of the component Web Management Interface. The manipulation leads to memory corruption. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-220017 was assigned to this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0637"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.10.0",
+      "cve_id": "CVE-2023-0638",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "A vulnerability has been found in TRENDnet TEW-811DRU 1.0.10.0 and classified as critical. This vulnerability affects unknown code of the component Web Interface. The manipulation leads to command injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-220018 is the identifier assigned to this vulnerability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0638"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.10.0",
+      "cve_id": "CVE-2025-15472",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "A flaw has been found in TRENDnet TEW-811DRU 1.0.2.0. This affects the function setDeviceURL\u00a0 of the file uapply.cgi of the component httpd\u00a0. This manipulation of the argument DeviceURL causes os command injection. The attack can be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15472"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

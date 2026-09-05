@@ -1,0 +1,22 @@
+{
+  "run_id": "f3bbd04b",
+  "timestamp": "2026-08-28T18:28:26.576043+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6250_V1.0.1.84-1.0.78.zip",
+    "name": "R6250_V1.0.1.84-1.0.78.zip",
+    "sha256": "9c9469f6c626803542e3fbe8d1aa13c8c7e85063db8349a36af9e797f2fb2711",
+    "size_bytes": 9736836
+  },
+  "emulation": {
+    "image_id": 30,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,2 @@
+vpc=1 scratch_id=117 name=R7000-V1.0.5.64_1.1.88 brand=netgear_r7000_v1_0_5_64_1_1_88
+matched_regex: exitcode=0x00001600

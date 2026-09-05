@@ -1,0 +1,22 @@
+{
+  "run_id": "605c9696",
+  "timestamp": "2026-08-30T11:55:58.442263+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA9500_1.1.7.180968_prod.img",
+    "name": "FW_EA9500_1.1.7.180968_prod.img",
+    "sha256": "6c64d561497132009ace2a9aaf72599836b91aed9f409b3bf0b68b418dc27fb0",
+    "size_bytes": 20025600
+  },
+  "emulation": {
+    "image_id": 408,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

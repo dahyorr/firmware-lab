@@ -1,0 +1,50 @@
+{
+  "run_id": "2967f0d8",
+  "timestamp": "2026-08-30T00:56:01.793849+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR600B_FW206b01_FOR_Hardware_B.bin",
+    "name": "DIR600B_FW206b01_FOR_Hardware_B.bin",
+    "sha256": "d38a9d8b9eaa32622bb9c74d0eb5a5f3f07b14eb6b4363307287ec3746eaea76",
+    "size_bytes": 3174528
+  },
+  "emulation": {
+    "image_id": 323,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 34.9,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.45",
+        "raw_banner": "53/tcp    open     domain  dnsmasq 2.45"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "D-Link DIR-600 WAP http config 2.12OR",
+        "raw_banner": "80/tcp    open     http    D-Link DIR-600 WAP http config 2.12OR"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-600 WAP UPnP 2.12OR (UPnP 1.0)",
+        "raw_banner": "49152/tcp open     upnp    D-Link DIR-600 WAP UPnP 2.12OR (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 00:50 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.041s latency).\nNot shown: 65531 closed ports\nPORT      STATE    SERVICE VERSION\n1/tcp     filtered tcpmux\n53/tcp    open     domain  dnsmasq 2.45\n80/tcp    open     http    D-Link DIR-600 WAP http config 2.12OR\n49152/tcp open     upnp    D-Link DIR-600 WAP UPnP 2.12OR (UPnP 1.0)\nService Info: OS: Linux; Device: WAP; CPE: cpe:/h:dlink:dir-600:2.12or, cpe:/o:linux:linux_kernel, cpe:/h:d-link:dir-600\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 34.82 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

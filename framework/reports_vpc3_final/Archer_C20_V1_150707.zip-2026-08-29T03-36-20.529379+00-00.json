@@ -1,0 +1,229 @@
+{
+  "run_id": "61c8f402",
+  "timestamp": "2026-08-29T03:36:20.529379+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/Archer_C20_V1_150707.zip",
+    "name": "Archer_C20_V1_150707.zip",
+    "sha256": "4a3b473014f224b462abc53550c4cb1e1087ea06baa0aa84a163efb35a71add1",
+    "size_bytes": 6782315
+  },
+  "emulation": {
+    "image_id": 69,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": true
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 79.3,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 03:35 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.056s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 79.25 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2011-5174",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "Buffer overflow in Intel Trusted Execution Technology (TXT) SINIT Authenticated Code Modules (ACM) in Intel Q67 Express, C202, C204, C206 Chipsets, and Mobile Intel QM67, and QS67 Chipset before 2nd_gen_i5_i7_SINIT_51.BIN Express; Intel Q57, 3450 Chipsets and Mobile Intel QM57 and QS57 Express Chipset before i5_i7_DUAL_SINIT_51.BIN and i7_QUAD_SINIT_51.BIN; Mobile Intel GM45, GS45, and PM45 Express Chipset before GM45_GS45_PM45_SINIT_51.BIN; Intel Q35 Express Chipsets before Q35_SINIT_51.BIN; and Intel 5520, 5500, X58, and 7500 Chipsets before SINIT ACM 1.1 allows local users to bypass the Trusted Execution Technology protection mechanism and perform other unspecified SINIT ACM functions via unspecified vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-5174"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2013-5740",
+      "cvss_score": 6.9,
+      "severity": null,
+      "description": "Unspecified vulnerability in the Intel Trusted Execution Technology (TXT) SINIT Authenticated Code Modules (ACM) before 1.2, as used by the Intel QM77, QS77, Q77 Express, C216, Q67 Express, C202, C204, and C206 chipsets and Mobile Intel QM67 and QS67 chipsets, when the measured launch environment (MLE) is invoked, allows local users to bypass the Trusted Execution Technology protection mechanism and perform other unspecified SINIT ACM functions via unspecified vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-5740"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2017-8217",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "TP-Link C2 and C20i devices through firmware 0.9.1 4.2 v0032.0 Build 160706 Rel.37961n have too permissive iptables rules, e.g., SNMP is not blocked on any interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8217"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2017-8218",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "vsftpd on TP-Link C2 and C20i devices through firmware 0.9.1 4.2 v0032.0 Build 160706 Rel.37961n has a backdoor admin account with the 1234 password, a backdoor guest account with the guest password, and a backdoor test account with the test password.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8218"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2017-8219",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "TP-Link C2 and C20i devices through firmware 0.9.1 4.2 v0032.0 Build 160706 Rel.37961n allow DoSing the HTTP server via a crafted Cookie header to the /cgi/ansi URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8219"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2017-8220",
+      "cvss_score": 9.9,
+      "severity": "CRITICAL",
+      "description": "TP-Link C2 and C20i devices through firmware 0.9.1 4.2 v0032.0 Build 160706 Rel.37961n allow remote code execution with a single HTTP request by placing shell commands in a \"host=\" line within HTTP POST data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8220"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-17315",
+      "cvss_score": 6.1,
+      "severity": "MEDIUM",
+      "description": "On the RICOH MP C2003 printer, HTML Injection and Stored XSS vulnerabilities have been discovered in the area of adding addresses via the entryNameIn parameter to /web/entry/en/address/adrsSetUserWizard.cgi.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-17315"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2015-7276",
+      "cvss_score": 5.9,
+      "severity": "MEDIUM",
+      "description": "Technicolor C2000T and C2100T uses hard-coded cryptographic keys.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-7276"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-7848",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "The EFM ipTIME C200 IP Camera is affected by a Command Injection vulnerability in /login.cgi?logout=1 script. To exploit this vulnerability, an attacker can send a GET request that executes arbitrary OS commands via cookie value.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7848"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-26614",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "ius_get.cgi in IpTime C200 camera allows remote code execution. A remote attacker may send a crafted parameters to the exposed vulnerable web service interface which invokes the arbitrary shell command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26614"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-7879",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "This issue was discovered when the ipTIME C200 IP Camera was synchronized with the ipTIME NAS. It is necessary to extract value for ipTIME IP camera because the ipTIME NAS send ans setCookie('[COOKIE]') . The value is transferred to the --header option in wget binary, and there is no validation check. This vulnerability allows remote attackers to execute remote command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7879"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-44827",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "There is remote authenticated OS command injection on TP-Link Archer C20i 0.9.1 3.2 v003a.0 Build 170221 Rel.55462n devices vie the X_TP_ExternalIPv6Address HTTP parameter, allowing a remote attacker to run arbitrary commands on the router with root privileges.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44827"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-4045",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TP-Link Tapo C200 IP camera, on its 1.1.15 firmware version and below, is affected by an unauthenticated RCE vulnerability, present in the uhttpd binary running by default as root. The exploitation of this vulnerability allows an attacker to take full control of the camera.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4045"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-38395",
+      "cvss_score": 9.1,
+      "severity": "CRITICAL",
+      "description": "Honeywell Experion PKS C200, C200E, C300, and ACE controllers are vulnerable to improper neutralization of special elements in output, which may allow an attacker to remotely execute arbitrary code and cause a denial-of-service condition.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-38395"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-38397",
+      "cvss_score": 10.0,
+      "severity": "CRITICAL",
+      "description": "Honeywell Experion PKS C200, C200E, C300, and ACE controllers are vulnerable to unrestricted file uploads, which may allow an attacker to remotely execute arbitrary code and cause a denial-of-service condition.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-38397"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-38399",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Honeywell Experion PKS C200, C200E, C300, and ACE controllers are vulnerable to relative path traversal, which may allow an attacker access to unauthorized files and directories.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-38399"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-41505",
+      "cvss_score": 6.4,
+      "severity": "MEDIUM",
+      "description": "An access control issue on TP-LInk Tapo C200 V1 devices allows physically proximate attackers to obtain root access by connecting to the UART pins, interrupting the boot process, and setting an init=/bin/sh value.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-41505"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-27126",
+      "cvss_score": 4.6,
+      "severity": "MEDIUM",
+      "description": "The AES Key-IV pair used by the TP-Link TAPO C200 camera V3 (EU) on firmware version 1.1.22 Build 220725 is reused across all cameras. An attacker with physical access to a camera is able to extract and decrypt sensitive data containing the Wifi password and the TP-LINK account credential of the victim.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-27126"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-30383",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "TP-LINK Archer C50v2 Archer C50(US)_V2_160801, TP-LINK Archer C20v1 Archer_C20_V1_150707, and TP-LINK Archer C2v1 Archer_C2_US__V1_170228 were discovered to contain a buffer overflow which may lead to a Denial of Service (DoS) when parsing crafted data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-30383"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-38906",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "An issue in TPLink Smart Bulb Tapo series L530 1.1.9, L510E 1.0.8, L630 1.0.3, P100 1.4.9, Smart Camera Tapo series C200 1.1.18, and Tapo Application 2.8.14 allows a remote attacker to obtain sensitive information via the authentication code for the UDP message.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38906"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

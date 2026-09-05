@@ -1,0 +1,343 @@
+{
+  "run_id": "aedff90a",
+  "timestamp": "2026-08-29T22:44:18.791671+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DM111Pv2_Firmware_Version_2.00.26__North_America_.zip",
+    "name": "DM111Pv2_Firmware_Version_2.00.26__North_America_.zip",
+    "sha256": "0575a61ebe208eda36926c63ed2dc16aecc6580825b1d7fca432a71667e80521",
+    "size_bytes": 1582212
+  },
+  "emulation": {
+    "image_id": 61,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 41.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Arris TG862G http config",
+        "raw_banner": "80/tcp    open  http    Arris TG862G http config"
+      },
+      {
+        "port": 32764,
+        "protocol": "tcp",
+        "service": "scmm",
+        "version": "SerComm manufacturer backdoor",
+        "raw_banner": "32764/tcp open  scmm    SerComm manufacturer backdoor"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 22:43 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.030s latency).\nNot shown: 64439 closed ports, 1094 filtered ports\nPORT      STATE SERVICE VERSION\n80/tcp    open  http    Arris TG862G http config\n32764/tcp open  scmm    SerComm manufacturer backdoor\nService Info: Devices: WAP, broadband router; CPE: cpe:/h:arris:tg862g\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 41.07 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2007-2796",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Arris Cadant C3 CMTS allows remote attackers to cause a denial of service (service termination) via a malformed IP packet with an invalid IP option.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-2796"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-3778",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in goform/RgDdns in ARRIS (formerly Motorola) SBG901 SURFboard Wireless Cable Modem allow remote attackers to hijack the authentication of administrators for requests that (1) change the dns service via the DdnsService parameter, (2) change the username via the DdnsUserName parameter, (3) change the password via the DdnsPassword parameter, or (4) change the host name via the DdnsHostName parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-3778"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-4863",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The Arris Touchstone DG950A cable modem with software 7.10.131 has an SNMP community of public, which allows remote attackers to obtain sensitive password, key, and SSID information via an SNMP request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-4863"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-8423",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Unspecified vulnerability in the management portal in ARRIS VAP2500 before FW08.41 allows remote attackers to execute arbitrary commands via unknown vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-8423"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-8424",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "ARRIS VAP2500 before FW08.41 does not properly validate passwords, which allows remote attackers to bypass authentication.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-8424"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-8425",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "The management portal in ARRIS VAP2500 before FW08.41 allows remote attackers to obtain credentials by reading the configuration files.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-8425"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-5437",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in ARRIS Touchstone TG862G/CT Telephony Gateway with firmware 7.6.59S.CT and earlier allow remote attackers to hijack the authentication of administrators for requests that (1) enable remote management via a request to remote_management.php, (2) add a port forwarding rule via a request to port_forwarding_add.php, (3) change the wireless network to open via a request to wireless_network_configuration_edit.php, or (4) conduct cross-site scripting (XSS) attacks via the keyword parameter to managed_sites_add_keyword.php.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-5437"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-5438",
+      "cvss_score": 3.5,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in ARRIS Touchstone TG862G/CT Telephony Gateway with firmware 7.6.59S.CT and earlier allows remote authenticated users to inject arbitrary web script or HTML via the computer_name parameter to connected_devices_computers_edit.php.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-5438"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2014-9406",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "ARRIS Touchstone TG862G/CT Telephony Gateway with firmware 7.6.59S.CT and earlier has a default password of password for the admin account, which makes it easier for remote attackers to obtain access via a request to home_loggedout.php.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-9406"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2009-5149",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Arris DG860A, TG862A, and TG862G devices with firmware TS0703128_100611 through TS0705125D_031115 have predictable technician passwords, which makes it easier for remote attackers to obtain access via the web management interface, related to a \"password of the day\" issue.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-5149"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2015-7289",
+      "cvss_score": 9.3,
+      "severity": null,
+      "description": "Arris DG860A, TG862A, and TG862G devices with firmware TS0703128_100611 through TS0705125D_031115 have a hardcoded administrator password derived from a serial number, which makes it easier for remote attackers to obtain access via the web management interface, SSH, TELNET, or SNMP.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-7289"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2015-7290",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in adv_pwd_cgi in the web management interface on Arris DG860A, TG862A, and TG862G devices with firmware TS0703128_100611 through TS0705125D_031115 allows remote attackers to inject arbitrary web script or HTML via the pwd parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-7290"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2015-7291",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Cross-site request forgery (CSRF) vulnerability in adv_pwd_cgi in the web management interface on Arris DG860A, TG862A, and TG862G devices with firmware TS0703128_100611 through TS0705125D_031115 allows remote attackers to hijack the authentication of arbitrary users.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-7291"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2017-9476",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "The Comcast firmware on Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421733-160420a-CMCST); Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421746-170221a-CMCST); and Arris TG1682G (eMTA&DOCSIS version 10.0.132.SIP.PC20.CT, software version TG1682_2.2p7s2_PROD_sey) devices makes it easy for remote attackers to determine the hidden SSID and passphrase for a Home Security Wi-Fi network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9476"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2017-9490",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The Comcast firmware on Arris TG1682G (eMTA&DOCSIS version 10.0.132.SIP.PC20.CT, software version TG1682_2.2p7s2_PROD_sey) devices allows configuration changes via CSRF.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9490"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2017-9491",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "The Comcast firmware on Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421733-160420a-CMCST); Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421746-170221a-CMCST); Cisco DPC3939B (firmware version dpc3939b-v303r204217-150321a-CMCST); Cisco DPC3941T (firmware version DPC3941_2.5s3_PROD_sey); and Arris TG1682G (eMTA&DOCSIS version 10.0.132.SIP.PC20.CT, software version TG1682_2.2p7s2_PROD_sey) devices does not set the secure flag for cookies in an https session to an administration application, which makes it easier for remote attackers to capture these cookies by intercepting their transmission within an http session.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9491"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2017-9492",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "The Comcast firmware on Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421733-160420a-CMCST); Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421746-170221a-CMCST); Cisco DPC3939B (firmware version dpc3939b-v303r204217-150321a-CMCST); Cisco DPC3941T (firmware version DPC3941_2.5s3_PROD_sey); and Arris TG1682G (eMTA&DOCSIS version 10.0.132.SIP.PC20.CT, software version TG1682_2.2p7s2_PROD_sey) devices does not include the HTTPOnly flag in a Set-Cookie header for administration applications, which makes it easier for remote attackers to obtain potentially sensitive information via script access to cookies.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9492"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2017-9521",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The Comcast firmware on Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421733-160420a-CMCST); Cisco DPC3939 (firmware version dpc3939-P20-18-v303r20421746-170221a-CMCST); Cisco DPC3939B (firmware version dpc3939b-v303r204217-150321a-CMCST); Cisco DPC3941T (firmware version DPC3941_2.5s3_PROD_sey); and Arris TG1682G (eMTA&DOCSIS version 10.0.132.SIP.PC20.CT, software version TG1682_2.2p7s2_PROD_sey) devices allows remote attackers to execute arbitrary code via a specific (but unstated) exposed service. NOTE: the scope of this CVE does NOT include the concept of \"Unnecessary Services\" in general; the scope is only a single service that is unnecessarily exposed, leading to remote code execution. The details of that service might be disclosed at a later date.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9521"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2017-10793",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "The AT&T U-verse 9.2.2h0d83 firmware for the Arris NVG589, NVG599, and unspecified other devices, when IP Passthrough mode is not used, configures an sbdc.ha WAN TCP service on port 61001 with the bdctest account and the bdctest password, which allows remote attackers to obtain sensitive information (such as the Wi-Fi password) by leveraging knowledge of a hardware identifier, related to the Bulk Data Collection (BDC) mechanism defined in Broadband Forum technical reports.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-10793"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "Arris TG862G http config",
+      "cve_id": "CVE-2017-14115",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "The AT&T U-verse 9.2.2h0d83 firmware for the Arris NVG589 and NVG599 devices, when IP Passthrough mode is not used, configures ssh-permanent-enable WAN SSH logins to the remotessh account with the 5SaP9I26 password, which allows remote attackers to access a \"Terminal shell v1.0\" service, and subsequently obtain unrestricted root privileges, by establishing an SSH session and then entering certain shell metacharacters and BusyBox commands.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-14115"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27132",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "SerComm AG Combo VD625 AGSOT_2.1.0 devices allow CRLF injection (for HTTP header injection) in the download function via the Content-Disposition header.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27132"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-44080",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "A Command Injection vulnerability in httpd web server (setup.cgi) in SerComm h500s, FW: lowi-h500s-v3.4.22 allows logged in administrators to arbitrary OS commands as root in the device via the connection_type parameter of the statussupport_diagnostic_tracing.json endpoint.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44080"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27702",
+      "cvss_score": 7.3,
+      "severity": "HIGH",
+      "description": "Sercomm Router Etisalat Model S3- AC2100 is affected by Incorrect Access Control via the diagnostic utility in the router dashboard.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27702"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2021-27703",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "Sercomm Model Etisalat Model S3- AC2100 is affected by Cross Site Scripting (XSS) via the firmware update page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27703"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2022-4985",
+      "cvss_score": null,
+      "severity": null,
+      "description": "Vodafone H500s devices running firmware v3.5.10 (hardware model Sercomm VFH500) expose the WiFi access point password via an unauthenticated HTTP endpoint. By sending a crafted GET request to /data/activation.json with specific headers and cookies, a remote attacker can retrieve a JSON document that contains the wifi_password field. This allows an unauthenticated attacker to obtain the WiFi credentials and gain unauthorized access to the wireless network, compromising confidentiality of network traffic and attached systems.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4985"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67112",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Use of a hard-coded AES-256-CBC key in the configuration backup/restore implementation of Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote authenticated users to decrypt, modify, and re-encrypt device configurations, enabling credential manipulation and privilege escalation via the GUI import/export functions.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67112"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67113",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "OS command injection in the CWMP client (/ftl/bin/cwmp) of Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers controlling the ACS endpoint to execute arbitrary commands as root via a crafted TR-069 Download URL that is passed unescaped into the firmware upgrade pipeline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67113"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67114",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Use of a deterministic credential generation algorithm in /ftl/bin/calc_f2 in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote attackers to derive valid administrative/root credentials from the device's MAC address, enabling authentication bypass and full device access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67114"
+    },
+    {
+      "port": 32764,
+      "service": "scmm",
+      "version": "SerComm manufacturer backdoor",
+      "cve_id": "CVE-2025-67115",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A path traversal vulnerability in /ftl/web/setup.cgi in Small Cell Sercomm SCE4255W (FreedomFi Englewood) firmware before DG3934v3@2308041842 allows remote authenticated users to read arbitrary files from the filesystem via crafted values in the log_type parameter to /logsave.htm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67115"
+    }
+  ],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "password",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": []
+}

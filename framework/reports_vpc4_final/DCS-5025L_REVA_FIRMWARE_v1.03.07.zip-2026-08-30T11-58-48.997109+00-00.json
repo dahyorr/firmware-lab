@@ -1,0 +1,22 @@
+{
+  "run_id": "05e84d2d",
+  "timestamp": "2026-08-30T11:58:48.997109+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-5025L_REVA_FIRMWARE_v1.03.07.zip",
+    "name": "DCS-5025L_REVA_FIRMWARE_v1.03.07.zip",
+    "sha256": "fe61ba34c54cc96e6e2cfd7c92dcd2e26d89ddecca0ffb7a596ce3e6f72f5ac9",
+    "size_bytes": 7866002
+  },
+  "emulation": {
+    "image_id": null,
+    "success": false,
+    "architecture": null,
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,89 @@
+{
+  "run_id": "2bf4291d",
+  "timestamp": "2026-08-28T08:29:11.609338+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-652BRU_1.00b12.zip",
+    "name": "TEW-652BRU_1.00b12.zip",
+    "sha256": "94f4dcb1702e9b71cd6a98cd7796b5b430ac6b6c8ba210925eec575f2fba1b82",
+    "size_bytes": 3321939
+  },
+  "emulation": {
+    "image_id": 49,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:26 UTC\nNmap scan report for 192.168.0.1\nHost is up.\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.08 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2019-11399",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered on TRENDnet TEW-651BR 2.04B1, TEW-652BRP 3.04b01, and TEW-652BRU 1.00b12 devices. OS command injection occurs through the get_set.ccp lanHostCfg_HostName_1.1.1.0.0 parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11399"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2019-11400",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered on TRENDnet TEW-651BR 2.04B1, TEW-652BRP 3.04b01, and TEW-652BRU 1.00b12 devices. A buffer overflow occurs through the get_set.ccp ccp_act parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11400"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2024-51187",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "TRENDnet TEW-651BR 2.04B1, TEW-652BRP 3.04b01, and TEW-652BRU 1.00b12 devices contain a Store Cross-site scripting (XSS) vulnerability via the firewallRule_Name_1.1.1.0.0 parameter on the /firewall_setting.htm page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-51187"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2024-51188",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "TRENDnet TEW-651BR 2.04B1, TEW-652BRP 3.04b01, and TEW-652BRU 1.00b12 devices contain a Store Cross-site scripting (XSS) vulnerability via the vsRule_VirtualServerName_1.1.10.0.0 parameter on the /virtual_server.htm page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-51188"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2024-51189",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "TRENDnet TEW-651BR 2.04B1, TEW-652BRP 3.04b01, and TEW-652BRU 1.00b12 devices contain a Store Cross-site scripting (XSS) vulnerability via the macList_Name_1.1.1.0.0 parameter on the /filters.htm page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-51189"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.00",
+      "cve_id": "CVE-2024-51190",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "TRENDnet TEW-651BR 2.04B1, TEW-652BRP 3.04b01, and TEW-652BRU 1.00b12 devices contain a Store Cross-site scripting (XSS) vulnerability via the ptRule_ApplicationName_1.1.6.0.0 parameter on the /special_ap.htm page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-51190"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

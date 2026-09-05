@@ -1,0 +1,22 @@
+{
+  "run_id": "75da6b82",
+  "timestamp": "2026-08-29T09:24:30.595457+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N65R_30043763754.zip",
+    "name": "FW_RT_N65R_30043763754.zip",
+    "sha256": "8260b71d9b4732e13bf6c38f102bf9aa16029411585b59ea93e5b85a20da69a8",
+    "size_bytes": 14580134
+  },
+  "emulation": {
+    "image_id": 209,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

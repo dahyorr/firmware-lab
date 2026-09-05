@@ -1,0 +1,36 @@
+{
+  "run_id": "afc1f00f",
+  "timestamp": "2026-08-28T04:43:08.802920+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNDR3800-V1.0.0.44.zip",
+    "name": "WNDR3800-V1.0.0.44.zip",
+    "sha256": "6c113d4125328a597ac7a6a6174067b8660ea4e26b7a05472ef7234beace8e44",
+    "size_bytes": 10992079
+  },
+  "emulation": {
+    "image_id": 127,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 151.7,
+    "services": [
+      {
+        "port": 548,
+        "protocol": "tcp",
+        "service": "afp?",
+        "version": "",
+        "raw_banner": "548/tcp open  afp?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 04:40 UTC\nWarning: 192.168.1.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.1.1\nHost is up (0.00035s latency).\nNot shown: 57308 filtered ports, 8226 closed ports\nPORT    STATE SERVICE VERSION\n548/tcp open  afp?\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 151.68 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "c33ceccc",
+  "timestamp": "2026-08-28T06:32:09.982385+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/COVR-3902_REVA_ROUTER_FIRMWARE_v1.01B05.zip",
+    "name": "COVR-3902_REVA_ROUTER_FIRMWARE_v1.01B05.zip",
+    "sha256": "466e0f612b9ff84fbd5cacbf173365cf1245978a05b13691500983aa90844903",
+    "size_bytes": 26401063
+  },
+  "emulation": {
+    "image_id": 28,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": true
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 80.0,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 06:30 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.039s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 80.01 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.01",
+      "cve_id": "CVE-2018-20432",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "D-Link COVR-2600R and COVR-3902 Kit before 1.01b05Beta01 use hardcoded credentials for telnet connection, which allows unauthenticated attackers to gain privileged access to the router, and to extract sensitive data or modify the configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-20432"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

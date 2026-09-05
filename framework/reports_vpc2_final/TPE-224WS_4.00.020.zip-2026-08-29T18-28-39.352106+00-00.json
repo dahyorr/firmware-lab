@@ -1,0 +1,22 @@
+{
+  "run_id": "36ea0992",
+  "timestamp": "2026-08-29T18:28:39.352106+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TPE-224WS_4.00.020.zip",
+    "name": "TPE-224WS_4.00.020.zip",
+    "sha256": "66457798fd836f770dca34f46706fa512dae6bb3271c3752d6c9572cfdad65ae",
+    "size_bytes": 8644033
+  },
+  "emulation": {
+    "image_id": 293,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

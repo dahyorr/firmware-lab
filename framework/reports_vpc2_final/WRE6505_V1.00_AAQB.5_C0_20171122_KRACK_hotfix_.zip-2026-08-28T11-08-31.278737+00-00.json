@@ -1,0 +1,282 @@
+{
+  "run_id": "42615535",
+  "timestamp": "2026-08-28T11:08:31.278737+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/ZyXEL_latest/WRE6505_V1.00_AAQB.5_C0_20171122_KRACK_hotfix_.zip",
+    "name": "WRE6505_V1.00_AAQB.5_C0_20171122_KRACK_hotfix_.zip",
+    "sha256": "997687d0da83284fb02fd7a003b18217e5bfbb380163965c5965b7f6923fba34",
+    "size_bytes": 4072227
+  },
+  "emulation": {
+    "image_id": 80,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 190.9,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "53/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "jjhttpd 0.1.0 (D-Link or TRENDNet WAP)",
+        "raw_banner": "80/tcp    open  http          jjhttpd 0.1.0 (D-Link or TRENDNet WAP)"
+      },
+      {
+        "port": 139,
+        "protocol": "tcp",
+        "service": "netbios-ssn?",
+        "version": "",
+        "raw_banner": "139/tcp   open  netbios-ssn?"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp   open  ssl/https?"
+      },
+      {
+        "port": 445,
+        "protocol": "tcp",
+        "service": "microsoft-ds?",
+        "version": "",
+        "raw_banner": "445/tcp   open  microsoft-ds?"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open  ssl/vop?"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "jjhttpd 0.1.0 (D-Link or TRENDNet WAP)",
+        "raw_banner": "8181/tcp  open  http          jjhttpd 0.1.0 (D-Link or TRENDNet WAP)"
+      },
+      {
+        "port": 54088,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54088/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54089,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54089/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54090,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54090/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54091,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54091/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54092,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54092/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54093,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54093/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54094,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54094/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54095,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54095/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54096,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54096/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54097,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54097/tcp open  tcpwrapped"
+      },
+      {
+        "port": 54098,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "54098/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 10:59 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.015s latency).\nNot shown: 65517 closed ports\nPORT      STATE SERVICE       VERSION\n53/tcp    open  tcpwrapped\n80/tcp    open  http          jjhttpd 0.1.0 (D-Link or TRENDNet WAP)\n139/tcp   open  netbios-ssn?\n443/tcp   open  ssl/https?\n445/tcp   open  microsoft-ds?\n4433/tcp  open  ssl/vop?\n8181/tcp  open  http          jjhttpd 0.1.0 (D-Link or TRENDNet WAP)\n54088/tcp open  tcpwrapped\n54089/tcp open  tcpwrapped\n54090/tcp open  tcpwrapped\n54091/tcp open  tcpwrapped\n54092/tcp open  tcpwrapped\n54093/tcp open  tcpwrapped\n54094/tcp open  tcpwrapped\n54095/tcp open  tcpwrapped\n54096/tcp open  tcpwrapped\n54097/tcp open  tcpwrapped\n54098/tcp open  tcpwrapped\nService Info: Device: WAP\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 190.87 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /setup.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /stream",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /video",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /snapshot",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 403 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    }
+  ]
+}

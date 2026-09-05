@@ -1,0 +1,28 @@
+{
+  "run_id": "6a9431aa",
+  "timestamp": "2026-08-27T22:25:20.102087+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/dir600b_v2.03.bin",
+    "name": "dir600b_v2.03.bin",
+    "sha256": "7f849aa1a1ba011cd50de467d3cebf23cc44b88f99d5f5b0046749b185847651",
+    "size_bytes": 3240064
+  },
+  "emulation": {
+    "image_id": 64,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.0,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 22:22 UTC\nNmap scan report for 192.168.0.1\nHost is up.\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 142.97 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

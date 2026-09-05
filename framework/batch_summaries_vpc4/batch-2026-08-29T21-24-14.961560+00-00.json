@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-08-29T21:24:14.961650+00:00",
+  "profile": "comprehensive",
+  "total_firmware": 3,
+  "outcomes": {
+    "success": 0,
+    "emulation_failed": 0,
+    "timeout": 3,
+    "error": 0
+  },
+  "emulation_success_rate": 0.0,
+  "from_cache": 0,
+  "fresh_runs": 0,
+  "mean_duration_fresh": null,
+  "by_vendor": {
+    "tplink_latest": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    },
+    "dlink_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    },
+    "trendnet_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    }
+  },
+  "results": [
+    {
+      "vendor": "tplink_latest",
+      "firmware": "Archer_C7_V1_141204_US.zip",
+      "brand": "tplink_latest_archer_c7_v1_141204_us",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:39:12.454619+00:00",
+      "status": "timeout",
+      "duration_seconds": 900.5,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'tplink_latest_archer_c7_v1_141204_us', '/root/project/firmware/tplink_latest/Archer_C7_V1_141204_US.zip']' timed out after 900 seconds"
+    },
+    {
+      "vendor": "dlink_ipcamera",
+      "firmware": "DCS-5010L_REVA_FIRMWARE_1.14_B09.zip",
+      "brand": "dlink_ipcamera_dcs_5010l_reva_firmware_1_14_b09",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:54:12.913477+00:00",
+      "status": "timeout",
+      "duration_seconds": 901.0,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'dlink_ipcamera_dcs_5010l_reva_firmware_1_14_b09', '/root/project/firmware/dlink_ipcamera/DCS-5010L_REVA_FIRMWARE_1.14_B09.zip']' timed out after 900 seconds"
+    },
+    {
+      "vendor": "trendnet_ipcamera",
+      "firmware": "FW_TV-IP851WC_V1_1.03.03.zip",
+      "brand": "trendnet_ipcamera_fw_tv_ip851wc_v1_1_03_03",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T21:09:13.925371+00:00",
+      "status": "timeout",
+      "duration_seconds": 901.0,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'trendnet_ipcamera_fw_tv_ip851wc_v1_1_03_03', '/root/project/firmware/trendnet_ipcamera/FW_TV-IP851WC_V1_1.03.03.zip']' timed out after 900 seconds"
+    }
+  ]
+}

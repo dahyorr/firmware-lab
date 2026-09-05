@@ -1,0 +1,216 @@
+{
+  "run_id": "a4d8aaa7",
+  "timestamp": "2026-08-28T12:06:30.585220+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC87U_300438250702.ZIP",
+    "name": "FW_RT_AC87U_300438250702.ZIP",
+    "sha256": "0b3050d603227641969e4ef88438322bf1433158ab2ff56ab7d630c96e32d610",
+    "size_bytes": 46784724
+  },
+  "emulation": {
+    "image_id": 95,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 35.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "httpd/2.0",
+        "raw_banner": "80/tcp    open  http    httpd/2.0"
+      },
+      {
+        "port": 18017,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "18017/tcp open  unknown"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 12:04 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.010s latency).\nNot shown: 65533 closed ports\nPORT      STATE SERVICE VERSION\n80/tcp    open  http    httpd/2.0\n18017/tcp open  unknown\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 35.11 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0236",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0236"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-1068",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Oracle Webserver 2.1, when serving PL/SQL stored procedures, allows remote attackers to cause a denial of service via a long HTTP GET request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1068"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0071",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0071"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0267",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Buffer overflow in NCSA HTTP daemon v1.3 allows remote command execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0267"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-1416",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "AnswerBook2 (AB2) web server dwhttpd 3.1a4 allows remote attackers to cause a denial of service (resource exhaustion) via an HTTP POST request with a large content-length.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1416"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0633",
+      "cvss_score": null,
+      "severity": null,
+      "description": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: None.  Reason: this candidate is solely about a configuration that does not directly introduce security vulnerabilities, so it is more appropriate to cover under the Common Configuration Enumeration (CCE).  Notes: the former description is: \"The HTTP/WWW service is running.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0633"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-1412",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "A possible interaction between Apple MacOS X release 1.0 and Apache HTTP server allows remote attackers to cause a denial of service (crash) via a flood of HTTP GET requests to CGI programs, which generates a large number of processes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-1412"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "httpd/2.0",
+      "cve_id": "CVE-1999-0929",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Novell NetWare with Novell-HTTP-Server or YAWN web servers allows remote attackers to conduct a denial of service via a large number of HTTP GET requests.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0929"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

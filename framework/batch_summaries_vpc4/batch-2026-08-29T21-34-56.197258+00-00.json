@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-08-29T21:34:56.197318+00:00",
+  "profile": "comprehensive",
+  "total_firmware": 3,
+  "outcomes": {
+    "success": 2,
+    "emulation_failed": 1,
+    "timeout": 0,
+    "error": 0
+  },
+  "emulation_success_rate": 1.0,
+  "from_cache": 0,
+  "fresh_runs": 2,
+  "mean_duration_fresh": 1270.8,
+  "by_vendor": {
+    "tplink_latest": {
+      "total": 1,
+      "success": 1,
+      "emulation_failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "mean_duration_fresh": 1339.9,
+      "emulation_success_rate": 1.0
+    },
+    "dlink_ipcamera": {
+      "total": 2,
+      "success": 1,
+      "emulation_failed": 1,
+      "timeout": 0,
+      "error": 0,
+      "mean_duration_fresh": 1201.6,
+      "emulation_success_rate": 1.0
+    }
+  },
+  "results": [
+    {
+      "vendor": "tplink_latest",
+      "firmware": "RE210_US_CA__V1_171205.zip",
+      "brand": "tplink_latest_re210_us_ca_v1_171205",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:39:12.925915+00:00",
+      "status": "success",
+      "duration_seconds": 1339.9,
+      "from_cache": false,
+      "architecture": "mipsel",
+      "ip": "192.168.0.254",
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "c1b55414",
+      "report_path": "/root/project/framework/reports/RE210_US_CA__V1_171205.zip-2026-08-29T21-01-32.792907+00-00.json",
+      "error": null
+    },
+    {
+      "vendor": "dlink_ipcamera",
+      "firmware": "DCS-930L_REVA_FIRMWARE_1.16.04.ZIP",
+      "brand": "dlink_ipcamera_dcs_930l_reva_firmware_1_16_04",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T21:01:32.794073+00:00",
+      "status": "emulation_failed",
+      "duration_seconds": 801.8,
+      "from_cache": false,
+      "architecture": "mipsel",
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "567e3250",
+      "report_path": "/root/project/framework/reports/DCS-930L_REVA_FIRMWARE_1.16.04.ZIP-2026-08-29T21-14-54.547586+00-00.json",
+      "error": null
+    },
+    {
+      "vendor": "dlink_ipcamera",
+      "firmware": "DCS-960L_REVA_FIRMWARE_v1.06B01.zip",
+      "brand": "dlink_ipcamera_dcs_960l_reva_firmware_v1_06b01",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T21:14:54.548111+00:00",
+      "status": "success",
+      "duration_seconds": 1201.6,
+      "from_cache": false,
+      "architecture": "mipseb",
+      "ip": "192.168.0.1",
+      "services_found": 0,
+      "cve_matches": 3,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "fd9ef0e0",
+      "report_path": "/root/project/framework/reports/DCS-960L_REVA_FIRMWARE_v1.06B01.zip-2026-08-29T21-34-56.196005+00-00.json",
+      "error": null
+    }
+  ]
+}

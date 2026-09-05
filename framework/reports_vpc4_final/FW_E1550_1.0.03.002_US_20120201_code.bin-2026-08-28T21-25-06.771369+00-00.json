@@ -1,0 +1,22 @@
+{
+  "run_id": "ae324eb8",
+  "timestamp": "2026-08-28T21:25:06.771369+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_E1550_1.0.03.002_US_20120201_code.bin",
+    "name": "FW_E1550_1.0.03.002_US_20120201_code.bin",
+    "sha256": "b33e93a5aa73790b06c95a2384f869481b7ea1d553ec60892e1a6383f55c0d41",
+    "size_bytes": 10109952
+  },
+  "emulation": {
+    "image_id": 34,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "e45bcd4b",
+  "timestamp": "2026-08-29T21:24:49.095826+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_ipcamera/FW_TV-IP651W_V1_1.07.01.zip",
+    "name": "FW_TV-IP651W_V1_1.07.01.zip",
+    "sha256": "e953196f8501627b7280708b2f6ad63f910c95c608b00db309124c14f66020ba",
+    "size_bytes": 3921416
+  },
+  "emulation": {
+    "image_id": 293,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

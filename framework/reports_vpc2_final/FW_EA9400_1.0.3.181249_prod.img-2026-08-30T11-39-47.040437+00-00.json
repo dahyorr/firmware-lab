@@ -1,0 +1,22 @@
+{
+  "run_id": "3edd77e2",
+  "timestamp": "2026-08-30T11:39:47.040437+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA9400_1.0.3.181249_prod.img",
+    "name": "FW_EA9400_1.0.3.181249_prod.img",
+    "sha256": "a58ef0eb34631d6ff54a2ee8b1aa20b1775ec3c9e29aa92d2bc2bb07f1f2f02b",
+    "size_bytes": 20025600
+  },
+  "emulation": {
+    "image_id": 400,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

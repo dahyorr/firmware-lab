@@ -1,0 +1,92 @@
+{
+  "run_id": "3b4e5cbb",
+  "timestamp": "2026-08-30T04:55:20.586705+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/DIR-825_REVC_FIRMWARE_PATCH_3.01.B12.ZIP",
+    "name": "DIR-825_REVC_FIRMWARE_PATCH_3.01.B12.ZIP",
+    "sha256": "f993b485a947be86536309827d29073da1412841be9a8b83bf4b4597a1b17c8f",
+    "size_bytes": 8838216
+  },
+  "emulation": {
+    "image_id": 369,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 100.1,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.78",
+        "raw_banner": "53/tcp    open  domain       dnsmasq 2.78"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "httpd",
+        "raw_banner": "80/tcp    open  http         httpd"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https?",
+        "version": "",
+        "raw_banner": "443/tcp   open  ssl/https?"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open  ssl/vop?"
+      },
+      {
+        "port": 5449,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "5449/tcp  open  unknown"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "intermapper?",
+        "version": "",
+        "raw_banner": "8181/tcp  open  intermapper?"
+      },
+      {
+        "port": 8182,
+        "protocol": "tcp",
+        "service": "vmware-fdm?",
+        "version": "",
+        "raw_banner": "8182/tcp  open  vmware-fdm?"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-868L WAP UPnP 1.13 (UPnP 1.0)",
+        "raw_banner": "49152/tcp open  upnp         D-Link DIR-868L WAP UPnP 1.13 (UPnP 1.0)"
+      },
+      {
+        "port": 63481,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.78",
+        "raw_banner": "63481/tcp open  domain       dnsmasq 2.78"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 04:47 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.057s latency).\nNot shown: 65526 closed ports\nPORT      STATE SERVICE      VERSION\n53/tcp    open  domain       dnsmasq 2.78\n80/tcp    open  http         httpd\n443/tcp   open  ssl/https?\n4433/tcp  open  ssl/vop?\n5449/tcp  open  unknown\n8181/tcp  open  intermapper?\n8182/tcp  open  vmware-fdm?\n49152/tcp open  upnp         D-Link DIR-868L WAP UPnP 1.13 (UPnP 1.0)\n63481/tcp open  domain       dnsmasq 2.78\nService Info: OS: Linux; Device: WAP; CPE: cpe:/h:d-link:dir-868l, cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 100.03 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

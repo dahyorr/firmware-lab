@@ -1,0 +1,278 @@
+{
+  "run_id": "bcdd6cc8",
+  "timestamp": "2026-08-28T00:40:27.492056+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6400-V1.0.1.20_1.0.16.zip",
+    "name": "R6400-V1.0.1.20_1.0.16.zip",
+    "sha256": "d876220dc96db4582ebcabfb8a9182655a4662d8912c1853cf7519b5959372b9",
+    "size_bytes": 28042960
+  },
+  "emulation": {
+    "image_id": 75,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 148.3,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.15-OpenDNS-1",
+        "raw_banner": "53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp   open  tcpwrapped"
+      },
+      {
+        "port": 548,
+        "protocol": "tcp",
+        "service": "afp",
+        "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+        "raw_banner": "548/tcp  open  afp        Netatalk 2.2.5 (name: R6400; protocol 3.3)"
+      },
+      {
+        "port": 631,
+        "protocol": "tcp",
+        "service": "ipp?",
+        "version": "",
+        "raw_banner": "631/tcp  open  ipp?"
+      },
+      {
+        "port": 5000,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "5000/tcp open  tcpwrapped"
+      },
+      {
+        "port": 8200,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8200/tcp open  tcpwrapped"
+      },
+      {
+        "port": 9100,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9100/tcp open  jetdirect?"
+      },
+      {
+        "port": 9101,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9101/tcp open  jetdirect?"
+      },
+      {
+        "port": 9102,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9102/tcp open  jetdirect?"
+      },
+      {
+        "port": 9103,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9103/tcp open  jetdirect?"
+      },
+      {
+        "port": 9104,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9104/tcp open  jetdirect?"
+      },
+      {
+        "port": 9105,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9105/tcp open  jetdirect?"
+      },
+      {
+        "port": 9106,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9106/tcp open  jetdirect?"
+      },
+      {
+        "port": 9107,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9107/tcp open  jetdirect?"
+      },
+      {
+        "port": 9108,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "9108/tcp open  tcpwrapped"
+      },
+      {
+        "port": 9109,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "9109/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 00:37 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.025s latency).\nNot shown: 65519 closed ports\nPORT     STATE SERVICE    VERSION\n53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1\n80/tcp   open  tcpwrapped\n548/tcp  open  afp        Netatalk 2.2.5 (name: R6400; protocol 3.3)\n631/tcp  open  ipp?\n5000/tcp open  tcpwrapped\n8200/tcp open  tcpwrapped\n9100/tcp open  jetdirect?\n9101/tcp open  jetdirect?\n9102/tcp open  jetdirect?\n9103/tcp open  jetdirect?\n9104/tcp open  jetdirect?\n9105/tcp open  jetdirect?\n9106/tcp open  jetdirect?\n9107/tcp open  jetdirect?\n9108/tcp open  tcpwrapped\n9109/tcp open  tcpwrapped\nService Info: OS: Unix\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 148.22 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44047",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An SQL injection vulnerability in the MySQL CNID backend in Netatalk 3.1.0 through 4.4.2 allows a remote authenticated attacker to obtain unauthorized access to data, modify data, or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44047"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44048",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A stack-based buffer overflow via UCS-2 type confusion in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44048"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44049",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An out-of-bounds write due to improper null termination in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service via crafted character data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44049"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /setup.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /stream",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /video",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /snapshot",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /image",
+      "severity": "medium"
+    }
+  ]
+}

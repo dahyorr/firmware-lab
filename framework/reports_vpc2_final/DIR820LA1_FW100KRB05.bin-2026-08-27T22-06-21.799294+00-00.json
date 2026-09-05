@@ -1,0 +1,89 @@
+{
+  "run_id": "6edbce0c",
+  "timestamp": "2026-08-27T22:06:21.799294+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR820LA1_FW100KRB05.bin",
+    "name": "DIR820LA1_FW100KRB05.bin",
+    "sha256": "6db496099f5c6781a1dd8613d99cd3d72c7eeb503dfd174d3e88e0fc0e1c35cc",
+    "size_bytes": 5426244
+  },
+  "emulation": {
+    "image_id": 61,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 138.6,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 22:04 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.00032s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered (61732) or closed (3803)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 138.60 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-34973",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "D-Link DIR820LA1_FW106B02 was discovered to contain a buffer overflow via the nextPage parameter at ping.ccp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-34973"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-25283",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A stack overflow vulnerability in D-Link DIR820LA1_FW106B02 allows attackers to cause a denial of service via the reserveDHCP_HostName_1.1.1.0 parameter to lan.asp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25283"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-25279",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "OS Command injection vulnerability in D-Link DIR820LA1_FW105B03 allows attackers to escalate privileges to root via a crafted payload.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25279"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-25282",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A heap overflow vulnerability in D-Link DIR820LA1_FW106B02 allows attackers to cause a denial of service via the config.log_to_syslog and log_opt_dropPackets parameters to mydlink_api.ccp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25282"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-25280",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "OS Command injection vulnerability in D-Link DIR820LA1_FW105B03 allows attackers to escalate privileges to root via a crafted payload with the ping_addr parameter to ping.ccp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25280"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-25281",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "A stack overflow vulnerability exists in pingV4Msg component in D-Link DIR820LA1_FW105B03, allows attackers to cause a denial of service via the nextPage parameter to ping.ccp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25281"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

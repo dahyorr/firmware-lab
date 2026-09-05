@@ -1,0 +1,50 @@
+{
+  "run_id": "25e0addf",
+  "timestamp": "2026-08-28T03:41:19.575245+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-733GR_v1.03B01.zip",
+    "name": "TEW-733GR_v1.03B01.zip",
+    "sha256": "b6df8dcf37d2a11a33ac02fa85747c4aebad9236879326494be329e2dad4b634",
+    "size_bytes": 5111573
+  },
+  "emulation": {
+    "image_id": 127,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.10.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 101.1,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "53/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 63481,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "63481/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 03:36 UTC\nNmap scan report for 192.168.10.1\nHost is up (0.034s latency).\nNot shown: 38017 filtered ports, 27515 closed ports\nPORT      STATE SERVICE    VERSION\n53/tcp    open  tcpwrapped\n80/tcp    open  tcpwrapped\n63481/tcp open  tcpwrapped\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 101.04 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

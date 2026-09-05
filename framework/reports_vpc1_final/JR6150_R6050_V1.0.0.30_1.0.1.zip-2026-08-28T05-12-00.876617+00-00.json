@@ -1,0 +1,81 @@
+{
+  "run_id": "70024850",
+  "timestamp": "2026-08-28T05:12:00.876617+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/JR6150_R6050_V1.0.0.30_1.0.1.zip",
+    "name": "JR6150_R6050_V1.0.0.30_1.0.1.zip",
+    "sha256": "0138fc15a89acfb6d4d38fab189320989371be9e7f34bc09f2a1eb932e1a7fc7",
+    "size_bytes": 12596523
+  },
+  "emulation": {
+    "image_id": 132,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 244.3,
+    "services": [
+      {
+        "port": 548,
+        "protocol": "tcp",
+        "service": "afp",
+        "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+        "raw_banner": "548/tcp  open  afp        Netatalk 2.2.5 (name: R7000; protocol 3.3)"
+      },
+      {
+        "port": 631,
+        "protocol": "tcp",
+        "service": "ipp?",
+        "version": "",
+        "raw_banner": "631/tcp  open  ipp?"
+      },
+      {
+        "port": 5000,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "5000/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 05:07 UTC\nWarning: 192.168.1.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.1.1\nHost is up (0.0042s latency).\nNot shown: 45713 closed ports, 19819 filtered ports\nPORT     STATE SERVICE    VERSION\n548/tcp  open  afp        Netatalk 2.2.5 (name: R7000; protocol 3.3)\n631/tcp  open  ipp?\n5000/tcp open  tcpwrapped\nService Info: OS: Unix\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 244.18 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+      "cve_id": "CVE-2026-44047",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An SQL injection vulnerability in the MySQL CNID backend in Netatalk 3.1.0 through 4.4.2 allows a remote authenticated attacker to obtain unauthorized access to data, modify data, or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44047"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+      "cve_id": "CVE-2026-44048",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A stack-based buffer overflow via UCS-2 type confusion in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44048"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R7000; protocol 3.3)",
+      "cve_id": "CVE-2026-44049",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An out-of-bounds write due to improper null termination in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service via crafted character data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44049"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

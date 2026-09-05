@@ -1,0 +1,22 @@
+{
+  "run_id": "75315928",
+  "timestamp": "2026-08-28T22:41:44.836864+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TPE-4840WS_1.00.9.zip",
+    "name": "TPE-4840WS_1.00.9.zip",
+    "sha256": "8c29d1dc55f1b8fb454f1f69af58044d5a7f671ed278cb5e6b3a04822df46c27",
+    "size_bytes": 10685012
+  },
+  "emulation": {
+    "image_id": 252,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

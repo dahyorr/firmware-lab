@@ -1,0 +1,36 @@
+{
+  "run_id": "9c5a5e26",
+  "timestamp": "2026-08-30T11:31:52.050895+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/Archer_C8_US__V3_161104_1480403037578i.zip",
+    "name": "Archer_C8_US__V3_161104_1480403037578i.zip",
+    "sha256": "f79d15aff204dd46303579b9e33f2a1713aa2c58b81ef33add8138f6db92d9a9",
+    "size_bytes": 14802494
+  },
+  "emulation": {
+    "image_id": 431,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 27.1,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.62",
+        "raw_banner": "53/tcp open  domain  dnsmasq 2.62"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 11:31 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.029s latency).\nNot shown: 65534 closed ports\nPORT   STATE SERVICE VERSION\n53/tcp open  domain  dnsmasq 2.62\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 27.00 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

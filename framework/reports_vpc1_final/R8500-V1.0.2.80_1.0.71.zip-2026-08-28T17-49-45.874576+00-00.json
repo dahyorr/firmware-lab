@@ -1,0 +1,22 @@
+{
+  "run_id": "94013392",
+  "timestamp": "2026-08-28T17:49:45.874576+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R8500-V1.0.2.80_1.0.71.zip",
+    "name": "R8500-V1.0.2.80_1.0.71.zip",
+    "sha256": "b71007e32627a07545469e6d3fdab1bf68f9e2df0cf39249812f062ec5a5c9f6",
+    "size_bytes": 30177171
+  },
+  "emulation": {
+    "image_id": 222,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

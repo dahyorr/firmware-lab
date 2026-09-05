@@ -1,0 +1,22 @@
+{
+  "run_id": "a3b6253d",
+  "timestamp": "2026-08-28T09:16:44.879762+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/ArcherC7_KR__V2_170215.zip",
+    "name": "ArcherC7_KR__V2_170215.zip",
+    "sha256": "a93a2b5ae0b39415629be804cb3905320ca311b61a429b409625325d7521b035",
+    "size_bytes": 9574036
+  },
+  "emulation": {
+    "image_id": 66,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

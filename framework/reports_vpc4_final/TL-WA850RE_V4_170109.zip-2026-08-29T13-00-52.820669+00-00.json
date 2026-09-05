@@ -1,0 +1,164 @@
+{
+  "run_id": "29d54d4f",
+  "timestamp": "2026-08-29T13:00:52.820669+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/TL-WA850RE_V4_170109.zip",
+    "name": "TL-WA850RE_V4_170109.zip",
+    "sha256": "1e6aa1326d7f2bae159b19777f209ebf1da3a380908f0b18a431a656a251e075",
+    "size_bytes": 4200471
+  },
+  "emulation": {
+    "image_id": 259,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.254",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.254",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 24.3,
+    "services": [
+      {
+        "port": 22,
+        "protocol": "tcp",
+        "service": "ssh",
+        "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+        "raw_banner": "22/tcp open  ssh     Dropbear sshd 2012.55 (protocol 2.0)"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http?",
+        "version": "",
+        "raw_banner": "80/tcp open  http?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 13:00 UTC\nNmap scan report for 192.168.0.254\nHost is up (0.030s latency).\nNot shown: 65533 closed ports\nPORT   STATE SERVICE VERSION\n22/tcp open  ssh     Dropbear sshd 2012.55 (protocol 2.0)\n80/tcp open  http?\nService Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 24.27 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2013-4421",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buf_decompress function in packet.c in Dropbear SSH Server before 2013.59 allows remote attackers to cause a denial of service (memory consumption) via a compressed packet that has a large size when it is decompressed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4421"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2013-4434",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Dropbear SSH Server before 2013.59 generates error messages for a failed logon attempt with different time delays depending on whether the user account exists, which allows remote attackers to discover valid usernames.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4434"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-3116",
+      "cvss_score": 6.4,
+      "severity": "MEDIUM",
+      "description": "CRLF injection vulnerability in Dropbear SSH before 2016.72 allows remote authenticated users to bypass intended shell-command restrictions via crafted X11 forwarding data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3116"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7406",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Format string vulnerability in Dropbear SSH before 2016.74 allows remote attackers to execute arbitrary code via format string specifiers in the (1) username or (2) host argument.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7406"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7407",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The dropbearconvert command in Dropbear SSH before 2016.74 allows attackers to execute arbitrary code via a crafted OpenSSH key file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7407"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7408",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The dbclient in Dropbear SSH before 2016.74 allows remote attackers to execute arbitrary code via a crafted (1) -m or (2) -c argument.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7408"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7409",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "The dbclient and server in Dropbear SSH before 2016.74, when compiled with DEBUG_TRACE, allows local users to read process memory via the -v argument, related to a failed remote ident.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7409"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2017-9078",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The server in Dropbear before 2017.75 might allow post-authentication root remote code execution because of a double free in cleanup of TCP listeners when the -a option is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9078"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2017-9079",
+      "cvss_score": 4.7,
+      "severity": "MEDIUM",
+      "description": "Dropbear before 2017.75 might allow local users to read certain files as root, if the file has the authorized_keys file format with a command= option. This occurs because ~/.ssh/authorized_keys is read with root privileges and symlinks are followed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9079"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2018-15599",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "The recv_msg_userauth_request function in svr-auth.c in Dropbear through 2018.76 is prone to a user enumeration vulnerability because username validity affects how fields in SSH_MSG_USERAUTH messages are handled, a similar issue to CVE-2018-15473 in an unrelated codebase.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-15599"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2017-2659",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "It was found that dropbear before version 2013.59 with GSSAPI leaks whether given username is valid or invalid. When an invalid username is given, the GSSAPI authentication failure was incorrectly counted towards the maximum allowed number of password attempts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-2659"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2019-12953",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "Dropbear 2011.54 through 2018.76 has an inconsistent failure delay that may lead to revealing valid usernames, a different issue than CVE-2018-15599.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12953"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

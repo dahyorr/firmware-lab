@@ -1,0 +1,59 @@
+{
+  "run_id": "14fb3574",
+  "timestamp": "2026-08-29T21:15:40.664558+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-935L_REVA_FIRMWARE_PATCH_v1.11.01_BETA.zip",
+    "name": "DCS-935L_REVA_FIRMWARE_PATCH_v1.11.01_BETA.zip",
+    "sha256": "87eaf7f7873d657f826ecf212f31b49e7685e530fc95779d0bdb9beb8dfc9477",
+    "size_bytes": 7561270
+  },
+  "emulation": {
+    "image_id": 299,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 17.7,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 21:15 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.026s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 17.73 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.11.01",
+      "cve_id": "CVE-2025-10779",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability was found in D-Link DCS-935L up to 1.13.01. The impacted element is the function sub_402280 of the file /HNAP1/. The manipulation of the argument HNAP_AUTH/SOAPAction results in stack-based buffer overflow. The attack may be launched remotely. The exploit has been made public and could be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10779"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.11.01",
+      "cve_id": "CVE-2026-12174",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A security vulnerability has been detected in D-Link DCS-935L 1.10.01. This issue affects the function snprintf of the file /web/cgi-bin/greece/rhea of the component HTTP Handler. Such manipulation of the argument data leads to format string. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12174"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.11.01",
+      "cve_id": "CVE-2026-13545",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability has been found in D-Link DCS-935L 1.10.01. This affects the function sub_400E40 of the file setconf.cgi of the component POST Parameter Handler. Such manipulation of the argument UID leads to os command injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13545"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

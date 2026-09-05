@@ -1,0 +1,39 @@
+{
+  "run_id": "08403011",
+  "timestamp": "2026-08-28T11:37:40.458466+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-691GR_1_.zip",
+    "name": "TEW-691GR_1_.zip",
+    "sha256": "2b3ec1d49322a65610d74c17f1b9473ce8852329f697a3ba4222687be45b8556",
+    "size_bytes": 3947457
+  },
+  "emulation": {
+    "image_id": 90,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 83.6,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 11:36 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.050s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 83.56 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2013-3367",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Undocumented TELNET service in TRENDnet TEW-691GR and TEW-692GR when a web page named backdoor contains an HTML parameter of password and a value of j78G\u00acDFdg_24Mhw3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3367"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

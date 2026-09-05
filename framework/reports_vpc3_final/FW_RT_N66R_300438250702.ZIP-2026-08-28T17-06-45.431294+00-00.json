@@ -1,0 +1,28 @@
+{
+  "run_id": "0f40534d",
+  "timestamp": "2026-08-28T17:06:45.431294+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N66R_300438250702.ZIP",
+    "name": "FW_RT_N66R_300438250702.ZIP",
+    "sha256": "c836490a70be26cfc38eef658362179188949642309661125968091411357b1f",
+    "size_bytes": 32271064
+  },
+  "emulation": {
+    "image_id": 213,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.0,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 17:04 UTC\nNmap scan report for 192.168.1.1\nHost is up.\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 142.96 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

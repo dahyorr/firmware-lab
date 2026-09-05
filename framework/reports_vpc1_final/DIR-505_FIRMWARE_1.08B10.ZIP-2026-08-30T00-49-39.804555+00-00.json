@@ -1,0 +1,49 @@
+{
+  "run_id": "cfabd0d9",
+  "timestamp": "2026-08-30T00:49:39.804555+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR-505_FIRMWARE_1.08B10.ZIP",
+    "name": "DIR-505_FIRMWARE_1.08B10.ZIP",
+    "sha256": "e3c15be7b44d3a5f405c1cc5060d7529b57a42d8f1f43a94259a29e4791f8f46",
+    "size_bytes": 6880707
+  },
+  "emulation": {
+    "image_id": 321,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 49.5,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 00:48 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.028s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed (47806) or filtered (17729)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 49.46 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2013-4772",
+      "cvss_score": 9.3,
+      "severity": null,
+      "description": "D-Link DIR-505L SharePort Mobile Companion 1.01 and DIR-826L Wireless N600 Cloud Router 1.02 allows remote attackers to bypass authentication via a direct request when an authorized session is active.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4772"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2014-3936",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Stack-based buffer overflow in the do_hnap function in www/my_cgi.cgi in D-Link DSP-W215 (Rev. A1) with firmware 1.01b06 and earlier, DIR-505 with firmware before 1.08b10, and DIR-505L with firmware 1.01 and earlier allows remote attackers to execute arbitrary code via a long Content-Length header in a GetDeviceSettings action in an HNAP request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-3936"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

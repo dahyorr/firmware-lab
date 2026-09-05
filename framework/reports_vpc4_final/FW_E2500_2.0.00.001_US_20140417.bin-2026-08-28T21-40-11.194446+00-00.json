@@ -1,0 +1,22 @@
+{
+  "run_id": "cbdee93a",
+  "timestamp": "2026-08-28T21:40:11.194446+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_E2500_2.0.00.001_US_20140417.bin",
+    "name": "FW_E2500_2.0.00.001_US_20140417.bin",
+    "sha256": "05aa91204b6013e1cdfecdc8cc803039d6c45c902b2bda8d4a76aa1d75b95797",
+    "size_bytes": 7242752
+  },
+  "emulation": {
+    "image_id": 38,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

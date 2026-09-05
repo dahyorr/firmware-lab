@@ -1,0 +1,89 @@
+{
+  "run_id": "ec378136",
+  "timestamp": "2026-08-29T10:43:07.276010+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-825DAP_1.08B04.zip",
+    "name": "TEW-825DAP_1.08B04.zip",
+    "sha256": "d4ce0f531dce52beb362996cb9bd22fb700f66f3a41f4937e3fbdaaf2cad8fa8",
+    "size_bytes": 25081459
+  },
+  "emulation": {
+    "image_id": 238,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.10.100",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.100",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 10:40 UTC\nNmap scan report for 192.168.10.100\nHost is up.\nAll 65535 scanned ports on 192.168.10.100 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.09 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28841",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial of service by sending a POST request to apply_cgi via an action ping_test without a ping_ipaddr key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28841"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28842",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Deference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial os service by sending the POST request to apply_cgi via action do_graph_auth without login_name key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28842"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28843",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03 by sending the POST request to apply_cgi with an unknown action name.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28843"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28844",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03 by sending the POST request to apply_cgi via a do_graph_auth action without a session_id key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28844"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28845",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial of service by sending the POST request to apply_cgi via the lang action without a language key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28845"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28846",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A Format String vulnerablity exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial of service due to a logic bug at address 0x40dcd0 when calling fprintf with \"%s: key len = %d, too long\\n\" format. The two variables seem to be put in the wrong order. The vulnerability could be triggered by sending the POST request to apply_cgi with a long and unknown key in the request body.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28846"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,65 @@
+{
+  "run_id": "f346d5be",
+  "timestamp": "2026-08-28T02:35:59.278744+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNDR3700v4_V1.0.1.52.zip",
+    "name": "WNDR3700v4_V1.0.1.52.zip",
+    "sha256": "100c094b9e37443c8fdadf3bc35e65fa21c88e269ac8e5249f5c4b7cf62d69c2",
+    "size_bytes": 7559855
+  },
+  "emulation": {
+    "image_id": 100,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 53.1,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "telnet?",
+        "version": "",
+        "raw_banner": "23/tcp  open  telnet?"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.39",
+        "raw_banner": "53/tcp  open  domain  dnsmasq 2.39"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http?",
+        "version": "",
+        "raw_banner": "80/tcp  open  http?"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "https?",
+        "version": "",
+        "raw_banner": "443/tcp open  https?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 02:31 UTC\nWarning: 192.168.1.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.1.1\nHost is up (0.023s latency).\nNot shown: 65103 closed ports, 428 filtered ports\nPORT    STATE SERVICE VERSION\n23/tcp  open  telnet?\n53/tcp  open  domain  dnsmasq 2.39\n80/tcp  open  http?\n443/tcp open  https?\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 53.08 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    }
+  ]
+}

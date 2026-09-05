@@ -1,0 +1,49 @@
+{
+  "run_id": "376452e4",
+  "timestamp": "2026-08-28T04:58:39.806901+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R7000-_V1.0.3.80-1.1.38.zip",
+    "name": "R7000-_V1.0.3.80-1.1.38.zip",
+    "sha256": "4da2ebe4269f0bb5a6783677b83025635c8235205210c275d80f8239245f56f2",
+    "size_bytes": 20902264
+  },
+  "emulation": {
+    "image_id": 131,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 04:56 UTC\nNmap scan report for 192.168.1.1\nHost is up.\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.09 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.3.80",
+      "cve_id": "CVE-2022-37234",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Netgear Nighthawk AC1900 Smart WiFi Dual Band Gigabit Router R7000-V1.0.11.134_10.2.119 is vulnerable to Buffer Overflow via the wl binary in firmware. There is a stack overflow vulnerability caused by strncpy.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-37234"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.3.80",
+      "cve_id": "CVE-2022-37235",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Netgear Nighthawk AC1900 Smart WiFi Dual Band Gigabit Router R7000-V1.0.11.134_10.2.119 is vulnerable to Buffer Overflow via the wl binary in firmware. There is a stack overflow vulnerability caused by strncat",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-37235"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

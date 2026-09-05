@@ -1,0 +1,163 @@
+# CATEGORY: boots_no_confirmed_ip
+# vpc=1 scratch_id=125 name=JR6150_R6050-V1.0.1.2_1.0.1
+# source log: qemu.final.serial.log  (14452 lines total)
+# scratch metadata: name='JR6150_R6050-V1.0.1.2_1.0.1'  brand='netgear_jr6150_r6050_v1_0_1_2_1_0_1'  architecture='mipsel'  ip.0='192.168.1.1'
+# signature: /boa: starting server|lighttpd|mini_httpd|httpd.*start|goahead/  first hit at line 6081
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #28 Sat Oct 31 17:56:39 KST 2020
+[    0.000000] earlycon: Early serial console at I/O port 0x3f8 (options '38400n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] CPU0 revision is: 00019300 (MIPS 24Kc)
+[    0.000000] FPU revision is: 00739300
+[    0.000000] Software DMA cache coherency enabled
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00001000 @ 00000000 (reserved)
+[    0.000000]  memory: 000ef000 @ 00001000 (ROM data)
+[    0.000000]  memory: 00788000 @ 000f0000 (reserved)
+[    0.000000]  memory: 0f788000 @ 00878000 (usable)
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Wasting 69376 bytes for tracking 2168 unused pages
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x0000000000ffffff]
+[    0.000000]   Normal   [mem 0x0000000001000000-0x000000000fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] On node 0 totalpages: 65536
+[    0.000000] free_area_init_node: node 0, pgdat 808155b0, node_mem_map 81000000
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 4096 pages, LIFO batch:0
+[    0.000000]   Normal zone: 480 pages used for memmap
+[    0.000000]   Normal zone: 61440 pages, LIFO batch:15
+[    0.000000] Primary instruction cache 2kB, VIPT, 2-way, linesize 16 bytes.
+[    0.000000] Primary data cache 2kB, 2-way, VIPT, no aliases, linesize 16 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: root=/dev/sda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 rdinit=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=0 firmadyne.syscall=1
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+
+--- signature context (lines 6036-6106) ---
+nvram_get_buf: = "1"
+nvram_get_buf: fw_spi
+sem_get: Key: 4110022d
+nvram_get_buf: 
+
+[NVRAM] 6 fw_spi
+
+sem_get: Key: 4110022d
+nvram_get_buf: = "1"
+nvram_get_buf: log_asites
+sem_get: Key: 4110022d
+nvram_get_buf: 
+
+[NVRAM] 10 log_asites
+
+sem_get: Key: 4110022d
+nvram_get_buf: = "1"
+nvram_get_buf: log_block[   11.835413] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[   11.836217] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:2, protocol:0
+
+sem_get: Key: 4110022d
+nvram_get_buf: 
+
+[NVRAM] 9 log_block
+
+sem_get: Key: 4110022d
+nvram_get_buf: = "1"
+[32m[SYSTEM]/sbin/syslogd -f /etc/syslog.conf[0m
+[   11.851573] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[   11.852482] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:2, protocol:0
+[   11.867478] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[   11.868331] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:2, protocol:0
+[   11.883448] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[   11.884275] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:2, protocol:0
+[   11.899509] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[   11.900427] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:2, protocol:0
+[   11.915486] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[   11.916339] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:2, protocol:0
+[   11.918982] firmadyne: sys_socket[PID: 202 (rc)]: family:1, type:1, protocol:0
+[   11.920473] firmadyne: sys_socket[PID: 202 (rc)]: family:1, type:2, protocol:0
+unlink running file </var/run/rc.syslogd.run>
+[   11.931528] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[   11.932354] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:2, protocol:0
+[   11.933837] firmadyne: sys_socket[PID: 208 (syslogd)]: family:1, type:1, protocol:0
+[   11.947450] firmadyne: sys_socket[PID: 120 (klogd)]: family:1, type:1, protocol:0
+[36m[rc debug]/usr/sbin/rc httpd start [0m
+ap_name=httpd action=start
+[rc.c::rc_action():768] rc_action before add httpd - start
+[33m rc action <httpd @ start> before file_lock. [0m
+[33m rc action <httpd @ start lock = 3> after file_lock. [0m
+[32m[SYSTEM]/bin/cp /proc/uptime /var/run/rc.httpd.run[0m
+[33m rc action < unlock = 3> after file_lock. [0m
+[rc.c::rc_action():776] rc_action after add httpd - start
+[rc.c::rc_start():671] Calling Start function of httpd
+nvram_get_buf: wiz_language
+sem_lock: Already initialized!
+sem_get: Key: 4110022d
+nvram_get_buf: 
+
+[NVRAM] 12 wiz_language
+
+sem_get: Key: 4110022d
+nvram_get_buf: = "English"
+[sc_language.c::create_language_file():425] Create link files for <English>
+[31mMagic sign of /dev/mtdblock4 error
+[0m[31mMagic sign of /dev/mtdblock5 error
+[0m[31mMagic sign of /dev/mtdblock6 error
+[0m[31mMagic sign of /dev/mtdblock7 error
+[0m[31mMagic sign of /dev/mtdblock8 error
+[0m[sc_language.c::create_language_file():448] Checking MTD </dev/mtdblock4> according to its id <ENU>
+[31mMagic sign of /dev/mtdblock4 error
+
+--- final tail (last 40 lines) ---
+nvram_get_buf: = "1"
+nvram_get_buf: wifi_if_on
+sem_get: Key: 4110022d
+nvram_get_buf: 
+
+[NVRAM] 10 wifi_if_on
+
+sem_get: Key: 4110022d
+nvram_get_buf: = "1"
+nvram_get_buf: wps_mode
+sem_get: Key: 4110022d
+nvram_get_buf: 
+
+[NVRAM] 8 wps_mode
+
+sem_get: Key: 4110022d
+nvram_get_buf: = "enabled"
+nvram_get_buf: wifi_wep_on
+sem_get: Key: 4110022d
+nvram_get_buf: 
+
+[NVRAM] 11 wifi_wep_on
+
+sem_get: Key: 4110022d
+nvram_get_buf: = "0"
+nvram_get_buf: qos_tv_enable
+sem_get: Key: 4110022d
+sem_get: Key: 4110022d
+nvram_get_buf: Unable to open key: /firmadyne/libnvram/qos_tv_enable! Set default value to ""
+nvram_get_buf: qos_tv_buttonsel
+sem_get: Key: 4110022d
+sem_get: Key: 4110022d
+nvram_get_buf: Unable to open key: /firmadyne/libnvram/qos_tv_buttonsel! Set default value to ""
+nvram_get_buf: bwcontrol_enable
+sem_get: Key: 4110022d
+sem_get: Key: 4110022d
+nvram_get_buf: Unable to open key: /firmadyne/libnvram/bwcontrol_enable! Set default value to ""
+[   75.779069] firmadyne: ioctl: 0x0
+[   75.779529] firmadyne: ioctl: 0x0
+[   76.167470] firmadyne: sys_socket[PID: 1261 (wan_monitor)]: family:2, type:1, protocol:0

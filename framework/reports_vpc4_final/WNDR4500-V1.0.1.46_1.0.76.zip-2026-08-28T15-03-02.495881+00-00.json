@@ -1,0 +1,22 @@
+{
+  "run_id": "38a51d53",
+  "timestamp": "2026-08-28T15:03:02.495881+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear_latest/WNDR4500-V1.0.1.46_1.0.76.zip",
+    "name": "WNDR4500-V1.0.1.46_1.0.76.zip",
+    "sha256": "e91586fc4c2789e6b7c99f441a5fb738a3e22efd1649f3a5c46d857054b38441",
+    "size_bytes": 12104439
+  },
+  "emulation": {
+    "image_id": 190,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

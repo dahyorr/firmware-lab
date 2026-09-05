@@ -1,0 +1,229 @@
+{
+  "run_id": "8b61abb5",
+  "timestamp": "2026-08-28T05:37:36.653456+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R7500-V1.0.0.108.zip",
+    "name": "R7500-V1.0.0.108.zip",
+    "sha256": "44f299c6646e8aa31d8a9f87a32b840c5c88c2ecc083986d642dea151c4ce317",
+    "size_bytes": 24063129
+  },
+  "emulation": {
+    "image_id": 137,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.5,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 05:35 UTC\nNmap scan report for 192.168.1.1\nHost is up.\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.39 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11768",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by Stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR20 before 2.3.5.26, RBS20 before 2.3.5.26, RBK20 before 2.3.5.26, RBR40 before 2.3.5.30, RBS40 before 2.3.5.30, RBK40 before 2.3.5.30, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11768"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11769",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR20 before 2.3.5.26, RBS20 before 2.3.5.26, RBK20 before 2.3.5.26, RBR40 before 2.3.5.30, RBS40 before 2.3.5.30, RBK40 before 2.3.5.30, RBK50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11769"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11771",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11771"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11772",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11772"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11773",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11773"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11774",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11774"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11775",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR20 before 2.3.5.26, RBS20 before 2.3.5.26, RBK20 before 2.3.5.26, RBR40 before 2.3.5.30, RBS40 before 2.3.5.30, RBK40 before 2.3.5.30, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11775"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11776",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11776"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11777",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by Stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11777"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11778",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11778"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11779",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11779"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11780",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11780"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11781",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11781"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11782",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11782"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11783",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11783"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11784",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11784"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11785",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11785"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11786",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11786"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2020-11787",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D7800 before 1.0.1.56, R7500v2 before 1.0.3.46, R7800 before 1.0.2.68, R8900 before 1.0.4.28, R9000 before 1.0.4.28, RAX120 before 1.0.0.78, RBR20 before 2.3.5.26, RBS20 before 2.3.5.26, RBK20 before 2.3.5.26, RBR40 before 2.3.5.30, RBS40 before 2.3.5.30, RBK40 before 2.3.5.30, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, RBK50 before 2.3.5.30, XR500 before 2.3.2.56, and XR700 before 1.0.1.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11787"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.0.108",
+      "cve_id": "CVE-2019-20714",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D3600 before 1.0.0.75, D6000 before 1.0.0.75, D7800 before 1.0.1.44, DM200 before 1.0.0.58, R7500v2 before 1.0.3.40, R7800 before 1.0.2.60, R8900 before 1.0.4.12, R9000 before 1.0.4.12, RBK20 before 2.3.0.22, RBR20 before 2.3.0.22, RBS20 before 2.3.0.22, RBK50 before 2.3.0.22, RBR50 before 2.3.0.22, RBS50 before 2.3.0.22, RBS40 before 2.3.0.22, WN3000RPv2 before 1.0.0.68, WN3000RPv3 before 1.0.2.70, WN3100RPv2 before 1.0.0.60, WNDR4300v2 before 1.0.0.58, WNDR4500v3 before 1.0.0.58, and WNR2000v5 before 1.0.0.68.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20714"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

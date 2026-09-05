@@ -1,0 +1,22 @@
+{
+  "run_id": "943e1062",
+  "timestamp": "2026-08-30T11:16:47.656429+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-739APBO_1.1.12.zip",
+    "name": "TEW-739APBO_1.1.12.zip",
+    "sha256": "f6e21644f73f723db388472290e0439b418529888ad92f9b64d9f7a7e8441fd5",
+    "size_bytes": 5740378
+  },
+  "emulation": {
+    "image_id": 404,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

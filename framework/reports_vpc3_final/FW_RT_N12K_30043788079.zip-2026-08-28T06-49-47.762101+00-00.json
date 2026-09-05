@@ -1,0 +1,22 @@
+{
+  "run_id": "a03737b3",
+  "timestamp": "2026-08-28T06:49:47.762101+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N12K_30043788079.zip",
+    "name": "FW_RT_N12K_30043788079.zip",
+    "sha256": "890175f2b81a3eabfe389e5f04ce239bbaabaeabc1cef70653fb4411727b49e0",
+    "size_bytes": 6056985
+  },
+  "emulation": {
+    "image_id": 163,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "ff65e2a0",
+  "timestamp": "2026-08-30T01:37:58.053255+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR825B1_FW202SSB15beta03.bin",
+    "name": "DIR825B1_FW202SSB15beta03.bin",
+    "sha256": "7de0a97967ce8a6d58159c7781148442756129adc97acadde7d90795114c9f15",
+    "size_bytes": 6291482
+  },
+  "emulation": {
+    "image_id": 331,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 89.5,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 01:36 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.00060s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed (53310) or filtered (12225)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 89.43 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

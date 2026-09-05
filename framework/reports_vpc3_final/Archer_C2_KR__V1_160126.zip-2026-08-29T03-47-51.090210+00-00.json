@@ -1,0 +1,229 @@
+{
+  "run_id": "693a27ff",
+  "timestamp": "2026-08-29T03:47:51.090210+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/Archer_C2_KR__V1_160126.zip",
+    "name": "Archer_C2_KR__V1_160126.zip",
+    "sha256": "a58effbc78de1d7b6dda9801ea380e4df0a21fcba5b22b6abb0968ffe51226de",
+    "size_bytes": 6722551
+  },
+  "emulation": {
+    "image_id": 72,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": true
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 73.2,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 03:46 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.043s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 73.18 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2004-0953",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Buffer overflow in the C2S module in the open source Jabber 2.x server (Jabberd) allows remote attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a long username.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2004-0953"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2006-1231",
+      "cvss_score": 1.2,
+      "severity": null,
+      "description": "CAPI4HylaFAX 1.3, when compiled with GENERATE_DEBUGSFFDATAFILE set, allows local users to modify arbitrary files via a symlink attack on the c2faxrecv_dbgdatafile.sff temporary file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-1231"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2006-3533",
+      "cvss_score": 5.8,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in Pivot 1.30 RC2 and earlier, when register_globals is enabled, allow remote attackers to inject arbitrary web script or HTML via the (1) fg, (2) line1, (3) line2, (4) bg, (5) c1, (6) c2, (7) c3, and (8) c4 parameters in (a) includes/blogroll.php; (9) name and (10) js_name parameters in (b) includes/editor/edit_menu.php; and, even if register_globals is not enabled, the (11) h and (12) w parameters in (c) includes/photo.php.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-3533"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2006-3126",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "c2faxrecv in capi4hylafax 01.02.03 allows remote attackers to execute arbitrary commands via null (\\0) and shell metacharacters in the TSI string, as demonstrated by a fax from an anonymous number.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2006-3126"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2008-1786",
+      "cvss_score": 9.3,
+      "severity": null,
+      "description": "The DSM gui_cm_ctrls ActiveX control (gui_cm_ctrls.ocx), as used in multiple CA products including BrightStor ARCServe Backup for Laptops and Desktops r11.5, Desktop Management Suite r11.1 through r11.2 C2; Unicenter r11.1 through r11.2 C2; and Desktop and Server Management r11.1 through r11.2 C2 allows remote attackers to execute arbitrary code via crafted function arguments.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-1786"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2008-4825",
+      "cvss_score": 9.3,
+      "severity": null,
+      "description": "Multiple buffer overflows in UltraISO 9.3.1.2633, and possibly other versions before 9.3.3.2685, allow user-assisted attackers to execute arbitrary code via a crafted (1) CIF, (2) C2D, or (3) GI file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4825"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2009-1349",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in C2Net Stronghold 2.3 allows remote attackers to inject arbitrary web script or HTML via the URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1349"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2009-2026",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Stack-based buffer overflow in a token searching function in the dtscore library in Data Transport Services in CA Software Delivery r11.2 C1, C2, C3, and SP4; Unicenter Software Delivery 4.0 C3; CA Advantage Data Transport 3.0 C1; and CA IT Client Manager r12 allows remote attackers to execute arbitrary code via crafted data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-2026"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2010-0305",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "ejabberd_c2s.erl in ejabberd before 2.1.3 allows remote attackers to cause a denial of service (daemon crash) via a large number of c2s (aka client2server) messages that trigger a queue overload.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0305"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2011-5174",
+      "cvss_score": 7.2,
+      "severity": null,
+      "description": "Buffer overflow in Intel Trusted Execution Technology (TXT) SINIT Authenticated Code Modules (ACM) in Intel Q67 Express, C202, C204, C206 Chipsets, and Mobile Intel QM67, and QS67 Chipset before 2nd_gen_i5_i7_SINIT_51.BIN Express; Intel Q57, 3450 Chipsets and Mobile Intel QM57 and QS57 Express Chipset before i5_i7_DUAL_SINIT_51.BIN and i7_QUAD_SINIT_51.BIN; Mobile Intel GM45, GS45, and PM45 Express Chipset before GM45_GS45_PM45_SINIT_51.BIN; Intel Q35 Express Chipsets before Q35_SINIT_51.BIN; and Intel 5520, 5500, X58, and 7500 Chipsets before SINIT ACM 1.1 allows local users to bypass the Trusted Execution Technology protection mechanism and perform other unspecified SINIT ACM functions via unspecified vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-5174"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2012-5767",
+      "cvss_score": 6.5,
+      "severity": null,
+      "description": "Unspecified vulnerability in the web interface on the IBM TS3500 Tape Library with firmware before C260 allows remote authenticated users to gain privileges via unspecified vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-5767"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2013-0125",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in fileview.asp in C2 WebResource allows remote attackers to inject arbitrary web script or HTML via the File parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-0125"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2013-5740",
+      "cvss_score": 6.9,
+      "severity": null,
+      "description": "Unspecified vulnerability in the Intel Trusted Execution Technology (TXT) SINIT Authenticated Code Modules (ACM) before 1.2, as used by the Intel QM77, QS77, Q77 Express, C216, Q67 Express, C202, C204, and C206 chipsets and Mobile Intel QM67 and QS67 chipsets, when the measured launch environment (MLE) is invoked, allows local users to bypass the Trusted Execution Technology protection mechanism and perform other unspecified SINIT ACM functions via unspecified vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-5740"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2013-7193",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Multiple SQL injection vulnerabilities in C2C Forward Auction Creator 2.0 allow remote attackers to execute arbitrary SQL commands via the (1) pa parameter to auction/asp/list.asp, or the (2) UserID or (3) Password to auction/casp/admin.asp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-7193"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2014-2046",
+      "cvss_score": 9.7,
+      "severity": null,
+      "description": "cgi-bin/rpcBridge in the web interface 1.1 on Broadcom Ltd PIPA C211 rev2 does not properly restrict access, which allows remote attackers to (1) obtain credentials and other sensitive information via a certain request to the config.getValuesHashExcludePaths method or (2) modify the firmware via unspecified vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-2046"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2015-4460",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Cross-site request forgery (CSRF) vulnerability in SecuritySetting/UserSecurity/UserManagement.aspx in B.A.S C2Box before 4.0.0 (r19171) allows remote attackers to hijack the authentication of administrators for requests that add administrator accounts via certain vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-4460"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2015-2058",
+      "cvss_score": 6.5,
+      "severity": null,
+      "description": "c2s/c2s.c in Jabber Open Source Server 2.3.2 and earlier truncates data without ensuring it remains valid UTF-8, which allows remote authenticated users to read system memory or possibly have other unspecified impact via a crafted JID.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-2058"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2015-5624",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Buffer overflow in the ExecCall method in c2lv6.ocx in the FreeBit ELPhoneBtnV6 ActiveX control allows remote attackers to execute arbitrary code via a crafted HTML document, related to the discontinued \"Click to Live\" service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5624"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2016-0469",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "Unspecified vulnerability in the Oracle Retail MICROS C2 component in Oracle Retail Applications 9.89.0.0 allows local users to affect confidentiality via vectors related to POS.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-0469"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2015-4626",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "B.A.S C2Box before 4.0.0 (r19171) relies on client-side validation, which allows remote attackers to \"corrupt the business logic\" via a negative value in an overdraft.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-4626"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

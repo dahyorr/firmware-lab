@@ -1,0 +1,22 @@
+{
+  "run_id": "7991499a",
+  "timestamp": "2026-08-28T00:04:50.793149+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA6900_1.1.43.182871_prod.img",
+    "name": "FW_EA6900_1.1.43.182871_prod.img",
+    "sha256": "6ced4dae3a6ccef482d87320c0f12a49ffad91cbe0bfd20bd38afed538748b96",
+    "size_bytes": 17133824
+  },
+  "emulation": {
+    "image_id": 82,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

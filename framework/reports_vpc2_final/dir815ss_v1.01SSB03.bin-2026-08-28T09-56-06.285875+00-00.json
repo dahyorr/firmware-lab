@@ -1,0 +1,28 @@
+{
+  "run_id": "20eae568",
+  "timestamp": "2026-08-28T09:56:06.285875+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/dir815ss_v1.01SSB03.bin",
+    "name": "dir815ss_v1.01SSB03.bin",
+    "sha256": "2cf7472501ceccabf0404fc91f3f1127d29bea25fe380c9277d76b86ecf8bf1e",
+    "size_bytes": 3784844
+  },
+  "emulation": {
+    "image_id": 72,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 142.9,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 09:53 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.38s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 142.89 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

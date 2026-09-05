@@ -1,0 +1,22 @@
+{
+  "run_id": "c89704f5",
+  "timestamp": "2026-08-30T03:55:11.219845+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_latest/DIR-822_REVC_FIRMWARE_v3.02B05.zip",
+    "name": "DIR-822_REVC_FIRMWARE_v3.02B05.zip",
+    "sha256": "e87760169285c9a02e2f176361a6a95bec11711d92d2e8936e4a24d4f9e11c25",
+    "size_bytes": 6684155
+  },
+  "emulation": {
+    "image_id": 365,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

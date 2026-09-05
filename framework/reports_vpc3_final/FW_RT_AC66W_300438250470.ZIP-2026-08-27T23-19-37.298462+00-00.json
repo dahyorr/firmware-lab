@@ -1,0 +1,22 @@
+{
+  "run_id": "b99e90ee",
+  "timestamp": "2026-08-27T23:19:37.298462+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC66W_300438250470.ZIP",
+    "name": "FW_RT_AC66W_300438250470.ZIP",
+    "sha256": "c8b1100ce7d79226ffa15b2080833bbf0382b5de13ffeb45334457ecbeb7a2c8",
+    "size_bytes": 32216462
+  },
+  "emulation": {
+    "image_id": 64,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "7e9ddf11",
+  "timestamp": "2026-08-30T11:55:09.571774+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear_latest/WN2000RPTv2-V1.1.0.12.zip",
+    "name": "WN2000RPTv2-V1.1.0.12.zip",
+    "sha256": "9516738d79c9131beb487e637f7b614bd091977ff300d4455e5f558bedaa490c",
+    "size_bytes": 2916993
+  },
+  "emulation": {
+    "image_id": 438,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

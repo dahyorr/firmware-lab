@@ -1,0 +1,229 @@
+{
+  "run_id": "ee487429",
+  "timestamp": "2026-08-28T01:36:48.755058+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/JNR1010v2_WNR614v1_WNR618v1_WNR2020v1_JWNR2000v5_JWNR2010v5_FW_V1.1.0.09_1.0.3.zip",
+    "name": "JNR1010v2_WNR614v1_WNR618v1_WNR2020v1_JWNR2000v5_JWNR2010v5_FW_V1.1.0.09_1.0.3.zip",
+    "sha256": "1fe05ad6b2e72ff76c497598bbea31b4c07de9145f688160aa4fe4f41e2c4e04",
+    "size_bytes": 3796679
+  },
+  "emulation": {
+    "image_id": 84,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 78.3,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 01:35 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.058s latency).\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 78.27 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2019-20738",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by stored XSS. This affects D6100 before 1.0.0.58, D7800 before 1.0.1.34, JNR1010v2 before 1.1.0.50, JWNR2010v5 before 1.1.0.50, RBK50 before 2.3.5.30, RBR50 before 2.3.5.30, RBS50 before 2.3.5.30, R6020 before 1.0.0.30, R6080 before 1.0.0.30, R6100 before 1.0.1.16, R6120 before 1.0.0.40, R6700v2 before 1.2.0.14, R6800 before 1.2.0.14, R6900v2 before 1.2.0.14, R7500v2 before 1.0.3.26, R7800 before 1.0.2.46, R9000 before 1.0.4.2, WN3000RPv2 before 1.0.0.52, WN3000RPv3 before 1.0.2.78, WNDR3700v4 before 1.0.2.102, WNDR3700v5 before 1.1.0.54, WNDR4300v1 before 1.0.2.104, WNDR4300v2 before 1.0.0.48, WNDR4500v3 before 1.0.0.48, WNR1000v4 before 1.1.0.50, WNR2000v5 before 1.0.0.64, WNR2020 before 1.1.0.50, and WNR2050 before 1.1.0.50. NOTE: this may be a result of an incomplete fix for CVE-2017-18866.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20738"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18791",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by CSRF. This affects R6050/JR6150 before 1.0.1.7, PR2000 before 1.0.0.17, R6220 before 1.1.0.50, WNDR3700v5 before 1.1.0.48, JNR1010v2 before 1.1.0.40, JWNR2010v5 before 1.1.0.40, WNR1000v4 before 1.1.0.40, WNR2020 before 1.1.0.40, WNR2050 before 1.1.0.40, WNR614 before 1.1.0.40, WNR618 before 1.1.0.40, and D7000 before 1.0.1.50.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18791"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18788",
+      "cvss_score": 6.7,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by command injection by an authenticated user. This affects D3600 before 1.0.0.67, D6000 before 1.0.0.67, D6100 before 1.0.0.56, D6200 before 1.1.00.24, D6220 before 1.0.0.32, D6400 before 1.0.0.66, D7000 before 1.0.1.52, D7000v2 before 1.0.0.44, D7800 before 1.0.1.30, D8500 before 1.0.3.35, DGN2200v4 before 1.0.0.96, DGN2200Bv4 before 1.0.0.96, EX2700 before 1.0.1.28, EX6150v2 before 1.0.1.54, EX6100v2 before 1.0.1.54, EX6200v2 before 1.0.1.52, EX6400 before 1.0.1.72, EX7300 before 1.0.1.72, EX8000 before 1.0.0.102, JNR1010v2 before 1.1.0.44, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6100 before 1.0.1.20, R6250 before 1.0.4.16, R6300v2 before 1.0.4.18, R6400 before 1.0.1.32, R6400v2 before 1.0.2.46, R6700 before 1.0.1.36, R6900 before 1.0.1.34, R7000 before 1.0.9.18, R6900P before 1.3.0.8, R7000P before 1.3.0.8, R7100LG before 1.0.0.34, R7300DST before 1.0.0.58, R7500 before 1.0.0.118, R7500v2 before 1.0.3.24, R7800 before 1.0.2.40, R7900 before 1.0.2.4, R8000 before 1.0.4.4_1.1.42, R7900P before 1.1.5.14, R8000P before 1.1.5.14, R8300 before 1.0.2.110, R8500 before 1.0.2.110, R9000 before 1.0.2.52, WN2000RPTv3 before 1.0.1.14, WN3000RPv3 before 1.0.2.50, WN3100RPv2 before 1.0.0.40, WNDR3400v3 before 1.0.1.16, WNDR3700v4 before 1.0.2.94, WNDR4300 before 1.0.2.96, WNDR4300v2 before 1.0.0.50, WNDR4500v3 before 1.0.0.50, WNR1000v4 before 1.1.0.44, WNR2000v5 before 1.0.0.62, WNR2020 before 1.1.0.44, WNR2050 before 1.1.0.44, and WNR3500Lv2 before 1.2.0.46.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18788"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18776",
+      "cvss_score": 8.4,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by authentication bypass. This affects D6100 before V1.0.0.55, D7000 before V1.0.1.50, D7800 before V1.0.1.24, JNR1010v2 before 1.1.0.40, JWNR2010v5 before 1.1.0.40, R6100 before 1.0.1.12, R6220 before 1.1.0.50, R7500 before 1.0.0.108, R7500v2 before 1.0.3.10, WNDR4300v1 before 1.0.2.88, WNDR4300v2 before 1.0.0.48, WNDR4500v3 before 1.0.0.48, WNR1000v4 before 1.1.0.40, WNR2000v5 before 1.0.0.42, WNR2020 before 1.1.0.40, and WNR2050 before 1.1.0.40.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18776"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18778",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by incorrect configuration of security settings. This affects D6220 before 1.0.0.28, D6400 before 1.0.0.60, D7000 before 1.0.1.52, D7000v2 before 1.0.0.38, D7800 before 1.0.1.24, D8500 before 1.0.3.29, JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.14, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6050 before 1.0.1.14, R6220 before 1.1.0.60, R6400 before 1.1.0.26, R6400v2 before 1.0.2.46, R6700v2 before 1.2.0.2, R6800 before 1.2.0.2, R6900v2 before 1.2.0.2, R7100LG before 1.0.0.32, R7300DST before 1.0.0.56, R7500 before 1.0.0.112, R7500v2 before 1.0.3.24, R7800 before 1.0.2.36, R7900P before 1.1.4.6, R8000P before 1.1.4.6, R8300 before 1.0.2.104, R8500 before 1.0.2.104, R9000 before 1.0.2.52, WNDR3700v4 before 1.0.2.94, WNDR3700v5 before 1.1.0.50, WNDR4300v1 before 1.0.2.96, WNDR4300v2 before 1.0.0.52, WNDR4500v3 before 1.0.0.52, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18778"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18779",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a buffer overflow. This affects D6200 before 1.1.00.24, D7000 before 1.0.1.52, JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.12, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6020 before 1.0.0.26, R6050 before 1.0.1.12, R6080 before 1.0.0.26, R6120 before 1.0.0.36, R6220 before 1.1.0.60, R6700v2 before 1.2.0.12, R6800 before 1.2.0.12, R6900v2 before 1.2.0.12, WNDR3700v5 before 1.1.0.50, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18779"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18780",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by denial of service. This affects D6200 before 1.1.00.24, D7000 before 1.0.1.52, JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.12, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6020 before 1.0.0.26, R6050 before 1.0.1.12, R6080 before 1.0.0.26, R6120 before 1.0.0.36, R6220 before 1.1.0.60, R6700v2 before 1.2.0.12, R6800 before 1.2.0.12, R6900v2 before 1.2.0.12, WNDR3700v5 before 1.1.0.50, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18780"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18781",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by CSRF. This affects D6200 before 1.1.00.24, D7000 before 1.0.1.52, JNR1010v2 before 1.1.0.44, JWNR2010v5 before 1.1.0.44, JR6150 before 1.0.1.12, PR2000 before 1.0.0.20, R6020 before 1.0.0.26, R6050 before 1.0.1.12, R6080 before 1.0.0.26, R6120 before 1.0.0.36, R6220 before 1.1.0.60, R6700v2 before 1.2.0.12, R6800 before 1.2.0.12, R6900v2 before 1.2.0.12, WNDR3700v5 before 1.1.0.50, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18781"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18782",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by CSRF. This affects D6200 before 1.1.00.24, D7000 before 1.0.1.52, JR6150 before 1.0.1.12, JNR1010v2 before 1.1.0.44, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6020 before 1.0.0.26, R6050 before 1.0.1.12, R6080 before 1.0.0.26, R6120 before 1.0.0.36, R6220 before 1.1.0.60, R6700v2 before 1.2.0.12, R6800 before 1.2.0.12, R6900v2 before 1.2.0.12, WNDR3700v5 before 1.1.0.50, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18782"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18783",
+      "cvss_score": 6.1,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by XSS. This affects D6200 before 1.1.00.24, D7000 before 1.0.1.52, JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.12, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6020 before 1.0.0.26, R6050 before 1.0.1.12, R6080 before 1.0.0.26, R6120 before 1.0.0.36, R6220 before 1.1.0.60, R6700v2 before 1.2.0.12, R6800 before 1.2.0.12, R6900v2 before 1.2.0.12, WNDR3700v5 before 1.1.0.50, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18783"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18784",
+      "cvss_score": 6.1,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by XSS. This affects D6200 before 1.1.00.24, D7000 before 1.0.1.52, JNR1010v2 before 1.1.0.44, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6020 before 1.0.0.26, R6050 before 1.0.1.12, R6080 before 1.0.0.26, R6120 before 1.0.0.36, R6220 before 1.1.0.60, R6700v2 before 1.2.0.12, R6800 before 1.2.0.12, R6900v2 before 1.2.0.12, WNDR3700v5 before 1.1.0.50, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18784"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18785",
+      "cvss_score": 4.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by XSS. This affects D3600 before 1.0.0.67, D6000 before 1.0.0.67, D6100 before 1.0.0.56, D6200 before 1.1.00.24, D6220 before 1.0.0.32, D6400 before 1.0.0.66, D7000 before 1.0.1.52, D7000v2 before 1.0.0.44, D7800 before 1.0.1.30, D8500 before 1.0.3.35, DGN2200v4 before 1.0.0.96, DGN2200Bv4 before 1.0.0.96, EX2700 before 1.0.1.28, EX6100v2 before 1.0.1.54, EX6150v2 before 1.0.1.54, EX6200v2 before 1.0.1.52, EX6400 before 1.0.1.72, EX7300 before 1.0.1.72, EX8000 before 1.0.0.102, JNR1010v2 before 1.1.0.44, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6020 before 1.0.0.26, R6080 before 1.0.0.26, R6100 before 1.0.1.20, R6250 before 1.0.4.16, R6300v2 before 1.0.4.18, R6400 before 1.0.1.32, R6400v2 before 1.0.2.46, R6700 before 1.0.1.36, R6800 before 1.2.0.12, R6900v2 before 1.2.0.12, R6700v2 before 1.2.0.12, R6900 before 1.0.1.34, R6900P before 1.3.0.8, R7000 before 1.0.9.18, R7000P before 1.3.0.8, R7100LG before 1.0.0.34, R7300DST before 1.0.0.58, R7500 before 1.0.0.118, R7500v2 before 1.0.3.24, R7800 before 1.0.2.40, R7900 before 1.0.2.4, R7900P before 1.1.5.14, R8000 before 1.0.4.4, R8000P before 1.1.5.14, R8500 before 1.0.2.110, R8300 before 1.0.2.110, R9000 before 1.0.2.52, WN2000RPTv3 before 1.0.1.8, WN3000RPv3 before 1.0.2.50, WN3100RPv2 before 1.0.0.42, WNDR3400v3 before 1.0.1.16, WNDR3700v4 before 1.0.2.94, WNDR4300 before 1.0.2.96, WNDR4300v2 before 1.0.0.50, WNDR4500v3 before 1.0.0.50, WNR1000v4 before 1.1.0.44, WNR2000v5 before 1.0.0.62, WNR2020 before 1.1.0.44, WNR2050 before 1.1.0.44, and WNR3500Lv2 before 1.2.0.46.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18785"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18786",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection. This affects D6200 before 1.1.00.24, JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.12, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6050 before 1.0.1.12, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18786"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18787",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection. This affects D6200 before 1.1.00.24, JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.12, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.20, R6050, before 1.0.1.12, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18787"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18763",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by incorrect configuration of security settings. This affects JNR1010v2 before 1.1.0.42, JR6150 before 1.0.1.10, JWNR2010v5 before 1.1.0.42, PR2000 before 1.0.0.18, R6050 before 1.0.1.10, R6120 before 1.0.0.30, R6220 before 1.1.0.50, R6700v2 before 1.2.0.4, R6800 before 1.2.0.4, R6900v2 before 1.2.0.4, WNDR3700v5 before 1.1.0.48, WNR1000v4 before 1.1.0.42, WNR2020 before 1.1.0.42, and WNR2050 before 1.1.0.42.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18763"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18764",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection by an unauthenticated attacker. This affects D6100 before 1.0.0.55, D7000 before 1.0.1.50, D7800 before 1.0.1.28, JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.10, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.18, R6050 before 1.0.1.10, R6100 before 1.0.1.14, R6120 before 1.0.0.30, R6220 before 1.1.0.50, R6700v2 before 1.2.0.4, R6800 before 1.2.0.4, R6900v2 before 1.2.0.4, R7500 before 1.0.0.110, R7500v2 before 1.0.3.20, R7800 before 1.0.2.36, R9000 before 1.0.2.52, WN3000RPv3 before 1.0.2.50, WNDR3700v4 before 1.0.2.88, WNDR3700v5 before 1.1.0.48, WNDR4300v1 before 1.0.2.90, WNDR4300v2 before 1.0.0.48, WNDR4500v3 before 1.0.0.48, WNR1000v4 before 1.1.0.44, WNR2000v5 before 1.0.0.58, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18764"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18749",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by CSRF. This affects JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.10, JWNR2010v5 before 1.1.0.44, R6050 before 1.0.1.10, R6100 before 1.0.1.16, R6220 before 1.1.0.50, R7500 before 1.0.0.112, R7500v2 before 1.0.3.20, R7800 before 1.0.2.36, R9000 before 1.0.2.40, WNDR3700v4 before 1.0.2.88, WNDR3700v5 before 1.1.0.48, WNDR4300 before 1.0.2.90, WNDR4300v2 before 1.0.0.48, WNDR4500v3 before 1.0.0.48, WNR1000v4 before 1.1.0.44, WNR2000v5 before 1.0.0.58, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18749"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18734",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection by an unauthenticated attacker. This affects JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.10, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.18, R6050 before 1.0.1.10, R6220 before 1.1.0.50, R6700v2 before 1.2.0.4, R6800 before 1.2.0.4, R6900v2 before 1.2.0.4, WNDR3700v5 before 1.1.0.48, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18734"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2017-18737",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection by an unauthenticated attacker. This affects JNR1010v2 before 1.1.0.44, JR6150 before 1.0.1.10, JWNR2010v5 before 1.1.0.44, PR2000 before 1.0.0.18, R6050 before 1.0.1.10, R6220 before 1.1.0.50, R6700v2 before 1.2.0.4, R6800 before 1.2.0.4, R6900v2 before 1.2.0.4, WNDR3700v5 before 1.1.0.48, WNR1000v4 before 1.1.0.44, WNR2020 before 1.1.0.44, and WNR2050 before 1.1.0.44.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18737"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.1.0.09",
+      "cve_id": "CVE-2018-21139",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by disclosure of sensitive information. This affects D1500 before 1.0.0.27, D500 before 1.0.0.27, D6100 before 1.0.0.58, D6200 before 1.1.00.30, D6220 before 1.0.0.46, D6400 before 1.0.0.82, D7000 before 1.0.1.68, D7000v2 before 1.0.0.51, D7800 before 1.0.1.42, D8500 before 1.0.3.42, DC112A before 1.0.0.40, DGN2200Bv4 before 1.0.0.102, DGN2200v4 before 1.0.0.102, JNR1010v2 before 1.1.0.54, JR6150 before 1.0.1.18, JWNR2010v5 before 1.1.0.54, PR2000 before 1.0.0.24, R6020 before 1.0.0.34, R6050 before 1.0.1.18, R6080 before 1.0.0.34, R6100 before 1.0.1.22, R6120 before 1.0.0.42, R6220 before 1.1.0.68, R6250 before 1.0.4.30, R6300v2 before 1.0.4.32, R6400 before 1.0.1.44, R6400v2 before 1.0.2.60, R6700 before 1.0.1.48, R6700v2 before 1.2.0.24, R6800 before 1.2.0.24, R6900 before 1.0.1.48, R6900P before 1.3.1.44, R6900v2 before 1.2.0.24, R7000 before 1.0.9.34, R7000P before 1.3.1.44, R7100LG before 1.0.0.48, R7300 before 1.0.0.68, R7500 before 1.0.0.124, R7500v2 before 1.0.3.38, R7900 before 1.0.2.16, R7900P before 1.4.1.24, R8000 before 1.0.4.18, R8000P before 1.4.1.24, R8300 before 1.0.2.122, R8500 before 1.0.2.122, WN3000RP before 1.0.0.68, WN3000RPv2 before 1.0.0.68, WNDR3400v3 before 1.0.1.18, WNDR3700v4 before 1.0.2.102, WNDR3700v5 before 1.1.0.54, WNDR4300v1 before 1.0.2.104, WNDR4300v2 before 1.0.0.56, WNDR4500v3 before 1.0.0.56, WNR1000v4 before 1.1.0.54, WNR2020 before 1.1.0.54, WNR2050 before 1.1.0.54, and WNR3500Lv2 before 1.2.0.54.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-21139"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

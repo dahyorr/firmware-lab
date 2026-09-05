@@ -1,0 +1,229 @@
+{
+  "run_id": "1b23ecca",
+  "timestamp": "2026-08-28T18:21:52.786809+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-821DAP_1.08B04.zip",
+    "name": "TEW-821DAP_1.08B04.zip",
+    "sha256": "f977323f0343ccbcbdca27216d6a0ec1c405dbd2e5478ed63d81f29eaccca3b5",
+    "size_bytes": 25081723
+  },
+  "emulation": {
+    "image_id": 225,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.10.100",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.100",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.2,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 18:19 UTC\nNmap scan report for 192.168.10.100\nHost is up.\nAll 65535 scanned ports on 192.168.10.100 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.14 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28841",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial of service by sending a POST request to apply_cgi via an action ping_test without a ping_ipaddr key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28841"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28842",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Deference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial os service by sending the POST request to apply_cgi via action do_graph_auth without login_name key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28842"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28843",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03 by sending the POST request to apply_cgi with an unknown action name.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28843"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28844",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03 by sending the POST request to apply_cgi via a do_graph_auth action without a session_id key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28844"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28845",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Null Pointer Dereference vulnerability exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial of service by sending the POST request to apply_cgi via the lang action without a language key.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28845"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2021-28846",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "A Format String vulnerablity exists in TRENDnet TEW-755AP 1.11B03, TEW-755AP2KAC 1.11B03, TEW-821DAP2KAC 1.11B03, and TEW-825DAP 1.11B03, which could let a remote malicious user cause a denial of service due to a logic bug at address 0x40dcd0 when calling fprintf with \"%s: key len = %d, too long\\n\" format. The two variables seem to be put in the wrong order. The vulnerability could be triggered by sending the POST request to apply_cgi with a long and unknown key in the request body.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28846"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2023-51148",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "An issue in TRENDnet Trendnet AC1200 Dual Band PoE Indoor Wireless Access Point TEW-821DAP v.3.00b06 allows an attacker to execute arbitrary code via the 'mycli' command-line interface component.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-51148"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2023-51146",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "Buffer Overflow vulnerability in TRENDnet AC1200 TEW-821DAP with firmware version 3.00b06 allows an attacker to execute arbitrary code via the adm_add_user action.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-51146"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2023-51147",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "Buffer Overflow vulnerability in TRENDnet Trendnet AC1200 TEW-821DAP with firmware version 3.00b06 allows an attacker to execute arbitrary code via the adm_mod_pwd action.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-51147"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-7606",
+      "cvss_score": 3.7,
+      "severity": "LOW",
+      "description": "A weakness has been identified in TRENDnet TEW-821DAP 1.12B01. This issue affects the function find_hwid/new_gui_update_firmware of the component Firmware Update Handler. Executing a manipulation of the argument dest can lead to insufficient verification of data authenticity. The attack can be launched remotely. Attacks of this nature are highly complex. The exploitability is assessed as difficult. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7606"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-7607",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A security vulnerability has been detected in TRENDnet TEW-821DAP 1.12B01. Impacted is the function auto_update_firmware of the component Firmware Udpate. The manipulation of the argument str leads to buffer overflow. The attack may be initiated remotely. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7607"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-7608",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was detected in TRENDnet TEW-821DAP up to 1.12B01. The affected element is the function tools_diagnostic. The manipulation results in os command injection. The exploit is now public and may be used. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7608"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-7609",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A flaw has been found in TRENDnet TEW-821DAP up to 1.12B01. The impacted element is the function tools_diagnostic of the file /tmp/diagnostic of the component Firmware Udpate. This manipulation causes os command injection. Remote exploitation of the attack is possible. The exploit has been published and may be used. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7609"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-7610",
+      "cvss_score": 3.7,
+      "severity": "LOW",
+      "description": "A vulnerability has been found in TRENDnet TEW-821DAP 1.12B01. This affects an unknown function of the file /www/cgi/ssi of the component Firmware Update. Such manipulation leads to cleartext transmission of sensitive information. The attack can be executed remotely. This attack is characterized by high complexity. The exploitability is reported as difficult. The exploit has been disclosed to the public and may be used. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7610"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-7611",
+      "cvss_score": 3.7,
+      "severity": "LOW",
+      "description": "A vulnerability was found in TRENDnet TEW-821DAP up to 1.12B01. This impacts the function platform_do_upgrade_cameo_dev of the file cameo_dev.sh of the component Firmware Update Handler. Performing a manipulation results in insufficient verification of data authenticity. The attack is possible to be carried out remotely. The complexity of an attack is rather high. The exploitability is said to be difficult. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7611"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-15483",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A security vulnerability has been detected in TRENDnet TEW-821DAP 1.12B01. Impacted is the function sub_41EC14 of the file /goform/tools_nslookup of the component ssi. The manipulation of the argument nslookup_target leads to buffer overflow. It is possible to initiate the attack remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15483"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-15484",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability was detected in TRENDnet TEW-821DAP 1.12B01. The affected element is the function sub_41EC14 of the file /goform/tools_nslookup of the component ssi. The manipulation results in buffer overflow. It is possible to launch the attack remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15484"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-15485",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A flaw has been found in TRENDnet TEW-821DAP 1.11B03. The impacted element is the function sub_43F2C4 of the file /goform/tools_nslookup of the component DNS Lookup Handler. This manipulation of the argument nslookup_target/dns_server causes os command injection. The attack can be initiated remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15485"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-15486",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability has been found in TRENDnet TEW-821DAP 1.11B03. This affects the function sub_42026C of the file /goform/tools_ddns of the component Firmware Update Handler. Such manipulation of the argument hostname/username/password leads to os command injection. The attack can be launched remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15486"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.08",
+      "cve_id": "CVE-2026-15487",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in TRENDnet TEW-821DAP 1.11B03. This impacts the function sub_41FBD0 of the file /goform/system_ntp of the component Firmware Update Handler. Performing a manipulation of the argument Hostname results in os command injection. The attack may be initiated remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15487"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,61 @@
+{
+  "run_id": "0e1f78ad",
+  "timestamp": "2026-08-28T03:59:40.108476+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_RE4000W_v1.0.01.001_20180321.bin",
+    "name": "FW_RE4000W_v1.0.01.001_20180321.bin",
+    "sha256": "75ab55e6de4e1b17ff61070576bcd0be2d227d1fe9d00deca35e86df7350b83c",
+    "size_bytes": 3334622
+  },
+  "emulation": {
+    "image_id": 130,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "10.10.10.254",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "10.10.10.254",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 24.0,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "lighttpd",
+        "raw_banner": "80/tcp open  http    lighttpd"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 03:58 UTC\nNmap scan report for 10.10.10.254\nHost is up (0.023s latency).\nNot shown: 65534 closed ports\nPORT   STATE SERVICE VERSION\n80/tcp open  http    lighttpd\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 23.92 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "admin",
+      "success": true,
+      "method": "http_basic"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "username": "root",
+      "password": "admin",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    }
+  ]
+}

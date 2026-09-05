@@ -10,10 +10,15 @@ subscribers via asyncio.Queue fan-out.
 import asyncio
 import sys
 import uuid
+from collections import deque
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+
+# Per-run cap on retained events for late-subscriber replay. FirmAE emulation
+# emits a few hundred log lines at most; 2000 leaves generous headroom.
+_HISTORY_MAX = 2000
 
 
 @dataclass
@@ -90,6 +95,7 @@ class RunManager:
         self._runs: dict[str, RunState] = {}
         self._queue: asyncio.Queue[RunState] | None = None
         self._subscribers: dict[str, list[asyncio.Queue]] = {}
+        self._history: dict[str, deque[dict]] = {}
         self._executor = ThreadPoolExecutor(max_workers=1)
 
     async def start(self) -> None:
@@ -117,9 +123,22 @@ class RunManager:
         return sorted(self._runs.values(), key=lambda r: r.queued_at, reverse=True)
 
     def subscribe(self, run_id: str) -> asyncio.Queue:
-        q: asyncio.Queue = asyncio.Queue(maxsize=512)
-        self._subscribers.setdefault(run_id, []).append(q)
+        q, _ = self.subscribe_with_history(run_id)
         return q
+
+    def subscribe_with_history(self, run_id: str) -> tuple[asyncio.Queue, list[dict]]:
+        """
+        Register a subscriber and atomically snapshot the events emitted so far.
+
+        Runs synchronously (no await) so no event can slip in between the
+        history snapshot and the queue registration — a late subscriber to a
+        still-running job replays the backlog, then picks up live events with
+        no gap and no duplicates.
+        """
+        q: asyncio.Queue = asyncio.Queue(maxsize=512)
+        backlog = list(self._history.get(run_id, ()))
+        self._subscribers.setdefault(run_id, []).append(q)
+        return q, backlog
 
     def unsubscribe(self, run_id: str, q: asyncio.Queue) -> None:
         subs = self._subscribers.get(run_id, [])
@@ -128,6 +147,7 @@ class RunManager:
 
     def _emit(self, run_id: str, event: dict) -> None:
         """Broadcast an event to all subscribers. Must run on the event loop thread."""
+        self._history.setdefault(run_id, deque(maxlen=_HISTORY_MAX)).append(event)
         for q in list(self._subscribers.get(run_id, [])):
             try:
                 q.put_nowait(event)

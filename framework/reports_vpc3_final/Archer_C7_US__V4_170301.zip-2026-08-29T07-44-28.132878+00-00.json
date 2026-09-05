@@ -1,0 +1,229 @@
+{
+  "run_id": "4e9ec8be",
+  "timestamp": "2026-08-29T07:44:28.132878+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/Archer_C7_US__V4_170301.zip",
+    "name": "Archer_C7_US__V4_170301.zip",
+    "sha256": "77ba3f6ae97a0d71c5298b0184096897d2695109736957cc3e609d9811f8b838",
+    "size_bytes": 15006315
+  },
+  "emulation": {
+    "image_id": 125,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": true
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 72.7,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 07:43 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.056s latency).\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 72.70 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2009-2003",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Ascad Networks Password Protector SD 1.3.1 allows remote attackers to bypass authentication and gain administrative access by setting the (1) c7portal and (2) cookname cookies to \"admin.\"",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-2003"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2013-6032",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "cgi-bin/postpf/cgi-bin/dynamic/config/config.html on Lexmark X94x before LC.BR.P142, X85x through LC4.BE.P487, X644 and X646 before LC2.MC.P374, X642 through LC2.MB.P318, W840 through LS.HA.P252, T64x before LS.ST.P344, X64xef through LC2.TI.P325, C935dn through LC.JO.P091, C920 through LS.TA.P152, C78x through LC.IO.P187, X78x through LC2.IO.P335, C77x through LC.CM.P052, X772 through LC2.TR.P291, C53x through LS.SW.P069, C52x through LS.FA.P150, 25xxN through LCL.CU.P114, N4000 through LC.MD.P119, N4050e through GO.GO.N206, N70xxe through LC.CO.N309, E450 through LM.SZ.P124, E350 through LE.PH.P129, and E250 through LE.PM.P126 printers allows remote attackers to remove the Password Protect administrative password via the vac.255.GENPASSWORD parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-6032"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2015-3035",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Directory traversal vulnerability in TP-LINK Archer C5 (1.2) with firmware before 150317, C7 (2.0) with firmware before 150304, and C8 (1.0) with firmware before 150316, Archer C9 (1.0), TL-WDR3500 (1.0), TL-WDR3600 (1.0), and TL-WDR4300 (1.0) with firmware before 150302, TL-WR740N (5.0) and TL-WR741ND (5.0) with firmware before 150312, and TL-WR841N (9.0), TL-WR841N (10.0), TL-WR841ND (9.0), and TL-WR841ND (10.0) with firmware before 150310 allows remote attackers to read arbitrary files via a .. (dot dot) in the PATH_INFO to login/.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3035"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2017-10850",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Untrusted search path vulnerability in Installers of ART EX Driver for ApeosPort-VI C7771/C6671/C5571/C4471/C3371/C2271, DocuCentre-VI C7771/C6671/C5571/C4471/C3371/C2271 (Timestamp of code signing is before 12 Apr 2017 02:04 UTC.), PostScript? Driver + Additional Feature Plug-in + PPD File for ApeosPort-VI C7771/C6671/C5571/C4471/C3371/C2271, DocuCentre-VI C7771/C6671/C5571/C4471/C3371/C2271 (Timestamp of code signing is before 12 Apr 2017 02:10 UTC.), XPS Print Driver for ApeosPort-VI C7771/C6671/C5571/C4471/C3371/C2271, DocuCentre-VI C7771/C6671/C5571/C4471/C3371/C2271 (Timestamp of code signing is before 3 Nov 2017 23:48 UTC.), ART EX Direct FAX Driver for ApeosPort-VI C7771/C6671/C5571/C4471/C3371/C2271, DocuCentre-VI C7771/C6671/C5571/C4471/C3371/C2271 (Timestamp of code signing is before 26 May 2017 07:44 UTC.), Setting Restore Tool for ApeosPort-VI C7771/C6671/C5571/C4471/C3371/C2271, DocuCentre-VI C7771/C6671/C5571/C4471/C3371/C2271 (Timestamp of code signing is before 25 Aug 2015 08:51 UTC.) allows an attacker to gain privileges via a Trojan horse DLL in an unspecified directory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-10850"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-13787",
+      "cvss_score": 6.7,
+      "severity": "MEDIUM",
+      "description": "Certain Supermicro X11S, X10, X9, X8SI, K1SP, C9X299, C7, B1, A2, and A1 products have a misconfigured Descriptor Region, allowing OS programs to modify firmware.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-13787"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-19012",
+      "cvss_score": 7.8,
+      "severity": "HIGH",
+      "description": "Drager Infinity Delta, Infinity Delta, all versions, Delta XL, all versions, Kappa, all version, and Infinity Explorer C700, all versions. Via a specific dialog it is possible to break out of the kiosk mode and reach the underlying operating system. By breaking out of the kiosk mode, an attacker is able to take control of the operating system.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19012"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-19010",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "Drager Infinity Delta, Infinity Delta, all versions, Delta XL, all versions, Kappa, all version, and Infinity Explorer C700, all versions. A malformed network packet may cause the monitor to reboot. By repeatedly sending the malformed network packet, an attacker may be able to disrupt patient monitoring by causing the monitor to repeatedly reboot until it falls back to default configuration and loses network connectivity.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19010"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-19014",
+      "cvss_score": 6.5,
+      "severity": "MEDIUM",
+      "description": "Drager Infinity Delta, Infinity Delta, all versions, Delta XL, all versions, Kappa, all version, and Infinity Explorer C700, all versions. Log files are accessible over an unauthenticated network connection. By accessing the log files, an attacker is able to gain insights about internals of the patient monitor, the location of the monitor, and wired network configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19014"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2019-18992",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "OpenWrt 18.06.4 allows XSS via these Name fields to the cgi-bin/luci/admin/network/firewall/rules URI: \"Open ports on router\" and \"New forward rule\" and \"New Source NAT\" (this can occur, for example, on a TP-Link Archer C7 device).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18992"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2019-18993",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "OpenWrt 18.06.4 allows XSS via the \"New port forward\" Name field to the cgi-bin/luci/admin/network/firewall/forwards URI (this can occur, for example, on a TP-Link Archer C7 device).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18993"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-10094",
+      "cvss_score": 5.4,
+      "severity": "MEDIUM",
+      "description": "A cross-site scripting (XSS) vulnerability in Lexmark CS31x before LW74.VYL.P273; CS41x before LW74.VY2.P273; CS51x before LW74.VY4.P273; CX310 before LW74.GM2.P273; CX410 & XC2130 before LW74.GM4.P273; CX510 & XC2132 before LW74.GM7.P273; MS310, MS312, MS317 before LW74.PRL.P273; MS410, M1140 before LW74.PRL.P273; MS315, MS415, MS417 before LW74.TL2.P273; MS51x, MS610dn, MS617 before LW74.PR2.P273; M1145, M3150dn before LW74.PR2.P273; MS610de, M3150 before LW74.PR4.P273; MS71x,M5163dn before LW74.DN2.P273; MS810, MS811, MS812, MS817, MS818 before LW74.DN2.P273; MS810de, M5155, M5163 before LW74.DN4.P273; MS812de, M5170 before LW74.DN7.P273; MS91x before LW74.SA.P273; MX31x, XM1135 before LW74.SB2.P273; MX410, MX510 & MX511 before LW74.SB4.P273; XM1140, XM1145 before LW74.SB4.P273; MX610 & MX611 before LW74.SB7.P273; XM3150 before LW74.SB7.P273; MX71x, MX81x before LW74.TU.P273; XM51xx & XM71xx before LW74.TU.P273; MX91x & XM91x before LW74.MG.P273; MX6500e before LW74.JD.P273; C746 before LHS60.CM2.P738; C748, CS748 before LHS60.CM4.P738; C792, CS796 before LHS60.HC.P738; C925 before LHS60.HV.P738; C950 before LHS60.TP.P738; X548 & XS548 before LHS60.VK.P738; X74x & XS748 before LHS60.NY.P738; X792 & XS79x before LHS60.MR.P738; X925 & XS925 before LHS60.HK.P738; X95x & XS95x before LHS60.TQ.P738; 6500e before LHS60.JR.P738;C734 LR.SK.P824 and earlier; C736 LR.SKE.P824 and earlier; E46x LR.LBH.P824 and earlier; T65x LR.JP.P824 and earlier; X46x LR.BS.P824 and earlier; X65x LR.MN.P824 and earlier; X73x LR.FL.P824 and earlier; W850 LP.JB.P823 and earlier; and X86x LP.SP.P823 and earlier.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-10094"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-35575",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "A password-disclosure issue in the web interface on certain TP-Link devices allows a remote attacker to get full administrative access to the web panel. This affects WA901ND devices before 3.16.9(201211) beta, and Archer C5, Archer C7, MR3420, MR6400, WA701ND, WA801ND, WDR3500, WDR3600, WE843N, WR1043ND, WR1045ND, WR740N, WR741ND, WR749N, WR802N, WR840N, WR841HP, WR841N, WR842N, WR842ND, WR845N, WR940N, WR941HP, WR945N, WR949N, and WRD4300 devices.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-35575"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-20679",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Fuji Xerox multifunction devices and printers (DocuCentre-VII C7773/C6673/C5573/C4473/C3373/C3372/C2273, DocuCentre-VII C7788/C6688/C5588, ApeosPort-VII C7773/C6673/C5573/C4473/C3373/C3372 C2273, ApeosPort-VII C7788/C6688/C5588, ApeosPort C7070/C6570/C5570/C4570/C3570/C3070/C7070G/C6570G/C5570G/C4570G/C3570G/C3070G, ApeosPort-VII C4421/C3321, ApeosPort C3060/C2560/C2060/C3060G/C2560G/C2060G, ApeosPort-VII CP4421, ApeosPort Print C5570, ApeosPort 5570/4570/5570G/4570G, ApeosPort 3560/3060/2560/3560G/3060G/2560G, ApeosPort-VII 5021/ 4021, ApeosPort-VII P5021, DocuPrint CP 555 d/505 d, DocuPrint P505 d, PrimeLink C9065/C9070, DocuPrint CP475AP, and DocuPrint P475AP) allow an attacker to cause a denial of service (DoS) condition and abnormal end (ABEND) of the affected products via sending a specially crafted command.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20679"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-28673",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Xerox Phaser 6510 before 64.61.23 and 64.59.11 (Bridge), WorkCentre 6515 before 65.61.23 and 65.59.11 (Bridge), VersaLink B400 before 37.61.23 and 37.59.01 (Bridge), B405 before 38.61.23 and 38.59.01 (Bridge), B600/B610 before 32.61.23 and 32.59.01 (Bridge), B605/B615 before 33.61.23 and 33.59.01 (Bridge), B7025/30/35 before 58.61.23 and 58.59.11 (Bridge), C400 before 67.61.23 and 67.59.01 (Bridge), C405 before 68.61.23 and 68.59.01 (Bridge), C500/C600 before 61.61.23 and 61.59.01 (Bridge), C505/C605 before 62.61.23 and 62.59.11 (Bridge), C7000 before 56.61.23 and 56.59.01 (Bridge), C7020/25/30 before 57.61.23 and 57.59.01 (Bridge), C8000/C9000 before 70.61.23 and 70.59.01 (Bridge), allows remote attackers with \"a weaponized clone file\" to execute arbitrary commands in the Web User Interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28673"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-27245",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "This vulnerability allows a firewall bypass on affected installations of TP-Link Archer A7 prior to Archer C7(US)_V5_210125 and Archer A7(US)_V5_200220 AC1750 routers. Authentication is not required to exploit this vulnerability. The specific flaw exists within the handling of IPv6 connections. The issue results from the lack of proper filtering of IPv6 SSH connections. An attacker can leverage this in conjunction with other vulnerabilities to execute code in the context of root. Was ZDI-CAN-12309.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27245"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-28671",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Xerox Phaser 6510 before 64.65.51 and 64.59.11 (Bridge), WorkCentre 6515 before 65.65.51 and 65.59.11 (Bridge), VersaLink B400 before 37.65.51 and 37.59.01 (Bridge), B405 before 38.65.51 and 38.59.01 (Bridge), B600/B610 before 32.65.51 and 32.59.01 (Bridge), B605/B615 before 33.65.51 and 33.59.01 (Bridge), B7025/30/35 before 58.65.51 and 58.59.11 (Bridge), C400 before 67.65.51 and 67.59.01 (Bridge), C405 before 68.65.51 and 68.59.01 (Bridge), C500/C600 before 61.65.51 and 61.59.01 (Bridge), C505/C605 before 62.65.51 and 62.59.01 (Bridge), C7000 before 56.65.51 and 56.59.01 (Bridge), C7020/25/30 before 57.65.51 and 57.59.01 (Bridge), C8000/C9000 before 70.65.51 and 70.59.01 (Bridge), C8000W before 72.65.51 have a remote Command Execution vulnerability in the Web User Interface that allows remote attackers with \"a weaponized clone file\" to execute arbitrary commands.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28671"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-28672",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Xerox Phaser 6510 before 64.65.51 and 64.59.11 (Bridge), WorkCentre 6515 before 65.65.51 and 65.59.11 (Bridge), VersaLink B400 before 37.65.51 and 37.59.01 (Bridge), B405 before 38.65.51 and 38.59.01 (Bridge), B600/B610 before 32.65.51 and 32.59.01 (Bridge), B605/B615 before 33.65.51 and 33.59.01 (Bridge), B7025/30/35 before 58.65.51 and 58.59.11 (Bridge), C400 before 67.65.51 and 67.59.01 (Bridge), C405 before 68.65.51 and 68.59.01 (Bridge), C500/C600 before 61.65.51 and 61.59.01 (Bridge), C505/C605 before 62.65.51 and 62.59.01 (Bridge), C7000 before 56.65.51 and 56.59.01 (Bridge), C7020/25/30 before 57.65.51 and 57.59.01 (Bridge), C8000/C9000 before 70.65.51 and 70.59.01 (Bridge), C8000W before 72.65.51 allows remote attackers to execute arbitrary code through a buffer overflow in Web page parameter handling.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28672"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-20698",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Sharp NEC Displays (UN462A R1.300 and prior to it, UN462VA R1.300 and prior to it, UN492S R1.300 and prior to it, UN492VS R1.300 and prior to it, UN552A R1.300 and prior to it, UN552S R1.300 and prior to it, UN552VS R1.300 and prior to it, UN552 R1.300 and prior to it, UN552V R1.300 and prior to it, UX552S R1.300 and prior to it, UX552 R1.300 and prior to it, V864Q R2.000 and prior to it, C861Q R2.000 and prior to it, P754Q R2.000 and prior to it, V754Q R2.000 and prior to it, C751Q R2.000 and prior to it, V984Q R2.000 and prior to it, C981Q R2.000 and prior to it, P654Q R2.000 and prior to it, V654Q R2.000 and prior to it, C651Q R2.000 and prior to it, V554Q R2.000 and prior to it, P404 R3.200 and prior to it, P484 R3.200 and prior to it, P554 R3.200 and prior to it, V404 R3.200 and prior to it, V484 R3.200 and prior to it, V554 R3.200 and prior to it, V404-T R3.200 and prior to it, V484-T R3.200 and prior to it, V554-T R3.200 and prior to it, C501 R2.000 and prior to it, C551 R2.000 and prior to it, C431 R2.000 and prior to it) allows an attacker to obtain root privileges and execute remote code by sending unintended parameters that contain specific characters in http request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20698"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-20699",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Sharp NEC Displays ((UN462A R1.300 and prior to it, UN462VA R1.300 and prior to it, UN492S R1.300 and prior to it, UN492VS R1.300 and prior to it, UN552A R1.300 and prior to it, UN552S R1.300 and prior to it, UN552VS R1.300 and prior to it, UN552 R1.300 and prior to it, UN552V R1.300 and prior to it, UX552S R1.300 and prior to it, UX552 R1.300 and prior to it, V864Q R2.000 and prior to it, C861Q R2.000 and prior to it, P754Q R2.000 and prior to it, V754Q R2.000 and prior to it, C751Q R2.000 and prior to it, V984Q R2.000 and prior to it, C981Q R2.000 and prior to it, P654Q R2.000 and prior to it, V654Q R2.000 and prior to it, C651Q R2.000 and prior to it, V554Q R2.000 and prior to it, P404 R3.200 and prior to it, P484 R3.200 and prior to it, P554 R3.200 and prior to it, V404 R3.200 and prior to it, V484 R3.200 and prior to it, V554 R3.200 and prior to it, V404-T R3.200 and prior to it, V484-T R3.200 and prior to it, V554-T R3.200 and prior to it, C501 R2.000 and prior to it, C551 R2.000 and prior to it, C431 R2.000 and prior to it) allows an attacker a buffer overflow and to execute remote code by sending long parameters that contains specific characters in http request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20699"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2021-20868",
+      "cvss_score": 4.5,
+      "severity": "MEDIUM",
+      "description": "Incorrect authorization vulnerability in KONICA MINOLTA bizhub series (bizhub C750i G00-35 and earlier, bizhub C650i/C550i/C450i G00-B6 and earlier, bizhub C360i/C300i/C250i G00-B6 and earlier, bizhub 750i/650i/550i/450i G00-37 and earlier, bizhub 360i/300i G00-33 and earlier, bizhub C287i/C257i/C227i G00-19 and earlier, bizhub 306i/266i/246i/226i G00-B6 and earlier, bizhub C759/C659 GC7-X8 and earlier, bizhub C658/C558/C458 GC7-X8 and earlier, bizhub 958/808/758 GC7-X8 and earlier, bizhub 658e/558e/458e GC7-X8 and earlier, bizhub C287/C227 GC7-X8 and earlier, bizhub 287/227 GC7-X8 and earlier, bizhub 368e/308e GC7-X8 and earlier, bizhub C368/C308/C258 GC9-X4 and earlier, bizhub 558/458/368/308 GC9-X4 and earlier, bizhub C754e/C654e GDQ-M0 and earlier, bizhub 754e/654e GDQ-M0 and earlier, bizhub C554e/C454e GDQ-M1 and earlier, bizhub C364e/C284e/C224e GDQ-M1 and earlier, bizhub 554e/454e/364e/284e/224e GDQ-M1 and earlier, bizhub C754/C654 C554/C454 GR1-M0 and earlier, bizhub C364/C284/C224 GR1-M0 and earlier, bizhub 754/654 GR1-M0 and earlier, bizhub C4050i/C3350i/C4000i/C3300i G00-B6 and earlier, bizhub C3320i G00-B6 and earlier, bizhub 4750i/4050i G00-22 and earlier, bizhub 4700i G00-22 and earlier, bizhub C3851FS/C3851/C3351 GC9-X4 and earlier, and bizhub 4752/4052 GC9-X4 and earlier) allows an attacker on the adjacent network to obtain user credentials if external server authentication is enabled via a specific SOAP message sent by an administrative user.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20868"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

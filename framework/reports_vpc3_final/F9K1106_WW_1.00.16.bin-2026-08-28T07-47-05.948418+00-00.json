@@ -1,0 +1,22 @@
+{
+  "run_id": "96ece07c",
+  "timestamp": "2026-08-28T07:47:05.948418+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/belkin_latest/F9K1106_WW_1.00.16.bin",
+    "name": "F9K1106_WW_1.00.16.bin",
+    "sha256": "55c84a882ca783e7a3ad34c7330bee595160227ea2d5c091e1ae217b60c5452f",
+    "size_bytes": 4943872
+  },
+  "emulation": {
+    "image_id": 105,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "7720fa6b",
+  "timestamp": "2026-08-29T15:07:44.248867+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-5010L_REVA_FIRMWARE_1.14_B09.zip",
+    "name": "DCS-5010L_REVA_FIRMWARE_1.14_B09.zip",
+    "sha256": "5fd6f8d716c7861b003ed1e11dd4817e98db46f37647d616d79082954078ffad",
+    "size_bytes": 7571547
+  },
+  "emulation": {
+    "image_id": 274,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

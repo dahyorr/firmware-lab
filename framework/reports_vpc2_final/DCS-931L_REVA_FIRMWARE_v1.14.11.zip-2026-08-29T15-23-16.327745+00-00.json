@@ -1,0 +1,22 @@
+{
+  "run_id": "cef83bd0",
+  "timestamp": "2026-08-29T15:23:16.327745+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-931L_REVA_FIRMWARE_v1.14.11.zip",
+    "name": "DCS-931L_REVA_FIRMWARE_v1.14.11.zip",
+    "sha256": "20d57383541e5ad4c1eaca995e79d146b0cf29ce976ea2c7a05953479915c204",
+    "size_bytes": 7125615
+  },
+  "emulation": {
+    "image_id": 279,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

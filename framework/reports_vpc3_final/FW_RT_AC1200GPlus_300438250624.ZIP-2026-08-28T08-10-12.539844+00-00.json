@@ -1,0 +1,71 @@
+{
+  "run_id": "f1930334",
+  "timestamp": "2026-08-28T08:10:12.539844+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC1200GPlus_300438250624.ZIP",
+    "name": "FW_RT_AC1200GPlus_300438250624.ZIP",
+    "sha256": "83223d43feb7aa94ce398ef25ccd27560330e1fed0c062cbcb9ff4e031bd3e77",
+    "size_bytes": 15677322
+  },
+  "emulation": {
+    "image_id": 4,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 37.8,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.76",
+        "raw_banner": "53/tcp    open  domain       dnsmasq 2.76"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "WebServer",
+        "raw_banner": "80/tcp    open  http         WebServer"
+      },
+      {
+        "port": 443,
+        "protocol": "tcp",
+        "service": "ssl/https",
+        "version": "WebServer",
+        "raw_banner": "443/tcp   open  ssl/https    WebServer"
+      },
+      {
+        "port": 4433,
+        "protocol": "tcp",
+        "service": "ssl/vop?",
+        "version": "",
+        "raw_banner": "4433/tcp  open  ssl/vop?"
+      },
+      {
+        "port": 8181,
+        "protocol": "tcp",
+        "service": "intermapper?",
+        "version": "",
+        "raw_banner": "8181/tcp  open  intermapper?"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "unknown",
+        "version": "",
+        "raw_banner": "49152/tcp open  unknown"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:09 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.012s latency).\nNot shown: 65529 closed ports\nPORT      STATE SERVICE      VERSION\n53/tcp    open  domain       dnsmasq 2.76\n80/tcp    open  http         WebServer\n443/tcp   open  ssl/https    WebServer\n4433/tcp  open  ssl/vop?\n8181/tcp  open  intermapper?\n49152/tcp open  unknown\n4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port80-TCP:V=7.80%I=7%D=8/28%Time=6A914252%P=x86_64-pc-linux-gnu%r(GetR\nSF:equest,4F2,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20\nSF:Wed,\\x2027\\x20Sep\\x202017\\x2016:10:36\\x20GMT\\r\\nX-Frame-Options:\\x20SAM\nSF:EORIGIN\\r\\n\\r\\n<!DOCTYPE\\x20HTML\\x20PUBLIC\\x20\\\"-//W3C//DTD\\x20XHTML\\x2\nSF:01\\.0\\x20Strict//EN\\\"\\n\\\"http://www\\.w3\\.org/TR/xhtml1/DTD/xhtml1-stric\nSF:t\\.dtd\\\">\\n\\n<html\\x20xmlns=\\x20\\\"http://www\\.w3c\\.org/1999/xhtml\\\">\\n\\\nSF:n<head>\\n<title>D-LINK</title>\\n<meta\\x20http-equiv=\\\"X-UA-Compatible\\\"\nSF:\\x20content=\\\"IE=9\\\">\\n<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20content=\nSF:\\\"text/html;\\x20charset=utf-8\\\">\\n<meta\\x20http-equiv=\\\"Content-Type\\\"\\\nSF:x20content=\\\"text/css\\\">\\n<meta\\x20name=\\\"viewport\\\"\\x20content=\\\"width\nSF:=device-width\\\">\\n</head>\\n<body>\\n\\t<iframe\\x20class=\\\"login_frame\\\"\\x\nSF:20id=\\\"defaultframe\\\"\\x20src=\\\"\\\"\\x20frameborder=\\\"0\\\"\\x20width=\\\"100%\\\nSF:\"\\x20height=\\\"100%\\\"\\x20style=\\\"overflow:\\x20auto;-webkit-overflow-scro\nSF:lling:touch;\\\"></iframe>\\n</body>\\n<script\\x20type=\\\"text/javascript\\\">\nSF:\\n\\ttry\\n\\t{\\n\\t\\t//var\\x20url\\x20=\\x20window\\.location\\.pathname;\\n\\t\\\nSF:t//sessionStorage\\.setItem\\(\\\"RedirectUrl\\\",\\x20url\\);\\n\\t}\\n\\tcatch\\x2\nSF:0\\(error\\)\\n\\t{\\n\\t\\t//localStorage\\.setItem\\x20is\\x20useless\\x20when\\x\nSF:20the\\x20priva\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemen\nSF:ted\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016\nSF::10:36\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\\nSF:x20127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\\nSF:x20Implemented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\\nSF:x20not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\")%r(FourOhFourRequest,F0,\nSF:\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20W\nSF:ed,\\x2027\\x20Sep\\x202017\\x2016:10:36\\x20GMT\\r\\nContent-Type:\\x20text/ht\nSF:ml\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found<\nSF:/title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20\nSF:could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port443-TCP:V=7.80%T=SSL%I=7%D=8/28%Time=6A91425D%P=x86_64-pc-linux-gnu\nSF:%r(GetRequest,4F2,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20WebServer\\r\\nDa\nSF:te:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:42\\x20GMT\\r\\nX-Frame-Options:\nSF:\\x20SAMEORIGIN\\r\\n\\r\\n<!DOCTYPE\\x20HTML\\x20PUBLIC\\x20\\\"-//W3C//DTD\\x20X\nSF:HTML\\x201\\.0\\x20Strict//EN\\\"\\n\\\"http://www\\.w3\\.org/TR/xhtml1/DTD/xhtml\nSF:1-strict\\.dtd\\\">\\n\\n<html\\x20xmlns=\\x20\\\"http://www\\.w3c\\.org/1999/xhtm\nSF:l\\\">\\n\\n<head>\\n<title>D-LINK</title>\\n<meta\\x20http-equiv=\\\"X-UA-Compa\nSF:tible\\\"\\x20content=\\\"IE=9\\\">\\n<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20c\nSF:ontent=\\\"text/html;\\x20charset=utf-8\\\">\\n<meta\\x20http-equiv=\\\"Content-\nSF:Type\\\"\\x20content=\\\"text/css\\\">\\n<meta\\x20name=\\\"viewport\\\"\\x20content=\nSF:\\\"width=device-width\\\">\\n</head>\\n<body>\\n\\t<iframe\\x20class=\\\"login_fr\nSF:ame\\\"\\x20id=\\\"defaultframe\\\"\\x20src=\\\"\\\"\\x20frameborder=\\\"0\\\"\\x20width=\nSF:\\\"100%\\\"\\x20height=\\\"100%\\\"\\x20style=\\\"overflow:\\x20auto;-webkit-overfl\nSF:ow-scrolling:touch;\\\"></iframe>\\n</body>\\n<script\\x20type=\\\"text/javasc\nSF:ript\\\">\\n\\ttry\\n\\t{\\n\\t\\t//var\\x20url\\x20=\\x20window\\.location\\.pathnam\nSF:e;\\n\\t\\t//sessionStorage\\.setItem\\(\\\"RedirectUrl\\\",\\x20url\\);\\n\\t}\\n\\tc\nSF:atch\\x20\\(error\\)\\n\\t{\\n\\t\\t//localStorage\\.setItem\\x20is\\x20useless\\x2\nSF:0when\\x20the\\x20priva\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20I\nSF:mplemented\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x20201\nSF:7\\x2016:10:47\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x\nSF:20\\x20\\x20127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\\nSF:x20Not\\x20Implemented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\nSF:\\x20or\\x20not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port8181-TCP:V=7.80%I=7%D=8/28%Time=6A914252%P=x86_64-pc-linux-gnu%r(Ge\nSF:tRequest,104A,\"HTTP/1\\.1\\x20200\\x20OK\\r\\nServer:\\x20WebServer\\r\\nDate:\\\nSF:x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:36\\x20GMT\\r\\n\\r\\n<html>\\n\\t<head>\nSF:\\n\\t\\t<title>D-LINK</title>\\n\\t\\t<meta\\x20http-equiv=\\\"X-UA-Compatible\\\nSF:\"\\x20content=\\\"IE=9\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"Content-Type\\\"\\x20con\nSF:tent=\\\"text/html;\\x20charset=utf-8\\\">\\n\\t\\t<meta\\x20http-equiv=\\\"Conten\nSF:t-Type\\\"\\x20content=\\\"text/css\\\">\\n\\t\\t<link\\x20rel=\\\"stylesheet\\\"\\x20t\nSF:ype=\\\"text/css\\\"\\x20href=\\\"css/style_sharePort\\.css\\\"\\x20media=\\\"all\\\"\\\nSF:x20/>\\n\\t\\t<link\\x20rel=stylesheet\\x20type=\\\"text/css\\\"\\x20href=\\\"/css/\nSF:jquery\\.selectbox\\.css\\\"\\x20/>\\n\\t\\t<script\\x20type=\\\"text/javascript\\\"\nSF:\\x20src=\\\"js/jquery-1\\.8\\.2\\.min\\.js\\\"\\x20tppabs=\\\"/webaccess/js/jquery\nSF:-1\\.8\\.2\\.min\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\"text/javascript\\\"\\\nSF:x20src=\\\"js/jquery\\.selectbox-0\\.2_new\\.js\\\"\\x20tppabs=\\\"/webaccess/js/\nSF:jquery\\.selectbox-0\\.2_new\\.js\\\"></script>\\n\\t\\t<script\\x20type=\\\"text/\nSF:javascript\\\"\\x20src=\\\"fancybox/json2\\.js\\\"\\x20tppabs=\\\"/webaccess/fancy\nSF:box/json2\\.js\\\"></script>\\n\\x20\\x20\\x20\\x20<script\\x20language=\\\"JavaSc\nSF:ript\\\"\\x20src=\\\"js/object\\.js\\\"\\x20tppabs=\\\"/webaccess/js/object\\.js\\\">\nSF:</script>\\n\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\nSF:\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10\nSF::41\\x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20\nSF:127\\r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20\nSF:Implemented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20\nSF:not\\x20allowed\\x20by\\x20this\\x20server\\.\\n\")%r(FourOhFourRequest,F0,\"HT\nSF:TP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20WebServer\\r\\nDate:\\x20Wed,\nSF:\\x2027\\x20Sep\\x202017\\x2016:10:41\\x20GMT\\r\\nContent-Type:\\x20text/html\\\nSF:r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>404\\x20Not\\x20Found</ti\nSF:tle>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resource\\x20requested\\x20cou\nSF:ld\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\\.\\n\");\n==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\nSF-Port49152-TCP:V=7.80%I=7%D=8/28%Time=6A914252%P=x86_64-pc-linux-gnu%r(F\nSF:ourOhFourRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20Web\nSF:Server\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:36\\x20GMT\\r\\nCont\nSF:ent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<title>\nSF:404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20resou\nSF:rce\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20server\nSF:\\.\\n\")%r(GetRequest,F0,\"HTTP/1\\.1\\x20404\\x20Not\\x20Found\\r\\nServer:\\x20\nSF:WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:41\\x20GMT\\r\\nC\nSF:ontent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20110\\r\\n\\r\\n<tit\nSF:le>404\\x20Not\\x20Found</title>\\n<h1>404\\x20Not\\x20Found</h1>\\nThe\\x20re\nSF:source\\x20requested\\x20could\\x20not\\x20be\\x20found\\x20on\\x20this\\x20ser\nSF:ver\\.\\n\")%r(HTTPOptions,107,\"HTTP/1\\.1\\x20501\\x20Not\\x20Implemented\\r\\n\nSF:Server:\\x20WebServer\\r\\nDate:\\x20Wed,\\x2027\\x20Sep\\x202017\\x2016:10:41\\\nSF:x20GMT\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20\\x20\\x20127\\\nSF:r\\n\\r\\n<title>501\\x20Not\\x20Implemented</title>\\n<h1>501\\x20Not\\x20Impl\nSF:emented</h1>\\nYour\\x20request\\x20was\\x20not\\x20understood\\x20or\\x20not\\\nSF:x20allowed\\x20by\\x20this\\x20server\\.\\n\");\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 37.75 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

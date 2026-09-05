@@ -1,0 +1,22 @@
+{
+  "run_id": "5c75f7dd",
+  "timestamp": "2026-08-30T06:55:30.694945+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-752DRU_v1.03B01.zip",
+    "name": "TEW-752DRU_v1.03B01.zip",
+    "sha256": "368d9da232da271c5f4702b95cfb6b1dba86d4f82fc77cc766a840d098560149",
+    "size_bytes": 7489066
+  },
+  "emulation": {
+    "image_id": null,
+    "success": false,
+    "architecture": null,
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

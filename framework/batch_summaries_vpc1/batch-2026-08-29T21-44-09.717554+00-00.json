@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-08-29T21:44:09.717647+00:00",
+  "profile": "comprehensive",
+  "total_firmware": 4,
+  "outcomes": {
+    "success": 1,
+    "emulation_failed": 1,
+    "timeout": 2,
+    "error": 0
+  },
+  "emulation_success_rate": 0.5,
+  "from_cache": 0,
+  "fresh_runs": 1,
+  "mean_duration_fresh": 1260.9,
+  "by_vendor": {
+    "dlink": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 1,
+      "timeout": 0,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 1.0
+    },
+    "tplink_latest": {
+      "total": 1,
+      "success": 1,
+      "emulation_failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "mean_duration_fresh": 1260.9,
+      "emulation_success_rate": 1.0
+    },
+    "trendnet_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    },
+    "dlink_ipcamera": {
+      "total": 1,
+      "success": 0,
+      "emulation_failed": 0,
+      "timeout": 1,
+      "error": 0,
+      "mean_duration_fresh": null,
+      "emulation_success_rate": 0.0
+    }
+  },
+  "results": [
+    {
+      "vendor": "dlink",
+      "firmware": "DCS-932L_REVB_FIRMWARE_2.12.01.ZIP",
+      "brand": "dlink_dcs_932l_revb_firmware_2_12_01",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:39:08.583200+00:00",
+      "status": "emulation_failed",
+      "duration_seconds": 837.9,
+      "from_cache": false,
+      "architecture": "mipsel",
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "58646ec2",
+      "report_path": "/root/project/framework/reports/DCS-932L_REVB_FIRMWARE_2.12.01.ZIP-2026-08-29T20-53-06.459166+00-00.json",
+      "error": null
+    },
+    {
+      "vendor": "tplink_latest",
+      "firmware": "TL-WR902AC_US__V1_160905.zip",
+      "brand": "tplink_latest_tl_wr902ac_us_v1_160905",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T20:53:06.460057+00:00",
+      "status": "success",
+      "duration_seconds": 1260.9,
+      "from_cache": false,
+      "architecture": "mipseb",
+      "ip": "192.168.0.1",
+      "services_found": 0,
+      "cve_matches": 6,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": "e6ab227b",
+      "report_path": "/root/project/framework/reports/TL-WR902AC_US__V1_160905.zip-2026-08-29T21-14-07.365981+00-00.json",
+      "error": null
+    },
+    {
+      "vendor": "trendnet_ipcamera",
+      "firmware": "FW_TV-IP651WI_V1_1.07.01.zip",
+      "brand": "trendnet_ipcamera_fw_tv_ip651wi_v1_1_07_01",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T21:14:07.368140+00:00",
+      "status": "timeout",
+      "duration_seconds": 901.0,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'trendnet_ipcamera_fw_tv_ip651wi_v1_1_07_01', '/root/project/firmware/trendnet_ipcamera/FW_TV-IP651WI_V1_1.07.01.zip']' timed out after 900 seconds"
+    },
+    {
+      "vendor": "dlink_ipcamera",
+      "firmware": "DCS-5009L_REVA_FIRMWARE_1.08.11.zip",
+      "brand": "dlink_ipcamera_dcs_5009l_reva_firmware_1_08_11",
+      "profile": "comprehensive",
+      "started_at": "2026-08-29T21:29:08.394162+00:00",
+      "status": "timeout",
+      "duration_seconds": 901.3,
+      "from_cache": false,
+      "architecture": null,
+      "ip": null,
+      "services_found": 0,
+      "cve_matches": 0,
+      "credential_hits": 0,
+      "web_findings": 0,
+      "run_id": null,
+      "report_path": null,
+      "error": "Command '['sudo', './run.sh', '-c', 'dlink_ipcamera_dcs_5009l_reva_firmware_1_08_11', '/root/project/firmware/dlink_ipcamera/DCS-5009L_REVA_FIRMWARE_1.08.11.zip']' timed out after 900 seconds"
+    }
+  ]
+}

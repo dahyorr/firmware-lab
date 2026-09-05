@@ -1,0 +1,22 @@
+{
+  "run_id": "4c872ff2",
+  "timestamp": "2026-08-28T21:00:47.681265+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNR3500Lv2-V1.2.0.44_40.0.84.zip",
+    "name": "WNR3500Lv2-V1.2.0.44_40.0.84.zip",
+    "sha256": "280c7c9dbd41ef49d35647052d8c8f86db2bee74addcfb15c5e1b377bb861999",
+    "size_bytes": 7559213
+  },
+  "emulation": {
+    "image_id": 251,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

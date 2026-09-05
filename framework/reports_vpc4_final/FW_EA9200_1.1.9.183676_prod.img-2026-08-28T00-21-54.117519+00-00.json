@@ -1,0 +1,22 @@
+{
+  "run_id": "0c9f09b5",
+  "timestamp": "2026-08-28T00:21:54.117519+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA9200_1.1.9.183676_prod.img",
+    "name": "FW_EA9200_1.1.9.183676_prod.img",
+    "sha256": "28a489349d60dccbdd70b92b93d21c9de8e94d4effecf07d9f3ad0ac45dcc7bb",
+    "size_bytes": 18383104
+  },
+  "emulation": {
+    "image_id": 86,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,164 @@
+# CATEGORY: sem_key_variant
+# vpc=2 scratch_id=226 name=DIR-604M_FW2.00KR brand=dlink_dir_604m_fw2_00kr
+matched_regex: Unable to get semaphore key
+# source log: qemu.final.serial.log  (1009975 lines total)
+# scratch metadata: name='DIR-604M_FW2.00KR'  brand='dlink_dir_604m_fw2_00kr'  architecture='mipsel'  ip='192.168.1.1'  ip.0='192.168.1.1'
+# signature: /Unable to get semaphore key/  first hit at line 289
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #28 Sat Oct 31 17:56:39 KST 2020
+[    0.000000] earlycon: Early serial console at I/O port 0x3f8 (options '38400n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] CPU0 revision is: 00019300 (MIPS 24Kc)
+[    0.000000] FPU revision is: 00739300
+[    0.000000] Software DMA cache coherency enabled
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00001000 @ 00000000 (reserved)
+[    0.000000]  memory: 000ef000 @ 00001000 (ROM data)
+[    0.000000]  memory: 00788000 @ 000f0000 (reserved)
+[    0.000000]  memory: 0f788000 @ 00878000 (usable)
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Wasting 69376 bytes for tracking 2168 unused pages
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x0000000000ffffff]
+[    0.000000]   Normal   [mem 0x0000000001000000-0x000000000fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] On node 0 totalpages: 65536
+[    0.000000] free_area_init_node: node 0, pgdat 808155b0, node_mem_map 81000000
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 4096 pages, LIFO batch:0
+[    0.000000]   Normal zone: 480 pages used for memmap
+[    0.000000]   Normal zone: 61440 pages, LIFO batch:15
+[    0.000000] Primary instruction cache 2kB, VIPT, 2-way, linesize 16 bytes.
+[    0.000000] Primary data cache 2kB, 2-way, VIPT, no aliases, linesize 16 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: root=/dev/sda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 init=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=0 firmadyne.syscall=1
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+
+--- signature context (lines 244-314) ---
+[    1.826339] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.826577] ohci-pci: OHCI PCI platform driver
+[    1.826884] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.827696] uhci_hcd 0000:00:0a.2: UHCI Host Controller
+[    1.828098] uhci_hcd 0000:00:0a.2: new USB bus registered, assigned bus number 1
+[    1.828763] uhci_hcd 0000:00:0a.2: irq 11, io base 0x00001440
+[    1.833787] hub 1-0:1.0: USB hub found
+[    1.834230] hub 1-0:1.0: 2 ports detected
+[    1.837088] usbcore: registered new interface driver usb-storage
+[    1.838049] mousedev: PS/2 mouse device common for all mice
+[    1.840474] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    1.840910] rtc_cmos rtc_cmos: alarms up to one day, 242 bytes nvram
+[    1.841257] i2c /dev entries driver
+[    1.841641] piix4_smbus 0000:00:0a.3: SMBus Host Controller at 0x1100, revision 0
+[    1.842494] sdhci: Secure Digital Host Controller Interface driver
+[    1.842738] sdhci: Copyright(c) Pierre Ossman
+[    1.843210] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.844266] usbcore: registered new interface driver usbhid
+[    1.844425] usbhid: USB HID core driver
+[    1.844737] Netfilter messages via NETLINK v0.30.
+[    1.845251] nf_conntrack version 0.5.0 (3924 buckets, 15696 max)
+[    1.846330] ctnetlink v0.93: registering with nfnetlink.
+[    1.847205] ipip: IPv4 over IPv4 tunneling driver
+[    1.850325] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.851798] arp_tables: (C) 2002 David S. Miller
+[    1.852989] Initializing XFRM netlink socket
+[    1.853589] NET: Registered protocol family 10
+[    1.858222] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    1.859660] sit: IPv6 over IPv4 tunneling driver
+[    1.861939] NET: Registered protocol family 17
+[    1.862387] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    1.862888] Bridge firewalling registered
+[    1.863029] Ebtables v2.0 registered
+[    1.863975] 8021q: 802.1Q VLAN Support v1.8
+[    1.866577] rtc_cmos rtc_cmos: setting system clock to 2026-08-28 23:08:48 UTC (1787958528)
+[    1.882262] EXT2-fs (sda1): warning: mounting unchecked fs, running e2fsck is recommended
+[    1.884173] VFS: Mounted root (ext2 filesystem) on device 8:1.
+[    1.885183] Freeing YAMON memory: 956k freed
+[    1.918913] Freeing unused kernel memory: 228K (80817000 - 80850000)
+[    2.006038] spurious 8259A interrupt: IRQ7.
+[    2.063569] firmadyne: do_execve: /firmadyne/console
+[    2.063811] OFFSETS: offset of pid: 0x198 offset of comm: 0x278
+nvram_get_buf: et0macaddr
+sem_lock: Triggering NVRAM initialization!
+nvram_init: Initializing NVRAM...
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_lock: Unable to get semaphore!
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_set_default_builtin: Setting built-in default values!
+nvram_set: console_loglevel = "7"
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_lock: Unable to get semaphore!
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_set: restore_defaults = "1"
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_lock: Unable to get semaphore!
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_set: sku_name = ""
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_lock: Unable to get semaphore!
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_set: wla_wlanstate = ""
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_lock: Unable to get semaphore!
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_set: lan_if = "br0"
+
+--- final tail (last 40 lines) ---
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 6 gpio25
+
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "mode_router_led"
+nvram_get_buf: gpio26
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 6 gpio26
+
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "mode_ap_led"
+nvram_get_buf: gpio27
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 6 gpio27
+
+sem_get: Unable to get semaphore key! Utilize altenative key.. by SR
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "internet_led"
+/usr/sbin/iptables
+ERR! can't connect to GPIO 21.
+ERR! can't connect to GPIO 8.
+Try `iptables -h' or 'iptables --help' for more information.
+[  375.450150] firmadyne: sys_socket[PID: 6701 (iptables)]: family:2, type:3, protocol:255
+[  375.452827] firmadyne: sys_setsockopt[PID: 6701 (iptables)]: fd:3, level:0, optname:64
+[  375.453339] firmadyne: sys_setsockopt[PID: 6701 (iptables)]: fd:3, level:0, optname:65
+[  375.468636] firmadyne: sys_socket[PID: 6703 (iptables)]: family:2, type:3, protocol:255
+[  375.470638] firmadyne: sys_setsockopt[PID: 6703 (iptables)]: fd:3, level:0, optname:64
+[  375.471182] firmadyne: sys_setsockopt[PID: 6703 (iptables)]: fd:3, level:0, optname:65
+ERR! can't connect to GPIO 21.
+ERR! can't connect to GPIO 8.

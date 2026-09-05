@@ -1,0 +1,254 @@
+{
+  "run_id": "5cc37226",
+  "timestamp": "2026-08-30T11:43:50.240728+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-825DAP_1.08B04.zip",
+    "name": "TEW-825DAP_1.08B04.zip",
+    "sha256": "d4ce0f531dce52beb362996cb9bd22fb700f66f3a41f4937e3fbdaaf2cad8fa8",
+    "size_bytes": 25081459
+  },
+  "emulation": {
+    "image_id": 405,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.10.100",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.100",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 22.2,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "BusyBox http 1.19.4",
+        "raw_banner": "80/tcp    open  http    BusyBox http 1.19.4"
+      },
+      {
+        "port": 12250,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "BusyBox http 1.19.4",
+        "raw_banner": "12250/tcp open  http    BusyBox http 1.19.4"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 11:42 UTC\nNmap scan report for 192.168.10.100\nHost is up (0.027s latency).\nNot shown: 65533 closed ports\nPORT      STATE SERVICE VERSION\n80/tcp    open  http    BusyBox http 1.19.4\n12250/tcp open  http    BusyBox http 1.19.4\nService Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 22.16 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /cgi-bin/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 403 at /HNAP1/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: trendnet",
+      "severity": "info"
+    },
+    {
+      "port": 12250,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /setup.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /stream",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /video",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /snapshot",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /image",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 12250,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 12250,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 12250,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 12250,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    }
+  ]
+}

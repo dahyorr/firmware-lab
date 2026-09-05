@@ -1,0 +1,229 @@
+{
+  "run_id": "77c963ff",
+  "timestamp": "2026-08-30T03:14:13.483614+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink_latest/RE650_EU_UK_US_AU_JP_CA_AS__V1_180719.zip",
+    "name": "RE650_EU_UK_US_AU_JP_CA_AS__V1_180719.zip",
+    "sha256": "0b2c6c60f3b2759eebe298bc0af1d4cedeb4b5ff668c5e4647056f8738bd78e4",
+    "size_bytes": 6998481
+  },
+  "emulation": {
+    "image_id": 352,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.254",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.254",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.2,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 03:11 UTC\nNmap scan report for 192.168.0.254\nHost is up.\nAll 65535 scanned ports on 192.168.0.254 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.15 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-35713",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Belkin LINKSYS RE6500 devices before 1.0.012.001 allow remote attackers to execute arbitrary commands or set a new password via shell metacharacters to the goform/setSysAdm page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-35713"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-35714",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Belkin LINKSYS RE6500 devices before 1.0.11.001 allow remote authenticated users to execute arbitrary commands via goform/systemCommand?command= in conjunction with the goform/pingstart program.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-35714"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-35715",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Belkin LINKSYS RE6500 devices before 1.0.012.001 allow remote authenticated users to execute arbitrary commands via shell metacharacters in a filename to the upload_settings.cgi page.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-35715"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-35716",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Belkin LINKSYS RE6500 devices before 1.0.012.001 allow remote attackers to cause a persistent denial of service (segmentation fault) via a long /goform/langSwitch langSelectionOnly parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-35716"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5438",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. It has been declared as critical. Affected by this vulnerability is the function WPS of the file /goform/WPS. The manipulation of the argument PIN leads to command injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5438"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5439",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. It has been rated as critical. Affected by this issue is the function verifyFacebookLike of the file /goform/verifyFacebookLike. The manipulation of the argument uid/accessToken leads to os command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5439"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5440",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability classified as critical has been found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. This affects the function NTP of the file /goform/NTP. The manipulation of the argument manual_year_select/manual_month_select/manual_day_select/manual_hour_select/manual_min_select/manual_sec_select leads to os command injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5440"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5441",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability classified as critical was found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. This vulnerability affects the function setDeviceURL of the file /goform/setDeviceURL. The manipulation of the argument DeviceURL leads to os command injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5441"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5442",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability, which was classified as critical, has been found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. This issue affects the function RP_pingGatewayByBBS of the file /goform/RP_pingGatewayByBBS. The manipulation of the argument ip/nm/gw leads to os command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5442"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5443",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability, which was classified as critical, was found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. Affected is the function wirelessAdvancedHidden of the file /goform/wirelessAdvancedHidden. The manipulation of the argument ExtChSelector/24GSelector/5GSelector leads to os command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5443"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5444",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability has been found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001 and classified as critical. Affected by this vulnerability is the function RP_UpgradeFWByBBS of the file /goform/RP_UpgradeFWByBBS. The manipulation of the argument type/ch/ssidhex/security/extch/pwd/mode/ip/nm/gw leads to os command injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5444"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5445",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001 and classified as critical. Affected by this issue is the function RP_checkFWByBBS of the file /goform/RP_checkFWByBBS. The manipulation of the argument type/ch/ssidhex/security/extch/pwd/mode/ip/nm/gw leads to os command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5445"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5446",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. It has been classified as critical. This affects the function RP_checkCredentialsByBBS of the file /goform/RP_checkCredentialsByBBS. The manipulation of the argument pwd leads to os command injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5446"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-5447",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was found in Linksys RE6500, RE6250, RE6300, RE6350, RE7000 and RE9000 1.0.013.001/1.0.04.001/1.0.04.002/1.1.05.003/1.2.07.001. It has been declared as critical. This vulnerability affects the function ssid1MACFilter of the file /goform/ssid1MACFilter. The manipulation of the argument apselect_%d/newap_text_%d leads to os command injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5447"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-8816",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability was determined in Linksys RE6250, RE6300, RE6350, RE6500, RE7000 and RE9000 up to 20250801. Affected is the function setOpMode of the file /goform/setOpMode. The manipulation of the argument ethConv leads to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8816"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-8817",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability was identified in Linksys RE6250, RE6300, RE6350, RE6500, RE7000 and RE9000 up to 20250801. Affected by this vulnerability is the function setLan of the file /goform/setLan. The manipulation of the argument lan2enabled leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8817"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-8818",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability has been found in Linksys RE6250, RE6300, RE6350, RE6500, RE7000 and RE9000 up to 20250801. Affected by this issue is the function setDFSSetting of the file /goform/setLan. The manipulation of the argument lanNetmask/lanIp leads to os command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8818"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-8819",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability was found in Linksys RE6250, RE6300, RE6350, RE6500, RE7000 and RE9000 up to 20250801. This affects the function setWan of the file /goform/setWan. The manipulation of the argument staticIp leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8819"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-8820",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A vulnerability was determined in Linksys RE6250, RE6300, RE6350, RE6500, RE7000 and RE9000 up to 20250801. This vulnerability affects the function wirelessBasic of the file /goform/wirelessBasic. The manipulation of the argument submit_SSID1 leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8820"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2025-8821",
+      "cvss_score": 6.3,
+      "severity": "MEDIUM",
+      "description": "A vulnerability was identified in Linksys RE6250, RE6300, RE6350, RE6500, RE7000 and RE9000 up to 20250801. This issue affects the function RP_setBasic of the file /goform/RP_setBasic. The manipulation of the argument bssid leads to os command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8821"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

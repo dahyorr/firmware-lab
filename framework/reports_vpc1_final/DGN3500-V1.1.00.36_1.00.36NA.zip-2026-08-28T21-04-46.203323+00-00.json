@@ -1,0 +1,22 @@
+{
+  "run_id": "c9e0ed39",
+  "timestamp": "2026-08-28T21:04:46.203323+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DGN3500-V1.1.00.36_1.00.36NA.zip",
+    "name": "DGN3500-V1.1.00.36_1.00.36NA.zip",
+    "sha256": "7b5c583e3e4e5f1afa3f0a0cf5b29552eb88a6ff990aafdb9216702fc64867f1",
+    "size_bytes": 8287266
+  },
+  "emulation": {
+    "image_id": null,
+    "success": false,
+    "architecture": null,
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

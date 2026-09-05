@@ -1,0 +1,164 @@
+# CATEGORY: dev_nvram_gap
+# vpc=1 scratch_id=105 name=R7000-V1.0.3.56_1.1.25 brand=netgear_r7000_v1_0_3_56_1_1_25
+matched_regex: /dev/nvram: No such device
+# source log: qemu.final.serial.log  (77335 lines total)
+# scratch metadata: name='R7000-V1.0.3.56_1.1.25'  brand='netgear_r7000_v1_0_3_56_1_1_25'  architecture='armel'  ip='192.168.1.1'  ip.0='192.168.1.1'  result='true'
+# signature: //dev/nvram: No such device/  first hit at line 40345
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #18 Sat Oct 31 17:55:49 KST 2020
+[    0.000000] CPU: ARMv7 Processor [412fc0f1] revision 1 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine model: linux,dummy-virt
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Truncating RAM at 0x40000000-0x80000000 to -0x6f800000
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] On node 0 totalpages: 194560
+[    0.000000] free_area_init_node: node 0, pgdat c061bfa8, node_mem_map ef20a000
+[    0.000000]   Normal zone: 1520 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 194560 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv0.2 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 193040
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 init=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=0 firmadyne.syscall=1
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 763856K/778240K available (4297K kernel code, 170K rwdata, 1580K rodata, 176K init, 148K bss, 14384K reserved, 0K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc05c5788   (5878 kB)
+[    0.000000]       .init : 0xc05c6000 - 0xc05f2000   ( 176 kB)
+[    0.000000]       .data : 0xc05f2000 - 0xc061c800   ( 170 kB)
+[    0.000000]        .bss : 0xc061f000 - 0xc06442d4   ( 149 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] Architected cp15 timer(s) running at 62.50MHz (virt).
+[    0.000000] clocksource arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1cd42e208c, max_idle_ns: 881590405314 ns
+
+--- signature context (lines 40300-40370) ---
+nvram_get_buf: wps_start
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 9 wps_start
+
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "pbc"
+nvram_get_buf: wps_proc_status
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 15 wps_proc_status
+
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "disable"
+nvram_match: ipv6_proto (disable) ?= "6to4"
+nvram_match: false
+[   37.336293] firmadyne: sys_socket[PID: 930 (udhcpc)]: family:2, type:3, protocol:255
+411000f4, Semaphore: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "0"
+nvram_get_buf: wla_wlanstate
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 13 wla_wlanstate
+
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "Enable"
+nvram_get_buf: wps_mode
+sem_get: Key: 411000f4
+[   37.347723] firmadyne: __inet_insert_ifa[PID: 930 (udhcpc)]: device:eth0 ifa:0x00000000
+/dev/nvram: No such device
+/dev/nvram: No such device
+/dev/nvram: No such device
+/dev/nvram: No such device
+/dev/nvram: No such device
+/dev/nvram: No such device
+[   37.355382] firmadyne: sys_socket[PID: 930 (udhcpc)]: family:2, type:2, protocol:0
+eth0: No such process
+/dev/nvram: No such device
+/dev/nvram: No such device
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 8 wps_mode
+
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "enabled"
+nvram_get_buf: wla_repeater
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+
+--- final tail (last 40 lines) ---
+
+[NVRAM] 10 wan_ipaddr
+
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "0.0.0.0"
+nvram_get_buf: wan_dns_sel
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 11 wan_dns_sel
+
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "0"
+nvram_get_buf: wan_dns
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 7 wan_dns
+
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_unlock: Unable to get semaphore!
+nvram_get_buf: = "0.0.0.0"
+nvram_get_buf: pptp_user_ip
+sem_get: Key: 411000f4
+sem_get: Waiting for semaphore timeout (Key: 411000f4, Semaphore: 8001)...
+sem_lock: Unable to get semaphore!
+nvram_get_buf: 
+
+[NVRAM] 12 pptp_user_ip
+
+sem_get: Key: 411000f4

@@ -1,0 +1,519 @@
+{
+  "run_id": "be804f57",
+  "timestamp": "2026-08-29T13:29:57.520323+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/TL-WR740N_KR__V6_151209.zip",
+    "name": "TL-WR740N_KR__V6_151209.zip",
+    "sha256": "3e09c6b85ac2c5e5c44eee9bba246ba130f27978d17ca7fddd88483b2a3c665b",
+    "size_bytes": 3815132
+  },
+  "emulation": {
+    "image_id": 268,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 21.9,
+    "services": [
+      {
+        "port": 22,
+        "protocol": "tcp",
+        "service": "ssh",
+        "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+        "raw_banner": "22/tcp open  ssh     Dropbear sshd 2012.55 (protocol 2.0)"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "TP-LINK WR740N/WR747N WAP http config",
+        "raw_banner": "80/tcp open  http    TP-LINK WR740N/WR747N WAP http config"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 13:29 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.019s latency).\nNot shown: 65533 closed ports\nPORT   STATE SERVICE VERSION\n22/tcp open  ssh     Dropbear sshd 2012.55 (protocol 2.0)\n80/tcp open  http    TP-LINK WR740N/WR747N WAP http config\nService Info: OS: Linux; Device: WAP; CPE: cpe:/o:linux:linux_kernel, cpe:/h:tp-link:wr740n%2Fwr747n\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 21.88 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2013-4421",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The buf_decompress function in packet.c in Dropbear SSH Server before 2013.59 allows remote attackers to cause a denial of service (memory consumption) via a compressed packet that has a large size when it is decompressed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4421"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2013-4434",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "Dropbear SSH Server before 2013.59 generates error messages for a failed logon attempt with different time delays depending on whether the user account exists, which allows remote attackers to discover valid usernames.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4434"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-3116",
+      "cvss_score": 6.4,
+      "severity": "MEDIUM",
+      "description": "CRLF injection vulnerability in Dropbear SSH before 2016.72 allows remote authenticated users to bypass intended shell-command restrictions via crafted X11 forwarding data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3116"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7406",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Format string vulnerability in Dropbear SSH before 2016.74 allows remote attackers to execute arbitrary code via format string specifiers in the (1) username or (2) host argument.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7406"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7407",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The dropbearconvert command in Dropbear SSH before 2016.74 allows attackers to execute arbitrary code via a crafted OpenSSH key file.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7407"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7408",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The dbclient in Dropbear SSH before 2016.74 allows remote attackers to execute arbitrary code via a crafted (1) -m or (2) -c argument.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7408"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2016-7409",
+      "cvss_score": 5.5,
+      "severity": "MEDIUM",
+      "description": "The dbclient and server in Dropbear SSH before 2016.74, when compiled with DEBUG_TRACE, allows local users to read process memory via the -v argument, related to a failed remote ident.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-7409"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2017-9078",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The server in Dropbear before 2017.75 might allow post-authentication root remote code execution because of a double free in cleanup of TCP listeners when the -a option is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9078"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2017-9079",
+      "cvss_score": 4.7,
+      "severity": "MEDIUM",
+      "description": "Dropbear before 2017.75 might allow local users to read certain files as root, if the file has the authorized_keys file format with a command= option. This occurs because ~/.ssh/authorized_keys is read with root privileges and symlinks are followed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9079"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2018-15599",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "The recv_msg_userauth_request function in svr-auth.c in Dropbear through 2018.76 is prone to a user enumeration vulnerability because username validity affects how fields in SSH_MSG_USERAUTH messages are handled, a similar issue to CVE-2018-15473 in an unrelated codebase.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-15599"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2017-2659",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "It was found that dropbear before version 2013.59 with GSSAPI leaks whether given username is valid or invalid. When an invalid username is given, the GSSAPI authentication failure was incorrectly counted towards the maximum allowed number of password attempts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-2659"
+    },
+    {
+      "port": 22,
+      "service": "ssh",
+      "version": "Dropbear sshd 2012.55 (protocol 2.0)",
+      "cve_id": "CVE-2019-12953",
+      "cvss_score": 5.3,
+      "severity": "MEDIUM",
+      "description": "Dropbear 2011.54 through 2018.76 has an inconsistent failure delay that may lead to revealing valid usernames, a different issue than CVE-2018-15599.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12953"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2012-2440",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "The default configuration of the TP-Link 8840T router enables web-based administration on the WAN interface, which allows remote attackers to establish an HTTP connection and possibly have unspecified other impact via unknown vectors.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-2440"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2012-5687",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web-based management feature on the TP-LINK TL-WR841N router with firmware 3.13.9 build 120201 Rel.54965n and earlier allows remote attackers to read arbitrary files via a .. (dot dot) in the PATH_INFO to the help/ URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-5687"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2012-6276",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web-based management interface on the TP-LINK TL-WR841N router with firmware 3.13.9 build 120201 Rel.54965n and earlier allows remote attackers to read arbitrary files via the URL parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6276"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2013-3688",
+      "cvss_score": 7.1,
+      "severity": null,
+      "description": "The TP-Link IP Cameras TL-SC3171, TL-SC3130, TL-SC3130G, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6, does not properly restrict access to certain administrative functions, which allows remote attackers to (1) cause a denial of service (device reboot) via a request to cgi-bin/reboot or (2) cause a denial of service (reboot and reset to factory defaults) via a request to cgi-bin/hardfactorydefault.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3688"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2013-2578",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "cgi-bin/admin/servetest in TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6 allows remote attackers to execute arbitrary commands via shell metacharacters in (1) the ServerName parameter and (2) other unspecified parameters.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-2578"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2013-2579",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6 have an empty password for the hardcoded \"qmik\" account, which allows remote attackers to obtain administrative access via a TELNET session.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-2579"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2013-2580",
+      "cvss_score": 7.1,
+      "severity": null,
+      "description": "Unrestricted file upload vulnerability in cgi-bin/uploadfile in TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6, allows remote attackers to upload arbitrary files, then accessing it via a direct request to the file in the mnt/mtd directory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-2580"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2013-2581",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "cgi-bin/firmwareupgrade in TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6 allows remote attackers to modify the firmware revision via a \"preset\" action.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-2581"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2013-6786",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in Allegro RomPager before 4.51, as used on the ZyXEL P660HW-D1, Huawei MT882, Sitecom WL-174, TP-LINK TD-8816, and D-Link DSL-2640R and DSL-2641R, when the \"forbidden author header\" protection mechanism is bypassed, allows remote attackers to inject arbitrary web script or HTML by requesting a nonexistent URI in conjunction with a crafted HTTP Referer header that is not properly handled in a 404 page.  NOTE: there is no CVE for a \"URL redirection\" issue that some sources list separately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-6786"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2012-6316",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in the TP-LINK TL-WR841N router with firmware 3.13.9 Build 120201 Rel.54965n and earlier allow remote administrators to inject arbitrary web script or HTML via the (1) username or (2) pwd parameter to userRpm/NoipDdnsRpm.htm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6316"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2014-4727",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Cross-site scripting (XSS) vulnerability in the DHCP clients page in the TP-LINK N750 Wireless Dual Band Gigabit Router (TL-WDR4300) with firmware before 140916 allows remote attackers to inject arbitrary web script or HTML via the hostname in a DHCP request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-4727"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2014-4728",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "The web server in the TP-LINK N750 Wireless Dual Band Gigabit Router (TL-WDR4300) with firmware before 140916 allows remote attackers to cause a denial of service (crash) via a long header in a GET request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-4728"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2013-2645",
+      "cvss_score": 9.3,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities on the TP-LINK WR1043N router with firmware TL-WR1043ND_V1_120405 allow remote attackers to hijack the authentication of administrators for requests that (1) enable FTP access (aka \"FTP directory traversal\") to /tmp via the shareEntire parameter to userRpm/NasFtpCfgRpm.htm, (2) change the FTP administrative password via the nas_admin_pwd parameter to userRpm/NasUserAdvRpm.htm, (3) enable FTP on the WAN interface via the internetA parameter to userRpm/NasFtpCfgRpm.htm, (4) launch the FTP service via the startFtp parameter to userRpm/NasFtpCfgRpm.htm, or (5) enable or disable bandwidth limits via the QoSCtrl parameter to userRpm/QoSCfgRpm.htm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-2645"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2014-9350",
+      "cvss_score": 5.0,
+      "severity": null,
+      "description": "TP-Link TL-WR740N 4 with firmware 3.17.0 Build 140520, 3.16.6 Build 130529, and 3.16.4 Build 130205 allows remote attackers to cause a denial of service (httpd crash) via vectors involving a \"new\" value in the isNew parameter to PingIframeRpm.htm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-9350"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2014-9510",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Cross-site request forgery (CSRF) vulnerability in the administration console in TP-Link TL-WR840N (V1) router with firmware before 3.13.27 build 141120 allows remote attackers to hijack the authentication of administrators for requests that change router settings via a configuration file import.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-9510"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2015-3035",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Directory traversal vulnerability in TP-LINK Archer C5 (1.2) with firmware before 150317, C7 (2.0) with firmware before 150304, and C8 (1.0) with firmware before 150316, Archer C9 (1.0), TL-WDR3500 (1.0), TL-WDR3600 (1.0), and TL-WDR4300 (1.0) with firmware before 150302, TL-WR740N (5.0) and TL-WR741ND (5.0) with firmware before 150312, and TL-WR841N (9.0), TL-WR841N (10.0), TL-WR841ND (9.0), and TL-WR841ND (10.0) with firmware before 150310 allows remote attackers to read arbitrary files via a .. (dot dot) in the PATH_INFO to login/.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3035"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2015-3036",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Stack-based buffer overflow in the run_init_sbus function in the KCodes NetUSB module for the Linux kernel, as used in certain NETGEAR products, TP-LINK products, and other products, allows remote attackers to execute arbitrary code by providing a long computer name in a session on TCP port 20005.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3036"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2016-1000009",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "TP-LINK lost control of two domains, www.tplinklogin.net and tplinkextender.net. Please note that these domains are physically printed on many of the devices.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1000009"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2017-8074",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "On the TP-Link TL-SG108E 1.0, a remote attacker could retrieve credentials from \"SEND data\" log lines where passwords are encoded in hexadecimal. This affects the 1.1.2 Build 20141017 Rel.50749 firmware.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8074"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TP-LINK WR740N/WR747N WAP http config",
+      "cve_id": "CVE-2017-8075",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "On the TP-Link TL-SG108E 1.0, a remote attacker could retrieve credentials from \"Switch Info\" log lines where passwords are in cleartext. This affects the 1.1.2 Build 20141017 Rel.50749 firmware.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8075"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /setup.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /stream",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /video",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /snapshot",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /image",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: tplink",
+      "severity": "info"
+    }
+  ]
+}

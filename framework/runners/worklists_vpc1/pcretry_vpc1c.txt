@@ -1,0 +1,4 @@
+dlink|/root/project/firmware/dlink/DIR-550A_v1.10KRb09.trx|191|emulation_failed
+tplink|/root/project/firmware/tplink/TL-WR841N_KR__V11_151201.zip|282|emulation_failed
+dlink_ipcamera|/root/project/firmware/dlink_ipcamera/DCS-5025L_REVA_FIRMWARE_v1.03.07.zip|None|timeout
+tplink_ipcamera|/root/project/firmware/tplink_ipcamera/NC200_v2.1.8_171109.zip|None|timeout

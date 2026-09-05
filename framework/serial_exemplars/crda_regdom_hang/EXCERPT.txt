@@ -1,0 +1,164 @@
+# CATEGORY: crda_regdom_hang
+# vpc=1 scratch_id=100 name=WNDR3700v4_V1.0.1.52 brand=netgear_wndr3700v4_v1_0_1_52
+matched_regex: Exceeded CRDA call max attempts
+# source log: qemu.final.serial.log  (69170 lines total)
+# scratch metadata: name='WNDR3700v4_V1.0.1.52'  brand='netgear_wndr3700v4_v1_0_1_52'  architecture='mipseb'  ip='192.168.1.1'  ip.0='192.168.1.1'  result='true'
+# signature: /Exceeded CRDA call max attempts/  first hit at line 50493
+==============================================================================
+
+--- boot header (lines 1-40) ---
+[    0.000000] Linux version 4.1.17+ (firmae@ubuntu) (gcc version 5.3.0 (GCC) ) #17 Sat Oct 31 17:56:16 KST 2020
+[    0.000000] earlycon: Early serial console at I/O port 0x3f8 (options '38400n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] CPU0 revision is: 00019300 (MIPS 24Kc)
+[    0.000000] FPU revision is: 00739300
+[    0.000000] Software DMA cache coherency enabled
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00001000 @ 00000000 (reserved)
+[    0.000000]  memory: 000ef000 @ 00001000 (ROM data)
+[    0.000000]  memory: 00798000 @ 000f0000 (reserved)
+[    0.000000]  memory: 0f777000 @ 00888000 (usable)
+[    0.000000] debug: ignoring loglevel setting.
+[    0.000000] Wasting 69888 bytes for tracking 2184 unused pages
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x0000000000ffffff]
+[    0.000000]   Normal   [mem 0x0000000001000000-0x000000000fffefff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000000fffefff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffefff]
+[    0.000000] On node 0 totalpages: 65535
+[    0.000000] free_area_init_node: node 0, pgdat 8081d5b0, node_mem_map 81000000
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 4096 pages, LIFO batch:0
+[    0.000000]   Normal zone: 480 pages used for memmap
+[    0.000000]   Normal zone: 61439 pages, LIFO batch:15
+[    0.000000] Primary instruction cache 2kB, VIPT, 2-way, linesize 16 bytes.
+[    0.000000] Primary data cache 2kB, 2-way, VIPT, no aliases, linesize 16 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65023
+[    0.000000] Kernel command line: root=/dev/sda1 console=ttyS0 nandsim.parts=64,64,64,64,64,64,64,64,64,64 rdinit=/firmadyne/preInit.sh rw debug ignore_loglevel print-fatal-signals=1 FIRMAE_NET=true FIRMAE_NVRAM=true FIRMAE_KERNEL=true FIRMAE_ETC=true user_debug=0 firmadyne.syscall=1
+[    0.000000] found FIRMAE_KERNEL=t
+[    0.000000] set the LD_PRELOAD=/firmadyne/libnvram_ioctl.so
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+
+--- signature context (lines 50448-50518) ---
+[   34.777955] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.778396] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.778711] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.779106] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.779450] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.779995] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.780358] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.780762] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.781132] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.781539] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.781909] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.782434] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.782824] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.783330] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.783686] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.784267] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.784604] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.784980] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.785392] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.786094] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.786510] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.787022] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.787408] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.787801] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.788255] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.789033] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.789435] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.789957] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.790371] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.790855] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.791172] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.791569] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.791881] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.792336] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.792680] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.793180] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.793523] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.793908] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.794252] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.794646] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.794954] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.795364] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.795674] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.796111] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.796498] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.797266] cfg80211: Exceeded CRDA call max attempts. Not calling CRDA
+[   34.797863] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.798315] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.798837] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.799232] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.799856] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.800280] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.800702] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.801218] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.801730] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.802132] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.802646] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.802980] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.803395] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.803705] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.804124] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.804500] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.805020] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.805372] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.805750] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.806063] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.806464] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.806772] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.807171] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   34.807521] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   34.807956] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+
+--- final tail (last 40 lines) ---
+[   73.906849] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.907339] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.907679] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.908140] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.908475] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.918210] firmadyne: inet_accept[PID: 556 (telnetenable)]:
+[   73.919261] firmadyne: inet_accept[PID: 556 (telnetenable)]:
+[   73.920552] firmadyne: inet_accept[PID: 556 (telnetenable)]:
+[   73.922312] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.922866] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.923314] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.923634] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.924071] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.924470] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+Failed to update the language string table
+
+[   73.926734] firmadyne: sys_socket[PID: 1031 (net-cgi)]: family:2, type:1, protocol:0
+[   73.927257] firmadyne: sys_socket[PID: 1031 (net-cgi)]: family:2, type:1, protocol:0
+Saving Data... 
+[   73.927850] firmadyne: sys_socket[PID: 1031 (net-cgi)]: family:2, type:1, protocol:0
+Fail!
+
+[   73.932037] firmadyne: inet_accept[PID: 556 (telnetenable)]:
+[   73.933868] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.934288] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.934689] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.935023] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.935428] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.935870] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.936375] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.945791] firmadyne: inet_accept[PID: 556 (telnetenable)]:
+[   73.946297] firmadyne: inet_accept[PID: 556 (telnetenable)]:
+[   73.948655] firmadyne: inet_accept[PID: 556 (telnetenable)]:
+[   73.952160] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.953486] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.954091] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.954821] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.955373] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:2, protocol:0
+[   73.956280] firmadyne: sys_socket[PID: 66 (klogd)]: family:1, type:1, protocol:0
+[   73.967665] firmadyne: inet_accept[PID: 556 (telnetenable)]:

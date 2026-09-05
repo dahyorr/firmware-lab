@@ -1,0 +1,10 @@
+tplink|/root/project/firmware/tplink/Archer_C9_V1_150916.zip
+tplink|/root/project/firmware/tplink/TL-WA850RE_US__V2_151228_US.zip
+tplink|/root/project/firmware/tplink/TL-WA855RE_US__V1_160127.zip
+tplink|/root/project/firmware/tplink/TL-WR740N_EU__V6_160325.zip
+tplink|/root/project/firmware/tplink/TL-WR740N_V5_150312.zip
+tplink|/root/project/firmware/tplink/TL-WR841HP_v1.20_150729.zip
+tplink|/root/project/firmware/tplink/TL-WR841ND_V9_150104.zip
+tplink|/root/project/firmware/tplink/TL-WR841N_KR__V11_151201.zip
+tplink|/root/project/firmware/tplink/TL-WR841N_V8_121122_KR.zip
+tplink|/root/project/firmware/tplink/TL-WR940N_KR__V6_171115.zip

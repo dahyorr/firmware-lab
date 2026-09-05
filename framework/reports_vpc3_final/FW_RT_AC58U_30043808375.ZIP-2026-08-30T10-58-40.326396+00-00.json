@@ -1,0 +1,22 @@
+{
+  "run_id": "23c3cb9c",
+  "timestamp": "2026-08-30T10:58:40.326396+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_AC58U_30043808375.ZIP",
+    "name": "FW_RT_AC58U_30043808375.ZIP",
+    "sha256": "dadfba4eb15dceaccb618918c83ec197918c511950392e3aa3cfbc686e2d0c42",
+    "size_bytes": 24034166
+  },
+  "emulation": {
+    "image_id": 51,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

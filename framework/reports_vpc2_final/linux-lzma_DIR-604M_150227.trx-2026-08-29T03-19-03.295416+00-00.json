@@ -1,0 +1,22 @@
+{
+  "run_id": "c5dc08f1",
+  "timestamp": "2026-08-29T03:19:03.295416+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/linux-lzma_DIR-604M_150227.trx",
+    "name": "linux-lzma_DIR-604M_150227.trx",
+    "sha256": "8b3ca46d5495292baafe01b1d2226592364e84ce19b4e4c6525b1aa4673a546d",
+    "size_bytes": 4816896
+  },
+  "emulation": {
+    "image_id": 81,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

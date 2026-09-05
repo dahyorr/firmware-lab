@@ -1,0 +1,2 @@
+vpc=1 scratch_id=4 name=DGN1000_V1.1.00.34_NA brand=netgear_dgn1000_v1_1_00_34_na
+matched_regex: couldn.t execute it \(error -8\)

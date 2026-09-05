@@ -1,0 +1,2 @@
+vpc=1 scratch_id=105 name=R7000-V1.0.3.56_1.1.25 brand=netgear_r7000_v1_0_3_56_1_1_25
+matched_regex: /dev/nvram: No such device

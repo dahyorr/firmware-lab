@@ -1,0 +1,36 @@
+{
+  "run_id": "b9266808",
+  "timestamp": "2026-08-28T08:55:28.386618+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR815A1_FW104b03.bin",
+    "name": "DIR815A1_FW104b03.bin",
+    "sha256": "d145a15ac385b3dd58d053d9721664ea09aa06b88313b5f95dbe2d0f9f53b99a",
+    "size_bytes": 3666060
+  },
+  "emulation": {
+    "image_id": 59,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 43.6,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http?",
+        "version": "",
+        "raw_banner": "80/tcp open  http?"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:48 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.033s latency).\nNot shown: 65534 closed ports\nPORT   STATE SERVICE VERSION\n80/tcp open  http?\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 43.58 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,229 @@
+{
+  "run_id": "26d38a5a",
+  "timestamp": "2026-08-30T03:50:29.068078+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink_latest/TL-WR841N_WR841ND_v7_120201.zip",
+    "name": "TL-WR841N_WR841ND_v7_120201.zip",
+    "sha256": "15862e519e79ef4e364320870df4c940058c45617248bef2df1c66ae8ef4ad0e",
+    "size_bytes": 3361896
+  },
+  "emulation": {
+    "image_id": 358,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-30 03:48 UTC\nNmap scan report for 192.168.0.1\nHost is up.\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.05 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2012-5687",
+      "cvss_score": 7.8,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web-based management feature on the TP-LINK TL-WR841N router with firmware 3.13.9 build 120201 Rel.54965n and earlier allows remote attackers to read arbitrary files via a .. (dot dot) in the PATH_INFO to the help/ URI.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-5687"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2012-6276",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Directory traversal vulnerability in the web-based management interface on the TP-LINK TL-WR841N router with firmware 3.13.9 build 120201 Rel.54965n and earlier allows remote attackers to read arbitrary files via the URL parameter.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6276"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2012-6316",
+      "cvss_score": 4.3,
+      "severity": null,
+      "description": "Multiple cross-site scripting (XSS) vulnerabilities in the TP-LINK TL-WR841N router with firmware 3.13.9 Build 120201 Rel.54965n and earlier allow remote administrators to inject arbitrary web script or HTML via the (1) username or (2) pwd parameter to userRpm/NoipDdnsRpm.htm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6316"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2015-3035",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Directory traversal vulnerability in TP-LINK Archer C5 (1.2) with firmware before 150317, C7 (2.0) with firmware before 150304, and C8 (1.0) with firmware before 150316, Archer C9 (1.0), TL-WDR3500 (1.0), TL-WDR3600 (1.0), and TL-WDR4300 (1.0) with firmware before 150302, TL-WR740N (5.0) and TL-WR741ND (5.0) with firmware before 150312, and TL-WR841N (9.0), TL-WR841N (10.0), TL-WR841ND (9.0), and TL-WR841ND (10.0) with firmware before 150310 allows remote attackers to read arbitrary files via a .. (dot dot) in the PATH_INFO to login/.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3035"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2017-9466",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The executable httpd on the TP-Link WR841N V8 router before TL-WR841N(UN)_V8_170210 contained a design flaw in the use of DES for block encryption. This resulted in incorrect access control, which allowed attackers to gain read-write access to system settings through the protected router configuration service tddp via the LAN and Ath0 (Wi-Fi) interfaces.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-9466"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-11714",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "An issue was discovered on TP-Link TL-WR840N v5 00000005 0.9.1 3.16 v0001.0 Build 170608 Rel.58696n and TL-WR841N v13 00000013 0.9.1 4.16 v0001.0 Build 170622 Rel.64334n devices. This issue is caused by improper session handling on the /cgi/ folder or a /cgi file. If an attacker sends a header of \"Referer: http://192.168.0.1/mainFrame.htm\" then no authentication is required for any action.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-11714"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-12574",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "CSRF exists for all actions in the web interface on TP-Link TL-WR841N v13 00000001 0.9.1 4.16 v0001.0 Build 180119 Rel.65243n devices.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-12574"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-12575",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "On TP-Link TL-WR841N v13 00000001 0.9.1 4.16 v0001.0 Build 171019 Rel.55346n devices, all actions in the web interface are affected by bypass of authentication via an HTTP request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-12575"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-12576",
+      "cvss_score": 4.3,
+      "severity": "MEDIUM",
+      "description": "TP-Link TL-WR841N v13 00000001 0.9.1 4.16 v0001.0 Build 180119 Rel.65243n devices allow clickjacking.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-12576"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2018-12577",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The Ping and Traceroute features on TP-Link TL-WR841N v13 00000001 0.9.1 4.16 v0001.0 Build 180119 Rel.65243n devices allow authenticated blind Command Injection.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-12577"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2019-17147",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of TP-LINK TL-WR841N routers. Authentication is not required to exploit this vulnerability. The specific flaw exists within the web service, which listens on TCP port 80 by default. When parsing the Host request header, the process does not properly validate the length of user-supplied data prior to copying it to a fixed-length static buffer. An attacker can leverage this vulnerability to execute code in the context of the admin user. Was ZDI-CAN-8457.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17147"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-8423",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "A buffer overflow in the httpd daemon on TP-Link TL-WR841N V10 (firmware version 3.16.9) devices allows an authenticated remote attacker to execute arbitrary code via a GET request to the page for the configuration of the Wi-Fi network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8423"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2020-35576",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A Command Injection issue in the traceroute feature on TP-Link TL-WR841N V13 (JP) with firmware versions prior to 201216 allows authenticated users to execute arbitrary code as root via shell metacharacters, a different vulnerability than CVE-2018-12577.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-35576"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-0162",
+      "cvss_score": 8.4,
+      "severity": "HIGH",
+      "description": "The vulnerability exists in TP-Link TL-WR841N V11 3.16.9 Build 160325 Rel.62500n wireless router due to transmission of authentication information in cleartextbase64 format. Successful exploitation of this vulnerability could allow a remote attacker to intercept credentials and subsequently perform administrative operations on the affected device through web-based management interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0162"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-25073",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TL-WR841Nv14_US_0.9.1_4.18 routers were discovered to contain a stack overflow in the function dm_fillObjByStr(). This vulnerability allows unauthenticated attackers to execute arbitrary code.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25073"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-30024",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A buffer overflow in the httpd daemon on TP-Link TL-WR841N V12 (firmware version 3.16.9) devices allows an authenticated remote attacker to execute arbitrary code via a GET request to the page for the System Tools of the Wi-Fi network. This affects TL-WR841 V12 TL-WR841N(EU)_V12_160624 and TL-WR841 V11 TL-WR841N(EU)_V11_160325 , TL-WR841N_V11_150616 and TL-WR841 V10 TL-WR841N_V10_150310 are also affected.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-30024"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-42202",
+      "cvss_score": 6.1,
+      "severity": "MEDIUM",
+      "description": "TP-Link TL-WR841N 8.0 4.17.16 Build 120201 Rel.54750n is vulnerable to Cross Site Scripting (XSS).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42202"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-46912",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue in the firmware update process of TP-Link TL-WR841N / TL-WA841ND V7 3.13.9 and earlier allows attackers to execute arbitrary code or cause a Denial of Service (DoS) via uploading a crafted firmware image.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-46912"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2022-42433",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of TP-Link TL-WR841N TL-WR841N(US)_V14_220121 routers. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the ated_tp service. The issue results from the lack of proper validation of a user-supplied string before using it to execute a system call. An attacker can leverage this vulnerability to execute code in the context of root. Was ZDI-CAN-17356.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42433"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "",
+      "cve_id": "CVE-2023-33536",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "TP-Link TL-WR940N V2/V4, TL-WR841N V8/V10, and TL-WR740N V1/V2 was discovered to contain a buffer overflow via the component /userRpm/WlanMacFilterRpm.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-33536"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

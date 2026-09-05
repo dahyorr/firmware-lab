@@ -1,0 +1,229 @@
+{
+  "run_id": "913c1230",
+  "timestamp": "2026-08-28T02:24:56.129027+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6700-V1.0.1.16_10.0.30.zip",
+    "name": "R6700-V1.0.1.16_10.0.30.zip",
+    "sha256": "1330460408aa261189a1c318c9c8eef6bbc5818c0faff7f6c404777687de98ce",
+    "size_bytes": 31886909
+  },
+  "emulation": {
+    "image_id": 97,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.6,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 02:22 UTC\nNmap scan report for 192.168.1.1\nHost is up.\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.52 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2016-6277",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "NETGEAR R6250 before 1.0.4.6.Beta, R6400 before 1.0.1.18.Beta, R6700 before 1.0.1.14.Beta, R6900, R7000 before 1.0.7.6.Beta, R7100LG before 1.0.0.28.Beta, R7300DST before 1.0.0.46.Beta, R7900 before 1.0.1.8.Beta, R8000 before 1.0.3.26.Beta, D6220, D6400, D7000, and possibly other routers allow remote attackers to execute arbitrary commands via shell metacharacters in the path info to cgi-bin/.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6277"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2017-5521",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "An issue was discovered on NETGEAR R8500, R8300, R7000, R6400, R7300, R7100LG, R6300v2, WNDR3400v3, WNR3500Lv2, R6250, R6700, R6900, and R8000 devices. They are prone to password disclosure via simple crafted requests to the web management server. The bug is exploitable remotely if the remote management option is set, and can also be exploited given access to the router over LAN or WLAN. When trying to access the web panel, a user is asked to authenticate; if the authentication is canceled and password recovery is not enabled, the user is redirected to a page that exposes a password recovery token. If a user supplies the correct token to the page /passwordrecovered.cgi?id=TOKEN (and password recovery is not enabled), they will receive the admin password for the router. If password recovery is set the exploit will fail, as it will ask the user for the recovery questions that were previously set when enabling that feature. This is persistent (even after disabling the recovery option, the exploit will fail) because the router will ask for the security questions.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-5521"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-17372",
+      "cvss_score": 8.1,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices allow remote attackers to disable all authentication requirements by visiting genieDisableLanChanged.cgi. The attacker can then, for example, visit MNU_accessPassword_recovered.html to obtain a valid new admin password. This affects AC1450, D8500, DC112A, JNDR3000, LG2200D, R4500, R6200, R6200V2, R6250, R6300, R6300v2, R6400, R6700, R6900P, R6900, R7000P, R7000, R7100LG, R7300, R7900, R8000, R8300, R8500, WGR614v10, WN2500RPv2, WNDR3400v2, WNDR3700v3, WNDR4000, WNDR4500, WNDR4500v2, WNR1000, WNR1000v3, WNR3500L, and WNR3500L.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17372"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2020-11770",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection by an authenticated user. This affects D6220 before 1.0.0.52, D6400 before 1.0.0.86, D7000v2 before 1.0.0.53, D8500 before 1.0.3.44, R6220 before 1.1.0.80, R6250 before 1.0.4.34, R6260 before 1.1.0.64, R6400 before 1.0.1.46, R6400v2 before 1.0.2.66, R6700 before 1.0.2.6, R6700v2 before 1.2.0.36, R6700v3 before 1.0.2.66, R6800 before 1.2.0.36, R6900 before 1.0.2.4, R6900P before 1.3.1.64, R6900v2 before 1.2.0.36, R7000 before 1.0.9.42, R7000P before 1.3.1.64, R7100LG before 1.0.0.50, R7300DST before 1.0.0.70, R7800 before 1.0.2.60, R7900 before 1.0.3.8, R7900P before 1.4.1.30, R8000 before 1.0.4.28, R8000P before 1.4.1.30, R8300 before 1.0.2.128, R8500 before 1.0.2.128, R8900 before 1.0.4.12, R9000 before 1.0.4.12, and XR500 before 2.3.2.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11770"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20640",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects D3600 before 1.0.0.76, D6000 before 1.0.0.76, D6200 before 1.1.00.32, D7000 before 1.0.1.68, JR6150 before 1.0.1.18, PR2000 before 1.0.0.28, R6020 before 1.0.0.38, R6050 before 1.0.1.18, R6080 before 1.0.0.38, R6120 before 1.0.0.46, R6220 before 1.1.0.80, R6260 before 1.1.0.40, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, R6900v2 before 1.2.0.36, WNR2020 before 1.1.0.62, and XR500 before 2.3.2.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20640"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2020-11788",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by authentication bypass. This affects D6200 before 1.1.00.34, D7000 before 1.0.1.68, PR2000 before 1.0.0.28, R6050 before 1.0.1.18, JR6150 before 1.0.1.18, R6120 before 1.0.0.46, R6220 before 1.1.0.80, R6230 before 1.1.0.80, R6260 before 1.1.0.64, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, and R6900v2 before 1.2.0.36.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11788"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2020-11789",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Certain NETGEAR devices are affected by command injection by an unauthenticated attacker. This affects R6400v2 before 1.0.4.84, R6700 before 1.0.2.8, R6700v3 before 1.0.4.84, R6900 before 1.0.2.8, and R7900 before 1.0.3.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11789"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20656",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a hardcoded password. This affects D6200 before 1.1.00.36, D7000 before 1.0.1.74, PR2000 before 1.0.0.30, R6020 before 1.0.0.42, R6080 before 1.0.0.42, R6050 before 1.0.1.24, JR6150 before 1.0.1.24, R6120 before 1.0.0.48, R6220 before 1.1.0.86, R6230 before 1.1.0.86, R6260 before 1.1.0.64, R6700v2 before 1.2.0.62, R6800 before 1.2.0.62, R6900v2 before 1.2.0.62, and WNR2020 before 1.1.0.62.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20656"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20657",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a buffer overflow by an authenticated user. This affects D6200 before 1.1.00.36, D7000 before 1.0.1.74, PR2000 before 1.0.0.28, R6020 before 1.0.0.42, R6080 before 1.0.0.42, R6050 before 1.0.1.24, JR6150 before 1.0.1.24, R6120 before 1.0.0.48, R6220 before 1.1.0.86, R6230 before 1.1.0.86, R6260 before 1.1.0.64, R6700v2 before 1.2.0.62, R6800 before 1.2.0.62, R6900v2 before 1.2.0.62, and WNR2020 before 1.1.0.62.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20657"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20659",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection by an authenticated user. This affects R6400v2 before 1.0.4.84, R6700 before 1.0.2.8, R6700v3 before 1.0.4.84, R6900 before 1.0.2.8, and R7900 before 1.0.3.10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20659"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20680",
+      "cvss_score": 8.0,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by command injection by an authenticated user. This affects D7000v2 before 1.0.0.53, R6220 before 1.1.0.80, R6260 before 1.1.0.64, R6700 before 1.0.2.6, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, R6900 before 1.0.2.4, R6900P before 1.3.1.64, R6900v2 before 1.2.0.36, R7000 before 1.0.9.60, R7000P before 1.3.1.64, R7800 before 1.0.2.60, R7900 before 1.0.3.8, R7900P before 1.4.1.30, R8000 before 1.0.4.46, R8000P before 1.4.1.30, R8300 before 1.0.2.128, R8500 before 1.0.2.128, R8900 before 1.0.4.12, R9000 before 1.0.4.12, and XR500 before 2.3.2.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20680"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20681",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by authentication bypass. This affects D6200 before 1.1.00.34, D7000 before 1.0.1.68, JR6150 before 1.0.1.18, PR2000 before 1.0.0.28, R6050 before 1.0.1.18, R6120 before 1.0.0.46, R6220 before 1.1.0.80, R6260 before 1.1.0.64, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, and R6900v2 before 1.2.0.36.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20681"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20682",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects D3600 before 1.0.0.76, D6000 before 1.0.0.76, D6200 before 1.1.00.32, D7000 before 1.0.1.68, JR6150 before 1.0.1.18, PR2000 before 1.0.0.28, R6020 before 1.0.0.38, R6050 before 1.0.1.18, R6080 before 1.0.0.38, R6120 before 1.0.0.46, R6220 before 1.1.0.80, R6260 before 1.1.0.40, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, R6900v2 before 1.2.0.36, WNR2020 before 1.1.0.62, and XR500 before 2.3.2.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20682"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20683",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects D3600 before 1.0.0.76, D6000 before 1.0.0.76, D6200 before 1.1.00.32, D7000 before 1.0.1.68, JR6150 before 1.0.1.18, PR2000 before 1.0.0.28, R6020 before 1.0.0.38, R6050 before 1.0.1.18, R6080 before 1.0.0.38, R6120 before 1.0.0.46, R6220 before 1.1.0.80, R6260 before 1.1.0.40, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, R6900v2 before 1.2.0.36, WNR2020 before 1.1.0.62, and XR500 before 2.3.2.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20683"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20684",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects D3600 before 1.0.0.75, D6000 before 1.0.0.75, D6200 before 1.1.00.32, D7000 before 1.0.1.68, JR6150 before 1.0.1.18, PR2000 before 1.0.0.28, R6020 before 1.0.0.38, R6050 before 1.0.1.18, R6080 before 1.0.0.38, R6120 before 1.0.0.46, R6220 before 1.1.0.80, R6260 before 1.1.0.40, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, R6900v2 before 1.2.0.36, WNR2020 before 1.1.0.62, and XR500 before 2.3.2.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20684"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20685",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects D3600 before 1.0.0.75, D6000 before 1.0.0.75, D6200 before 1.1.00.32, D7000 before 1.0.1.68, DM200 before 1.0.0.58, JR6150 before 1.0.1.18, PR2000 before 1.0.0.28, R6020 before 1.0.0.38, R6050 before 1.0.1.18, R6080 before 1.0.0.38, R6120 before 1.0.0.46, R6220 before 1.1.0.80, R6260 before 1.1.0.40, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, R6900v2 before 1.2.0.36, WNR2020 before 1.1.0.62, and XR500 before 2.3.2.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20685"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20686",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Certain NETGEAR devices are affected by a buffer overflow by an unauthenticated attacker. This affects D6200 before 1.1.00.36, D7000 before 1.0.1.74, JR6150 before 1.0.1.18, PR2000 before 1.0.0.28, R6020 before 1.0.0.40, R6080 before 1.0.0.40, R6050 before 1.0.1.18, R6120 before 1.0.0.48, R6220 before 1.1.0.86, R6260 before 1.1.0.64, R6700v2 before 1.2.0.36, R6800 before 1.2.0.36, R6900v2 before 1.2.0.36, and WNR2020 before 1.1.0.62.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20686"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20692",
+      "cvss_score": 6.7,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects D6220 before 1.0.0.44, D6400 before 1.0.0.78, D7000v2 before 1.0.0.51, D8500 before 1.0.3.42, DGN2200v4 before 1.0.0.110, DGND2200Bv4 before 1.0.0.109, EX3700 before 1.0.0.70, EX3800 before 1.0.0.70, EX6000 before 1.0.0.30, EX6100 before 1.0.2.24, EX6120 before 1.0.0.40, EX6130 before 1.0.0.22, EX6150v1 before 1.0.0.42, EX6200 before 1.0.3.88, EX7000 before 1.0.0.66, R6250 before 1.0.4.26, R6300v2 before 1.0.4.28, R6400 before 1.0.1.36, R6400v2 before 1.0.2.52, R6700 before 1.0.1.46, R6900 before 1.0.1.46, R7000 before 1.0.9.28, R6900P before 1.3.1.44, R7000P before 1.3.1.44, R7100LG before 1.0.0.46, R7300DST before 1.0.0.68, R7900 before 1.0.2.10, R8000 before 1.0.4.12, R7900P before 1.3.0.10, R8000P before 1.3.0.10, R8300 before 1.0.2.122, R8500 before 1.0.2.122, WN2500RPv2 before 1.0.1.54, WNDR3400v3 before 1.0.1.22, and WNR3500Lv2 before 1.2.0.54.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20692"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20700",
+      "cvss_score": 6.7,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by a stack-based buffer overflow by an unauthenticated attacker. This affects D6220 before 1.0.0.44, D6400 before 1.0.0.78, D7000v2 before 1.0.0.51, D8500 before 1.0.3.42, DGN2200v4 before 1.0.0.110, DGND2200Bv4 before 1.0.0.110, EX3700 before 1.0.0.70, EX3800 before 1.0.0.70, EX6000 before 1.0.0.30, EX6100 before 1.0.2.24, EX6120 before 1.0.0.40, EX6130 before 1.0.0.22, EX6150v1 before 1.0.0.42, EX6200 before 1.0.3.88, EX7000 before 1.0.0.66, R6250 before 1.0.4.26, R6300v2 before 1.0.4.28, R6400 before 1.0.1.36, R6400v2 before 1.0.2.52, R6700 before 1.0.1.46, R6900 before 1.0.1.46, R7000 before 1.0.9.28, R7900 before 1.0.2.10, R8000 before 1.0.4.12, R8300 before 1.0.2.122, R8500 before 1.0.2.122, R6900P before 1.3.1.64, R7000P before 1.3.1.64, R7100LG before 1.0.0.46, R7300DST before 1.0.0.68, R7900P before 1.3.0.10, R8000P before 1.3.0.10, WN2500RPv2 before 1.0.1.54, WNDR3400v3 before 1.0.1.22, and WNR3500Lv2 before 1.2.0.54.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20700"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.1.16",
+      "cve_id": "CVE-2019-20712",
+      "cvss_score": 6.8,
+      "severity": "MEDIUM",
+      "description": "Certain NETGEAR devices are affected by a buffer overflow by an authenticated user. This affects D6220 before 1.0.0.52, D6400 before 1.0.0.86, D7000v2 before 1.0.0.53, D8500 before 1.0.3.44, DGN2200v4 before 1.0.0.110, DGND2200Bv4 before 1.0.0.109, R6250 before 1.0.4.34, R6300v2 before 1.0.4.32, R6400 before 1.0.1.46, R6400v2 before 1.0.2.62, R6700 before 1.0.2.6, R6900 before 1.0.2.4, R6900P before 1.3.1.64, R7000 before 1.0.9.60, R7000P before 1.3.1.64, R7100LG before 1.0.0.52, R7300DST before 1.0.0.70, R7900 before 1.0.3.8, R7900P before 1.4.1.30, R8000 before 1.0.4.28, R8000P before 1.4.1.30, R8300 before 1.0.2.128, R8500 before 1.0.2.128, WNDR3400v3 before 1.0.1.24, and WNR3500Lv2 before 1.2.0.56.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20712"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

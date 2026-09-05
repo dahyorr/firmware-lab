@@ -1,0 +1,22 @@
+{
+  "run_id": "ad0b16ba",
+  "timestamp": "2026-08-28T21:40:17.410329+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_E3200_1.0.05.002_US_20140516_code.bin",
+    "name": "FW_E3200_1.0.05.002_US_20140516_code.bin",
+    "sha256": "9ce46ddcf7ac2ba37df6ebf97343ed73ae06dd92e03138edb46b52e0f9a6a0f3",
+    "size_bytes": 10699776
+  },
+  "emulation": {
+    "image_id": 44,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

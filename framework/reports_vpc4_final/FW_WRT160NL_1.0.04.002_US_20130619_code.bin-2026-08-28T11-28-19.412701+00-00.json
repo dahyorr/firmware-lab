@@ -1,0 +1,49 @@
+{
+  "run_id": "b07285b8",
+  "timestamp": "2026-08-28T11:28:19.412701+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_WRT160NL_1.0.04.002_US_20130619_code.bin",
+    "name": "FW_WRT160NL_1.0.04.002_US_20130619_code.bin",
+    "sha256": "11da34f57df6d934ca193dae99dbe4daeeeff346c57bfd5be2759bf5c1345529",
+    "size_bytes": 6325248
+  },
+  "emulation": {
+    "image_id": 148,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 141.3,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 11:25 UTC\nWarning: 192.168.0.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.0.1\nHost is up (0.00034s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered (64061) or closed (1474)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 141.24 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.04.002",
+      "cve_id": "CVE-2020-26561",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Belkin LINKSYS WRT160NL 1.0.04.002_US_20130619 devices have a stack-based buffer overflow vulnerability because of sprintf in create_dir in mini_httpd. Successful exploitation leads to arbitrary code execution. NOTE: This vulnerability only affects products that are no longer supported by the maintainer",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-26561"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.0.04.002",
+      "cve_id": "CVE-2021-25310",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The administration web interface on Belkin Linksys WRT160NL 1.0.04.002_US_20130619 devices allows remote authenticated attackers to execute system commands with root privileges via shell metacharacters in the ui_language POST parameter to the apply.cgi form endpoint. This occurs in do_upgrade_post in mini_httpd. NOTE: This vulnerability only affects products that are no longer supported by the maintaine",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-25310"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "52d2e13a",
+  "timestamp": "2026-08-29T21:21:36.422262+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_ipcamera/FW_TV-IP110WN_1.2.2.65.zip",
+    "name": "FW_TV-IP110WN_1.2.2.65.zip",
+    "sha256": "48d5dc4df93a710ecbdd9cc9e5a46d80c391dfbf72e5c6e0955d54076abce80c",
+    "size_bytes": 4338780
+  },
+  "emulation": {
+    "image_id": 302,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,49 @@
+{
+  "run_id": "d885c4d2",
+  "timestamp": "2026-08-29T21:15:40.697674+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink_ipcamera/DCS-5030L_REVA_FIRMWARE_v1.04.10.zip",
+    "name": "DCS-5030L_REVA_FIRMWARE_v1.04.10.zip",
+    "sha256": "b34a99801d6a50c3a71cef01ccc328e5cc65965407be419fb4b207883a17ab26",
+    "size_bytes": 7988968
+  },
+  "emulation": {
+    "image_id": 274,
+    "success": true,
+    "architecture": "mipsel",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 17.7,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 21:15 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.013s latency).\nAll 65535 scanned ports on 192.168.0.1 are closed\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 17.72 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.04.10",
+      "cve_id": "CVE-2017-7852",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "D-Link DCS cameras have a weak/insecure CrossDomain.XML file that allows sites hosting malicious Flash objects to access and/or change the device's settings via a CSRF attack. This is because of the 'allow-access-from domain' child element set to *, thus accepting requests from any domain. If a victim logged into the camera's web console visits a malicious site hosting a malicious Flash file from another Browser tab, the malicious Flash file then can send requests to the victim's DCS series Camera without knowing the credentials. An attacker can host a malicious Flash file that can retrieve Live Feeds or information from the victim's DCS series Camera, add new admin users, or make other changes to the device. Known affected devices are DCS-933L with firmware before 1.13.05, DCS-5030L, DCS-5020L, DCS-2530L, DCS-2630L, DCS-930L, DCS-932L, and DCS-932LB1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-7852"
+    },
+    {
+      "port": 0,
+      "service": "firmware",
+      "version": "1.04.10",
+      "cve_id": "CVE-2019-10999",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "The D-Link DCS series of Wi-Fi cameras contains a stack-based buffer overflow in alphapd, the camera's web server. The overflow allows a remotely authenticated attacker to execute arbitrary code by providing a long string in the WEPEncryption parameter when requesting wireless.htm. Vulnerable devices include DCS-5009L (1.08.11 and below), DCS-5010L (1.14.09 and below), DCS-5020L (1.15.12 and below), DCS-5025L (1.03.07 and below), DCS-5030L (1.04.10 and below), DCS-930L (2.16.01 and below), DCS-931L (1.14.11 and below), DCS-932L (2.17.01 and below), DCS-933L (1.14.11 and below), and DCS-934L (1.05.04 and below).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10999"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "9f230d49",
+  "timestamp": "2026-08-27T13:21:52.371506+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/DGN1000NA_V1.1.00.40.zip",
+    "name": "DGN1000NA_V1.1.00.40.zip",
+    "sha256": "802021532fef6e5fb652605db8100268f04c7c1fa0a16a716ef9e485ff1977c8",
+    "size_bytes": 2967478
+  },
+  "emulation": {
+    "image_id": 2,
+    "success": false,
+    "architecture": "mipseb",
+    "ip": null,
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

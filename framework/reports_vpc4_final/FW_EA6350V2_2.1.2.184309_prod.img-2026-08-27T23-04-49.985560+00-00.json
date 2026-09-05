@@ -1,0 +1,22 @@
+{
+  "run_id": "74313234",
+  "timestamp": "2026-08-27T23:04:49.985560+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_EA6350V2_2.1.2.184309_prod.img",
+    "name": "FW_EA6350V2_2.1.2.184309_prod.img",
+    "sha256": "b73debbf9bcb1ab55e4dd75acd99d000727be6c95d72609873429a591dd70120",
+    "size_bytes": 16597248
+  },
+  "emulation": {
+    "image_id": 68,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "d77d0a48",
+  "timestamp": "2026-08-28T06:37:49.329240+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N12HP_B1_30043808291.ZIP",
+    "name": "FW_RT_N12HP_B1_30043808291.ZIP",
+    "sha256": "8d018c83b72c6f8a08c0970e9a652adbdc483fe9de289de346f155a8c1d26df4",
+    "size_bytes": 6581894
+  },
+  "emulation": {
+    "image_id": 160,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,107 @@
+{
+  "run_id": "f77c6630",
+  "timestamp": "2026-08-28T09:12:25.925426+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR820LA1_FW100KRB08.bin",
+    "name": "DIR820LA1_FW100KRB08.bin",
+    "sha256": "f87ab17bb2265cd91ac44164c9e15866f359007db4af607a8be6a75b9fed6e6b",
+    "size_bytes": 5460036
+  },
+  "emulation": {
+    "image_id": 65,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 174.7,
+    "services": [
+      {
+        "port": 23,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "23/tcp    open  tcpwrapped"
+      },
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain?",
+        "version": "",
+        "raw_banner": "53/tcp    open  domain?"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Mathopd httpd 1.5p6",
+        "raw_banner": "80/tcp    open  http       Mathopd httpd 1.5p6"
+      },
+      {
+        "port": 49152,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "D-Link DIR-300 WAP UPnP 1.03 (UPnP 1.0)",
+        "raw_banner": "49152/tcp open  upnp       D-Link DIR-300 WAP UPnP 1.03 (UPnP 1.0)"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 09:02 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.036s latency).\nNot shown: 65531 closed ports\nPORT      STATE SERVICE    VERSION\n23/tcp    open  tcpwrapped\n53/tcp    open  domain?\n80/tcp    open  http       Mathopd httpd 1.5p6\n49152/tcp open  upnp       D-Link DIR-300 WAP UPnP 1.03 (UPnP 1.0)\nService Info: OSs: Unix, Linux; Device: WAP; CPE: cpe:/h:d-link:dir-300, cpe:/o:linux:linux_kernel\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 174.69 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 23,
+      "path": "N/A",
+      "finding_type": "insecure_service",
+      "detail": "Telnet service exposed \u2014 plaintext remote access",
+      "severity": "high"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Frame-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-Content-Type-Options",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: Content-Security-Policy",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "missing_header",
+      "detail": "Missing security header: X-XSS-Protection",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/",
+      "finding_type": "default_page",
+      "detail": "Vendor-default web interface detected: dlink",
+      "severity": "info"
+    }
+  ]
+}

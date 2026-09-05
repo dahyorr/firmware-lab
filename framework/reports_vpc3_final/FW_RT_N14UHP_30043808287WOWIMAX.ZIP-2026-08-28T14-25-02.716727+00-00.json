@@ -1,0 +1,22 @@
+{
+  "run_id": "c96e1ad5",
+  "timestamp": "2026-08-28T14:25:02.716727+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N14UHP_30043808287WOWIMAX.ZIP",
+    "name": "FW_RT_N14UHP_30043808287WOWIMAX.ZIP",
+    "sha256": "3c94e695e96b71fa82d7b1494fb04b5df6442de321da8d54058c884d840e25f0",
+    "size_bytes": 15397640
+  },
+  "emulation": {
+    "image_id": 189,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "4c178a6c",
+  "timestamp": "2026-08-28T03:34:21.154660+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/WNDR3800-V1.0.0.32.zip",
+    "name": "WNDR3800-V1.0.0.32.zip",
+    "sha256": "c4c8bd97a0500adca8a5d501ad314c3daed5458715d38e8f06e18ed1f3412d95",
+    "size_bytes": 10940090
+  },
+  "emulation": {
+    "image_id": 114,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 143.1,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 03:31 UTC\nNmap scan report for 192.168.1.1\nHost is up.\nAll 65535 scanned ports on 192.168.1.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 143.08 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

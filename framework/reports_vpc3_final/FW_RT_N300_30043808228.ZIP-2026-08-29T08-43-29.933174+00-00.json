@@ -1,0 +1,22 @@
+{
+  "run_id": "10870c2f",
+  "timestamp": "2026-08-29T08:43:29.933174+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N300_30043808228.ZIP",
+    "name": "FW_RT_N300_30043808228.ZIP",
+    "sha256": "72caf6e2d580cfe2615a24736a19b5ce73e6f3dbdcf57780bafe540d8cca7b8f",
+    "size_bytes": 6580500
+  },
+  "emulation": {
+    "image_id": 198,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

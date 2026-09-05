@@ -1,0 +1,22 @@
+{
+  "run_id": "a0d2885d",
+  "timestamp": "2026-08-29T20:39:13.361997+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/dlink/DIR-604M_v1.10KRb08.trx",
+    "name": "DIR-604M_v1.10KRb08.trx",
+    "sha256": "b445ebb08ede53954661cac57c2abde90d90d037681ee747bf07756558e5c28f",
+    "size_bytes": 4816896
+  },
+  "emulation": {
+    "image_id": 228,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": "192.168.1.1",
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

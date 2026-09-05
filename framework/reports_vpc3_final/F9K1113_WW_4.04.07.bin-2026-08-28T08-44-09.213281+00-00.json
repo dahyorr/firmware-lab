@@ -1,0 +1,28 @@
+{
+  "run_id": "f24142a9",
+  "timestamp": "2026-08-28T08:44:09.213281+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/belkin_latest/F9K1113_WW_4.04.07.bin",
+    "name": "F9K1113_WW_4.04.07.bin",
+    "sha256": "ed4175c65d32bca4c6256ee29b1fbd13f958e1251d7a876059704fef8cf3959e",
+    "size_bytes": 7992183
+  },
+  "emulation": {
+    "image_id": 124,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 142.5,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:41 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.055s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 142.43 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

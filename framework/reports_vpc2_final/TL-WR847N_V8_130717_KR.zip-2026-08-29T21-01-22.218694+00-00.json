@@ -1,0 +1,28 @@
+{
+  "run_id": "863f7ef9",
+  "timestamp": "2026-08-29T21:01:22.218694+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/tplink/TL-WR847N_V8_130717_KR.zip",
+    "name": "TL-WR847N_V8_130717_KR.zip",
+    "sha256": "77e105036909aa544de65beb38de65feb1e7176c53a6a5972f3be6074de2fefb",
+    "size_bytes": 3414853
+  },
+  "emulation": {
+    "image_id": 299,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 104.4,
+    "services": [],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-29 20:59 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.030s latency).\nAll 65535 scanned ports on 192.168.0.1 are filtered (45614) or closed (19921)\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 104.33 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

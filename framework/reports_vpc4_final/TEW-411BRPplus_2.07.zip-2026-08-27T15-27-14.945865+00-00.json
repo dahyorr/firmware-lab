@@ -1,0 +1,22 @@
+{
+  "run_id": "bdd3771e",
+  "timestamp": "2026-08-27T15:27:14.945865+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-411BRPplus_2.07.zip",
+    "name": "TEW-411BRPplus_2.07.zip",
+    "sha256": "4b891385c8e31927bf8f37f695cb3ea982b939d0c945eae6cde59cd99a7e02f2",
+    "size_bytes": 2938245
+  },
+  "emulation": {
+    "image_id": 11,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

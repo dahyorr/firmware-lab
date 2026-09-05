@@ -1,0 +1,292 @@
+{
+  "run_id": "bd80d834",
+  "timestamp": "2026-08-28T00:48:30.286696+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6400-V1.0.1.22_1.0.17.zip",
+    "name": "R6400-V1.0.1.22_1.0.17.zip",
+    "sha256": "5be6209bbda5a0946e52179439d2a39cdc2b7211186b953b31ea5cd48c52c9c1",
+    "size_bytes": 28037210
+  },
+  "emulation": {
+    "image_id": 77,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 157.7,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.15-OpenDNS-1",
+        "raw_banner": "53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp   open  tcpwrapped"
+      },
+      {
+        "port": 548,
+        "protocol": "tcp",
+        "service": "afp",
+        "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+        "raw_banner": "548/tcp  open  afp        Netatalk 2.2.5 (name: R6400; protocol 3.3)"
+      },
+      {
+        "port": 631,
+        "protocol": "tcp",
+        "service": "ipp?",
+        "version": "",
+        "raw_banner": "631/tcp  open  ipp?"
+      },
+      {
+        "port": 5000,
+        "protocol": "tcp",
+        "service": "upnp?",
+        "version": "",
+        "raw_banner": "5000/tcp open  upnp?"
+      },
+      {
+        "port": 8200,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8200/tcp open  tcpwrapped"
+      },
+      {
+        "port": 9100,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9100/tcp open  jetdirect?"
+      },
+      {
+        "port": 9101,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9101/tcp open  jetdirect?"
+      },
+      {
+        "port": 9102,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9102/tcp open  jetdirect?"
+      },
+      {
+        "port": 9103,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9103/tcp open  jetdirect?"
+      },
+      {
+        "port": 9104,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9104/tcp open  jetdirect?"
+      },
+      {
+        "port": 9105,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9105/tcp open  jetdirect?"
+      },
+      {
+        "port": 9106,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9106/tcp open  jetdirect?"
+      },
+      {
+        "port": 9107,
+        "protocol": "tcp",
+        "service": "jetdirect?",
+        "version": "",
+        "raw_banner": "9107/tcp open  jetdirect?"
+      },
+      {
+        "port": 9108,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "9108/tcp open  tcpwrapped"
+      },
+      {
+        "port": 9109,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "9109/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 00:45 UTC\nWarning: 192.168.1.1 giving up on port because retransmission cap hit (1).\nNmap scan report for 192.168.1.1\nHost is up (0.017s latency).\nNot shown: 65493 closed ports, 26 filtered ports\nPORT     STATE SERVICE    VERSION\n53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1\n80/tcp   open  tcpwrapped\n548/tcp  open  afp        Netatalk 2.2.5 (name: R6400; protocol 3.3)\n631/tcp  open  ipp?\n5000/tcp open  upnp?\n8200/tcp open  tcpwrapped\n9100/tcp open  jetdirect?\n9101/tcp open  jetdirect?\n9102/tcp open  jetdirect?\n9103/tcp open  jetdirect?\n9104/tcp open  jetdirect?\n9105/tcp open  jetdirect?\n9106/tcp open  jetdirect?\n9107/tcp open  jetdirect?\n9108/tcp open  tcpwrapped\n9109/tcp open  tcpwrapped\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port5000-TCP:V=7.80%I=7%D=8/28%Time=6A90DA3D%P=x86_64-pc-linux-gnu%r(Ge\nSF:nericLines,E7,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nContent-type:\\x20t\nSF:ext/html\\r\\n\\r\\n<html>\\r\\n<head><title>400\\x20Bad\\x20Request</title></h\nSF:ead>\\r\\n<body><h1>400\\x20Bad\\x20Request</h1>\\r\\n<p>This\\x20server\\x20do\nSF:es\\x20not\\x20support\\x20the\\x20operation\\x20requested\\x20by\\x20your\\x20\nSF:client\\.</p></body>\\r\\n</html>\\r\\n\")%r(GetRequest,CE,\"HTTP/1\\.0\\x20404\\\nSF:x20Not\\x20Found\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<html>\\r\\n<head><t\nSF:itle>404\\x20Not\\x20Found</title></head>\\r\\n<body><h1>404\\x20Not\\x20Foun\nSF:d</h1>\\r\\n<p>The\\x20resource\\x20you\\x20have\\x20requested\\x20is\\x20not\\x\nSF:20available\\.</p></body>\\r\\n</html>\\r\\n\")%r(RTSPRequest,E7,\"HTTP/1\\.0\\x\nSF:20400\\x20Bad\\x20Request\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<html>\\r\\n\nSF:<head><title>400\\x20Bad\\x20Request</title></head>\\r\\n<body><h1>400\\x20B\nSF:ad\\x20Request</h1>\\r\\n<p>This\\x20server\\x20does\\x20not\\x20support\\x20th\nSF:e\\x20operation\\x20requested\\x20by\\x20your\\x20client\\.</p></body>\\r\\n</h\nSF:tml>\\r\\n\")%r(DNSVersionBindReqTCP,E7,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Reques\nSF:t\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<html>\\r\\n<head><title>400\\x20Ba\nSF:d\\x20Request</title></head>\\r\\n<body><h1>400\\x20Bad\\x20Request</h1>\\r\\n\nSF:<p>This\\x20server\\x20does\\x20not\\x20support\\x20the\\x20operation\\x20requ\nSF:ested\\x20by\\x20your\\x20client\\.</p></body>\\r\\n</html>\\r\\n\")%r(SMBProgNe\nSF:g,E7,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nContent-type:\\x20text/html\\\nSF:r\\n\\r\\n<html>\\r\\n<head><title>400\\x20Bad\\x20Request</title></head>\\r\\n<\nSF:body><h1>400\\x20Bad\\x20Request</h1>\\r\\n<p>This\\x20server\\x20does\\x20not\nSF:\\x20support\\x20the\\x20operation\\x20requested\\x20by\\x20your\\x20client\\.<\nSF:/p></body>\\r\\n</html>\\r\\n\")%r(ZendJavaBridge,E7,\"HTTP/1\\.0\\x20400\\x20Ba\nSF:d\\x20Request\\r\\nContent-type:\\x20text/html\\r\\n\\r\\n<html>\\r\\n<head><titl\nSF:e>400\\x20Bad\\x20Request</title></head>\\r\\n<body><h1>400\\x20Bad\\x20Reque\nSF:st</h1>\\r\\n<p>This\\x20server\\x20does\\x20not\\x20support\\x20the\\x20operat\nSF:ion\\x20requested\\x20by\\x20your\\x20client\\.</p></body>\\r\\n</html>\\r\\n\")%\nSF:r(HTTPOptions,E7,\"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nContent-type:\\x\nSF:20text/html\\r\\n\\r\\n<html>\\r\\n<head><title>400\\x20Bad\\x20Request</title>\nSF:</head>\\r\\n<body><h1>400\\x20Bad\\x20Request</h1>\\r\\n<p>This\\x20server\\x2\nSF:0does\\x20not\\x20support\\x20the\\x20operation\\x20requested\\x20by\\x20your\\\nSF:x20client\\.</p></body>\\r\\n</html>\\r\\n\");\nService Info: OS: Unix\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 157.69 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44047",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An SQL injection vulnerability in the MySQL CNID backend in Netatalk 3.1.0 through 4.4.2 allows a remote authenticated attacker to obtain unauthorized access to data, modify data, or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44047"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44048",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A stack-based buffer overflow via UCS-2 type confusion in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44048"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44049",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An out-of-bounds write due to improper null termination in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service via crafted character data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44049"
+    }
+  ],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /admin",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /HNAP1/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /setup.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /goform/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /cgi-bin/webproc",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /apply.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /login.cgi",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/syscmd.htm",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /syscmd.htm",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /debug/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /stream",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /video",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /snapshot",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 200 at /image",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /axis-cgi/",
+      "severity": "medium"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 200 at /onvif/",
+      "severity": "medium"
+    }
+  ]
+}

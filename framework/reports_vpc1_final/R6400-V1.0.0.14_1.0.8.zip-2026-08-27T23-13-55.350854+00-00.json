@@ -1,0 +1,102 @@
+{
+  "run_id": "2e74899d",
+  "timestamp": "2026-08-27T23:13:55.350854+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear/R6400-V1.0.0.14_1.0.8.zip",
+    "name": "R6400-V1.0.0.14_1.0.8.zip",
+    "sha256": "1c35e1ed001b4cc38b2f6a4b533780398aeb23903f60ee8e1d4daa321b38de6a",
+    "size_bytes": 25151330
+  },
+  "emulation": {
+    "image_id": 57,
+    "success": true,
+    "architecture": "armel",
+    "ip": "192.168.1.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.1.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 149.3,
+    "services": [
+      {
+        "port": 53,
+        "protocol": "tcp",
+        "service": "domain",
+        "version": "dnsmasq 2.15-OpenDNS-1",
+        "raw_banner": "53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1"
+      },
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "80/tcp   open  tcpwrapped"
+      },
+      {
+        "port": 548,
+        "protocol": "tcp",
+        "service": "afp",
+        "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+        "raw_banner": "548/tcp  open  afp        Netatalk 2.2.5 (name: R6400; protocol 3.3)"
+      },
+      {
+        "port": 631,
+        "protocol": "tcp",
+        "service": "ipp?",
+        "version": "",
+        "raw_banner": "631/tcp  open  ipp?"
+      },
+      {
+        "port": 5000,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "5000/tcp open  tcpwrapped"
+      },
+      {
+        "port": 8200,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "8200/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 23:11 UTC\nNmap scan report for 192.168.1.1\nHost is up (0.050s latency).\nNot shown: 65529 closed ports\nPORT     STATE SERVICE    VERSION\n53/tcp   open  domain     dnsmasq 2.15-OpenDNS-1\n80/tcp   open  tcpwrapped\n548/tcp  open  afp        Netatalk 2.2.5 (name: R6400; protocol 3.3)\n631/tcp  open  ipp?\n5000/tcp open  tcpwrapped\n8200/tcp open  tcpwrapped\nService Info: OS: Unix\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 149.21 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44047",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An SQL injection vulnerability in the MySQL CNID backend in Netatalk 3.1.0 through 4.4.2 allows a remote authenticated attacker to obtain unauthorized access to data, modify data, or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44047"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44048",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "A stack-based buffer overflow via UCS-2 type confusion in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44048"
+    },
+    {
+      "port": 548,
+      "service": "afp",
+      "version": "Netatalk 2.2.5 (name: R6400; protocol 3.3)",
+      "cve_id": "CVE-2026-44049",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "An out-of-bounds write due to improper null termination in convert_charset() in Netatalk 2.0.4 through 4.4.2 allows a remote authenticated attacker to execute arbitrary code or cause a denial of service via crafted character data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44049"
+    }
+  ],
+  "credentials": [],
+  "web_findings": []
+}

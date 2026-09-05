@@ -1,0 +1,260 @@
+{
+  "run_id": "5930f967",
+  "timestamp": "2026-08-27T22:30:22.496027+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/trendnet_latest/TEW-657BRM_1.00.1.zip",
+    "name": "TEW-657BRM_1.00.1.zip",
+    "sha256": "f912e86024ae0bb2cd9d496e8a31241dfba6c46e38039a2746329c8ab13afc0e",
+    "size_bytes": 2914682
+  },
+  "emulation": {
+    "image_id": 61,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.10.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.10.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 46.9,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "TRENDnet TEW-657BRM WAP http config",
+        "raw_banner": "80/tcp    open  http       TRENDnet TEW-657BRM WAP http config"
+      },
+      {
+        "port": 5000,
+        "protocol": "tcp",
+        "service": "upnp",
+        "version": "",
+        "raw_banner": "5000/tcp  open  upnp"
+      },
+      {
+        "port": 32764,
+        "protocol": "tcp",
+        "service": "tcpwrapped",
+        "version": "",
+        "raw_banner": "32764/tcp open  tcpwrapped"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-27 22:29 UTC\nNmap scan report for 192.168.10.1\nHost is up (0.025s latency).\nNot shown: 65532 closed ports\nPORT      STATE SERVICE    VERSION\n80/tcp    open  http       TRENDnet TEW-657BRM WAP http config\n5000/tcp  open  upnp\n32764/tcp open  tcpwrapped\n1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :\nSF-Port5000-TCP:V=7.80%I=7%D=8/27%Time=6A90BA54%P=x86_64-pc-linux-gnu%r(Ge\nSF:nericLines,119,\"\\x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\\x20text/\nSF:html\\r\\nConnection:\\x20Keep-Alive\\r\\nContent-Length:\\x20149\\r\\nServer:\\\nSF:x202\\.4\\.x\\x20UPnP/1\\.0\\x20miniupnpd/1\\.0\\r\\n\\r\\n<HTML><HEAD><TITLE>501\nSF:\\x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1>T\nSF:he\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x20serve\nSF:r\\.</BODY></HTML>\\r\\n\")%r(GetRequest,10C,\"HTTP/1\\.0\\x20404\\x20Not\\x20Fo\nSF:und\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\x20Keep-Alive\\r\\nConte\nSF:nt-Length:\\x20134\\r\\nServer:\\x202\\.4\\.x\\x20UPnP/1\\.0\\x20miniupnpd/1\\.0\\\nSF:r\\n\\r\\n<HTML><HEAD><TITLE>404\\x20Not\\x20Found</TITLE></HEAD><BODY><H1>N\nSF:ot\\x20Found</H1>The\\x20requested\\x20URL\\x20was\\x20not\\x20found\\x20on\\x2\nSF:0this\\x20server\\.</BODY></HTML>\\r\\n\")%r(RTSPRequest,121,\"RTSP/1\\.0\\x205\nSF:01\\x20Not\\x20Implemented\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\x\nSF:20Keep-Alive\\r\\nContent-Length:\\x20149\\r\\nServer:\\x202\\.4\\.x\\x20UPnP/1\\\nSF:.0\\x20miniupnpd/1\\.0\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\x20Not\\x20Implemente\nSF:d</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1>The\\x20HTTP\\x20Method\\\nSF:x20is\\x20not\\x20implemented\\x20by\\x20this\\x20server\\.</BODY></HTML>\\r\\n\nSF:\")%r(HTTPOptions,121,\"HTTP/1\\.0\\x20501\\x20Not\\x20Implemented\\r\\nContent\nSF:-Type:\\x20text/html\\r\\nConnection:\\x20Keep-Alive\\r\\nContent-Length:\\x20\nSF:149\\r\\nServer:\\x202\\.4\\.x\\x20UPnP/1\\.0\\x20miniupnpd/1\\.0\\r\\n\\r\\n<HTML><\nSF:HEAD><TITLE>501\\x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Im\nSF:plemented</H1>The\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x\nSF:20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(FourOhFourRequest,10C,\"HTTP/1\\\nSF:.0\\x20404\\x20Not\\x20Found\\r\\nContent-Type:\\x20text/html\\r\\nConnection:\\\nSF:x20Keep-Alive\\r\\nContent-Length:\\x20134\\r\\nServer:\\x202\\.4\\.x\\x20UPnP/1\nSF:\\.0\\x20miniupnpd/1\\.0\\r\\n\\r\\n<HTML><HEAD><TITLE>404\\x20Not\\x20Found</TI\nSF:TLE></HEAD><BODY><H1>Not\\x20Found</H1>The\\x20requested\\x20URL\\x20was\\x2\nSF:0not\\x20found\\x20on\\x20this\\x20server\\.</BODY></HTML>\\r\\n\")%r(SIPOption\nSF:s,120,\"SIP/2\\.0\\x20501\\x20Not\\x20Implemented\\r\\nContent-Type:\\x20text/h\nSF:tml\\r\\nConnection:\\x20Keep-Alive\\r\\nContent-Length:\\x20149\\r\\nServer:\\x\nSF:202\\.4\\.x\\x20UPnP/1\\.0\\x20miniupnpd/1\\.0\\r\\n\\r\\n<HTML><HEAD><TITLE>501\\\nSF:x20Not\\x20Implemented</TITLE></HEAD><BODY><H1>Not\\x20Implemented</H1>Th\nSF:e\\x20HTTP\\x20Method\\x20is\\x20not\\x20implemented\\x20by\\x20this\\x20server\nSF:\\.</BODY></HTML>\\r\\n\");\nService Info: Device: WAP; CPE: cpe:/h:trendnet:tew-657brm\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 46.82 seconds\n"
+  },
+  "cve_matches": [
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2012-4876",
+      "cvss_score": 10.0,
+      "severity": null,
+      "description": "Stack-based buffer overflow in the UltraMJCam ActiveX Control in TRENDnet SecurView TV-IP121WN Wireless Internet Camera allows remote attackers to execute arbitrary code via a long string to the OpenFileDlg method.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-4876"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2013-3098",
+      "cvss_score": 6.8,
+      "severity": null,
+      "description": "Multiple cross-site request forgery (CSRF) vulnerabilities in TRENDnet TEW-812DRU router with firmware before 1.0.9.0 allow remote attackers to hijack the authentication of administrators for requests that (1) change admin credentials in a request to setSysAdm.cgi, (2) enable remote management or (3) enable port forwarding in an Apply action to uapply.cgi, or (4) have unspecified impact via a request to setNTP.cgi.  NOTE: some of these details are obtained from third party information.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3098"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2013-3365",
+      "cvss_score": 8.5,
+      "severity": null,
+      "description": "TRENDnet TEW-812DRU router allows remote authenticated users to execute arbitrary commands via shell metacharacters in the (1) wan network prefix to internet/ipv6.asp; (2) remote port to adm/management.asp; (3) pptp username, (4) pptp password, (5) ip, (6) gateway, (7) l2tp username, or (8) l2tp password to internet/wan.asp; (9) NtpDstStart, (10) NtpDstEnd, or (11) NtpDstOffset to adm/time.asp; or (12) device url to adm/management.asp.  NOTE: vectors 9, 10, and 11 can be exploited by unauthenticated remote attackers by leveraging CVE-2013-3098.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-3365"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2014-10011",
+      "cvss_score": 7.5,
+      "severity": null,
+      "description": "Stack-based buffer overflow in UltraCamLib in the UltraCam ActiveX Control (UltraCamX.ocx) for the TRENDnet SecurView camera TV-IP422WN allows remote attackers to execute arbitrary code via a long string to the (1) CGI_ParamSet, (2) OpenFileDlg, (3) SnapFileName, (4) Password, (5) SetCGIAPNAME, (6) AccountCode, or (7) RemoteHost function.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-10011"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2013-4659",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Buffer overflow in Broadcom ACSD allows remote attackers to execute arbitrary code via a long string to TCP port 5916. This component is used on routers of multiple vendors including ASUS RT-AC66U and TRENDnet TEW-812DRU.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4659"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2015-2880",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "TRENDnet WiFi Baby Cam TV-IP743SIC has a password of admin for the backdoor root account.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-2880"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2015-1187",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "The ping tool in multiple D-Link and TRENDnet devices allow remote attackers to execute arbitrary code via the ping_addr parameter to ping.ccp.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1187"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2014-8579",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "TRENDnet TEW-823DRU devices with firmware before 1.00b36 have a hardcoded password of kcodeskcodes for the root account, which makes it easier for remote attackers to obtain access via an FTP session.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-8579"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2018-7034",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-751DR v1.03B03, TEW-752DRU v1.03B01, and TEW733GR v1.03B01 devices allow authentication bypass via an AUTHORIZED_GROUP=1 value, as demonstrated by a request for getcfg.php.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-7034"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2018-19239",
+      "cvss_score": 7.2,
+      "severity": "HIGH",
+      "description": "TRENDnet TEW-673GRU v1.00b40 devices have an OS command injection vulnerability in the start_arpping function of the timer binary, which allows remote attackers to execute arbitrary commands via three parameters (dhcpd_start, dhcpd_end, and lan_ipaddr) passed to the apply.cgi binary through a POST request.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19239"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2018-19240",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "Buffer overflow in network.cgi on TRENDnet TV-IP110WN V1.2.2 build 68, V1.2.2.65, and V1.2.2 build 64 and TV-IP121WN V1.2.2 build 28 devices allows attackers to hijack the control flow to any attacker-specified location by crafting a POST request payload (without authentication).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19240"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2018-19241",
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "description": "Buffer overflow in video.cgi on TRENDnet TV-IP110WN V1.2.2 build 68, V1.2.2.65, and V1.2.2 build 64 and TV-IP121WN V1.2.2 build 28 devices allows attackers to hijack the control flow to any attacker-specified location by crafting a POST request payload (without authentication).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19241"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2018-19242",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "Buffer overflow in apply.cgi on TRENDnet TEW-632BRP 1.010B32 and TEW-673GRU devices allows attackers to hijack the control flow to any attacker-specified location by crafting a POST request payload (with authentication).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-19242"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2019-11417",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "system.cgi on TRENDnet TV-IP110WN cameras has a buffer overflow caused by an inadequate source-length check before a strcpy operation in the respondAsp function. Attackers can exploit the vulnerability by using the languse parameter with a long string. This affects 1.2.2 build 28, 64, 65, and 68.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11417"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2019-11418",
+      "cvss_score": 9.8,
+      "severity": "CRITICAL",
+      "description": "apply.cgi on the TRENDnet TEW-632BRP 1.010B32 router has a buffer overflow via long strings to the SOAPACTION:HNAP1 interface.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11418"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2019-13148",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the UDP Ports To Open in Add Gaming Rule.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13148"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2019-13149",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the key passwd in Routing RIP Settings.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13149"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2019-13150",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication). The command injection exists in the key ip_addr.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13150"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2019-13151",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the action set_sta_enrollee_pin_5g and the key wps_sta_enrollee_pin.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13151"
+    },
+    {
+      "port": 80,
+      "service": "http",
+      "version": "TRENDnet TEW-657BRM WAP http config",
+      "cve_id": "CVE-2019-13152",
+      "cvss_score": 8.8,
+      "severity": "HIGH",
+      "description": "An issue was discovered in TRENDnet TEW-827DRU firmware before 2.05B11. There is a command injection in apply.cgi (exploitable with authentication) via the IP Address in Add Gaming Rule.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13152"
+    }
+  ],
+  "credentials": [
+    {
+      "port": 80,
+      "service": "http",
+      "username": "admin",
+      "password": "admin",
+      "success": true,
+      "method": "http_basic"
+    }
+  ],
+  "web_findings": []
+}

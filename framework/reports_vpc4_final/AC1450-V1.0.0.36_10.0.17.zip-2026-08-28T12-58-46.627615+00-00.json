@@ -1,0 +1,22 @@
+{
+  "run_id": "a94cfa42",
+  "timestamp": "2026-08-28T12:58:46.627615+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/netgear_latest/AC1450-V1.0.0.36_10.0.17.zip",
+    "name": "AC1450-V1.0.0.36_10.0.17.zip",
+    "sha256": "81a99ea20515e1cd30f879a775440771910860a14305555f68a7d7700d5316a3",
+    "size_bytes": 12165105
+  },
+  "emulation": {
+    "image_id": 174,
+    "success": false,
+    "architecture": "armel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

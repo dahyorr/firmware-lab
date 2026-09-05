@@ -1,0 +1,149 @@
+{
+  "run_id": "585af5e7",
+  "timestamp": "2026-08-28T08:48:56.502543+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/ZyXEL_latest/NBG2105_V1.00_AAGU.2_C0.zip",
+    "name": "NBG2105_V1.00_AAGU.2_C0.zip",
+    "sha256": "6eba7145edcf99d42654a5970e87ef84e305fbf0226c4e1c4915d84fdfe13c08",
+    "size_bytes": 3334349
+  },
+  "emulation": {
+    "image_id": 51,
+    "success": true,
+    "architecture": "mipseb",
+    "ip": "192.168.0.1",
+    "web_service": true,
+    "from_cache": false
+  },
+  "probe": {
+    "ip": "192.168.0.1",
+    "scan_profile": "comprehensive",
+    "scan_duration_seconds": 21.1,
+    "services": [
+      {
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "version": "Boa HTTPd 0.94.14rc21",
+        "raw_banner": "80/tcp open  http    Boa HTTPd 0.94.14rc21"
+      }
+    ],
+    "raw_output": "Starting Nmap 7.80 ( https://nmap.org ) at 2026-08-28 08:48 UTC\nNmap scan report for 192.168.0.1\nHost is up (0.024s latency).\nNot shown: 65534 closed ports\nPORT   STATE SERVICE VERSION\n80/tcp open  http    Boa HTTPd 0.94.14rc21\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 21.09 seconds\n"
+  },
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": [
+    {
+      "port": 80,
+      "path": "/admin",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /admin",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /cgi-bin/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/HNAP1/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /HNAP1/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/setup.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /setup.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/goform/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /goform/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /webproc",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/cgi-bin/webproc",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /cgi-bin/webproc",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/apply.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /apply.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/login.cgi",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /login.cgi",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/debug/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /debug/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/stream",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /stream",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/video",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /video",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/snapshot",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /snapshot",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/image",
+      "finding_type": "exposed_stream",
+      "detail": "HTTP 302 at /image",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/axis-cgi/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /axis-cgi/",
+      "severity": "low"
+    },
+    {
+      "port": 80,
+      "path": "/onvif/",
+      "finding_type": "exposed_admin",
+      "detail": "HTTP 302 at /onvif/",
+      "severity": "low"
+    }
+  ]
+}

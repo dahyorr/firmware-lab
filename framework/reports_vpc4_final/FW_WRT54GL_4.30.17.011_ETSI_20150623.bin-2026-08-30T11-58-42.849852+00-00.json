@@ -1,0 +1,22 @@
+{
+  "run_id": "51519f78",
+  "timestamp": "2026-08-30T11:58:42.849852+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/linksys_latest/FW_WRT54GL_4.30.17.011_ETSI_20150623.bin",
+    "name": "FW_WRT54GL_4.30.17.011_ETSI_20150623.bin",
+    "sha256": "a9a8dad0fdc6da992d30ecb3da23318b640cb5e8ada66eb955f6f0d869c2fa36",
+    "size_bytes": 3539968
+  },
+  "emulation": {
+    "image_id": 155,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}

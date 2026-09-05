@@ -1,0 +1,22 @@
+{
+  "run_id": "ef546ae6",
+  "timestamp": "2026-08-29T01:19:22.495239+00:00",
+  "firmware": {
+    "path": "/root/project/firmware/asus_latest/FW_RT_N12_PLUS_30043807378.ZIP",
+    "name": "FW_RT_N12_PLUS_30043807378.ZIP",
+    "sha256": "3435630e06b8e0515750394083626e786d4795ae2dc99ab05a6792b1942b8449",
+    "size_bytes": 6593956
+  },
+  "emulation": {
+    "image_id": 183,
+    "success": false,
+    "architecture": "mipsel",
+    "ip": null,
+    "web_service": false,
+    "from_cache": false
+  },
+  "probe": null,
+  "cve_matches": [],
+  "credentials": [],
+  "web_findings": []
+}
